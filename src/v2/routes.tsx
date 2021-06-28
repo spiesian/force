@@ -1,33 +1,86 @@
 import { AppRouteConfig } from "v2/System/Router/Route"
-import { artistRoutes } from "v2/Apps/Artist/artistRoutes"
-import { artistSeriesRoutes } from "v2/Apps/ArtistSeries/artistSeriesRoutes"
-import { artistsRoutes } from "v2/Apps/Artists/artistsRoutes"
-import { artworkRoutes } from "v2/Apps/Artwork/artworkRoutes"
-import { auctionsRoutes } from "v2/Apps/Auctions/auctionsRoutes"
 import { buildAppRoutes } from "v2/System/Router/buildAppRoutes"
-import { buyerGuaranteeRoutes } from "v2/Apps/BuyerGuarantee/buyerGuaranteeRoutes"
-import { collectRoutes } from "v2/Apps/Collect/collectRoutes"
-import { consignRoutes } from "v2/Apps/Consign/consignRoutes"
-import { conversationRoutes } from "v2/Apps/Conversation/conversationRoutes"
-import { debugRoutes } from "v2/Apps/Debug/debugRoutes"
-import { exampleRoutes } from "v2/Apps/Example/exampleRoutes"
-import { fairRoutes } from "v2/Apps/Fair/fairRoutes"
-import { fairsRoutes } from "v2/Apps/Fairs/fairsRoutes"
-import { featureRoutes } from "v2/Apps/Feature/featureRoutes"
-import { geneRoutes } from "v2/Apps/Gene/geneRoutes"
-import { homeRoutes } from "v2/Apps/Home/homeRoutes"
-import { identityVerificationRoutes } from "v2/Apps/IdentityVerification/identityVerificationRoutes"
-import { orderRoutes } from "v2/Apps/Order/orderRoutes"
-import { partnerRoutes } from "v2/Apps/Partner/partnerRoutes"
-import { paymentRoutes } from "v2/Apps/Payment/paymentRoutes"
-import { purchaseRoutes } from "v2/Apps/Purchase/purchaseRoutes"
-import { searchRoutes } from "v2/Apps/Search/searchRoutes"
-import { showRoutes } from "v2/Apps/Show/showRoutes"
-import { tagRoutes } from "./Apps/Tag/tagRoutes"
-import { unsubscribeRoutes } from "./Apps/Unsubscribe/unsubscribeRoutes"
-import { viewingRoomRoutes } from "v2/Apps/ViewingRoom/viewingRoomRoutes"
 
-export function getAppRoutes(): AppRouteConfig[] {
+export async function getAppRoutes(): Promise<AppRouteConfig[]> {
+  const { artistRoutes } = await import(
+    /* webpackChunkName: "artistRoutes" */ "v2/Apps/Artist/artistRoutes"
+  )
+  const { artistSeriesRoutes } = await import(
+    /* webpackChunkName: "artistSeriesRoutes" */ "v2/Apps/ArtistSeries/artistSeriesRoutes"
+  )
+  const { artistsRoutes } = await import(
+    /* webpackChunkName: "artistsRoutes" */ "v2/Apps/Artists/artistsRoutes"
+  )
+  const { artworkRoutes } = await import(
+    /* webpackChunkName: "artworkRoutes" */ "v2/Apps/Artwork/artworkRoutes"
+  )
+  const { auctionsRoutes } = await import(
+    /* webpackChunkName: "auctionsRoutes" */ "v2/Apps/Auctions/auctionsRoutes"
+  )
+  const { buyerGuaranteeRoutes } = await import(
+    /* webpackChunkName: "buyerGuaranteeRoutes" */ "v2/Apps/BuyerGuarantee/buyerGuaranteeRoutes"
+  )
+  const { collectRoutes } = await import(
+    /* webpackChunkName: "collectRoutes" */ "v2/Apps/Collect/collectRoutes"
+  )
+  const { consignRoutes } = await import(
+    /* webpackChunkName: "consignRoutes" */ "v2/Apps/Consign/consignRoutes"
+  )
+  const { conversationRoutes } = await import(
+    /* webpackChunkName: "conversationRoutes" */ "v2/Apps/Conversation/conversationRoutes"
+  )
+  const { debugRoutes } = await import(
+    /* webpackChunkName: "debugRoutes" */ "v2/Apps/Debug/debugRoutes"
+  )
+  const { exampleRoutes } = await import(
+    /* webpackChunkName: "exampleRoutes" */ "v2/Apps/Example/exampleRoutes"
+  )
+  const { fairRoutes } = await import(
+    /* webpackChunkName: "fairRoutes" */ "v2/Apps/Fair/fairRoutes"
+  )
+  const { fairsRoutes } = await import(
+    /* webpackChunkName: "fairsRoutes" */ "v2/Apps/Fairs/fairsRoutes"
+  )
+  const { featureRoutes } = await import(
+    /* webpackChunkName: "featureRoutes" */ "v2/Apps/Feature/featureRoutes"
+  )
+  const { geneRoutes } = await import(
+    /* webpackChunkName: "geneRoutes" */ "v2/Apps/Gene/geneRoutes"
+  )
+  const { homeRoutes } = await import(
+    /* webpackChunkName: "homeRoutes" */ "v2/Apps/Home/homeRoutes"
+  )
+  const { identityVerificationRoutes } = await import(
+    /* webpackChunkName: "identityVerificationRoutes" */ "v2/Apps/IdentityVerification/identityVerificationRoutes"
+  )
+  const { orderRoutes } = await import(
+    /* webpackChunkName: "orderRoutes" */ "v2/Apps/Order/orderRoutes"
+  )
+  const { partnerRoutes } = await import(
+    /* webpackChunkName: "partnerRoutes" */ "v2/Apps/Partner/partnerRoutes"
+  )
+  const { paymentRoutes } = await import(
+    /* webpackChunkName: "paymentRoutes" */ "v2/Apps/Payment/paymentRoutes"
+  )
+  const { purchaseRoutes } = await import(
+    /* webpackChunkName: "purchaseRoutes" */ "v2/Apps/Purchase/purchaseRoutes"
+  )
+  const { searchRoutes } = await import(
+    /* webpackChunkName: "searchRoutes" */ "v2/Apps/Search/searchRoutes"
+  )
+  const { showRoutes } = await import(
+    /* webpackChunkName: "showRoutes" */ "v2/Apps/Show/showRoutes"
+  )
+  const { tagRoutes } = await import(
+    /* webpackChunkName: "tagRoutes" */ "./Apps/Tag/tagRoutes"
+  )
+  const { unsubscribeRoutes } = await import(
+    /* webpackChunkName: "unsubscribeRoutes" */ "./Apps/Unsubscribe/unsubscribeRoutes"
+  )
+  const { viewingRoomRoutes } = await import(
+    /* webpackChunkName: "viewingRoomRoutes" */ "v2/Apps/ViewingRoom/viewingRoomRoutes"
+  )
+
   return buildAppRoutes([
     { routes: artistRoutes },
     { routes: artistSeriesRoutes },

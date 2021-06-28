@@ -31,8 +31,9 @@ async function setupClient() {
     { setupArtistSignUpModal },
   ] = clientImports
 
+  const routes = await getAppRoutes()
   const { ClientApp } = await buildClientApp({
-    routes: getAppRoutes(),
+    routes,
   })
 
   // Rehydrate
