@@ -7,7 +7,10 @@ import path from "path"
 import WebpackManifestPlugin from "webpack-manifest-plugin"
 import { basePath, env } from "../utils/env"
 import {
-  babelLoader,
+  esbuildJSLoader,
+  esbuildTSLoader,
+  svgLoader,
+  // babelLoader,
   coffeeLoader,
   ejsLoader,
   jadeLoader,
@@ -16,7 +19,7 @@ import {
 import {
   clientExternals,
   productionDevtool,
-  standardMinimizer,
+  esbuildMinimizer,
   standardMode,
   standardResolve,
   standardStats,
@@ -32,12 +35,20 @@ export const clientProductionConfig = {
   externals: clientExternals,
   mode: standardMode,
   module: {
-    rules: [coffeeLoader, jadeLoader, babelLoader, ejsLoader, mjsLoader],
+    rules: [
+      coffeeLoader,
+      jadeLoader,
+      svgLoader,
+      esbuildJSLoader,
+      esbuildTSLoader,
+      ejsLoader,
+      mjsLoader,
+    ],
   },
   optimization: {
     concatenateModules: env.webpackConcatenate,
     minimize: !env.webpackDebug && !env.fastProductionBuild,
-    minimizer: standardMinimizer,
+    minimizer: esbuildMinimizer,
     // Extract webpack runtime code into it's own file
     runtimeChunk: "single",
     splitChunks: clientChunks,

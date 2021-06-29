@@ -70,3 +70,28 @@ export const mjsLoader = {
   type: "javascript/auto",
   use: [],
 }
+
+export const svgLoader = {
+  test: /\.svg$/,
+  use: ["@svgr/webpack"],
+}
+
+export const esbuildJSLoader = {
+  include: path.resolve(basePath, "src"),
+  test: /\.jsx?$/,
+  loader: "esbuild-loader",
+  options: {
+    loader: "jsx", // Remove this if you're not using JSX
+    target: "es2015", // Syntax to compile to (see options below for possible values)
+  },
+}
+
+export const esbuildTSLoader = {
+  include: path.resolve(basePath, "src"),
+  test: /\.tsx?$/,
+  loader: "esbuild-loader",
+  options: {
+    loader: "tsx", // Or 'ts' if you don't need tsx
+    target: "es2015",
+  },
+}

@@ -3,6 +3,7 @@
 import path from "path"
 import TerserPlugin from "terser-webpack-plugin"
 import { basePath, env } from "../utils/env"
+const { ESBuildMinifyPlugin } = require("esbuild-loader")
 
 export const standardDevtool = env.webpackDevtool || "eval"
 
@@ -18,6 +19,12 @@ export const standardMinimizer = [
     cache: false,
     parallel: env.onCi ? env.webpackCiCpuLimit : true, // Only use 4 cpus (default) in CircleCI, by default it will try using 36 and OOM
     sourceMap: true, // Must be set to true if using source-maps in production
+  }),
+]
+
+export const esbuildMinimizer = [
+  new ESBuildMinifyPlugin({
+    target: "es2015", // Syntax to compile to (see options below for possible values)
   }),
 ]
 

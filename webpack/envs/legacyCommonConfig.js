@@ -11,7 +11,10 @@ import {
   standardStats,
 } from "./commonEnv"
 import {
-  babelLoader,
+  esbuildJSLoader,
+  esbuildTSLoader,
+  svgLoader,
+  // babelLoader,
   coffeeLoader,
   jadeLoader,
   mjsLoader,
@@ -24,7 +27,14 @@ export const legacyCommonConfig = {
   externals: clientExternals,
   mode: standardMode,
   module: {
-    rules: [coffeeLoader, jadeLoader, babelLoader, mjsLoader],
+    rules: [
+      coffeeLoader,
+      jadeLoader,
+      svgLoader,
+      esbuildJSLoader,
+      esbuildTSLoader,
+      mjsLoader,
+    ],
   },
   optimization: {
     // Extract webpack runtime code into it's own file
