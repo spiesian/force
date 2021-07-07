@@ -7,19 +7,28 @@ import { paramsToCamelCase } from "v2/Components/ArtworkFilter/Utils/urlBuilder"
 import { CollectionAppQuery } from "./Routes/Collection/CollectionAppQuery"
 
 const CollectApp = loadable(
-  () => import(/* webpackChunkName: "collectBundle" */ "./Routes/Collect"),
+  () =>
+    import(
+      /* webpackChunkName: "collectBundle", webpackPrefetch: true */ "./Routes/Collect"
+    ),
   {
     resolveComponent: component => component.CollectAppFragmentContainer,
   }
 )
 const CollectionsApp = loadable(
-  () => import(/* webpackChunkName: "collectBundle" */ "./Routes/Collections"),
+  () =>
+    import(
+      /* webpackChunkName: "collectBundle", webpackPrefetch: true */ "./Routes/Collections"
+    ),
   {
     resolveComponent: component => component.CollectionsAppFragmentContainer,
   }
 )
 const CollectionApp = loadable(
-  () => import(/* webpackChunkName: "collectBundle" */ "./Routes/Collection"),
+  () =>
+    import(
+      /* webpackChunkName: "collectBundle", webpackPrefetch: true */ "./Routes/Collection"
+    ),
   {
     resolveComponent: component => component.CollectionRefetchContainer,
   }

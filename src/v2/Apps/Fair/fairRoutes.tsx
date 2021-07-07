@@ -5,37 +5,55 @@ import { paramsToCamelCase } from "v2/Components/ArtworkFilter/Utils/urlBuilder"
 import { allowedFilters } from "v2/Components/ArtworkFilter/Utils/allowedFilters"
 
 const FairApp = loadable(
-  () => import(/* webpackChunkName: "fairBundle" */ "./FairApp"),
+  () =>
+    import(
+      /* webpackChunkName: "fairBundle", webpackPrefetch: true */ "./FairApp"
+    ),
   {
     resolveComponent: component => component.FairAppFragmentContainer,
   }
 )
 const FairSubApp = loadable(
-  () => import(/* webpackChunkName: "fairBundle" */ "./FairSubApp"),
+  () =>
+    import(
+      /* webpackChunkName: "fairBundle", webpackPrefetch: true */ "./FairSubApp"
+    ),
   {
     resolveComponent: component => component.FairSubAppFragmentContainer,
   }
 )
 const FairExhibitorsRoute = loadable(
-  () => import(/* webpackChunkName: "fairBundle" */ "./Routes/FairExhibitors"),
+  () =>
+    import(
+      /* webpackChunkName: "fairBundle", webpackPrefetch: true */ "./Routes/FairExhibitors"
+    ),
   {
     resolveComponent: component => component.FairExhibitorsFragmentContainer,
   }
 )
 const FairArtworksRoute = loadable(
-  () => import(/* webpackChunkName: "fairBundle" */ "./Routes/FairArtworks"),
+  () =>
+    import(
+      /* webpackChunkName: "fairBundle", webpackPrefetch: true */ "./Routes/FairArtworks"
+    ),
   {
     resolveComponent: component => component.FairArtworksRefetchContainer,
   }
 )
 const FairInfoRoute = loadable(
-  () => import(/* webpackChunkName: "fairBundle" */ "./Routes/FairInfo"),
+  () =>
+    import(
+      /* webpackChunkName: "fairBundle", webpackPrefetch: true */ "./Routes/FairInfo"
+    ),
   {
     resolveComponent: component => component.FairInfoFragmentContainer,
   }
 )
 const FairArticlesRoute = loadable(
-  () => import(/* webpackChunkName: "fairBundle" */ "./Routes/FairArticles"),
+  () =>
+    import(
+      /* webpackChunkName: "fairBundle", webpackPrefetch: true */ "./Routes/FairArticles"
+    ),
   {
     resolveComponent: component => component.FairArticlesPaginationContainer,
   }

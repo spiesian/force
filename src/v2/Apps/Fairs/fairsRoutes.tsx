@@ -4,14 +4,20 @@ import { RedirectException } from "found"
 import { AppRouteConfig } from "v2/System/Router/Route"
 
 const FairsApp = loadable(
-  () => import(/* webpackChunkName: "fairBundle" */ "./FairsApp"),
+  () =>
+    import(
+      /* webpackChunkName: "fairBundle", webpackPrefetch: true */ "./FairsApp"
+    ),
   {
     resolveComponent: component => component.FairsApp,
   }
 )
 
 const FairsIndexRoute = loadable(
-  () => import(/* webpackChunkName: "fairBundle" */ "./Routes/FairsIndex"),
+  () =>
+    import(
+      /* webpackChunkName: "fairBundle", webpackPrefetch: true */ "./Routes/FairsIndex"
+    ),
   {
     resolveComponent: component => component.FairsIndexFragmentContainer,
   }

@@ -11,7 +11,7 @@ export const conversationRoutes: AppRouteConfig[] = [
       loadable(
         () =>
           import(
-            /* webpackChunkName: "conversationBundle" */ "./ConversationApp"
+            /* webpackChunkName: "conversationBundle", webpackPrefetch: true */ "./ConversationApp"
           ),
         {
           resolveComponent: component =>
@@ -41,7 +41,7 @@ export const conversationRoutes: AppRouteConfig[] = [
     Component: loadable(
       () =>
         import(
-          /* webpackChunkName: "conversationBundle" */ "./Routes/Conversation"
+          /* webpackChunkName: "conversationBundle", webpackPrefetch: true */ "./Routes/Conversation"
         ),
       {
         resolveComponent: component =>

@@ -5,7 +5,7 @@ import { AppRouteConfig } from "v2/System/Router/Route"
 const PaymentApp = loadable(
   () =>
     import(
-      /* webpackChunkName: "paymentBundle" */ "./Routes/Payment/PaymentApp"
+      /* webpackChunkName: "paymentBundle", webpackPrefetch: true */ "./Routes/Payment/PaymentApp"
     ),
   {
     resolveComponent: component => component.PaymentAppFragmentContainer,

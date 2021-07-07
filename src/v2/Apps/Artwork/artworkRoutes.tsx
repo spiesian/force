@@ -3,7 +3,10 @@ import { graphql } from "react-relay"
 import { AppRouteConfig } from "v2/System/Router/Route"
 
 const ArtworkApp = loadable(
-  () => import(/* webpackChunkName: "artworkBundle" */ "./ArtworkApp"),
+  () =>
+    import(
+      /* webpackChunkName: "artworkBundle", webpackPrefetch: true */ "./ArtworkApp"
+    ),
   {
     resolveComponent: component => component.ArtworkAppFragmentContainer,
   }

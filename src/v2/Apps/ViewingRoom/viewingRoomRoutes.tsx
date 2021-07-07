@@ -5,7 +5,7 @@ import { AppRouteConfig } from "v2/System/Router/Route"
 const StatementRoute = loadable(
   () =>
     import(
-      /* webpackChunkName: "viewingRoomBundle" */ "./Routes/Statement/ViewingRoomStatementRoute"
+      /* webpackChunkName: "viewingRoomBundle", webpackPrefetch: true */ "./Routes/Statement/ViewingRoomStatementRoute"
     ),
   {
     resolveComponent: component =>
@@ -15,7 +15,7 @@ const StatementRoute = loadable(
 const WorksRoute = loadable(
   () =>
     import(
-      /* webpackChunkName: "viewingRoomBundle" */ "./Routes/Works/ViewingRoomWorksRoute"
+      /* webpackChunkName: "viewingRoomBundle", webpackPrefetch: true */ "./Routes/Works/ViewingRoomWorksRoute"
     ),
   {
     resolveComponent: component =>
@@ -23,13 +23,19 @@ const WorksRoute = loadable(
   }
 )
 const ViewingRoomApp = loadable(
-  () => import(/* webpackChunkName: "viewingRoomBundle" */ "./ViewingRoomApp"),
+  () =>
+    import(
+      /* webpackChunkName: "viewingRoomBundle", webpackPrefetch: true */ "./ViewingRoomApp"
+    ),
   {
     resolveComponent: component => component.ViewingRoomAppFragmentContainer,
   }
 )
 const ViewingRoomsApp = loadable(
-  () => import(/* webpackChunkName: "viewingRoomBundle" */ "./ViewingRoomsApp"),
+  () =>
+    import(
+      /* webpackChunkName: "viewingRoomBundle", webpackPrefetch: true */ "./ViewingRoomsApp"
+    ),
   {
     resolveComponent: component => component.ViewingRoomsAppFragmentContainer,
   }

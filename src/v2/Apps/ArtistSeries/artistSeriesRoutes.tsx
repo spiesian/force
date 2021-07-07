@@ -5,7 +5,10 @@ import { paramsToCamelCase } from "v2/Components/ArtworkFilter/Utils/urlBuilder"
 import { allowedFilters } from "v2/Components/ArtworkFilter/Utils/allowedFilters"
 
 const ArtistSeriesApp = loadable(
-  () => import(/* webpackChunkName: "artistBundle" */ "./ArtistSeriesApp"),
+  () =>
+    import(
+      /* webpackChunkName: "artistBundle", webpackPrefetch: true */ "./ArtistSeriesApp"
+    ),
   {
     resolveComponent: component => component.ArtistSeriesAppFragmentContainer,
   }

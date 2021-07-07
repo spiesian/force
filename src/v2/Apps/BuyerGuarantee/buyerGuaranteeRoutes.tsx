@@ -2,7 +2,10 @@ import loadable from "@loadable/component"
 import { AppRouteConfig } from "v2/System/Router/Route"
 
 const BuyerGuaranteeApp = loadable(
-  () => import(/* webpackChunkName: "buyerBundle" */ "./BuyerGuaranteeApp"),
+  () =>
+    import(
+      /* webpackChunkName: "buyerBundle", webpackPrefetch: true */ "./BuyerGuaranteeApp"
+    ),
   {
     resolveComponent: component => component.BuyerGuaranteeApp,
   }
@@ -11,7 +14,7 @@ const BuyerGuaranteeApp = loadable(
 const BuyerGuaranteeIndexRoute = loadable(
   () =>
     import(
-      /* webpackChunkName: "buyerBundle" */ "./Routes/BuyerGuaranteeIndex"
+      /* webpackChunkName: "buyerBundle", webpackPrefetch: true */ "./Routes/BuyerGuaranteeIndex"
     ),
   {
     resolveComponent: component => component.BuyerGuaranteeIndex,

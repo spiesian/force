@@ -4,7 +4,10 @@ import { graphql } from "react-relay"
 import { WelcomeRoute } from "./Routes/Welcome/WelcomeRoute"
 
 const ExampleApp = loadable(
-  () => import(/* webpackChunkName: "exampleBundle" */ "./ExampleApp"),
+  () =>
+    import(
+      /* webpackChunkName: "exampleBundle", webpackPrefetch: true */ "./ExampleApp"
+    ),
   {
     resolveComponent: component => component.ExampleAppFragmentContainer,
   }
@@ -12,7 +15,7 @@ const ExampleApp = loadable(
 const ArtistRoute = loadable(
   () =>
     import(
-      /* webpackChunkName: "exampleBundle" */ "./Routes/Artist/ExampleArtistRoute"
+      /* webpackChunkName: "exampleBundle", webpackPrefetch: true */ "./Routes/Artist/ExampleArtistRoute"
     ),
   {
     resolveComponent: component =>
@@ -22,7 +25,7 @@ const ArtistRoute = loadable(
 const ArtworkRoute = loadable(
   () =>
     import(
-      /* webpackChunkName: "exampleBundle" */ "./Routes/Artwork/ExampleArtworkRoute"
+      /* webpackChunkName: "exampleBundle", webpackPrefetch: true */ "./Routes/Artwork/ExampleArtworkRoute"
     ),
   {
     resolveComponent: component =>
@@ -32,7 +35,7 @@ const ArtworkRoute = loadable(
 const ArtworkFilterRoute = loadable(
   () =>
     import(
-      /* webpackChunkName: "exampleBundle" */ "./Routes/ArtworkFilter/ExampleArtworkFilterRoute"
+      /* webpackChunkName: "exampleBundle", webpackPrefetch: true */ "./Routes/ArtworkFilter/ExampleArtworkFilterRoute"
     ),
   {
     resolveComponent: component =>

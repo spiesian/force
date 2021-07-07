@@ -6,7 +6,10 @@ import { allowedFilters } from "v2/Components/ArtworkFilter/Utils/allowedFilters
 import { paramsToCamelCase } from "v2/Components/ArtworkFilter/Utils/urlBuilder"
 
 const TagApp = loadable(
-  () => import(/* webpackChunkName: "tagBundle" */ "./TagApp"),
+  () =>
+    import(
+      /* webpackChunkName: "tagBundle", webpackPrefetch: true */ "./TagApp"
+    ),
   {
     resolveComponent: component => component.TagAppFragmentContainer,
   }

@@ -3,7 +3,10 @@ import { graphql } from "relay-runtime"
 import { AppRouteConfig } from "v2/System/Router/Route"
 
 const UnsubscribeApp = loadable(
-  () => import(/* webpackChunkName: "unsubscribeBundle" */ "./UnsubscribeApp"),
+  () =>
+    import(
+      /* webpackChunkName: "unsubscribeBundle", webpackPrefetch: true */ "./UnsubscribeApp"
+    ),
   { resolveComponent: component => component.UnsubscribeAppFragmentContainer }
 )
 

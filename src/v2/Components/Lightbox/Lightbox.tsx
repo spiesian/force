@@ -154,43 +154,43 @@ class LightboxComponent extends React.Component<LightboxProps, LightboxState> {
   }
 
   initSeaDragon = () => {
-    import(/* webpackChunkName: "openseadragon" */ "openseadragon").then(
-      OpenSeaDragon => {
-        const viewer = OpenSeaDragon.default({
-          element: this.state.deepZoomRef.current,
+    import(
+      /* webpackChunkName: "openseadragon", webpackPrefetch: true */ "openseadragon"
+    ).then(OpenSeaDragon => {
+      const viewer = OpenSeaDragon.default({
+        element: this.state.deepZoomRef.current,
 
-          debugMode: false,
-          showNavigationControl: false,
-          immediateRender: false,
-          useCanvas: true,
-          constrainDuringPan: false,
-          blendTime: 0.0,
-          animationTime: 1.5,
-          springStiffness: 15.0,
-          maxZoomPixelRatio: 1.0,
-          minZoomImageRatio: 0.9,
-          zoomPerClick: ZOOM_PER_CLICK,
-          zoomPerScroll: 1.4,
-          clickDistThreshold: 5,
-          clickTimeThreshold: 300,
-          visibilityRatio: 1,
-          tileSources: this.props.deepZoom,
+        debugMode: false,
+        showNavigationControl: false,
+        immediateRender: false,
+        useCanvas: true,
+        constrainDuringPan: false,
+        blendTime: 0.0,
+        animationTime: 1.5,
+        springStiffness: 15.0,
+        maxZoomPixelRatio: 1.0,
+        minZoomImageRatio: 0.9,
+        zoomPerClick: ZOOM_PER_CLICK,
+        zoomPerScroll: 1.4,
+        clickDistThreshold: 5,
+        clickTimeThreshold: 300,
+        visibilityRatio: 1,
+        tileSources: this.props.deepZoom,
 
-          gestureSettingsTouch: {
-            scrolltozoom: false,
-            clicktozoom: true,
-            pinchtozoom: true,
-            flickenabled: true,
-            flickminspeed: 20,
-            flickmomentum: 0.4,
-          },
-        })
-        document.addEventListener(KEYBOARD_EVENT, this.handleKeyPress)
-        this.setState({
-          viewer,
-        })
-      }
-    )
+        gestureSettingsTouch: {
+          scrolltozoom: false,
+          clicktozoom: true,
+          pinchtozoom: true,
+          flickenabled: true,
+          flickminspeed: 20,
+          flickmomentum: 0.4,
+        },
+      })
+      document.addEventListener(KEYBOARD_EVENT, this.handleKeyPress)
+      this.setState({
+        viewer,
+      })
+    })
   }
 
   onSliderChanged = event => {

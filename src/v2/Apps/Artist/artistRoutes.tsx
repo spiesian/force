@@ -7,7 +7,10 @@ import { renderOrRedirect } from "./Routes/Overview/Utils/renderOrRedirect"
 import { getWorksForSaleRouteVariables } from "./Routes/WorksForSale/Utils/getWorksForSaleRouteVariables"
 
 const ArtistApp = loadable(
-  () => import(/* webpackChunkName: "artistBundle" */ "./ArtistApp"),
+  () =>
+    import(
+      /* webpackChunkName: "artistBundle", webpackPrefetch: true */ "./ArtistApp"
+    ),
   {
     resolveComponent: component => component.ArtistAppFragmentContainer,
   }
@@ -15,7 +18,7 @@ const ArtistApp = loadable(
 const OverviewRoute = loadable(
   () =>
     import(
-      /* webpackChunkName: "artistBundle" */ "./Routes/Overview/ArtistOverviewRoute"
+      /* webpackChunkName: "artistBundle", webpackPrefetch: true */ "./Routes/Overview/ArtistOverviewRoute"
     ),
   {
     resolveComponent: component =>
@@ -25,7 +28,7 @@ const OverviewRoute = loadable(
 const WorksForSaleRoute = loadable(
   () =>
     import(
-      /* webpackChunkName: "artistBundle" */ "./Routes/WorksForSale/ArtistWorksForSaleRoute"
+      /* webpackChunkName: "artistBundle", webpackPrefetch: true */ "./Routes/WorksForSale/ArtistWorksForSaleRoute"
     ),
   {
     resolveComponent: component =>
@@ -34,7 +37,9 @@ const WorksForSaleRoute = loadable(
 )
 const CVRoute = loadable(
   () =>
-    import(/* webpackChunkName: "artistBundle" */ "./Routes/CV/ArtistCVRoute"),
+    import(
+      /* webpackChunkName: "artistBundle", webpackPrefetch: true */ "./Routes/CV/ArtistCVRoute"
+    ),
   {
     resolveComponent: component => component.ArtistCVRouteFragmentContainer,
   }
@@ -42,7 +47,7 @@ const CVRoute = loadable(
 const ArticlesRoute = loadable(
   () =>
     import(
-      /* webpackChunkName: "artistBundle" */ "./Routes/Articles/ArtistArticlesRoute"
+      /* webpackChunkName: "artistBundle", webpackPrefetch: true */ "./Routes/Articles/ArtistArticlesRoute"
     ),
   {
     resolveComponent: component =>
@@ -52,7 +57,7 @@ const ArticlesRoute = loadable(
 const ShowsRoute = loadable(
   () =>
     import(
-      /* webpackChunkName: "artistBundle" */ "./Routes/Shows/ArtistShowsRoute"
+      /* webpackChunkName: "artistBundle", webpackPrefetch: true */ "./Routes/Shows/ArtistShowsRoute"
     ),
   {
     resolveComponent: component => component.ArtistShowsRouteFragmentContainer,
@@ -61,7 +66,7 @@ const ShowsRoute = loadable(
 const AuctionResultsRoute = loadable(
   () =>
     import(
-      /* webpackChunkName: "artistBundle" */ "./Routes/AuctionResults/ArtistAuctionResultsRoute"
+      /* webpackChunkName: "artistBundle", webpackPrefetch: true */ "./Routes/AuctionResults/ArtistAuctionResultsRoute"
     ),
   {
     resolveComponent: component =>
@@ -71,7 +76,7 @@ const AuctionResultsRoute = loadable(
 const ConsignRoute = loadable(
   () =>
     import(
-      /* webpackChunkName: "artistBundle" */ "./Routes/Consign/ArtistConsignRoute"
+      /* webpackChunkName: "artistBundle", webpackPrefetch: true */ "./Routes/Consign/ArtistConsignRoute"
     ),
   {
     resolveComponent: component =>

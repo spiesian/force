@@ -5,7 +5,7 @@ import { graphql } from "react-relay"
 const IdentityVerificationApp = loadable(
   () =>
     import(
-      /* webpackChunkName: "identityVerificationBundle" */ "./IdentityVerificationApp"
+      /* webpackChunkName: "identityVerificationBundle", webpackPrefetch: true */ "./IdentityVerificationApp"
     ),
   {
     resolveComponent: component =>
@@ -14,13 +14,18 @@ const IdentityVerificationApp = loadable(
 )
 const Processing = loadable(
   () =>
-    import(/* webpackChunkName: "identityVerificationBundle" */ "./Processing"),
+    import(
+      /* webpackChunkName: "identityVerificationBundle", webpackPrefetch: true */ "./Processing"
+    ),
   {
     resolveComponent: component => component.Processing,
   }
 )
 const Error = loadable(
-  () => import(/* webpackChunkName: "identityVerificationBundle" */ "./Error"),
+  () =>
+    import(
+      /* webpackChunkName: "identityVerificationBundle", webpackPrefetch: true */ "./Error"
+    ),
   {
     resolveComponent: component => component.Error,
   }

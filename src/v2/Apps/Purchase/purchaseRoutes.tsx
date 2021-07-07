@@ -3,7 +3,10 @@ import { graphql } from "react-relay"
 import { AppRouteConfig } from "v2/System/Router/Route"
 
 const PurchasesApp = loadable(
-  () => import(/* webpackChunkName: "pruchaseBundle" */ "./PurchaseApp"),
+  () =>
+    import(
+      /* webpackChunkName: "pruchaseBundle", webpackPrefetch: true */ "./PurchaseApp"
+    ),
   {
     resolveComponent: component => component.PurchaseAppFragmentContainer,
   }

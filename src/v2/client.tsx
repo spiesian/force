@@ -12,15 +12,15 @@ import { getClientParam } from "./Utils/getClientParam"
 async function setupClient() {
   const clientImports = await Promise.all([
     import(
-      /* webpackChunkName: "clientAppMain" */
+      /* webpackChunkName: "clientAppMain", webpackPrefetch: true */
       "v2/System/Router/client"
     ),
     import(
-      /* webpackChunkName: "clientAppModals" */
+      /* webpackChunkName: "clientAppModals", webpackPrefetch: true */
       "desktop/apps/authentication/client/initModalManager"
     ),
     import(
-      /* webpackChunkName: "clientAppModals" */
+      /* webpackChunkName: "clientAppModals", webpackPrefetch: true */
       "desktop/components/artistSignupModal/artistSignupModal"
     ),
   ])

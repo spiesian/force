@@ -4,27 +4,37 @@ import { AppRouteConfig } from "v2/System/Router/Route"
 
 const CurrentAuctionsPaginationContainer = loadable(
   () =>
-    import(/* webpackChunkName: "auctionBundle" */ "./Routes/CurrentAuctions"),
+    import(
+      /* webpackChunkName: "auctionBundle", webpackPrefetch: true */ "./Routes/CurrentAuctions"
+    ),
   {
     resolveComponent: component => component.CurrentAuctionsPaginationContainer,
   }
 )
 const PastAuctionsPaginationContainer = loadable(
-  () => import(/* webpackChunkName: "auctionBundle" */ "./Routes/PastAuctions"),
+  () =>
+    import(
+      /* webpackChunkName: "auctionBundle", webpackPrefetch: true */ "./Routes/PastAuctions"
+    ),
   {
     resolveComponent: component => component.PastAuctionsPaginationContainer,
   }
 )
 const UpcomingAuctionsPaginationContainer = loadable(
   () =>
-    import(/* webpackChunkName: "auctionBundle" */ "./Routes/UpcomingAuctions"),
+    import(
+      /* webpackChunkName: "auctionBundle", webpackPrefetch: true */ "./Routes/UpcomingAuctions"
+    ),
   {
     resolveComponent: component =>
       component.UpcomingAuctionsPaginationContainer,
   }
 )
 const AuctionsApp = loadable(
-  () => import(/* webpackChunkName: "auctionBundle" */ "./AuctionsApp"),
+  () =>
+    import(
+      /* webpackChunkName: "auctionBundle", webpackPrefetch: true */ "./AuctionsApp"
+    ),
   {
     resolveComponent: component => component.AuctionsAppFragmentContainer,
   }
@@ -32,7 +42,7 @@ const AuctionsApp = loadable(
 const AuctionsRoute = loadable(
   () =>
     import(
-      /* webpackChunkName: "auctionBundle" */ "./Routes/Auctions/AuctionsRoute"
+      /* webpackChunkName: "auctionBundle", webpackPrefetch: true */ "./Routes/Auctions/AuctionsRoute"
     ),
   {
     resolveComponent: component => component.AuctionsRouteFragmentContainer,
@@ -41,7 +51,7 @@ const AuctionsRoute = loadable(
 const ArtworksRoute = loadable(
   () =>
     import(
-      /* webpackChunkName: "auctionBundle" */ "./Routes/Artworks/ArtworksRoute"
+      /* webpackChunkName: "auctionBundle", webpackPrefetch: true */ "./Routes/Artworks/ArtworksRoute"
     ),
   {
     resolveComponent: component => component.ArtworksRouteFragmentContainer,

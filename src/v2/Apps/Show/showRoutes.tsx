@@ -6,19 +6,28 @@ import { allowedFilters } from "v2/Components/ArtworkFilter/Utils/allowedFilters
 import { AppRouteConfig } from "v2/System/Router/Route"
 
 const ShowApp = loadable(
-  () => import(/* webpackChunkName: "showBundle" */ "./ShowApp"),
+  () =>
+    import(
+      /* webpackChunkName: "showBundle", webpackPrefetch: true */ "./ShowApp"
+    ),
   {
     resolveComponent: component => component.ShowAppFragmentContainer,
   }
 )
 const ShowSubApp = loadable(
-  () => import(/* webpackChunkName: "showBundle" */ "./ShowSubApp"),
+  () =>
+    import(
+      /* webpackChunkName: "showBundle", webpackPrefetch: true */ "./ShowSubApp"
+    ),
   {
     resolveComponent: component => component.ShowSubAppFragmentContainer,
   }
 )
 const ShowInfoRoute = loadable(
-  () => import(/* webpackChunkName: "showBundle" */ "./Routes/ShowInfo"),
+  () =>
+    import(
+      /* webpackChunkName: "showBundle", webpackPrefetch: true */ "./Routes/ShowInfo"
+    ),
   {
     resolveComponent: component => component.ShowInfoFragmentContainer,
   }

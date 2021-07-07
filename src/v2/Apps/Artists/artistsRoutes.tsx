@@ -3,14 +3,20 @@ import { graphql } from "react-relay"
 import { AppRouteConfig } from "v2/System/Router/Route"
 
 const ArtistsApp = loadable(
-  () => import(/* webpackChunkName: "artistBundle" */ "./ArtistsApp"),
+  () =>
+    import(
+      /* webpackChunkName: "artistBundle", webpackPrefetch: true */ "./ArtistsApp"
+    ),
   {
     resolveComponent: component => component.ArtistsApp,
   }
 )
 
 const ArtistsIndexRoute = loadable(
-  () => import(/* webpackChunkName: "artistBundle" */ "./Routes/ArtistsIndex"),
+  () =>
+    import(
+      /* webpackChunkName: "artistBundle", webpackPrefetch: true */ "./Routes/ArtistsIndex"
+    ),
   {
     resolveComponent: component => component.ArtistsIndexFragmentContainer,
   }
@@ -18,7 +24,9 @@ const ArtistsIndexRoute = loadable(
 
 const ArtistsByLetterRoute = loadable(
   () =>
-    import(/* webpackChunkName: "artistBundle" */ "./Routes/ArtistsByLetter"),
+    import(
+      /* webpackChunkName: "artistBundle", webpackPrefetch: true */ "./Routes/ArtistsByLetter"
+    ),
   {
     resolveComponent: component => component.ArtistsByLetterFragmentContainer,
   }

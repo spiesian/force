@@ -8,49 +8,70 @@ import { allowedFilters } from "v2/Components/ArtworkFilter/Utils/allowedFilters
 import { AppRouteConfig } from "v2/System/Router/Route"
 
 const PartnerApp = loadable(
-  () => import(/* webpackChunkName: "partnerBundle" */ "./PartnerApp"),
+  () =>
+    import(
+      /* webpackChunkName: "partnerBundle", webpackPrefetch: true */ "./PartnerApp"
+    ),
   {
     resolveComponent: component => component.PartnerAppFragmentContainer,
   }
 )
 
 const ArticlesRoute = loadable(
-  () => import(/* webpackChunkName: "partnerBundle" */ "./Routes/Articles"),
+  () =>
+    import(
+      /* webpackChunkName: "partnerBundle", webpackPrefetch: true */ "./Routes/Articles"
+    ),
   {
     resolveComponent: component => component.ArticlesPaginationContainer,
   }
 )
 
 const OverviewRoute = loadable(
-  () => import(/* webpackChunkName: "partnerBundle" */ "./Routes/Overview"),
+  () =>
+    import(
+      /* webpackChunkName: "partnerBundle", webpackPrefetch: true */ "./Routes/Overview"
+    ),
   {
     resolveComponent: component => component.OverviewFragmentContainer,
   }
 )
 
 const ShowsRoute = loadable(
-  () => import(/* webpackChunkName: "partnerBundle" */ "./Routes/Shows"),
+  () =>
+    import(
+      /* webpackChunkName: "partnerBundle", webpackPrefetch: true */ "./Routes/Shows"
+    ),
   {
     resolveComponent: component => component.ShowsFragmentContainer,
   }
 )
 
 const WorksRoute = loadable(
-  () => import(/* webpackChunkName: "partnerBundle" */ "./Routes/Works"),
+  () =>
+    import(
+      /* webpackChunkName: "partnerBundle", webpackPrefetch: true */ "./Routes/Works"
+    ),
   {
     resolveComponent: component => component.ArtworksRefetchContainer,
   }
 )
 
 const ArtistsRoute = loadable(
-  () => import(/* webpackChunkName: "partnerBundle" */ "./Routes/Artists"),
+  () =>
+    import(
+      /* webpackChunkName: "partnerBundle", webpackPrefetch: true */ "./Routes/Artists"
+    ),
   {
     resolveComponent: component => component.ArtistsRouteFragmentContainer,
   }
 )
 
 const ContactRoute = loadable(
-  () => import(/* webpackChunkName: "partnerBundle" */ "./Routes/Contact"),
+  () =>
+    import(
+      /* webpackChunkName: "partnerBundle", webpackPrefetch: true */ "./Routes/Contact"
+    ),
   {
     resolveComponent: component => component.ContactRouteFragmentContainer,
   }

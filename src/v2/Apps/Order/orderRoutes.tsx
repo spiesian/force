@@ -8,77 +8,110 @@ import { graphql } from "react-relay"
 import { AppRouteConfig } from "v2/System/Router/Route"
 
 const RespondRoute = loadable(
-  () => import(/* webpackChunkName: "orderBundle" */ "./Routes/Respond"),
+  () =>
+    import(
+      /* webpackChunkName: "orderBundle", webpackPrefetch: true */ "./Routes/Respond"
+    ),
   {
     resolveComponent: component => component.RespondFragmentContainer,
   }
 )
 
 const OfferRoute = loadable(
-  () => import(/* webpackChunkName: "orderBundle" */ "./Routes/Offer"),
+  () =>
+    import(
+      /* webpackChunkName: "orderBundle", webpackPrefetch: true */ "./Routes/Offer"
+    ),
   {
     resolveComponent: component => component.OfferFragmentContainer,
   }
 )
 
 const ShippingRoute = loadable(
-  () => import(/* webpackChunkName: "orderBundle" */ "./Routes/Shipping"),
+  () =>
+    import(
+      /* webpackChunkName: "orderBundle", webpackPrefetch: true */ "./Routes/Shipping"
+    ),
   {
     resolveComponent: component => component.ShippingFragmentContainer,
   }
 )
 
 const PaymentRoute = loadable(
-  () => import(/* webpackChunkName: "orderBundle" */ "./Routes/Payment"),
+  () =>
+    import(
+      /* webpackChunkName: "orderBundle", webpackPrefetch: true */ "./Routes/Payment"
+    ),
   {
     resolveComponent: component => component.PaymentFragmentContainer,
   }
 )
 
 const NewPaymentRoute = loadable(
-  () => import(/* webpackChunkName: "orderBundle" */ "./Routes/NewPayment"),
+  () =>
+    import(
+      /* webpackChunkName: "orderBundle", webpackPrefetch: true */ "./Routes/NewPayment"
+    ),
   {
     resolveComponent: component => component.NewPaymentFragmentContainer,
   }
 )
 
 const CounterRoute = loadable(
-  () => import(/* webpackChunkName: "orderBundle" */ "./Routes/Counter"),
+  () =>
+    import(
+      /* webpackChunkName: "orderBundle", webpackPrefetch: true */ "./Routes/Counter"
+    ),
   {
     resolveComponent: component => component.CounterFragmentContainer,
   }
 )
 
 const ReviewRoute = loadable(
-  () => import(/* webpackChunkName: "orderBundle" */ "./Routes/Review"),
+  () =>
+    import(
+      /* webpackChunkName: "orderBundle", webpackPrefetch: true */ "./Routes/Review"
+    ),
   {
     resolveComponent: component => component.ReviewFragmentContainer,
   }
 )
 
 const AcceptRoute = loadable(
-  () => import(/* webpackChunkName: "orderBundle" */ "./Routes/Accept"),
+  () =>
+    import(
+      /* webpackChunkName: "orderBundle", webpackPrefetch: true */ "./Routes/Accept"
+    ),
   {
     resolveComponent: component => component.AcceptFragmentContainer,
   }
 )
 
 const DeclineRoute = loadable(
-  () => import(/* webpackChunkName: "orderBundle" */ "./Routes/Reject"),
+  () =>
+    import(
+      /* webpackChunkName: "orderBundle", webpackPrefetch: true */ "./Routes/Reject"
+    ),
   {
     resolveComponent: component => component.RejectFragmentContainer,
   }
 )
 
 const StatusRoute = loadable(
-  () => import(/* webpackChunkName: "orderBundle" */ "./Routes/Status"),
+  () =>
+    import(
+      /* webpackChunkName: "orderBundle", webpackPrefetch: true */ "./Routes/Status"
+    ),
   {
     resolveComponent: component => component.StatusFragmentContainer,
   }
 )
 
 const OrderApp = loadable(
-  () => import(/* webpackChunkName: "orderBundle" */ "./OrderApp"),
+  () =>
+    import(
+      /* webpackChunkName: "orderBundle", webpackPrefetch: true */ "./OrderApp"
+    ),
   {
     resolveComponent: component => component.OrderApp,
   }

@@ -3,7 +3,10 @@ import { graphql } from "react-relay"
 import { AppRouteConfig } from "v2/System/Router/Route"
 
 const FeatureApp = loadable(
-  () => import(/* webpackChunkName: "featureBundle" */ "./FeatureApp"),
+  () =>
+    import(
+      /* webpackChunkName: "featureBundle", webpackPrefetch: true */ "./FeatureApp"
+    ),
   {
     resolveComponent: component => component.FeatureAppFragmentContainer,
   }

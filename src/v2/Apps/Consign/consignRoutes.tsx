@@ -5,7 +5,7 @@ import { AppRouteConfig } from "v2/System/Router/Route"
 const MarketingLandingApp = loadable(
   () =>
     import(
-      /* webpackChunkName: "consignBundle" */ "./Routes/MarketingLanding/MarketingLandingApp"
+      /* webpackChunkName: "consignBundle", webpackPrefetch: true */ "./Routes/MarketingLanding/MarketingLandingApp"
     ),
   {
     resolveComponent: component => component.MarketingLandingApp,
@@ -14,7 +14,7 @@ const MarketingLandingApp = loadable(
 const OfferDetailApp = loadable(
   () =>
     import(
-      /* webpackChunkName: "consignBundle" */ "./Routes/Offer/OfferDetailApp"
+      /* webpackChunkName: "consignBundle", webpackPrefetch: true */ "./Routes/Offer/OfferDetailApp"
     ),
   {
     resolveComponent: component => component.OfferDetailAppFragmentContainer,

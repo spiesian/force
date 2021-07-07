@@ -3,7 +3,10 @@ import { graphql } from "relay-runtime"
 import { AppRouteConfig } from "v2/System/Router/Route"
 
 const HomeApp = loadable(
-  () => import(/* webpackChunkName: "homeBundle" */ "./HomeApp"),
+  () =>
+    import(
+      /* webpackChunkName: "homeBundle", webpackPrefetch: true */ "./HomeApp"
+    ),
   { resolveComponent: component => component.HomeAppFragmentContainer }
 )
 

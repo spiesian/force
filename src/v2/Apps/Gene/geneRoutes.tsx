@@ -7,14 +7,20 @@ import { initialArtworkFilterState } from "v2/Components/ArtworkFilter/ArtworkFi
 import { AppRouteConfig } from "v2/System/Router/Route"
 
 const GeneApp = loadable(
-  () => import(/* webpackChunkName: "geneBundle" */ "./GeneApp"),
+  () =>
+    import(
+      /* webpackChunkName: "geneBundle", webpackPrefetch: true */ "./GeneApp"
+    ),
   {
     resolveComponent: component => component.GeneApp,
   }
 )
 
 const GeneShowRoute = loadable(
-  () => import(/* webpackChunkName: "geneBundle" */ "./Routes/GeneShow"),
+  () =>
+    import(
+      /* webpackChunkName: "geneBundle", webpackPrefetch: true */ "./Routes/GeneShow"
+    ),
   {
     resolveComponent: component => component.GeneShowFragmentContainer,
   }
