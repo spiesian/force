@@ -222,7 +222,7 @@ export class AddressForm extends React.Component<
                 // @ts-expect-error STRICT_NULL_CHECK
                 description={this.phoneNumberInputDescription()}
                 placeholder="Add phone"
-                pattern="[^a-z]+"
+                pattern="^[^a-z]{7,25}$"
                 // @ts-expect-error STRICT_NULL_CHECK
                 value={this.props.value.phoneNumber}
                 onChange={this.changeEventHandler("phoneNumber")}
