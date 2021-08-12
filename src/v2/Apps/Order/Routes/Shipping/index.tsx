@@ -739,10 +739,11 @@ export class ShippingRoute extends Component<ShippingProps, ShippingState> {
 
               <Media greaterThan="xs">
                 <Button
+                  variant="primaryBlack"
                   onClick={this.onContinueButtonPressed}
                   loading={isCommittingMutation}
                   disabled={isContinueButtonDisabled}
-                  size="large"
+                  size="medium"
                   width="100%"
                 >
                   Continue
