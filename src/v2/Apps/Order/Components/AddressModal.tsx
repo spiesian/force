@@ -10,6 +10,8 @@ import {
   ModalWidth,
   Spacer,
   Text,
+  Select,
+  Box,
 } from "@artsy/palette"
 import {
   SavedAddressType,
@@ -29,7 +31,9 @@ import { useSystemContext } from "v2/System/SystemContext"
 import { updateUserDefaultAddress } from "../Mutations/UpdateUserDefaultAddress"
 import { UpdateUserAddressMutationResponse } from "v2/__generated__/UpdateUserAddressMutation.graphql"
 import { CreateUserAddressMutationResponse } from "v2/__generated__/CreateUserAddressMutation.graphql"
-
+import { PhoneNumberUtil } from "google-libphonenumber"
+import styled from "styled-components"
+import { countries } from "v2/Utils/countries"
 export interface ModalDetails {
   addressModalTitle: string
   addressModalAction: AddressModalAction
@@ -71,6 +75,7 @@ export const AddressModal: React.FC<Props> = ({
   modalDetails,
   me,
 }) => {
+  const phoneUtil = PhoneNumberUtil.getInstance()
   const title = modalDetails?.addressModalTitle
   const createMutation =
     modalDetails?.addressModalAction === "createUserAddress"
@@ -177,17 +182,42 @@ export const AddressModal: React.FC<Props> = ({
               </Text>
               <AddressModalFields />
               <Spacer mb={2} />
-              <Input
-                title="Phone number"
-                description="Required for shipping logistics"
-                placeholder="Add phone number"
-                name="phoneNumber"
-                type="tel"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                error={formik.touched.phoneNumber && formik.errors.phoneNumber}
-                value={formik.values?.phoneNumber || ""}
-              />
+              <Flex>
+                <Box style={{ maxWidth: "25%" }}>
+                  <Select
+                    title="Phone number"
+                    description="Only used for shipping purposes"
+                    options={countries}
+                    style={{
+                      letterSpacing: "1px",
+                      borderRight: "none",
+                    }}
+                  />
+                </Box>
+                <Flex
+                  flexDirection="column"
+                  style={{
+                    width: "100%",
+                  }}
+                >
+                  <Box height="100%"></Box>
+                  <Input
+                    title=""
+                    description=""
+                    placeholder="Add phone number"
+                    name="phoneNumber"
+                    type="tel"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    error={
+                      formik.touched.phoneNumber && formik.errors.phoneNumber
+                    }
+                    value={formik.values?.phoneNumber || ""}
+                    style={{ borderLeft: "none" }}
+                  />
+                </Flex>
+              </Flex>
+
               <Spacer mb={2} />
               {(!address?.isDefault || createMutation) && (
                 <Checkbox
@@ -252,3 +282,10 @@ export const AddressModal: React.FC<Props> = ({
     </>
   )
 }
+
+export const StyledSelect = styled(Select)`
+  > label {
+    min-width: 400px;
+    border: solid 1px hotpink;
+  }
+`
