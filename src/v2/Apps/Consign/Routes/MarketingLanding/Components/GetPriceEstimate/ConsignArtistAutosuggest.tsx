@@ -1,11 +1,5 @@
-import Autosuggest from "react-autosuggest"
 import React, { useEffect } from "react"
-import {
-  MagnifyingGlassIcon,
-  Text,
-  DROP_SHADOW,
-  LabeledInput,
-} from "@artsy/palette"
+import { AutocompleteInput } from "@artsy/palette"
 import { usePriceEstimateContext } from "./ConsignPriceEstimateContext"
 import { useTracking } from "react-tracking"
 import { Suggestion as ConsignSearchSuggestion } from "v2/Apps/Consign/Routes/MarketingLanding/Components/GetPriceEstimate/ConsignPriceEstimateContext"
@@ -39,17 +33,16 @@ export const ConsignArtistAutosuggest: React.FC = () => {
   }
 
   const trackSelectedItemFromSearch = (
-    suggestion: ConsignSearchSuggestion["node"]
+    suggestion: NonNullable<ConsignSearchSuggestion>["node"]
   ) => {
     tracking.trackEvent(
       selectedItemFromSearch({
         context_module: ContextModule.priceEstimate,
         context_owner_type: OwnerType.consign,
-        owner_id: suggestion.internalID,
-        owner_slug: suggestion.slug,
+        owner_id: suggestion?.internalID!,
+        owner_slug: suggestion?.slug!,
         owner_type: OwnerType.artist,
-        // @ts-expect-error STRICT_NULL_CHECK
-        query: searchQuery,
+        query: searchQuery!,
       })
     )
   }
@@ -59,8 +52,7 @@ export const ConsignArtistAutosuggest: React.FC = () => {
       searchedWithNoResults({
         context_module: ContextModule.priceEstimate,
         context_owner_type: OwnerType.consign,
-        // @ts-expect-error STRICT_NULL_CHECK
-        query: searchQuery,
+        query: searchQuery!,
       })
     )
   }
@@ -78,72 +70,33 @@ export const ConsignArtistAutosuggest: React.FC = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [suggestions])
 
+  const options = (suggestions ?? []).map(suggestion => ({
+    text: suggestion?.node?.displayLabel!,
+    value: suggestion?.node?.slug!,
+  }))
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const query = event.target.value
+    setSearchQuery?.(query)
+    fetchSuggestions?.(query)
+  }
+
   return (
-    <Autosuggest
-      suggestions={suggestions ?? []}
-      onSuggestionsClearRequested={x => x}
-      // @ts-expect-error STRICT_NULL_CHECK
-      onSuggestionsFetchRequested={() => fetchSuggestions(searchQuery)}
-      onSuggestionSelected={(_, { suggestion }) => {
-        trackSelectedItemFromSearch(suggestion)
-        // @ts-expect-error STRICT_NULL_CHECK
-        selectSuggestion(suggestion)
-      }}
-      getSuggestionValue={suggestion => suggestion.node.displayLabel}
-      renderInputComponent={AutosuggestInput}
-      renderSuggestion={Suggestion}
-      inputProps={{
-        onChange: (_, { newValue }) => {
-          // @ts-expect-error STRICT_NULL_CHECK
-          setSearchQuery(newValue)
-        },
-        onFocus: trackFocusedOnSearchInput,
-        placeholder: "Search by artist name",
-        value: searchQuery,
-      }}
-      theme={{
-        container: {
-          width: "100%",
-        },
-        suggestionsContainer: {
-          boxShadow: DROP_SHADOW,
-          marginTop: "4px",
-        },
+    <AutocompleteInput
+      options={options}
+      placeholder="Search by artist name"
+      onChange={handleChange}
+      onFocus={trackFocusedOnSearchInput}
+      onSelect={option => {
+        const suggestion = suggestions?.find(
+          suggestion => suggestion?.node?.slug === option.value
+        )
+
+        if (suggestion) {
+          trackSelectedItemFromSearch(suggestion as any)
+          selectSuggestion?.(suggestion)
+        }
       }}
     />
   )
-}
-
-const AutosuggestInput: React.FC = props => {
-  return (
-    <LabeledInput
-      spellCheck={false}
-      label={<MagnifyingGlassIcon />}
-      {...props}
-    />
-  )
-}
-
-const Suggestion: React.FC<{ node: any /* FIXME */ }> = (
-  { node },
-  { isHighlighted }
-) => {
-  return (
-    <Text
-      width="100%"
-      bg={isHighlighted ? "black5" : "white100"}
-      p={0.5}
-      variant="md"
-      style={{
-        cursor: "pointer",
-      }}
-    >
-      {node.displayLabel}
-    </Text>
-  )
-}
-
-export const tests = {
-  AutosuggestInput,
-  Suggestion,
 }

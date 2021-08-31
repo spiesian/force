@@ -82,7 +82,26 @@
   resolved "https://registry.yarnpkg.com/@artsy/palette-tokens/-/palette-tokens-2.6.0.tgz#3d780ff65994fef0daadef29d43d11f89470b728"
   integrity sha512-UQP6P+xv/5hm82ep0z5X3kCFFnk03H6y8kdW/wTU+xPq45ESUay7aNFYXeub47tmW2v6dXJ8Oa01Z0iwc6BVpA==
 
-"@artsy/palette@17.1.0", "@artsy/palette@^17.1.0":
+"@artsy/palette@17.1.1-canary.1027.20364.0":
+  version "17.1.1-canary.1027.20364.0"
+  resolved "https://registry.yarnpkg.com/@artsy/palette/-/palette-17.1.1-canary.1027.20364.0.tgz#57f23331c310c8e8038e590c82a56211f8c015df"
+  integrity sha512-+wArWpOGsUkc9wZlYWR0t6PeF+Ng/qxvnAKx+SRiD+F5s1Z0QZO0fV5DZTO8joT1B21kTdhPNrC8q3X8ujaxdQ==
+  dependencies:
+    "@artsy/palette-tokens" "^2.6.0"
+    "@seznam/compose-react-refs" "^1.0.6"
+    "@styled-system/theme-get" "^5.1.2"
+    debounce "^1.2.0"
+    luxon "^1.15"
+    proportional-scale "^4.0.0"
+    react-lazy-load-image-component "1.5.0"
+    react-remove-scroll "^2.3.0"
+    styled-bootstrap-grid "3.1.0"
+    styled-system "^5.1.5"
+    trunc-html "^1.1.2"
+    use-cursor "^1.2.3"
+    use-keyboard-list-navigation "2.4.1"
+
+"@artsy/palette@^17.1.0":
   version "17.1.0"
   resolved "https://registry.yarnpkg.com/@artsy/palette/-/palette-17.1.0.tgz#e23f9a733c18a5079402b34693f6f63d98516eb8"
   integrity sha512-toPmC8Nur5VnKGo5KfBltcNr1RdzHsW17S7DVoMIjN0hjwF1YZngbFpbgFCojubH5BfudHTETbVMM6+xRmqzHQ==
@@ -20284,6 +20303,13 @@ use-isomorphic-layout-effect@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/use-isomorphic-layout-effect/-/use-isomorphic-layout-effect-1.1.1.tgz#7bb6589170cd2987a152042f9084f9effb75c225"
   integrity sha512-L7Evj8FGcwo/wpbv/qvSfrkHFtOpCzvM5yl2KVyDJoylVuSvzphiiasmjgQPttIGBAy2WKiBNR98q8w7PiNgKQ==
+
+use-keyboard-list-navigation@2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/use-keyboard-list-navigation/-/use-keyboard-list-navigation-2.4.1.tgz#e6d2ee6188da005deebf443356f1dfbb20d86030"
+  integrity sha512-ghycnT+Hp86CUS780pp+ZcPhffYMUQvcofMq3US7kzNZCZ5eAL+vs+vR6BaTBcbSPJklIcEKvwJUcajeny/YkQ==
+  dependencies:
+    map-cursor-to-max "^1.0.0"
 
 use-latest@^1.0.0:
   version "1.2.0"

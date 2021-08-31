@@ -32,7 +32,7 @@ export const ArtistInsightResult: React.FC = () => {
     return <Placeholder />
   }
 
-  if (!artistInsights.length) {
+  if (artistInsights?.length === 0) {
     return <ZeroState />
   }
 
@@ -42,14 +42,14 @@ export const ArtistInsightResult: React.FC = () => {
     value: medium,
   }))
 
-  const { node: artistInsight } = artistInsights.find(
-    ({ node }) => node.medium === medium
-  )
+  const edge = artistInsights?.find(edge => edge?.node?.medium === medium)
+
+  const artistInsight = edge?.node
 
   // TODO: Look into why we need to coerce these types from mp
-  const lowRangeCents: number = Number(artistInsight.lowRangeCents)
-  const midRangeCents: number = Number(artistInsight.midRangeCents)
-  const highRangeCents: number = Number(artistInsight.highRangeCents)
+  const lowRangeCents: number = Number(artistInsight?.lowRangeCents ?? 0)
+  const midRangeCents: number = Number(artistInsight?.midRangeCents ?? 0)
+  const highRangeCents: number = Number(artistInsight?.highRangeCents ?? 0)
 
   const lowEstimateDollars = formatCentsToDollars(lowRangeCents)
   const highEstimateDollars = formatCentsToDollars(highRangeCents)
@@ -57,7 +57,6 @@ export const ArtistInsightResult: React.FC = () => {
 
   const imageUrl = selectedSuggestion?.node?.imageUrl
   const artistSlug = selectedSuggestion?.node?.slug
-  const { artistName } = artistInsight
 
   const img = !!imageUrl ? cropped(imageUrl, { width: 125, height: 125 }) : null
 
@@ -82,11 +81,11 @@ export const ArtistInsightResult: React.FC = () => {
           />
         )}
 
-        <Text variant="xl">{artistName}</Text>
+        <Text variant="xl">{artistInsight?.artistName}</Text>
 
         <Select
           my={1}
-          selected={artistInsight.medium}
+          selected={artistInsight?.medium!}
           options={mediumSelectOptions}
           onSelect={handleMediumChange}
         />
@@ -171,7 +170,7 @@ const ZeroState: React.FC = () => {
         pb={1}
         mb={2}
       >
-        {selectedSuggestion.node.displayLabel}
+        {selectedSuggestion?.node?.displayLabel}
       </Text>
 
       <Text variant="sm" mb={1}>

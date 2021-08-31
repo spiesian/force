@@ -1,9 +1,9 @@
-import { Link, LinkPropsSimple, RouterContext } from "found"
-import React, { useContext } from "react"
+import { Link, LinkPropsSimple } from "found"
+import React from "react"
 import { BoxProps, boxMixin } from "@artsy/palette"
 import styled from "styled-components"
 import { compose, ResponsiveValue, system } from "styled-system"
-import { useMemo } from "react"
+import { useIsSupportedInRouter } from "v2/Utils/Hooks/useIsSupportedInRouter"
 
 /**
  * Wrapper component around found's <Link> component with a fallback to a normal
@@ -29,13 +29,7 @@ export const RouterLink: React.FC<RouterLinkProps> = ({
   noUnderline,
   ...rest
 }) => {
-  const context = useContext(RouterContext)
-  const routes = context?.router?.matcher?.routeConfig ?? []
-  const matcher = context?.router?.matcher
-  const isSupportedInRouter = useMemo(
-    () => !!matcher?.matchRoutes(routes, to),
-    [matcher, routes, to]
-  )
+  const { isSupportedInRouter } = useIsSupportedInRouter(to)
 
   // TODO: Bulk replace
   const deprecated = noUnderline ? { textDecoration: "none" } : {}

@@ -9,7 +9,6 @@ import {
   Box,
 } from "@artsy/palette"
 import { useSystemContext } from "v2/System/SystemContext"
-import { SearchBarQueryRenderer } from "v2/Components/Search/SearchBar"
 import { NavBarSubMenu } from "./Menus"
 import {
   NavBarMobileMenu,
@@ -40,6 +39,7 @@ import { AppContainer } from "v2/Apps/Components/AppContainer"
 import { HorizontalPadding } from "v2/Apps/Components/HorizontalPadding"
 import { useNavBarHeight } from "./useNavBarHeight"
 import { RouterLink } from "v2/System/Router/RouterLink"
+import { NavBarSearch } from "./NavBarSearch"
 
 /**
  * Old Force pages have the navbar height hardcoded in several places. If
@@ -168,7 +168,7 @@ export const NavBar: React.FC = track(
               <NavBarPrimaryLogo mr={1} />
 
               <Flex flex={1} alignItems="center">
-                <SearchBarQueryRenderer width="100%" />
+                <NavBarSearch />
               </Flex>
 
               {/* Desktop. Collapses into mobile at `xs` breakpoint. */}
