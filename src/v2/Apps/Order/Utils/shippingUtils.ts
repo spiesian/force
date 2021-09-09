@@ -1,7 +1,7 @@
 import { Address, emptyAddress } from "v2/Components/AddressForm"
 import { Shipping_me } from "v2/__generated__/Shipping_me.graphql"
 import { Shipping_order } from "v2/__generated__/Shipping_order.graphql"
-import { pick, omit, compact } from "lodash"
+import { pick, omit, compact, assign, assignIn } from "lodash"
 import {
   UpdateUserAddressMutationResponse,
   UserAddressAttributes,
@@ -120,12 +120,15 @@ export const convertShippingAddressForExchange = (
 }
 
 export const convertShippingAddressToMutationInput = (
+  phoneNumber: SavedAddressType["phoneNumber"],
   address: SavedAddressType
 ): UserAddressAttributes => {
+  const modifiedAddress = assign(address, { phoneNumber })
+
   return omit(
     {
-      ...address,
-      name: address?.name || "",
+      ...modifiedAddress,
+      name: modifiedAddress?.name || "",
     },
     ["isDefault", "internalID", "id", "__typename"]
   )

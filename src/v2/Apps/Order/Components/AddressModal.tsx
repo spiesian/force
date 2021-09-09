@@ -34,7 +34,7 @@ import { CreateUserAddressMutationResponse } from "v2/__generated__/CreateUserAd
 import { PhoneNumberUtil } from "google-libphonenumber"
 import styled from "styled-components"
 import { replace } from "lodash"
-import { countries } from "v2/Utils/countries"
+import { countries, countryCodes } from "v2/Utils/countries"
 import { useEffect } from "react"
 export interface ModalDetails {
   addressModalTitle: string
@@ -78,7 +78,7 @@ export const AddressModal: React.FC<Props> = ({
   me,
 }) => {
   const phoneUtil = PhoneNumberUtil.getInstance()
-  const [countryCode, setCountryCode] = useState<string>("1")
+  const [countryCode, setCountryCode] = useState<string>("us")
   const [formattedPhoneNumber, setformattedPhoneNumber] = useState<
     string | null
   >(null)
@@ -89,45 +89,14 @@ export const AddressModal: React.FC<Props> = ({
   const createMutation =
     modalDetails?.addressModalAction === "createUserAddress"
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const isValidNumber = (number: string, countryCode: string) => {
-    try {
-      number = replace(number, /[+()-\s]/g, "")
-      const parsedNumber = phoneUtil.parse(number, countryCode)
-      const isValid = phoneUtil.isValidNumber(parsedNumber)
-
-      if (isValid) {
-        setformattedPhoneNumber(
-          phoneUtil.formatInOriginalFormat(parsedNumber, countryCode)
-        )
-      }
-      return isValid
-    } catch (err) {
-      return false
-    }
-  }
   const validator = (values: any) => {
     const validationResult = validateAddress(values)
     const phoneValidation = validatePhoneNumber(values.phoneNumber)
-    // console.log(
-    //   "🚀 ~ file: AddressModal.tsx ~ line 89 ~ validator ~ phoneValidation",
-    //   phoneValidation
-    // )
-    const errors = Object.assign({}, validationResult.errors, {
-      phoneNumber: phoneValidation.error,
-    })
+    const errors = Object.assign({}, validationResult.errors, {})
     const errorsTrimmed = removeEmptyKeys(errors)
 
     return errorsTrimmed
   }
-
-  useEffect(() => {
-    const isValidPhone = isValidNumber(phoneNumber, countryCode)
-    console.log(
-      "🚀 ~ file: AddressModal.tsx ~ line 118 ~ useEffect ~ isValidPhone",
-      isValidPhone
-    )
-  }, [countryCode, isValidNumber, phoneNumber])
 
   const { relayEnvironment } = useSystemContext()
   const [createUpdateError, setCreateUpdateError] = useState<string | null>(
@@ -140,6 +109,10 @@ export const AddressModal: React.FC<Props> = ({
   const handleModalClose = () => {
     closeModal()
     setCreateUpdateError(null)
+  }
+  const mergeCountryCodeToPhoneNum = (phoneInput: string) => {
+    const cc = countryCodes[countryCode.toUpperCase()] ?? ""
+    setphoneNumber("+" + cc + phoneInput)
   }
 
   return (
@@ -171,6 +144,10 @@ export const AddressModal: React.FC<Props> = ({
             }
 
             const handleSuccess = savedAddress => {
+              console.log(
+                "🚀 ~ file: AddressModal.tsx ~ line 187 ~ savedAddress",
+                savedAddress
+              )
               // update default address only if isDefault changed or new
               // address marked ad default
               if (
@@ -192,7 +169,11 @@ export const AddressModal: React.FC<Props> = ({
 
               setCreateUpdateError(null)
             }
-            const addressInput = convertShippingAddressToMutationInput(values)
+            const addressInput = convertShippingAddressToMutationInput(
+              phoneNumber,
+              values
+            )
+
             if (createMutation) {
               createUserAddress(
                 relayEnvironment,
@@ -229,7 +210,9 @@ export const AddressModal: React.FC<Props> = ({
                     title="Phone number"
                     description="Only used for shipping purposes"
                     options={countries}
-                    onSelect={cc => setCountryCode(cc)}
+                    onSelect={cc => {
+                      setCountryCode(cc)
+                    }}
                     style={{
                       letterSpacing: "1px",
                       borderRight: "none",
@@ -250,8 +233,11 @@ export const AddressModal: React.FC<Props> = ({
                     name="phoneNumber"
                     type="tel"
                     onChange={formik.handleChange}
-                    onBlurCapture={e => setphoneNumber(e.target.value)}
-                    onBlur={formik.handleBlur}
+                    onBlur={e => {
+                      mergeCountryCodeToPhoneNum(e.target.value)
+
+                      formik.handleBlur
+                    }}
                     error={
                       formik.touched.phoneNumber && formik.errors.phoneNumber
                     }
