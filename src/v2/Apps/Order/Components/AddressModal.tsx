@@ -31,11 +31,8 @@ import { useSystemContext } from "v2/System/SystemContext"
 import { updateUserDefaultAddress } from "../Mutations/UpdateUserDefaultAddress"
 import { UpdateUserAddressMutationResponse } from "v2/__generated__/UpdateUserAddressMutation.graphql"
 import { CreateUserAddressMutationResponse } from "v2/__generated__/CreateUserAddressMutation.graphql"
-import { PhoneNumberUtil } from "google-libphonenumber"
 import styled from "styled-components"
-import { replace } from "lodash"
 import { countries, countryCodes } from "v2/Utils/countries"
-import { useEffect } from "react"
 export interface ModalDetails {
   addressModalTitle: string
   addressModalAction: AddressModalAction
@@ -77,11 +74,7 @@ export const AddressModal: React.FC<Props> = ({
   modalDetails,
   me,
 }) => {
-  const phoneUtil = PhoneNumberUtil.getInstance()
   const [countryCode, setCountryCode] = useState<string>("us")
-  const [formattedPhoneNumber, setformattedPhoneNumber] = useState<
-    string | null
-  >(null)
   const [phoneNumber, setphoneNumber] = useState<string>(
     address?.phoneNumber ?? ""
   )
@@ -92,7 +85,9 @@ export const AddressModal: React.FC<Props> = ({
   const validator = (values: any) => {
     const validationResult = validateAddress(values)
     const phoneValidation = validatePhoneNumber(values.phoneNumber)
-    const errors = Object.assign({}, validationResult.errors, {})
+    const errors = Object.assign({}, validationResult.errors, {
+      phoneNumber: phoneValidation.error,
+    })
     const errorsTrimmed = removeEmptyKeys(errors)
 
     return errorsTrimmed
@@ -144,10 +139,6 @@ export const AddressModal: React.FC<Props> = ({
             }
 
             const handleSuccess = savedAddress => {
-              console.log(
-                "🚀 ~ file: AddressModal.tsx ~ line 187 ~ savedAddress",
-                savedAddress
-              )
               // update default address only if isDefault changed or new
               // address marked ad default
               if (

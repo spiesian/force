@@ -1,7 +1,7 @@
 import { Address, emptyAddress } from "v2/Components/AddressForm"
 import { Shipping_me } from "v2/__generated__/Shipping_me.graphql"
 import { Shipping_order } from "v2/__generated__/Shipping_order.graphql"
-import { pick, omit, compact, assign, assignIn } from "lodash"
+import { pick, omit, compact, assign } from "lodash"
 import {
   UpdateUserAddressMutationResponse,
   UserAddressAttributes,
