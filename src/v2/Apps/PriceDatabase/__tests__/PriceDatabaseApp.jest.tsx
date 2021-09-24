@@ -4,6 +4,9 @@ import React from "react"
 import { HeadProvider } from "react-head"
 import { PriceDatabaseArtistAutosuggest } from "../Components/PriceDatabaseArtistAutosuggest"
 import { PriceDatabase } from "../PriceDatabase"
+import { useTracking } from "react-tracking"
+
+jest.mock("react-tracking")
 
 jest.mock("v2/System/Router/useRouter", () => {
   return {
@@ -17,6 +20,8 @@ const mockRouterPush = jest.fn()
 
 describe("PriceDatabaseApp", () => {
   let wrapper: ReactWrapper
+  const mockuseTracking = useTracking as jest.Mock
+  const trackingSpy = jest.fn()
 
   beforeAll(() => {
     wrapper = mount(
@@ -24,6 +29,12 @@ describe("PriceDatabaseApp", () => {
         <PriceDatabase />
       </HeadProvider>
     )
+  })
+
+  beforeEach(() => {
+    mockuseTracking.mockImplementation(() => ({
+      trackEvent: trackingSpy,
+    }))
   })
 
   it("renders correct components", () => {
