@@ -1,4 +1,4 @@
-# syntax=docker/dockerfile:1
+# syntax=docker/dockerfile:1.3
 #              +------------------+
 #              |                  |
 #              |  builder-base    |
@@ -59,7 +59,7 @@
 FROM node:14.17.5-alpine3.11 as builder-base
 
 # beep boop just forcing rebuild
-RUN echo hi
+RUN echo hi1
 
 WORKDIR /app
 
