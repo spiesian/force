@@ -25,6 +25,12 @@ export type Status_order = {
     readonly lineItems: {
         readonly edges: ReadonlyArray<{
             readonly node: {
+                readonly shipment: {
+                    readonly trackingNumber: string | null;
+                    readonly trackingUrl: string | null;
+                    readonly status: string | null;
+                    readonly estimatedDeliveryWindow: string | null;
+                } | null;
                 readonly fulfillments: {
                     readonly edges: ReadonlyArray<{
                         readonly node: {
@@ -179,6 +185,45 @@ return {
                 {
                   "alias": null,
                   "args": null,
+                  "concreteType": "CommerceShipment",
+                  "kind": "LinkedField",
+                  "name": "shipment",
+                  "plural": false,
+                  "selections": [
+                    {
+                      "alias": null,
+                      "args": null,
+                      "kind": "ScalarField",
+                      "name": "trackingNumber",
+                      "storageKey": null
+                    },
+                    {
+                      "alias": null,
+                      "args": null,
+                      "kind": "ScalarField",
+                      "name": "trackingUrl",
+                      "storageKey": null
+                    },
+                    {
+                      "alias": null,
+                      "args": null,
+                      "kind": "ScalarField",
+                      "name": "status",
+                      "storageKey": null
+                    },
+                    {
+                      "alias": null,
+                      "args": null,
+                      "kind": "ScalarField",
+                      "name": "estimatedDeliveryWindow",
+                      "storageKey": null
+                    }
+                  ],
+                  "storageKey": null
+                },
+                {
+                  "alias": null,
+                  "args": null,
                   "concreteType": "CommerceFulfillmentConnection",
                   "kind": "LinkedField",
                   "name": "fulfillments",
@@ -329,5 +374,5 @@ return {
   "type": "CommerceOrder"
 };
 })();
-(node as any).hash = '6d7b7eae932926afe8a4dd215e13d78f';
+(node as any).hash = '5029716a75cecb7ff78021ab01ffa63f';
 export default node;

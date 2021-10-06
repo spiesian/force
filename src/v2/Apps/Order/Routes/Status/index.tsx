@@ -47,6 +47,9 @@ export class StatusRoute extends Component<StatusProps> {
       stateReason,
       stateExpiresAt,
     } = this.props.order
+
+    console.log(this.props.order)
+    // const isArta =
     const isOfferFlow = mode === "OFFER"
     const isShip = requestedFulfillment?.__typename === "CommerceShip"
 
@@ -76,7 +79,7 @@ export class StatusRoute extends Component<StatusProps> {
             }
       case "APPROVED":
         return {
-          title: isOfferFlow ? "Offer accepted" : "Your order is confirmed",
+          title: this.getApprovedTitle(isOfferFlow),
           description: isShip ? (
             <>
               Thank you for your purchase. You will be notified when the work
@@ -136,6 +139,10 @@ export class StatusRoute extends Component<StatusProps> {
           description: null,
         }
     }
+  }
+
+  getApprovedTitle(isOfferFlow): string {
+    isOfferFlow ? "Offer accepted" : "Your order is confirmed"
   }
 
   getCanceledOfferOrderCopy(): StatusPageConfig {
@@ -376,6 +383,12 @@ export const StatusFragmentContainer = createFragmentContainer(StatusRoute, {
       lineItems {
         edges {
           node {
+            shipment {
+              trackingNumber
+              trackingUrl
+              status
+              estimatedDeliveryWindow
+            }
             fulfillments {
               edges {
                 node {
