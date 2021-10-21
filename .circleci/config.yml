@@ -172,6 +172,7 @@ jobs:
     steps:
       - checkout
       - run: |
+          cat .env.oss
           detect-secrets-hook --baseline .secrets.baseline .env.oss
           code=$?
           echo "code: $code"
