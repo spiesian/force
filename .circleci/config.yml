@@ -174,7 +174,7 @@ jobs:
       - run: |
           cp .secrets.baseline /tmp/.secrets.baseline
           set +e && set +o pipefail
-          detect-secrets-hook --baseline .secrets.baseline .secrets.baseline .env.oss
+          detect-secrets-hook --baseline .secrets.baseline .env.oss
           code=$?
           echo "code: $code"
           if [[ $code -ne 3 ]]; then
