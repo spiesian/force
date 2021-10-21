@@ -176,10 +176,12 @@ jobs:
           set +e && set +o pipefail
           detect-secrets-hook --baseline .secrets.baseline $(git ls-files)
           code=$?
+          echo "code: $code"
           if [[ $code -ne 3 ]]; then
             exit $code
           else
             lines=$(diff -y --suppress-common-lines .secrets.baseline /tmp/.secrets.baseline | wc -l)
+            echo "lines: $lines"
             [ $lines -eq 1 ] && git restore .secrets.baseline && exit 0
             cat \<<EOF
             Changes to baseline results need to be committed.
