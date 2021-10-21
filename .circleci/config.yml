@@ -172,6 +172,8 @@ jobs:
     steps:
       - checkout
       - run: |
+          apt-get update && apt-get install -y openssh-client
+      - run: |
           cat .env.oss
           detect-secrets-hook --baseline .secrets.baseline .env.oss
           code=$?
