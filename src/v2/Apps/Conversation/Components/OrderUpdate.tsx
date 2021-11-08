@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import {
   AlertCircleFillIcon,
@@ -22,21 +22,20 @@ export const OrderUpdate: React.FC<OrderUpdateProps> = ({ event }) => {
   let message: string
   let Icon: React.FC<IconProps> = MoneyFillIcon
 
-  if (event.__typename === "CommerceOfferSubmittedEvent") {
-    const { offer } = event
-    const isCounter = offer.respondsTo !== null
-    if (offer.fromParticipant === "BUYER") {
+  if (event.__typename === "ConversationOfferSubmitted") {
+    const isCounter = event.respondsTo !== null
+    if (event.fromParticipant === "BUYER") {
       color = "black100"
       message = `You sent ${isCounter ? "a counteroffer" : "an offer"} for ${
-        event.offer.amount
+        event.amount
       }`
-    } else if (offer.fromParticipant === "SELLER") {
+    } else if (event.fromParticipant === "SELLER") {
       color = "copper100"
       Icon = AlertCircleFillIcon
-      if (offer.offerAmountChanged) {
+      if (event.offerAmountChanged) {
         message = `You received ${
           isCounter ? "a counteroffer" : "an offer"
-        } for ${event.offer.amount}`
+        } for ${event.amount}`
       } else {
         message = "Offer Accepted - Pending Action"
       }
@@ -44,7 +43,7 @@ export const OrderUpdate: React.FC<OrderUpdateProps> = ({ event }) => {
       // ignore future added value
       return null
     }
-  } else if (event.__typename === "CommerceOrderStateChangedEvent") {
+  } else if (event.__typename === "ConversationOrderStateChanged") {
     const { state, stateReason } = event
     if (state === "APPROVED") {
       color = "green100"
@@ -88,23 +87,21 @@ export const OrderUpdateFragmentContainer = createFragmentContainer(
   OrderUpdate,
   {
     event: graphql`
-      fragment OrderUpdate_event on CommerceOrderEventUnion {
-        __typename
-        ... on CommerceOrderStateChangedEvent {
+      fragment OrderUpdate_event on ConversationEvent {
+        ... on ConversationOrderStateChanged {
+          __typename
           createdAt
           stateReason
           state
         }
-        ... on CommerceOfferSubmittedEvent {
+        ... on ConversationOfferSubmitted {
+          __typename
           createdAt
-          offer {
-            amount
+          amount
+          fromParticipant
+          offerAmountChanged
+          respondsTo {
             fromParticipant
-            definesTotal
-            offerAmountChanged
-            respondsTo {
-              fromParticipant
-            }
           }
         }
       }

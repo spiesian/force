@@ -212,8 +212,7 @@ const Conversation: React.FC<ConversationProps> = props => {
               <Waypoint onEnter={loadMore} />
               {fetchingMore ? <Loading /> : null}
               <ConversationMessages
-                messages={conversation.messagesConnection!}
-                events={conversation.orderConnection}
+                messagesAndEvents={conversation.conversationEventConnection!}
                 lastViewedMessageID={conversation?.fromLastViewedMessageID}
               />
               <Box ref={bottomOfMessageContainer as any} />
@@ -283,7 +282,7 @@ export const ConversationPaginationContainer = createPaginationContainer(
     conversation: graphql`
       fragment Conversation_conversation on Conversation
         @argumentDefinitions(
-          count: { type: "Int", defaultValue: 30 }
+          count: { type: "Int", defaultValue: 10 }
           after: { type: "String" }
         ) {
         id
@@ -315,13 +314,14 @@ export const ConversationPaginationContainer = createPaginationContainer(
               }
             }
           }
-          ...ConversationMessages_events
         }
 
         unread
-
-        messagesConnection(first: $count, after: $after, sort: DESC)
-          @connection(key: "Messages_messagesConnection", filters: []) {
+        conversationEventConnection(first: $count, after: $after)
+          @connection(
+            key: "Conversation_conversationEventConnection"
+            filters: []
+          ) {
           pageInfo {
             startCursor
             endCursor
@@ -330,11 +330,11 @@ export const ConversationPaginationContainer = createPaginationContainer(
           }
           edges {
             node {
-              id
+              __typename
             }
           }
           totalCount
-          ...ConversationMessages_messages
+          ...ConversationMessages_messagesAndEvents
         }
         items {
           item {
@@ -361,7 +361,7 @@ export const ConversationPaginationContainer = createPaginationContainer(
   {
     direction: "forward",
     getConnectionFromProps(props) {
-      return props.conversation?.messagesConnection
+      return props.conversation?.conversationEventConnection
     },
     getFragmentVariables(prevVars, count) {
       return {
