@@ -1,191 +1,169 @@
-// import { graphql } from "react-relay"
-// import { setupTestWrapper } from "v2/DevTools/setupTestWrapper"
-// import { OrderUpdateFragmentContainer } from "../OrderUpdate"
-// import { OrderUpdate_Test_Query } from "v2/__generated__/OrderUpdate_Test_Query.graphql"
+import { graphql } from "react-relay"
+import { setupTestWrapperTL } from "v2/DevTools/setupTestWrapper"
+import { OrderUpdateFragmentContainer } from "../OrderUpdate"
+import { OrderUpdate_Test_Query } from "v2/__generated__/OrderUpdate_Test_Query.graphql"
+import { screen } from "@testing-library/react"
+import { DateTime } from "luxon"
 
-// jest.unmock("react-relay")
+jest.unmock("react-relay")
 
-// const { getWrapper } = setupTestWrapper<OrderUpdate_Test_Query>({
-//   Component: props => {
-//     const event = props!.me!.conversation!.orderConnection!.edges![0]!.node!
-//       .orderHistory[0]
+const { renderWithRelay } = setupTestWrapperTL<OrderUpdate_Test_Query>({
+  Component: props => {
+    const event = props!.me!.conversation!.conversationEventConnection!
+      .edges![0]!.node!
 
-//     return <OrderUpdateFragmentContainer event={event} />
-//   },
-//   query: graphql`
-//     query OrderUpdate_Test_Query($conversationID: String!) {
-//       me {
-//         conversation(id: $conversationID) {
-//           orderConnection(first: 10, participantType: BUYER) {
-//             edges {
-//               node {
-//                 orderHistory {
-//                   __typename
-//                   ...OrderUpdate_event
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   `,
-// })
+    return <OrderUpdateFragmentContainer event={event} />
+  },
+  query: graphql`
+    query OrderUpdate_Test_Query {
+      me {
+        conversation(id: "1234") {
+          conversationEventConnection {
+            edges {
+              node {
+                __typename
+                ...OrderUpdate_event
+              }
+            }
+          }
+        }
+      }
+    }
+  `,
+})
 
-// describe("testing different statuses", () => {
-//   it("render counteroffer", () => {
-//     let wrapper = getWrapper({
-//       Conversation: () => ({
-//         orderConnection: {
-//           edges: [
-//             {
-//               node: {
-//                 orderHistory: [
-//                   {
-//                     __typename: "CommerceOfferSubmittedEvent",
-//                     createdAt: "2021-07-04T12:46:40+03:00",
-//                     offer: {
-//                       amount: "$40000",
-//                       definesTotal: true,
-//                       fromParticipant: "BUYER",
-//                       offerAmountChanged: false,
-//                       respondsTo: {
-//                         fromParticipant: "BUYER",
-//                       },
-//                     },
-//                   },
-//                 ],
-//               },
-//             },
-//           ],
-//         },
-//       }),
-//     })
-//     expect(wrapper.find("TimeSince").length).toEqual(1)
-//     expect(wrapper.text()).toContain("You sent a counteroffer for $40000")
-//   })
+describe("testing different statuses", () => {
+  it("render counteroffer", () => {
+    const createdAt = "2021-07-04T12:46:40Z"
+    renderWithRelay({
+      Conversation: () => ({
+        conversationEventConnection: {
+          edges: [
+            {
+              node: {
+                __typename: "ConversationOfferSubmitted",
+                createdAt,
+                amount: "$40000",
+                fromParticipant: "BUYER",
+                offerAmountChanged: false,
+                respondsTo: {
+                  fromParticipant: "BUYER",
+                },
+              },
+            },
+          ],
+        },
+      }),
+    })
 
-//   it("render received a counteroffer", () => {
-//     let wrapper = getWrapper({
-//       Conversation: () => ({
-//         orderConnection: {
-//           edges: [
-//             {
-//               node: {
-//                 orderHistory: [
-//                   {
-//                     __typename: "CommerceOfferSubmittedEvent",
-//                     offer: {
-//                       amount: "$40000",
-//                       fromParticipant: "SELLER",
-//                       offerAmountChanged: true,
-//                       respondsTo: {
-//                         fromParticipant: "BUYER",
-//                       },
-//                     },
-//                   },
-//                 ],
-//               },
-//             },
-//           ],
-//         },
-//       }),
-//     })
-//     expect(wrapper.text()).toContain("You received a counteroffer for $40000")
-//   })
+    const date = DateTime.fromISO(createdAt)
+    expect(screen.getByText(date.toFormat("ccc, LLL d, t"))).toBeInTheDocument()
+    expect(
+      screen.getByText("You sent a counteroffer for $40000")
+    ).toBeInTheDocument()
+  })
 
-//   it("render Offer Accepted - Pending Action", () => {
-//     let wrapper = getWrapper({
-//       Conversation: () => ({
-//         orderConnection: {
-//           edges: [
-//             {
-//               node: {
-//                 orderHistory: [
-//                   {
-//                     __typename: "CommerceOfferSubmittedEvent",
-//                     offer: {
-//                       amount: "$40000",
-//                       fromParticipant: "SELLER",
-//                       offerAmountChanged: false,
-//                       respondsTo: {
-//                         fromParticipant: "BUYER",
-//                       },
-//                     },
-//                   },
-//                 ],
-//               },
-//             },
-//           ],
-//         },
-//       }),
-//     })
-//     expect(wrapper.text()).toContain("Offer Accepted - Pending Action")
-//   })
+  it("render received a counteroffer", () => {
+    renderWithRelay({
+      Conversation: () => ({
+        conversationEventConnection: {
+          edges: [
+            {
+              node: {
+                __typename: "ConversationOfferSubmitted",
+                amount: "$40000",
+                fromParticipant: "SELLER",
+                offerAmountChanged: true,
+                respondsTo: {
+                  fromParticipant: "BUYER",
+                },
+              },
+            },
+          ],
+        },
+      }),
+    })
+    expect(
+      screen.getByText("You received a counteroffer for $40000")
+    ).toBeInTheDocument()
+  })
 
-//   it("render Offer Accepted", () => {
-//     let wrapper = getWrapper({
-//       Conversation: () => ({
-//         orderConnection: {
-//           edges: [
-//             {
-//               node: {
-//                 orderHistory: [
-//                   {
-//                     __typename: "CommerceOrderStateChangedEvent",
-//                     state: "APPROVED",
-//                   },
-//                 ],
-//               },
-//             },
-//           ],
-//         },
-//       }),
-//     })
-//     expect(wrapper.text()).toContain("Offer Accepted")
-//   })
-//   it("render Offer Declined", () => {
-//     let wrapper = getWrapper({
-//       Conversation: () => ({
-//         orderConnection: {
-//           edges: [
-//             {
-//               node: {
-//                 orderHistory: [
-//                   {
-//                     __typename: "CommerceOrderStateChangedEvent",
-//                     state: "CANCELED",
-//                     stateReason: ["_rejected"],
-//                   },
-//                 ],
-//               },
-//             },
-//           ],
-//         },
-//       }),
-//     })
-//     expect(wrapper.text()).toContain("Offer Declined")
-//   })
-//   it("render Offer Expired", () => {
-//     let wrapper = getWrapper({
-//       Conversation: () => ({
-//         orderConnection: {
-//           edges: [
-//             {
-//               node: {
-//                 orderHistory: [
-//                   {
-//                     __typename: "CommerceOrderStateChangedEvent",
-//                     state: "CANCELED",
-//                     stateReason: ["_lapsed"],
-//                   },
-//                 ],
-//               },
-//             },
-//           ],
-//         },
-//       }),
-//     })
-//     expect(wrapper.text()).toContain("Offer Expired")
-//   })
-// })
+  it("render Offer Accepted - Pending Action", () => {
+    renderWithRelay({
+      Conversation: () => ({
+        conversationEventConnection: {
+          edges: [
+            {
+              node: {
+                __typename: "ConversationOfferSubmitted",
+                amount: "$40000",
+                fromParticipant: "SELLER",
+                offerAmountChanged: false,
+                respondsTo: {
+                  fromParticipant: "BUYER",
+                },
+              },
+            },
+          ],
+        },
+      }),
+    })
+    expect(
+      screen.getByText("Offer Accepted - Pending Action")
+    ).toBeInTheDocument()
+  })
+
+  it("render Offer Accepted", () => {
+    renderWithRelay({
+      Conversation: () => ({
+        conversationEventConnection: {
+          edges: [
+            {
+              node: {
+                __typename: "ConversationOrderStateChanged",
+                state: "APPROVED",
+              },
+            },
+          ],
+        },
+      }),
+    })
+    expect(screen.getByText("Offer Accepted")).toBeInTheDocument()
+  })
+  it("render Offer Declined", () => {
+    renderWithRelay({
+      Conversation: () => ({
+        conversationEventConnection: {
+          edges: [
+            {
+              node: {
+                __typename: "ConversationOrderStateChanged",
+                state: "CANCELED",
+                stateReason: ["_rejected"],
+              },
+            },
+          ],
+        },
+      }),
+    })
+    expect(screen.getByText("Offer Declined")).toBeInTheDocument()
+  })
+  it("render Offer Expired", () => {
+    renderWithRelay({
+      Conversation: () => ({
+        conversationEventConnection: {
+          edges: [
+            {
+              node: {
+                __typename: "ConversationOrderStateChanged",
+                state: "CANCELED",
+                stateReason: ["_lapsed"],
+              },
+            },
+          ],
+        },
+      }),
+    })
+    expect(screen.getByText("Offer Expired")).toBeInTheDocument()
+  })
+})
