@@ -11,7 +11,7 @@ import {
 import { TransactionDetailsSummaryItemFragmentContainer as TransactionDetailsSummaryItem } from "v2/Apps/Order/Components/TransactionDetailsSummaryItem"
 import { TwoColumnLayout } from "v2/Apps/Order/Components/TwoColumnLayout"
 import { Router } from "found"
-import { createRef, Component } from "react";
+import { createRef, Component } from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import type { Stripe, StripeElements } from "@stripe/stripe-js"
 import createLogger from "v2/Utils/logger"
@@ -21,7 +21,7 @@ import { Box, Button, Flex, Spacer } from "@artsy/palette"
 import {
   PaymentPicker,
   PaymentPickerFragmentContainer,
-} from "v2/Apps/Order/Components/PaymentPicker"
+} from "v2/Apps/Order/Components/PaymentPicker/PaymentPicker"
 import { Dialog, injectDialog } from "v2/Apps/Order/Dialogs"
 import {
   CommitMutation,

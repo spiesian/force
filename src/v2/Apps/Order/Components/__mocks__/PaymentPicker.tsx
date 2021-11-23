@@ -1,5 +1,5 @@
 import { createElement } from "react"
-import { PaymentPicker } from "../PaymentPicker"
+import { PaymentPicker } from "../PaymentPicker/PaymentPicker"
 
 type UnpackPromise<T> = T extends Promise<infer R> ? R : T
 type CreditCardIdResult = UnpackPromise<

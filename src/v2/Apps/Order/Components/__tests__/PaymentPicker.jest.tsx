@@ -18,7 +18,10 @@ import { Address, AddressForm } from "v2/Components/AddressForm"
 import { createTestEnv } from "v2/DevTools/createTestEnv"
 import { RootTestPage } from "v2/DevTools/RootTestPage"
 import { graphql } from "react-relay"
-import { PaymentPicker, PaymentPickerFragmentContainer } from "../PaymentPicker"
+import {
+  PaymentPicker,
+  PaymentPickerFragmentContainer,
+} from "../PaymentPicker/PaymentPicker"
 import type { Token, StripeError } from "@stripe/stripe-js"
 import { mockStripe } from "v2/DevTools/mockStripe"
 

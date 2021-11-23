@@ -35,7 +35,7 @@ import {
   Spacer,
 } from "@artsy/palette"
 import { CommitMutation } from "v2/Apps/Order/Utils/commitMutation"
-import { CreditCardDetails } from "./CreditCardDetails"
+import { CreditCardDetails } from "../CreditCardDetails"
 import {
   SystemContextConsumer,
   SystemContextProps,
