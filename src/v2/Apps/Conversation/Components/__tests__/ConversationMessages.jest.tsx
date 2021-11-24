@@ -1,89 +1,107 @@
+import { graphql } from "react-relay"
 import { ConversationMessagesFragmentContainer } from "../ConversationMessages"
-import { screen } from "@testing-library/react"
+import { useTracking } from "react-tracking"
+import { useSystemContext as baseUseSystemContext } from "v2/System/useSystemContext"
+import { ConversationMessages_Test_Query } from "v2/__generated__/ConversationMessages_Test_Query.graphql"
 import { setupTestWrapperTL } from "v2/DevTools/setupTestWrapper"
-import { graphql } from "relay-runtime"
+import { screen } from "@testing-library/react"
 
 jest.unmock("react-relay")
 
-const { renderWithRelay } = setupTestWrapperTL({
-  Component: ({ me }: any) => {
-    return (
-      <ConversationMessagesFragmentContainer
-        messages={me.conversation.messagesConnection}
-        events={me.conversation.orderConnection}
-      />
-    )
-  },
-  query: graphql`
-    query ConversationMessages_Test_Query @relay_test_operation {
-      me {
-        conversation(id: "1234") {
-          messagesConnection(first: 10) {
-            ...ConversationMessages_messages
-          }
-          orderConnection(first: 10) {
-            ...ConversationMessages_events
+describe("ConversationMessages", () => {
+  const { renderWithRelay } = setupTestWrapperTL<
+    ConversationMessages_Test_Query
+  >({
+    Component: (props: any) => {
+      return (
+        <ConversationMessagesFragmentContainer
+          messagesAndEvents={props.me.conversation.conversationEventConnection}
+          lastViewedMessageID={null}
+        />
+      )
+    },
+    query: graphql`
+      query ConversationMessages_Test_Query {
+        me {
+          conversation(id: "1234") {
+            conversationEventConnection {
+              ...ConversationMessages_messagesAndEvents
+            }
           }
         }
       }
-    }
-  `,
-})
+    `,
+  })
 
-describe("ConversationMessages", () => {
+  const mockuseTracking = useTracking as jest.Mock
+  const trackingSpy = jest.fn()
+  let useSystemContext = baseUseSystemContext as jest.Mock
+
+  beforeEach(() => {
+    mockuseTracking.mockImplementation(() => ({
+      trackEvent: trackingSpy,
+    }))
+
+    useSystemContext.mockImplementation(() => {
+      return {
+        mediator: {
+          on: jest.fn(),
+          off: jest.fn(),
+        },
+      }
+    })
+  })
+
+  afterEach(() => {
+    jest.resetAllMocks()
+  })
+
   it("check components render", async () => {
     renderWithRelay({
-      MessageConnection: () => ({
-        edges: [
-          {
-            node: {
-              __typename: "Message",
-              internalID: "123",
-              body: "First test message",
-              isFromUser: true,
-              createdAt: Date.now().toString(),
+      Conversation: () => ({
+        conversationEventConnection: {
+          edges: [
+            {
+              node: {
+                __typename: "Message",
+                internalID: "123",
+                body: "First test message",
+                isFromUser: true,
+                createdAt: Date.now().toString(),
+              },
             },
-          },
-          {
-            node: {
-              __typename: "Message",
-              internalID: "456",
-              body: "Second test message",
-              isFromUser: true,
-              createdAt: Date.now().toString(),
+            {
+              node: {
+                __typename: "Message",
+                internalID: "456",
+                body: "Second test message",
+                isFromUser: true,
+                createdAt: Date.now().toString(),
+              },
             },
-          },
-        ],
-      }),
-      CommerceOrderConnectionWithTotalCount: () => ({
-        edges: [
-          {
-            node: {
-              orderHistory: [
-                {
-                  __typename: "CommerceOfferSubmittedEvent",
-                  internalID: "7adde1e2-bdd4-4360-9484-989d6dd3248e",
-                  createdAt: Date.now().toString(),
-                  state: "PENDING",
-                  offer: {
-                    amount: "£40,000",
-                    fromParticipant: "SELLER",
-                    offerAmountChanged: false,
-                  },
-                },
-                {
-                  __typename: "CommerceOrderStateChangedEvent",
-                  internalID: "7adde1e2-bdd4-4360-9484-989d6dde",
-                  createdAt: Date.now().toString(),
-                  state: "APPROVED",
-                  stateReason: null,
-                  offer: {
-                    amount: "£40,000",
-                    fromParticipant: "SELLER",
-                    offerAmountChanged: false,
-                  },
-                },
-              ],
+
+            {
+              node: {
+                __typename: "ConversationOfferSubmitted",
+                internalID: "7adde1e2-bdd4-4360-9484-989d6dd3248e",
+                createdAt: Date.now().toString(),
+                state: "PENDING",
+                amount: "£40,000",
+                fromParticipant: "SELLER",
+                offerAmountChanged: false,
+              },
+            },
+            {
+              node: {
+                __typename: "ConversationOrderStateChanged",
+                internalID: "7adde1e2-bdd4-4360-9484-989d6dde",
+                createdAt: Date.now().toString(),
+                state: "APPROVED",
+                stateReason: null,
+                amount: "£40,000",
+                fromParticipant: "SELLER",
+                offerAmountChanged: false,
+              },
             },
           },
         ],
