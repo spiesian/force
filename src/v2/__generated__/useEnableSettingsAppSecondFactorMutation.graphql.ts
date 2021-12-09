@@ -2,21 +2,19 @@
 /* eslint-disable */
 
 import { ConcreteRequest } from "relay-runtime";
-export type CreateBackupSecondFactorsInput = {
+export type EnableSecondFactorInput = {
     clientMutationId?: string | null;
+    code: string;
     password?: string | null;
+    secondFactorID: string;
 };
-export type useCreateSettingsBackupSecondFactorsMutationVariables = {
-    input: CreateBackupSecondFactorsInput;
+export type useEnableSettingsAppSecondFactorMutationVariables = {
+    input: EnableSecondFactorInput;
 };
-export type useCreateSettingsBackupSecondFactorsMutationResponse = {
-    readonly createBackupSecondFactors: {
-        readonly secondFactorsOrErrors: {
-            readonly __typename: "BackupSecondFactors";
-            readonly secondFactors: ReadonlyArray<{
-                readonly code: string;
-            }>;
-        } | {
+export type useEnableSettingsAppSecondFactorMutationResponse = {
+    readonly enableSecondFactor: {
+        readonly recoveryCodes: ReadonlyArray<string> | null;
+        readonly secondFactorOrErrors: {
             readonly __typename: "Errors";
             readonly errors: ReadonlyArray<{
                 readonly message: string;
@@ -28,25 +26,21 @@ export type useCreateSettingsBackupSecondFactorsMutationResponse = {
         };
     } | null;
 };
-export type useCreateSettingsBackupSecondFactorsMutation = {
-    readonly response: useCreateSettingsBackupSecondFactorsMutationResponse;
-    readonly variables: useCreateSettingsBackupSecondFactorsMutationVariables;
+export type useEnableSettingsAppSecondFactorMutation = {
+    readonly response: useEnableSettingsAppSecondFactorMutationResponse;
+    readonly variables: useEnableSettingsAppSecondFactorMutationVariables;
 };
 
 
 
 /*
-mutation useCreateSettingsBackupSecondFactorsMutation(
-  $input: CreateBackupSecondFactorsInput!
+mutation useEnableSettingsAppSecondFactorMutation(
+  $input: EnableSecondFactorInput!
 ) {
-  createBackupSecondFactors(input: $input) {
-    secondFactorsOrErrors {
+  enableSecondFactor(input: $input) {
+    recoveryCodes
+    secondFactorOrErrors {
       __typename
-      ... on BackupSecondFactors {
-        secondFactors {
-          code
-        }
-      }
       ... on Errors {
         errors {
           message
@@ -63,7 +57,7 @@ var v0 = [
     "defaultValue": null,
     "kind": "LocalArgument",
     "name": "input",
-    "type": "CreateBackupSecondFactorsInput!"
+    "type": "EnableSecondFactorInput!"
   }
 ],
 v1 = [
@@ -76,17 +70,24 @@ v1 = [
         "variableName": "input"
       }
     ],
-    "concreteType": "CreateBackupSecondFactorsPayload",
+    "concreteType": "EnableSecondFactorPayload",
     "kind": "LinkedField",
-    "name": "createBackupSecondFactors",
+    "name": "enableSecondFactor",
     "plural": false,
     "selections": [
       {
         "alias": null,
         "args": null,
+        "kind": "ScalarField",
+        "name": "recoveryCodes",
+        "storageKey": null
+      },
+      {
+        "alias": null,
+        "args": null,
         "concreteType": null,
         "kind": "LinkedField",
-        "name": "secondFactorsOrErrors",
+        "name": "secondFactorOrErrors",
         "plural": false,
         "selections": [
           {
@@ -95,30 +96,6 @@ v1 = [
             "kind": "ScalarField",
             "name": "__typename",
             "storageKey": null
-          },
-          {
-            "kind": "InlineFragment",
-            "selections": [
-              {
-                "alias": null,
-                "args": null,
-                "concreteType": "BackupSecondFactor",
-                "kind": "LinkedField",
-                "name": "secondFactors",
-                "plural": true,
-                "selections": [
-                  {
-                    "alias": null,
-                    "args": null,
-                    "kind": "ScalarField",
-                    "name": "code",
-                    "storageKey": null
-                  }
-                ],
-                "storageKey": null
-              }
-            ],
-            "type": "BackupSecondFactors"
           },
           {
             "kind": "InlineFragment",
@@ -156,7 +133,7 @@ return {
     "argumentDefinitions": (v0/*: any*/),
     "kind": "Fragment",
     "metadata": null,
-    "name": "useCreateSettingsBackupSecondFactorsMutation",
+    "name": "useEnableSettingsAppSecondFactorMutation",
     "selections": (v1/*: any*/),
     "type": "Mutation"
   },
@@ -164,17 +141,17 @@ return {
   "operation": {
     "argumentDefinitions": (v0/*: any*/),
     "kind": "Operation",
-    "name": "useCreateSettingsBackupSecondFactorsMutation",
+    "name": "useEnableSettingsAppSecondFactorMutation",
     "selections": (v1/*: any*/)
   },
   "params": {
     "id": null,
     "metadata": {},
-    "name": "useCreateSettingsBackupSecondFactorsMutation",
+    "name": "useEnableSettingsAppSecondFactorMutation",
     "operationKind": "mutation",
-    "text": "mutation useCreateSettingsBackupSecondFactorsMutation(\n  $input: CreateBackupSecondFactorsInput!\n) {\n  createBackupSecondFactors(input: $input) {\n    secondFactorsOrErrors {\n      __typename\n      ... on BackupSecondFactors {\n        secondFactors {\n          code\n        }\n      }\n      ... on Errors {\n        errors {\n          message\n        }\n      }\n    }\n  }\n}\n"
+    "text": "mutation useEnableSettingsAppSecondFactorMutation(\n  $input: EnableSecondFactorInput!\n) {\n  enableSecondFactor(input: $input) {\n    recoveryCodes\n    secondFactorOrErrors {\n      __typename\n      ... on Errors {\n        errors {\n          message\n        }\n      }\n    }\n  }\n}\n"
   }
 };
 })();
-(node as any).hash = '8eed491172b95de47934cbf9463a72d4';
+(node as any).hash = '1f9c03b749cc442cd20066d3e0c731a0';
 export default node;

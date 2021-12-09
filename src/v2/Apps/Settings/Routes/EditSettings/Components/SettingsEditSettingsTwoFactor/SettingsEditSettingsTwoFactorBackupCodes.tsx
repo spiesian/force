@@ -2,7 +2,7 @@ import {
   Box,
   Button,
   Flex,
-  Modal,
+  ModalDialog,
   Spacer,
   Sup,
   Text,
@@ -31,17 +31,13 @@ export const SettingsEditSettingsTwoFactorBackupCodes: FC<SettingsEditSettingsTw
 
   const { sendToast } = useToasts()
 
-  const {
-    submitCreateSettingsBackupSecondFactors,
-  } = useCreateSettingsBackupSecondFactors()
+  const { submitMutation } = useCreateSettingsBackupSecondFactors()
 
   const handleGenerate = async () => {
     setMode(Mode.Creating)
 
-    console.log("creating now")
-
     try {
-      await submitCreateSettingsBackupSecondFactors()
+      await submitMutation({ input: {} })
 
       setMode(Mode.Show)
     } catch (err) {
@@ -122,18 +118,20 @@ export const SettingsEditSettingsTwoFactorBackupCodes: FC<SettingsEditSettingsTw
         </Flex>
       </Flex>
 
-      <Modal
-        title="Your backup codes"
-        show={mode === Mode.Show}
-        onClose={handleClose}
-        FixedButton={
-          <Button width="100%" onClick={handleClose}>
-            Done
-          </Button>
-        }
-      >
-        <SettingsEditSettingsTwoFactorBackupCodesDialogQueryRenderer />
-      </Modal>
+      {mode === Mode.Show && (
+        <ModalDialog
+          width={440}
+          title="Your backup codes"
+          onClose={handleClose}
+          footer={
+            <Button width="100%" onClick={handleClose}>
+              Done
+            </Button>
+          }
+        >
+          <SettingsEditSettingsTwoFactorBackupCodesDialogQueryRenderer />
+        </ModalDialog>
+      )}
     </>
   )
 }

@@ -2,20 +2,25 @@
 /* eslint-disable */
 
 import { ConcreteRequest } from "relay-runtime";
-export type CreateBackupSecondFactorsInput = {
+export type CreateAppSecondFactorInput = {
+    attributes: AppSecondFactorAttributes;
     clientMutationId?: string | null;
-    password?: string | null;
+    password: string;
 };
-export type useCreateSettingsBackupSecondFactorsMutationVariables = {
-    input: CreateBackupSecondFactorsInput;
+export type AppSecondFactorAttributes = {
+    name?: string | null;
 };
-export type useCreateSettingsBackupSecondFactorsMutationResponse = {
-    readonly createBackupSecondFactors: {
-        readonly secondFactorsOrErrors: {
-            readonly __typename: "BackupSecondFactors";
-            readonly secondFactors: ReadonlyArray<{
-                readonly code: string;
-            }>;
+export type useCreateSettingsAppSecondFactorMutationVariables = {
+    input: CreateAppSecondFactorInput;
+};
+export type useCreateSettingsAppSecondFactorMutationResponse = {
+    readonly createAppSecondFactor: {
+        readonly secondFactorOrErrors: {
+            readonly __typename: "AppSecondFactor";
+            readonly internalID: string;
+            readonly otpSecret: string | null;
+            readonly otpProvisioningURI: string | null;
+            readonly name: string | null;
         } | {
             readonly __typename: "Errors";
             readonly errors: ReadonlyArray<{
@@ -28,24 +33,25 @@ export type useCreateSettingsBackupSecondFactorsMutationResponse = {
         };
     } | null;
 };
-export type useCreateSettingsBackupSecondFactorsMutation = {
-    readonly response: useCreateSettingsBackupSecondFactorsMutationResponse;
-    readonly variables: useCreateSettingsBackupSecondFactorsMutationVariables;
+export type useCreateSettingsAppSecondFactorMutation = {
+    readonly response: useCreateSettingsAppSecondFactorMutationResponse;
+    readonly variables: useCreateSettingsAppSecondFactorMutationVariables;
 };
 
 
 
 /*
-mutation useCreateSettingsBackupSecondFactorsMutation(
-  $input: CreateBackupSecondFactorsInput!
+mutation useCreateSettingsAppSecondFactorMutation(
+  $input: CreateAppSecondFactorInput!
 ) {
-  createBackupSecondFactors(input: $input) {
-    secondFactorsOrErrors {
+  createAppSecondFactor(input: $input) {
+    secondFactorOrErrors {
       __typename
-      ... on BackupSecondFactors {
-        secondFactors {
-          code
-        }
+      ... on AppSecondFactor {
+        internalID
+        otpSecret
+        otpProvisioningURI
+        name
       }
       ... on Errors {
         errors {
@@ -63,7 +69,7 @@ var v0 = [
     "defaultValue": null,
     "kind": "LocalArgument",
     "name": "input",
-    "type": "CreateBackupSecondFactorsInput!"
+    "type": "CreateAppSecondFactorInput!"
   }
 ],
 v1 = [
@@ -76,9 +82,9 @@ v1 = [
         "variableName": "input"
       }
     ],
-    "concreteType": "CreateBackupSecondFactorsPayload",
+    "concreteType": "CreateAppSecondFactorPayload",
     "kind": "LinkedField",
-    "name": "createBackupSecondFactors",
+    "name": "createAppSecondFactor",
     "plural": false,
     "selections": [
       {
@@ -86,7 +92,7 @@ v1 = [
         "args": null,
         "concreteType": null,
         "kind": "LinkedField",
-        "name": "secondFactorsOrErrors",
+        "name": "secondFactorOrErrors",
         "plural": false,
         "selections": [
           {
@@ -102,23 +108,33 @@ v1 = [
               {
                 "alias": null,
                 "args": null,
-                "concreteType": "BackupSecondFactor",
-                "kind": "LinkedField",
-                "name": "secondFactors",
-                "plural": true,
-                "selections": [
-                  {
-                    "alias": null,
-                    "args": null,
-                    "kind": "ScalarField",
-                    "name": "code",
-                    "storageKey": null
-                  }
-                ],
+                "kind": "ScalarField",
+                "name": "internalID",
+                "storageKey": null
+              },
+              {
+                "alias": null,
+                "args": null,
+                "kind": "ScalarField",
+                "name": "otpSecret",
+                "storageKey": null
+              },
+              {
+                "alias": null,
+                "args": null,
+                "kind": "ScalarField",
+                "name": "otpProvisioningURI",
+                "storageKey": null
+              },
+              {
+                "alias": null,
+                "args": null,
+                "kind": "ScalarField",
+                "name": "name",
                 "storageKey": null
               }
             ],
-            "type": "BackupSecondFactors"
+            "type": "AppSecondFactor"
           },
           {
             "kind": "InlineFragment",
@@ -156,7 +172,7 @@ return {
     "argumentDefinitions": (v0/*: any*/),
     "kind": "Fragment",
     "metadata": null,
-    "name": "useCreateSettingsBackupSecondFactorsMutation",
+    "name": "useCreateSettingsAppSecondFactorMutation",
     "selections": (v1/*: any*/),
     "type": "Mutation"
   },
@@ -164,17 +180,17 @@ return {
   "operation": {
     "argumentDefinitions": (v0/*: any*/),
     "kind": "Operation",
-    "name": "useCreateSettingsBackupSecondFactorsMutation",
+    "name": "useCreateSettingsAppSecondFactorMutation",
     "selections": (v1/*: any*/)
   },
   "params": {
     "id": null,
     "metadata": {},
-    "name": "useCreateSettingsBackupSecondFactorsMutation",
+    "name": "useCreateSettingsAppSecondFactorMutation",
     "operationKind": "mutation",
-    "text": "mutation useCreateSettingsBackupSecondFactorsMutation(\n  $input: CreateBackupSecondFactorsInput!\n) {\n  createBackupSecondFactors(input: $input) {\n    secondFactorsOrErrors {\n      __typename\n      ... on BackupSecondFactors {\n        secondFactors {\n          code\n        }\n      }\n      ... on Errors {\n        errors {\n          message\n        }\n      }\n    }\n  }\n}\n"
+    "text": "mutation useCreateSettingsAppSecondFactorMutation(\n  $input: CreateAppSecondFactorInput!\n) {\n  createAppSecondFactor(input: $input) {\n    secondFactorOrErrors {\n      __typename\n      ... on AppSecondFactor {\n        internalID\n        otpSecret\n        otpProvisioningURI\n        name\n      }\n      ... on Errors {\n        errors {\n          message\n        }\n      }\n    }\n  }\n}\n"
   }
 };
 })();
-(node as any).hash = '8eed491172b95de47934cbf9463a72d4';
+(node as any).hash = 'eb303c96578e0eeab88858bb5fb79910';
 export default node;

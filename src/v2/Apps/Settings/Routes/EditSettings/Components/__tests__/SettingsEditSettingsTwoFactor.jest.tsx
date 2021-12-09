@@ -21,7 +21,7 @@ const { renderWithRelay } = setupTestWrapperTL({
   `,
 })
 
-describe("TwoFactorAuthentication", () => {
+describe("SettingsEditSettingsTwoFactor", () => {
   const mockUseCreateSettingsBackupSecondFactors = useCreateSettingsBackupSecondFactors as jest.Mock
   const mockSubmitCreateSettingsBackupSecondFactors = jest.fn()
 

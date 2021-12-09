@@ -1,51 +1,29 @@
-import { commitMutation, graphql } from "relay-runtime"
-import { useSystemContext } from "v2/System"
-import {
-  useCreateSettingsBackupSecondFactorsMutation,
-  useCreateSettingsBackupSecondFactorsMutationResponse,
-  CreateBackupSecondFactorsInput,
-} from "v2/__generated__/useCreateSettingsBackupSecondFactorsMutation.graphql"
+import { graphql } from "relay-runtime"
+import { useCreateSettingsBackupSecondFactorsMutation } from "v2/__generated__/useCreateSettingsBackupSecondFactorsMutation.graphql"
+import { useMutation } from "v2/Utils/Hooks/useMutation"
 
 export const useCreateSettingsBackupSecondFactors = () => {
-  const { relayEnvironment } = useSystemContext()
-
-  const submitCreateSettingsBackupSecondFactors = (
-    input: CreateBackupSecondFactorsInput = {}
-  ): Promise<useCreateSettingsBackupSecondFactorsMutationResponse> => {
-    return new Promise((resolve, reject) => {
-      commitMutation<useCreateSettingsBackupSecondFactorsMutation>(
-        relayEnvironment!,
-        {
-          onError: reject,
-          onCompleted: (res, errors) => {
-            if (errors !== null) {
-              reject(errors)
-              return
-            }
-
-            resolve(res)
-          },
-          mutation: graphql`
-            mutation useCreateSettingsBackupSecondFactorsMutation(
-              $input: CreateBackupSecondFactorsInput!
-            ) {
-              createBackupSecondFactors(input: $input) {
-                secondFactorsOrErrors {
-                  ... on BackupSecondFactors {
-                    __typename
-                    secondFactors {
-                      code
-                    }
-                  }
-                }
+  return useMutation<useCreateSettingsBackupSecondFactorsMutation>({
+    mutation: graphql`
+      mutation useCreateSettingsBackupSecondFactorsMutation(
+        $input: CreateBackupSecondFactorsInput!
+      ) {
+        createBackupSecondFactors(input: $input) {
+          secondFactorsOrErrors {
+            __typename
+            ... on BackupSecondFactors {
+              secondFactors {
+                code
               }
             }
-          `,
-          variables: { input },
+            ... on Errors {
+              errors {
+                message
+              }
+            }
+          }
         }
-      )
-    })
-  }
-
-  return { submitCreateSettingsBackupSecondFactors }
+      }
+    `,
+  })
 }

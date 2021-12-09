@@ -5,6 +5,7 @@ import { SettingsEditSettingsTwoFactor_me } from "v2/__generated__/SettingsEditS
 import { SmsSecondFactorFragmentContainer } from "v2/Components/UserSettings/TwoFactorAuthentication/Components/SmsSecondFactor"
 import { AppSecondFactorFragmentContainer } from "v2/Components/UserSettings/TwoFactorAuthentication/Components/AppSecondFactor"
 import { SettingsEditSettingsTwoFactorBackupCodesFragmentContainer } from "./SettingsEditSettingsTwoFactorBackupCodes"
+import { SettingsEditSettingsTwoFactorAppAuthenticatorFragmentContainer } from "./SettingsEditSettingsTwoFactorAppAuthenticator"
 
 export interface SettingsEditSettingsTwoFactorProps {
   me: SettingsEditSettingsTwoFactor_me
@@ -25,6 +26,10 @@ export const SettingsEditSettingsTwoFactor: React.FC<SettingsEditSettingsTwoFact
           Set up an additional layer of security by requiring a security code in
           addition to your password to log in to your Artsy account.
         </Text>
+
+        <SettingsEditSettingsTwoFactorAppAuthenticatorFragmentContainer
+          me={me}
+        />
 
         {/* TODO: */}
         <AppSecondFactorFragmentContainer me={me} />
@@ -48,6 +53,7 @@ export const SettingsEditSettingsTwoFactorFragmentContainer = createFragmentCont
         hasSecondFactorEnabled
         ...AppSecondFactor_me
         ...SmsSecondFactor_me
+        ...SettingsEditSettingsTwoFactorAppAuthenticator_me
         ...SettingsEditSettingsTwoFactorBackupCodes_me
       }
     `,
