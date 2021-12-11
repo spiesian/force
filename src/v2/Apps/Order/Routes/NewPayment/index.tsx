@@ -8,7 +8,7 @@ import { TwoColumnLayout } from "v2/Apps/Order/Components/TwoColumnLayout"
 import { track } from "v2/System/Analytics"
 import { CountdownTimer } from "v2/Components/CountdownTimer"
 import { RouteConfig, Router } from "found"
-import { createRef, Component } from "react";
+import { createRef, Component } from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import type { Stripe, StripeElements } from "@stripe/stripe-js"
 import createLogger from "v2/Utils/logger"
@@ -209,6 +209,7 @@ export class NewPaymentRoute extends Component<
     return this.props.commitMutation<NewPaymentRouteSetOrderPaymentMutation>({
       variables,
       // TODO: Inputs to the mutation might have changed case of the keys!
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       mutation: graphql`
         mutation NewPaymentRouteSetOrderPaymentMutation(
           $input: CommerceFixFailedPaymentInput!
@@ -298,11 +299,13 @@ export const NewPaymentFragmentContainer = createFragmentContainer(
     injectCommitMutation(injectDialog(NewPaymentRoute)) as any
   ),
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment NewPayment_me on Me {
         ...PaymentPicker_me
       }
     `,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     order: graphql`
       fragment NewPayment_order on CommerceOrder {
         internalID

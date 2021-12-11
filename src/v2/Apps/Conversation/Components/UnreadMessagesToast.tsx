@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import * as React from "react";
+import { useState, useEffect } from "react"
+import * as React from "react"
 import { createRefetchContainer, graphql, RelayRefetchProp } from "react-relay"
 import { ArrowDownIcon, Flex, Text } from "@artsy/palette"
 import styled from "styled-components"
@@ -111,6 +111,7 @@ export const UnreadMessagesToast: React.FC<UnreadMessagesToastProps> = ({
   )
 }
 
+// PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
 export const CONVERSATION_QUERY = graphql`
   query UnreadMessagesToastQuery($conversationID: String!) {
     me {
@@ -124,6 +125,7 @@ export const CONVERSATION_QUERY = graphql`
 export const UnreadMessagesToastRefetchContainer = createRefetchContainer(
   UnreadMessagesToast,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     conversation: graphql`
       fragment UnreadMessagesToast_conversation on Conversation {
         id

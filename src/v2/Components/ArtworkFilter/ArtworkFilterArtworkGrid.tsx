@@ -106,6 +106,7 @@ const ArtworkFilterArtworkGrid: React.FC<ArtworkFilterArtworkGridProps> = props 
 export const ArtworkFilterArtworkGridRefetchContainer = createFragmentContainer(
   ArtworkFilterArtworkGrid,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     filtered_artworks: graphql`
       fragment ArtworkFilterArtworkGrid_filtered_artworks on FilterArtworksConnection {
         id

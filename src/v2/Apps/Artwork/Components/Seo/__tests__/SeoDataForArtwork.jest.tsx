@@ -24,6 +24,7 @@ describe("SeoDataForArtwork", () => {
     return await renderRelayTree({
       Component: SeoDataForArtworkFragmentContainer,
       wrapper: renderer => <MockBoot>{renderer}</MockBoot>,
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query: graphql`
         query SeoDataForArtwork_Test_Query @raw_response_type {
           artwork(id: "richard-anuszkiewicz-lino-yellow-318") {

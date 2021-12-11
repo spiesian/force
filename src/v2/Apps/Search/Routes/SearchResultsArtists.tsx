@@ -164,6 +164,7 @@ export class SearchResultsArtistsRoute extends React.Component<Props, State> {
 export const SearchResultsArtistsRouteFragmentContainer = createRefetchContainer(
   withRouter(SearchResultsArtistsRoute) as React.ComponentType<Props>,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewer: graphql`
       fragment SearchResultsArtists_viewer on Viewer
         @argumentDefinitions(

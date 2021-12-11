@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { Text } from "@artsy/palette"
 import { getContactAddressLines } from "./partnerContactUtils"
 import { PartnerContactAddress_location } from "v2/__generated__/PartnerContactAddress_location.graphql"
@@ -26,6 +26,7 @@ export const PartnerContactAddress: React.FC<PartnerContactAddressProps> = ({
 export const PartnerContactAddressFragmentContainer = createFragmentContainer(
   PartnerContactAddress,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     location: graphql`
       fragment PartnerContactAddress_location on Location {
         city

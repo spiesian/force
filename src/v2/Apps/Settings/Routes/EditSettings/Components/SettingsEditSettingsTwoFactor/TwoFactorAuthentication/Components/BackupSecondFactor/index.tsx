@@ -123,6 +123,7 @@ export const BackupSecondFactor: React.FC<BackupSecondFactorProps> = props => {
 export const BackupSecondFactorFragmentContainer = createFragmentContainer(
   BackupSecondFactor,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment BackupSecondFactor_me on Me {
         backupSecondFactors: secondFactors(kinds: [backup]) {

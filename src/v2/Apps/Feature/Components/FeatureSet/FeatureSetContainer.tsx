@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { Box, CSSGrid, Join, Spacer } from "@artsy/palette"
 import { createFragmentContainer, graphql } from "react-relay"
 import { Masonry } from "v2/Components/Masonry"
@@ -59,6 +59,7 @@ export const FeatureSetContainer: React.FC<FeatureSetContainerProps> = ({
 export const FeatureSetContainerFragmentContainer = createFragmentContainer(
   FeatureSetContainer,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     set: graphql`
       fragment FeatureSetContainer_set on OrderedSet {
         id

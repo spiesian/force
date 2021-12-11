@@ -31,6 +31,7 @@ const ConsignTopArtistsQueryRenderer: React.FC = () => {
     <SystemQueryRenderer<ConsignTopArtistsQuery>
       environment={relayEnvironment}
       variables={{}}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query ConsignTopArtistsQuery {
           targetSupply {

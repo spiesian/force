@@ -124,6 +124,7 @@ export const consignRoutes: AppRouteConfig[] = [
         onClientSideRender: () => {
           ContactInformation.preload()
         },
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query consignRoutes_ContactInformationQuery {
             me {
@@ -150,6 +151,7 @@ export const consignRoutes: AppRouteConfig[] = [
     onClientSideRender: () => {
       OfferDetailApp.preload()
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query consignRoutes_OfferDetailQuery($offerID: ID!) {
         offer(id: $offerID) {

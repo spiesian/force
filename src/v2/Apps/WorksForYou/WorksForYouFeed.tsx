@@ -129,6 +129,7 @@ export class WorksForYouFeed extends Component<Props, State> {
 export const WorksForYouFeedPaginationContainer = createPaginationContainer(
   WorksForYouFeed,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewer: graphql`
       fragment WorksForYouFeed_viewer on Viewer
         @argumentDefinitions(
@@ -192,6 +193,7 @@ export const WorksForYouFeedPaginationContainer = createPaginationContainer(
         cursor,
       }
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query WorksForYouFeedPaginationQuery($count: Int!, $cursor: String) {
         viewer {

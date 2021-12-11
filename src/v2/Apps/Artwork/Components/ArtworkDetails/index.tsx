@@ -9,8 +9,8 @@ import {
   Tab,
   Tabs,
 } from "@artsy/palette"
-import { Component } from "react";
-import * as React from "react";
+import { Component } from "react"
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import styled from "styled-components"
 import { ArtworkDetailsAboutTheWorkFromArtsyFragmentContainer } from "./ArtworkDetailsAboutTheWorkFromArtsy"
@@ -113,6 +113,7 @@ export class ArtworkDetails extends Component<ArtworkDetailsProps> {
 export const ArtworkDetailsFragmentContainer = createFragmentContainer(
   ArtworkDetails,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment ArtworkDetails_artwork on Artwork {
         ...ArtworkDetailsAboutTheWorkFromArtsy_artwork
@@ -170,6 +171,7 @@ export const ArtworkDetailsQueryRenderer: React.FC<{
       environment={relayEnvironment}
       variables={{ slug }}
       placeholder={PLACEHOLDER}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query ArtworkDetailsQuery($slug: String!) {
           artwork(id: $slug) {

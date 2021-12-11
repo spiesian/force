@@ -124,6 +124,7 @@ export class MarketInsights extends Component<MarketInsightsProps> {
 export const ArtistMarketInsightsFragmentContainer = createFragmentContainer(
   MarketInsights,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment ArtistMarketInsights_artist on Artist
         @argumentDefinitions(

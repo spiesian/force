@@ -1,5 +1,5 @@
-import { useState } from "react";
-import * as React from "react";
+import { useState } from "react"
+import * as React from "react"
 import {
   Clickable,
   Image,
@@ -124,6 +124,7 @@ export const ShowInstallShots: React.FC<ShowInstallShotsProps> = ({
 export const ShowInstallShotsFragmentContainer = createFragmentContainer(
   ShowInstallShots,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     show: graphql`
       fragment ShowInstallShots_show on Show {
         name

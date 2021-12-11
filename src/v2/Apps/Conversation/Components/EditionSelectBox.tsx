@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { Box, BorderBox, Flex, Text, Radio } from "@artsy/palette"
 import styled from "styled-components"
@@ -64,6 +64,7 @@ export const EditionSelectBox: React.FC<Props> = ({
 export const EditionSelectBoxFragmentContainer = createFragmentContainer(
   EditionSelectBox,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     edition: graphql`
       fragment EditionSelectBox_edition on EditionSet {
         internalID

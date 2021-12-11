@@ -75,6 +75,7 @@ const ViewingRoomSubsections: React.FC<ViewingRoomSubsectionsProps> = ({
 export const ViewingRoomSubsectionsFragmentContainer = createFragmentContainer(
   ViewingRoomSubsections,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewingRoom: graphql`
       fragment ViewingRoomSubsections_viewingRoom on ViewingRoom {
         subsections {

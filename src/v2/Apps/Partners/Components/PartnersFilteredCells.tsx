@@ -87,6 +87,7 @@ const PartnersFilteredCells: FC<PartnersFilteredCellsProps> = ({
   )
 }
 
+// PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
 const PARTNERS_FILTERED_CELLS_QUERY = graphql`
   query PartnersFilteredCellsQuery(
     $after: String
@@ -104,6 +105,7 @@ const PARTNERS_FILTERED_CELLS_QUERY = graphql`
 const PartnersFilteredCellsPaginationContainer = createPaginationContainer(
   PartnersFilteredCells,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewer: graphql`
       fragment PartnersFilteredCells_viewer on Viewer
         @argumentDefinitions(

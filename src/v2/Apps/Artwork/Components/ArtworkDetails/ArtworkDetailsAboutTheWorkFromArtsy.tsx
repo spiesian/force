@@ -66,6 +66,7 @@ export class ArtworkDetailsAboutTheWorkFromArtsy extends Component<
 export const ArtworkDetailsAboutTheWorkFromArtsyFragmentContainer = createFragmentContainer(
   ArtworkDetailsAboutTheWorkFromArtsy,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment ArtworkDetailsAboutTheWorkFromArtsy_artwork on Artwork {
         description(format: HTML)

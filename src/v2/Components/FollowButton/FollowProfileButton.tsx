@@ -86,6 +86,7 @@ export class FollowProfileButton extends React.Component<Props> {
       // @ts-expect-error PLEASE_FIX_ME_STRICT_NULL_CHECK_MIGRATION
       commitMutation<FollowProfileButtonMutation>(relay.environment, {
         // TODO: Inputs to the mutation might have changed case of the keys!
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         mutation: graphql`
           mutation FollowProfileButtonMutation($input: FollowProfileInput!) {
             followProfile(input: $input) {
@@ -161,6 +162,7 @@ export const FollowProfileButtonFragmentContainer = track({})(
       withAnalyticsContext(FollowProfileButton)
     ) as React.ComponentType<Props>,
     {
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       profile: graphql`
         fragment FollowProfileButton_profile on Profile {
           id

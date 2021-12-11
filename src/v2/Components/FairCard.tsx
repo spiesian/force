@@ -35,6 +35,7 @@ export const FairCard: React.FC<FairHeaderImageProps> = ({
 }
 
 export const FairCardFragmentContainer = createFragmentContainer(FairCard, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   fair: graphql`
     fragment FairCard_fair on Fair {
       name

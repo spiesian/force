@@ -122,6 +122,7 @@ export class FollowArtistButton extends React.Component<Props> {
 
     // @ts-expect-error PLEASE_FIX_ME_STRICT_NULL_CHECK_MIGRATION
     commitMutation<FollowArtistButtonMutation>(relay.environment, {
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       mutation: graphql`
         mutation FollowArtistButtonMutation($input: FollowArtistInput!) {
           followArtist(input: $input) {
@@ -229,6 +230,7 @@ export const FollowArtistButtonFragmentContainer = createFragmentContainer(
     withAnalyticsContext(FollowArtistButton)
   ) as React.ComponentType<Props>,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment FollowArtistButton_artist on Artist
         @argumentDefinitions(
@@ -258,6 +260,7 @@ export const FollowArtistButtonQueryRenderer: React.FC<
   return (
     <SystemQueryRenderer<FollowArtistButtonQuery>
       environment={relayEnvironment}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query FollowArtistButtonQuery($id: String!) {
           artist(id: $id) {

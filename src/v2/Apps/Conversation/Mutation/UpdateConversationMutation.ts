@@ -13,6 +13,7 @@ export const UpdateConversation = (
         fromLastViewedMessageId: conversation?.lastMessageID ?? "",
       },
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     mutation: graphql`
       mutation UpdateConversationMutation(
         $input: UpdateConversationMutationInput!

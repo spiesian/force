@@ -22,6 +22,7 @@ jest.mock("v2/System/Router/useRouter", () => ({
 describe("FairExhibitors", () => {
   const { getWrapper } = setupTestWrapper<FairExhibitors_Test_Query>({
     Component: FairExhibitorsFragmentContainer,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query FairExhibitors_Test_Query($id: String!) {
         fair(id: $id) @principalField {

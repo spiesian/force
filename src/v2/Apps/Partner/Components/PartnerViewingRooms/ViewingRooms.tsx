@@ -1,5 +1,5 @@
 import { Column, GridColumns, Text } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { ViewingRoomCardFragmentContainer } from "./ViewingRoomCard"
 import { ViewingRooms_edges } from "v2/__generated__/ViewingRooms_edges.graphql"
@@ -33,6 +33,7 @@ const ViewingRooms: React.FC<ViewingRoomsProps> = ({ edges, eventTitle }) => {
 export const ViewingRoomsFragmentContainer = createFragmentContainer(
   ViewingRooms,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     edges: graphql`
       fragment ViewingRooms_edges on ViewingRoomsEdge @relay(plural: true) {
         node {

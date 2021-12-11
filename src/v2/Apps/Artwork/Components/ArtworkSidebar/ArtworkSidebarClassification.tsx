@@ -1,5 +1,5 @@
 import { Clickable, Text } from "@artsy/palette"
-import { Component } from "react";
+import { Component } from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { ArtworkSidebarClassification_artwork } from "v2/__generated__/ArtworkSidebarClassification_artwork.graphql"
 import * as Schema from "v2/System/Analytics/Schema"
@@ -72,6 +72,7 @@ export class ArtworkSidebarClassification extends Component<
 export const ArtworkSidebarClassificationFragmentContainer = createFragmentContainer(
   ArtworkSidebarClassification,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment ArtworkSidebarClassification_artwork on Artwork {
         attributionClass {

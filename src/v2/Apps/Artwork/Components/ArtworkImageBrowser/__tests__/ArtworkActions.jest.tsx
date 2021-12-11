@@ -47,6 +47,7 @@ const getWrapperWithBreakpoint = (breakpoint: Breakpoint) =>
         </MockBoot>
       )
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query ArtworkActions_Test_Query {
         artwork(id: "example") {

@@ -52,6 +52,7 @@ export const fairOrganizerRoutes: AppRouteConfig[] = [
         return <Component {...props} />
       }
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query fairOrganizerRoutes_FairOrganizerQuery($slug: String!) {
         fairOrganizer(id: $slug) @principalField {
@@ -87,6 +88,7 @@ export const fairOrganizerRoutes: AppRouteConfig[] = [
       const { page } = location.query
       return { page, slug }
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query fairOrganizerRoutes_FairOrganizerDedicatedArticles_Query(
         $slug: String!

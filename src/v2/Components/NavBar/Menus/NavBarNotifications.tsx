@@ -1,7 +1,7 @@
 import { AnalyticsSchema } from "v2/System/Analytics"
 import { useTracking } from "v2/System/Analytics/useTracking"
-import { useContext } from "react";
-import * as React from "react";
+import { useContext } from "react"
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { SystemContext } from "v2/System"
 import { NavBarNotificationsQuery } from "v2/__generated__/NavBarNotificationsQuery.graphql"
@@ -133,6 +133,7 @@ export const NavBarNotifications: React.FC<NavBarNotificationsProps> = ({
 const NavBarNotificationsFragmentContainer = createFragmentContainer(
   NavBarNotifications,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment NavBarNotifications_me on Me {
         unreadNotificationsCount
@@ -193,6 +194,7 @@ export const NavBarNotificationsQueryRenderer: React.FC = () => {
 
       <SystemQueryRenderer<NavBarNotificationsQuery>
         environment={relayEnvironment}
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query={graphql`
           query NavBarNotificationsQuery {
             me {

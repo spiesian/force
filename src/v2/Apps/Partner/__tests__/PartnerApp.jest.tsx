@@ -30,6 +30,7 @@ const { getWrapper } = setupTestWrapper<PartnerApp_Test_Query>({
       </HeadProvider>
     )
   },
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query PartnerApp_Test_Query {
       partner(id: "example") {

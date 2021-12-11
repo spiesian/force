@@ -61,6 +61,7 @@ export const fairRoutes: AppRouteConfig[] = [
     onClientSideRender: () => {
       FairApp.preload()
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query fairRoutes_FairQuery($slug: String!) {
         fair(id: $slug) @principalField {
@@ -75,6 +76,7 @@ export const fairRoutes: AppRouteConfig[] = [
         onClientSideRender: () => {
           FairOverviewRoute.preload()
         },
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query fairRoutes_FairOverviewQuery($slug: String!) {
             fair(id: $slug) @principalField {
@@ -89,6 +91,7 @@ export const fairRoutes: AppRouteConfig[] = [
         onClientSideRender: () => {
           FairExhibitorsRoute.preload()
         },
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query fairRoutes_FairExhibitorsQuery($slug: String!) {
             fair(id: $slug) @principalField {
@@ -110,6 +113,7 @@ export const fairRoutes: AppRouteConfig[] = [
           }
           return { sort, page, slug }
         },
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query fairRoutes_FairBoothsQuery(
             $slug: String!
@@ -153,6 +157,7 @@ export const fairRoutes: AppRouteConfig[] = [
           FairArtworksRoute.preload()
         },
         prepareVariables: initializeVariablesWithFilterState,
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query fairRoutes_FairArtworksQuery(
             $slug: String!
@@ -181,6 +186,7 @@ export const fairRoutes: AppRouteConfig[] = [
     onClientSideRender: () => {
       FairSubApp.preload()
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query fairRoutes_FairSubAppQuery($slug: String!) {
         fair(id: $slug) @principalField {
@@ -195,6 +201,7 @@ export const fairRoutes: AppRouteConfig[] = [
         onClientSideRender: () => {
           FairArticlesRoute.preload()
         },
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query fairRoutes_FaiArticlesQuery($slug: String!) {
             fair(id: $slug) @principalField {

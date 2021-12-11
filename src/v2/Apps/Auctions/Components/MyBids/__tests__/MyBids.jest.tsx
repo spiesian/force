@@ -14,6 +14,7 @@ describe("MyBids", () => {
     Component: (props: any) => {
       return <MyBidsFragmentContainer me={props.me} />
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query MyBids_Test_Query {
         me {

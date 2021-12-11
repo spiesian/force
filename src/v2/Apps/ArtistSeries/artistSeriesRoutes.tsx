@@ -19,6 +19,7 @@ export const artistSeriesRoutes: AppRouteConfig[] = [
       ArtistSeriesApp.preload()
     },
     prepareVariables: initializeVariablesWithFilterState,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query artistSeriesRoutes_ArtistSeriesQuery(
         $slug: ID!

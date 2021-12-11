@@ -93,6 +93,7 @@ const InstitutionsRoute: React.FC<InstitutionsRouteProps> = ({ viewer }) => {
 export const InstitutionsRouteFragmentContainer = createFragmentContainer(
   InstitutionsRoute,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewer: graphql`
       fragment InstitutionsRoute_viewer on Viewer {
         ...PartnersFeaturedCarousel_viewer

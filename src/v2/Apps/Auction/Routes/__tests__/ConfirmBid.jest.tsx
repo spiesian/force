@@ -98,6 +98,7 @@ const setupTestEnv = ({
       createCreditCard: {},
       updateMyUserProfile: {},
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query ConfirmBidValidTestQuery @raw_response_type {
         artwork(id: "artwork-id") {

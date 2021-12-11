@@ -9,6 +9,7 @@ export type FollowedArtistList = Array<{
   internalID: string
 }>
 
+// PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
 graphql`
   fragment fetchFollowedArtists_response on FollowArtistConnection {
     edges {

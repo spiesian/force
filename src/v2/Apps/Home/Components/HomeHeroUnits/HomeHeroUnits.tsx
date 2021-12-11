@@ -55,6 +55,7 @@ const HomeHeroUnits: React.FC<HomeHeroUnitsProps> = ({ homePage }) => {
 export const HomeHeroUnitsFragmentContainer = createFragmentContainer(
   HomeHeroUnits,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     homePage: graphql`
       fragment HomeHeroUnits_homePage on HomePage {
         heroUnits(platform: DESKTOP) {

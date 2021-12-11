@@ -80,6 +80,7 @@ export class ArtworkSidebarPartnerInfo extends Component<
 export const ArtworkSidebarPartnerInfoFragmentContainer = createFragmentContainer(
   ArtworkSidebarPartnerInfo,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment ArtworkSidebarPartnerInfo_artwork on Artwork {
         partner {

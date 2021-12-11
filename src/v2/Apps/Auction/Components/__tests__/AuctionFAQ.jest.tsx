@@ -63,6 +63,7 @@ describe("AuctionFAQ", () => {
   ) => {
     return await renderRelayTree({
       Component: AuctionFAQFragmentContainer,
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query: graphql`
         query AuctionFAQ_Query @raw_response_type {
           viewer {

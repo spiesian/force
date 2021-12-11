@@ -15,6 +15,7 @@ export const requestEmailConfirmation = (relayEnvironment: Environment) => {
           reject(error)
         },
         variables: {},
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         mutation: graphql`
           mutation requestEmailConfirmationMutation {
             sendConfirmationEmail(input: {}) {

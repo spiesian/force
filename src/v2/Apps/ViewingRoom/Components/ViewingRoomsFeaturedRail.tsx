@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { Card, Shelf } from "@artsy/palette"
 import { ViewingRoomsFeaturedRail_featuredViewingRooms } from "v2/__generated__/ViewingRoomsFeaturedRail_featuredViewingRooms.graphql"
 import { createFragmentContainer, graphql } from "react-relay"
@@ -56,6 +56,7 @@ export const ViewingRoomsFeaturedRail: React.FC<ViewingRoomsFeaturedRailProps> =
 export const ViewingRoomsFeaturedRailFragmentContainer = createFragmentContainer(
   ViewingRoomsFeaturedRail,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     featuredViewingRooms: graphql`
       fragment ViewingRoomsFeaturedRail_featuredViewingRooms on ViewingRoomConnection {
         edges {

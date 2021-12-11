@@ -88,6 +88,7 @@ describe("Review", () => {
       ...submitOrderSuccess,
       ...submitOfferOrderSuccess,
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query ReviewTestQuery @raw_response_type {
         order: commerceOrder(id: "unused") {

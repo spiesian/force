@@ -1,6 +1,6 @@
 import { Shelf } from "@artsy/palette"
 import { DefaultHeader_headerArtworks } from "v2/__generated__/DefaultHeader_headerArtworks.graphql"
-import { FC } from "react";
+import { FC } from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { DefaultHeaderArtworkFragmentContainer as DefaultHeaderArtwork } from "./DefaultHeaderArtwork"
 import { extractNodes } from "v2/Utils/extractNodes"
@@ -37,6 +37,7 @@ export const CollectionDefaultHeader: FC<CollectionDefaultHeaderProps> = ({
 export const CollectionDefaultHeaderFragmentContainer = createFragmentContainer(
   CollectionDefaultHeader,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     headerArtworks: graphql`
       fragment DefaultHeader_headerArtworks on FilterArtworksConnection {
         edges {

@@ -69,6 +69,7 @@ export const OtherCollectionEntity: React.FC<CollectionProps> = ({
 export const OtherCollectionsRailsContainer = createFragmentContainer(
   OtherCollectionEntity as React.FC<CollectionProps>,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     member: graphql`
       fragment OtherCollectionEntity_member on MarketingCollection {
         id

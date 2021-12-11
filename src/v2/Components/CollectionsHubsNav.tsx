@@ -54,6 +54,7 @@ export const CollectionsHubsNav: FC<CollectionsHubsNavProps> = props => {
 export const CollectionsHubsNavFragmentContainer = createFragmentContainer(
   CollectionsHubsNav,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     marketingHubCollections: graphql`
       fragment CollectionsHubsNav_marketingHubCollections on MarketingCollection
         @relay(plural: true) {

@@ -11,6 +11,7 @@ export const createConsignSubmissionMutation = (
 ) => {
   return new Promise<string>((resolve, reject) => {
     commitMutation<CreateConsignSubmissionMutation>(relayEnvironment, {
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       mutation: graphql`
         mutation CreateConsignSubmissionMutation(
           $input: CreateSubmissionMutationInput!

@@ -9,7 +9,7 @@ import {
   ResponsiveBox,
   Text,
 } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { ContextModule } from "@artsy/cohesion"
 import { createFragmentContainer, graphql } from "react-relay"
 import { FollowArtistButtonFragmentContainer } from "v2/Components/FollowButton/FollowArtistButton"
@@ -124,6 +124,7 @@ const ArtistHeader: React.FC<ArtistHeaderProps> = ({ artist }) => {
 export const ArtistHeaderFragmentContainer = createFragmentContainer(
   ArtistHeader,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment ArtistHeader_artist on Artist
         @argumentDefinitions(

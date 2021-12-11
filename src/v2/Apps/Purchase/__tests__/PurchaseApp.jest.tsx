@@ -41,6 +41,7 @@ const render = (me: PurchaseAppTestQueryRawResponse["me"], user: User) =>
       <PurchaseAppFragmentContainer me={{ ...me }} {...props} />
     ),
     mockData: { me } as PurchaseAppTestQueryRawResponse,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query PurchaseAppTestQuery @raw_response_type {
         me {

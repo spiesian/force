@@ -447,6 +447,7 @@ export const BaseArtworkFilter: React.FC<
 export const ArtworkFilterRefetchContainer = createRefetchContainer(
   BaseArtworkFilter,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewer: graphql`
       fragment ArtworkFilter_viewer on Viewer
         @argumentDefinitions(input: { type: "FilterArtworksInput" }) {

@@ -9,6 +9,7 @@ jest.mock("v2/Utils/Hooks/Mutations/useUpdateMyUserProfile")
 
 const { renderWithRelay } = setupTestWrapperTL({
   Component: SettingsEditProfileAboutYouFragmentContainer,
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query SettingsEditProfileAboutYou_Test_Query {
       me {

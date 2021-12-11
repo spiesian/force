@@ -48,6 +48,7 @@ export const ArtistConsignPageViews: React.FC<ArtistConsignPageViewsProps> = pro
 export const ArtistConsignPageViewsFragmentContainer = createFragmentContainer(
   ArtistConsignPageViews,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment ArtistConsignPageViews_artist on Artist {
         name

@@ -119,6 +119,7 @@ const GalleriesRoute: React.FC<GalleriesRouteProps> = ({ viewer }) => {
 export const GalleriesRouteFragmentContainer = createFragmentContainer(
   GalleriesRoute,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewer: graphql`
       fragment GalleriesRoute_viewer on Viewer {
         ...PartnersFeaturedCarousel_viewer

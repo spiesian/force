@@ -188,6 +188,7 @@ export class RespondRoute extends Component<RespondProps, RespondState> {
   createCounterOffer(variables: RespondCounterOfferMutation["variables"]) {
     return this.props.commitMutation<RespondCounterOfferMutation>({
       // TODO: Inputs to the mutation might have changed case of the keys!
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       mutation: graphql`
         mutation RespondCounterOfferMutation(
           $input: CommerceBuyerCounterOfferInput!
@@ -356,6 +357,7 @@ export class RespondRoute extends Component<RespondProps, RespondState> {
 export const RespondFragmentContainer = createFragmentContainer(
   injectCommitMutation(injectDialog(RespondRoute)),
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     order: graphql`
       fragment Respond_order on CommerceOrder {
         internalID

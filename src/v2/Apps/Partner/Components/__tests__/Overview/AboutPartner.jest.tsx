@@ -8,6 +8,7 @@ const { getWrapper } = setupTestWrapper({
   Component: ({ partner }: any) => {
     return <AboutPartnerFragmentContainer partner={partner} />
   },
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query AboutPartner_Test_Query {
       partner(id: "unit-london") @principalField {

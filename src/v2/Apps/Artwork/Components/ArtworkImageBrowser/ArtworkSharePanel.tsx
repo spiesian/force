@@ -15,8 +15,8 @@ import {
   TumblrIcon,
 } from "@artsy/palette"
 import { ArtworkSharePanel_artwork } from "v2/__generated__/ArtworkSharePanel_artwork.graphql"
-import { useRef, useState } from "react";
-import * as React from "react";
+import { useRef, useState } from "react"
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { data as sd } from "sharify"
 
@@ -168,6 +168,7 @@ export const ArtworkSharePanel: React.FC<ArtworkSharePanelProps> = ({
 export const ArtworkSharePanelFragmentContainer = createFragmentContainer(
   ArtworkSharePanel,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment ArtworkSharePanel_artwork on Artwork {
         href

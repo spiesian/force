@@ -10,6 +10,7 @@ const { getWrapper } = setupTestWrapper({
       <ShowCardFragmentContainer show={partner.showsConnection.edges[0].node} />
     )
   },
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query ShowCard_Test_Query {
       partner(id: "white-cube") @principalField {

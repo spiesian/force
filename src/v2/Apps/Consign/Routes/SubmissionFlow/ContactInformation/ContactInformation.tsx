@@ -143,6 +143,7 @@ export const ContactInformation: React.FC<ContactInformationProps> = ({
 export const ContactInformationFragmentContainer = createFragmentContainer(
   ContactInformation,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment ContactInformation_me on Me {
         name

@@ -54,6 +54,7 @@ export const PartnerArtists: React.FC<PartnerArtistsProps> = ({
 export const PartnerArtistsFragmentContainer = createFragmentContainer(
   PartnerArtists,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     partner: graphql`
       fragment PartnerArtists_partner on Partner {
         slug
@@ -82,6 +83,7 @@ export const PartnerArtistsRenderer: React.FC<{
     <SystemQueryRenderer<PartnerArtistsQuery>
       lazyLoad
       environment={relayEnvironment}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query PartnerArtistsQuery($partnerId: String!) {
           partner(id: $partnerId) @principalField {

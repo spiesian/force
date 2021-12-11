@@ -35,6 +35,7 @@ const { getWrapper } = setupTestWrapper<ArtistSeriesArtworksFilter_Query>({
       />
     </MockBoot>
   ),
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query ArtistSeriesArtworksFilter_Query($slug: ID!) {
       artistSeries(id: $slug) {

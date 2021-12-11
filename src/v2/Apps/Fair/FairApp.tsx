@@ -188,6 +188,7 @@ const TrackingWrappedFairApp: React.FC<FairAppProps> = props => {
 export const FairAppFragmentContainer = createFragmentContainer(
   TrackingWrappedFairApp,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     fair: graphql`
       fragment FairApp_fair on Fair {
         internalID

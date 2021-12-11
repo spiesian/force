@@ -43,6 +43,7 @@ export const SecurePayment: React.FC<SecurePaymentProps> = ({
 export const SecurePaymentFragmentContainer = createFragmentContainer(
   SecurePayment,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment SecurePayment_artwork on Artwork {
         is_acquireable: isAcquireable

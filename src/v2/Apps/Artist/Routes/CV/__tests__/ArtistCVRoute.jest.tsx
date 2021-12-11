@@ -14,6 +14,7 @@ jest.mock("v2/Components/Pagination", () => ({
 describe("ArtistCVRoute", () => {
   const { getWrapper } = setupTestWrapper<ArtistCVRoute_Test_Query>({
     Component: ArtistCVRouteFragmentContainer,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query ArtistCVRoute_Test_Query($artistID: String!) {
         viewer {

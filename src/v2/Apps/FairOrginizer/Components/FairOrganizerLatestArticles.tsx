@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { Box, Button, Column, GridColumns, Spacer, Text } from "@artsy/palette"
 import { RouterLink } from "v2/System/Router/RouterLink"
 import { createFragmentContainer, graphql, _FragmentRefs } from "react-relay"
@@ -91,6 +91,7 @@ export const FairOrganizerLatestArticles: React.FC<FairOrganizerLatestArticlesPr
 export const FairOrganizerLatestArticlesFragmentContainer = createFragmentContainer(
   FairOrganizerLatestArticles,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     fairOrganizer: graphql`
       fragment FairOrganizerLatestArticles_fairOrganizer on FairOrganizer {
         name

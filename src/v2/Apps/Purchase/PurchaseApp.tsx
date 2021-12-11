@@ -22,6 +22,7 @@ export const PurchaseApp = (props: any) => {
 export const PurchaseAppFragmentContainer = createFragmentContainer(
   PurchaseApp,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment PurchaseApp_me on Me {
         ...PurchaseHistory_me

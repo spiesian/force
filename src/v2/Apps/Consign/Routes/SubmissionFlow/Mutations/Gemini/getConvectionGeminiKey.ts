@@ -4,6 +4,7 @@ import { getConvectionGeminiKeyQuery } from "v2/__generated__/getConvectionGemin
 export const getConvectionGeminiKey = (relayEnvironment: Environment) =>
   fetchQuery<getConvectionGeminiKeyQuery>(
     relayEnvironment,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     graphql`
       query getConvectionGeminiKeyQuery {
         system {

@@ -54,6 +54,7 @@ export const RequestConditionReport: React.FC<RequestConditionReportProps> = pro
           onError: error => {
             reject(error)
           },
+          // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
           mutation: graphql`
             mutation RequestConditionReportMutation(
               $input: RequestConditionReportInput!
@@ -208,6 +209,7 @@ export const RequestConditionReportQueryRenderer: React.FC<{
     <SystemQueryRenderer<RequestConditionReportQuery>
       environment={relayEnvironment}
       variables={{ artworkID }}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query RequestConditionReportQuery($artworkID: String!) {
           me {

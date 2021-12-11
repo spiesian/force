@@ -90,6 +90,7 @@ class ArtistSearchResultsContent extends React.Component<Props, null> {
       this.props.relay.environment,
       {
         // TODO: Inputs to the mutation might have changed case of the keys!
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         mutation: graphql`
           mutation ArtistSearchResultsArtistMutation(
             $input: FollowArtistInput!
@@ -187,6 +188,7 @@ export const ArtistSearchResultsContentContainer = createFragmentContainer(
   // @ts-expect-error PLEASE_FIX_ME_STRICT_NULL_CHECK_MIGRATION
   ArtistSearchResultsContent,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewer: graphql`
       fragment ArtistSearchResults_viewer on Viewer {
         searchConnection(
@@ -218,6 +220,7 @@ const ArtistSearchResultsComponent: React.SFC<
   return (
     <SystemQueryRenderer<ArtistSearchResultsQuery>
       environment={relayEnvironment}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query ArtistSearchResultsQuery($term: String!) {
           viewer {

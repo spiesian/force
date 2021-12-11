@@ -12,6 +12,7 @@ const { renderWithRelay } = setupTestWrapperTL<
   PartnersFeaturedCarousel_Test_Query
 >({
   Component: PartnersFeaturedCarouselFragmentContainer,
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query PartnersFeaturedCarousel_Test_Query {
       viewer {

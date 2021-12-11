@@ -1,5 +1,5 @@
 import { Text, Flex, Box, Image } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { createRefetchContainer, graphql, RelayRefetchProp } from "react-relay"
 import { extractNodes } from "v2/Utils/extractNodes"
 import { ArtistShowsGroup_artist } from "v2/__generated__/ArtistShowsGroup_artist.graphql"
@@ -109,6 +109,7 @@ const ArtistShowsGroup: React.FC<ArtistShowsGroupProps> = ({
 export const ArtistShowsGroupRefetchContainer = createRefetchContainer(
   ArtistShowsGroup,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment ArtistShowsGroup_artist on Artist
         @argumentDefinitions(

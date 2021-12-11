@@ -103,6 +103,7 @@ const FairsFairBanner: React.FC<FairsFairBannerProps> = ({ fair, ...rest }) => {
 export const FairsFairBannerFragmentContainer = createFragmentContainer(
   FairsFairBanner,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     fair: graphql`
       fragment FairsFairBanner_fair on Fair {
         href

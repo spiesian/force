@@ -29,6 +29,7 @@ export const useUpdateMyUserProfile = ({
 
             resolve(res)
           },
+          // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
           mutation: graphql`
             mutation useUpdateMyUserProfileMutation(
               $input: UpdateMyProfileInput!

@@ -12,6 +12,7 @@ const { getWrapper } = setupTestWrapper<PartnerContacts_Test_Query>({
   Component: ({ partner }: any) => {
     return <PartnerContacts edges={partner.locations.edges} />
   },
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query PartnerContacts_Test_Query @raw_response_type {
       partner(id: "white-cube") {

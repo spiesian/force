@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { DateTime } from "luxon"
 import { createFragmentContainer, graphql } from "react-relay"
 import { Box, Column, Flex, GridColumns, Spacer, Text } from "@artsy/palette"
@@ -83,6 +83,7 @@ export const FairOrganizerHeader: React.FC<FairOrganizerHeaderProps> = ({
 export const FairOrganizerHeaderFragmentContainer = createFragmentContainer(
   FairOrganizerHeader,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     fairOrganizer: graphql`
       fragment FairOrganizerHeader_fairOrganizer on FairOrganizer {
         name

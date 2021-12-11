@@ -160,6 +160,7 @@ export const Message: React.FC<MessageProps> = props => {
 }
 
 export const MessageFragmentContainer = createFragmentContainer(Message, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   message: graphql`
     fragment Message_message on Message {
       __typename

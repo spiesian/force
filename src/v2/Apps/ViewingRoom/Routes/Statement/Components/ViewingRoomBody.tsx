@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { Text } from "@artsy/palette"
 import { createFragmentContainer, graphql } from "react-relay"
 import { ViewingRoomBody_viewingRoom } from "v2/__generated__/ViewingRoomBody_viewingRoom.graphql"
@@ -24,6 +24,7 @@ const ViewingRoomBody: React.FC<ViewingRoomBodyProps> = ({
 export const ViewingRoomBodyFragmentContainer = createFragmentContainer(
   ViewingRoomBody,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewingRoom: graphql`
       fragment ViewingRoomBody_viewingRoom on ViewingRoom {
         body

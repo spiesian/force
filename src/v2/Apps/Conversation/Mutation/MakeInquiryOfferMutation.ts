@@ -17,6 +17,7 @@ export const MakeInquiryOffer = (
   return commitMutation<MakeInquiryOfferMutation>(environment, {
     onError,
     onCompleted,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     mutation: graphql`
       mutation MakeInquiryOfferMutation(
         $input: CommerceCreateInquiryOfferOrderWithArtworkInput!

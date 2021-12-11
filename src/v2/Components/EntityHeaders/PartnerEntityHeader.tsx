@@ -45,6 +45,7 @@ const PartnerEntityHeader: FC<PartnerEntityHeaderProps> = ({
 export const PartnerEntityHeaderFragmentContainer = createFragmentContainer(
   PartnerEntityHeader,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     partner: graphql`
       fragment PartnerEntityHeader_partner on Partner {
         internalID

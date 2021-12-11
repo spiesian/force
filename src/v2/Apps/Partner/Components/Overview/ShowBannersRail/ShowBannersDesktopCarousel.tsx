@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { Carousel, CarouselCell, CarouselRail } from "@artsy/palette"
 import { ShowBannerFragmentContainer } from "../../PartnerShows"
 import { usePartnerShowBannersContext } from "v2/Apps/Partner/Utils/PartnerShowBannersContex"
@@ -51,6 +51,7 @@ const ShowBannersDesktopCarousel: React.FC<ShowBannersDesktopCarouselProps> = ({
 export const ShowBannersDesktopCarouselFragmentContainer = createFragmentContainer(
   ShowBannersDesktopCarousel,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     shows: graphql`
       fragment ShowBannersDesktopCarousel_shows on Show @relay(plural: true) {
         id

@@ -29,6 +29,7 @@ const { getWrapper } = setupTestWrapper<GeneArtworkFilter_Query>({
       <GeneArtworkFilterRefetchContainer gene={gene!} />
     </MockBoot>
   ),
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query GeneArtworkFilter_Query($slug: String!) {
       gene(id: $slug) {

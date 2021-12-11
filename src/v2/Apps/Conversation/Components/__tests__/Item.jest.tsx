@@ -5,6 +5,7 @@ import { graphql } from "react-relay"
 
 jest.unmock("react-relay")
 
+// PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
 const query = graphql`
   query Item_Test_Query {
     me {

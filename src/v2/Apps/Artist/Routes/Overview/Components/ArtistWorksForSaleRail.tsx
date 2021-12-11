@@ -93,6 +93,7 @@ const ArtistWorksForSaleRail: React.FC<ArtistWorksForSaleRailProps> = ({
 export const ArtistWorksForSaleRailFragmentContainer = createFragmentContainer(
   ArtistWorksForSaleRail,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment ArtistWorksForSaleRail_artist on Artist {
         artworksConnection(first: 20, sort: AVAILABILITY_ASC) {
@@ -143,6 +144,7 @@ export const ArtistWorksForSaleRailQueryRenderer: React.FC<{
         environment={relayEnvironment}
         variables={{ slug }}
         placeholder={PLACEHOLDER}
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query={graphql`
           query ArtistWorksForSaleRailQuery($slug: String!) {
             artist(id: $slug) {

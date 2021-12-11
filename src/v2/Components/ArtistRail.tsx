@@ -107,6 +107,7 @@ export const ARTIST_RAIL_PLACEHOLDER = (
 )
 
 export const ArtistRailFragmentContainer = createFragmentContainer(ArtistRail, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   artist: graphql`
     fragment ArtistRail_artist on Artist {
       name
@@ -143,6 +144,7 @@ export const ArtistRailQueryRenderer: FC<ArtistRailQueryRendererProps> = ({
     <SystemQueryRenderer<ArtistRailQuery>
       placeholder={ARTIST_RAIL_PLACEHOLDER}
       variables={{ id }}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query ArtistRailQuery($id: String!) {
           artist(id: $id) {

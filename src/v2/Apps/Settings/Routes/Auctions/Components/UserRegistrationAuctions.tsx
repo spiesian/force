@@ -68,6 +68,7 @@ export const UserRegistrationAuctions: React.FC<UserRegistrationAuctionsProps> =
 export const UserRegistrationAuctionsFragmentContainer = createFragmentContainer(
   UserRegistrationAuctions,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment UserRegistrationAuctions_me on Me {
         saleRegistrationsConnection(

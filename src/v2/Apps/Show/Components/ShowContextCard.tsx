@@ -162,6 +162,7 @@ export const ShowContextCard: React.FC<Props> = ({ show }) => {
 export const ShowContextCardFragmentContainer = createFragmentContainer(
   ShowContextCard,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     show: graphql`
       fragment ShowContextCard_show on Show {
         isFairBooth

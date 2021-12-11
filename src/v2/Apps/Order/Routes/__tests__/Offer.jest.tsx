@@ -41,6 +41,7 @@ describe("Offer InitialMutation", () => {
     defaultMutationResults: {
       ...initialOfferSuccess,
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query OfferTestQuery @raw_response_type {
         order: commerceOrder(id: "unused") {

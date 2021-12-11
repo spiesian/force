@@ -72,6 +72,7 @@ const SettingsApp: React.FC<SettingsAppProps> = ({ me, children }) => {
 export const SettingsAppFragmentContainer = createFragmentContainer(
   SettingsApp,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment SettingsApp_me on Me {
         name

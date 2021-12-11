@@ -59,6 +59,7 @@ export const ArtistSeriesArtworksFilterRefetchContainer = createRefetchContainer
     ArtistSeriesArtworksFilter
   ),
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artistSeries: graphql`
       fragment ArtistSeriesArtworksFilter_artistSeries on ArtistSeries
         @argumentDefinitions(input: { type: "FilterArtworksInput" }) {

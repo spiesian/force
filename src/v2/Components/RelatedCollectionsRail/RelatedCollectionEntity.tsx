@@ -113,6 +113,7 @@ export const RelatedCollectionEntity: React.FC<RelatedCollectionEntityProps> = (
 export const RelatedCollectionEntityFragmentContainer = createFragmentContainer(
   RelatedCollectionEntity,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     collection: graphql`
       fragment RelatedCollectionEntity_collection on MarketingCollection {
         headerImage

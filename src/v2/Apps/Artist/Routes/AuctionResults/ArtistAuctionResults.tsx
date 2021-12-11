@@ -333,6 +333,7 @@ export const ArtistAuctionResultsRefetchContainer = createRefetchContainer(
     )
   },
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment ArtistAuctionResults_artist on Artist
         @argumentDefinitions(

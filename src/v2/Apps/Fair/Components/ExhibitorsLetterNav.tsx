@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import styled from "styled-components"
 import { Text, Flex, Swiper } from "@artsy/palette"
@@ -79,6 +79,7 @@ Letter.displayName = "Letter"
 export const ExhibitorsLetterNavFragmentContainer = createFragmentContainer(
   ExhibitorsLetterNav,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     fair: graphql`
       fragment ExhibitorsLetterNav_fair on Fair {
         exhibitorsGroupedByName {

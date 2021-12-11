@@ -29,6 +29,7 @@ const SettingsAuctionsRoute: React.FC<SettingsAuctionsRouteProps> = ({
 export const SettingsAuctionsRouteFragmentContainer = createFragmentContainer(
   SettingsAuctionsRoute,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment SettingsAuctionsRoute_me on Me {
         ...UserActiveBids_me

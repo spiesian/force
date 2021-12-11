@@ -49,6 +49,7 @@ const ShippingSummaryItem = ({
 export const ShippingSummaryItemFragmentContainer = createFragmentContainer(
   ShippingSummaryItem,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     order: graphql`
       fragment ShippingSummaryItem_order on CommerceOrder {
         state

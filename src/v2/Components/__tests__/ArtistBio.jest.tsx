@@ -24,6 +24,7 @@ describe("ArtistBio", () => {
           <ArtistBio bio={bio} />
         </MockBoot>
       ),
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query: graphql`
         query ArtistBioTestQuery @raw_response_type {
           bio: artist(id: "unused") {

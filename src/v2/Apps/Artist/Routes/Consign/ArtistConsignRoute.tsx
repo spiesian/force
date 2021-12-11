@@ -1,5 +1,5 @@
 import { Box } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 
 import { ArtistConsignRoute_artist } from "v2/__generated__/ArtistConsignRoute_artist.graphql"
@@ -41,6 +41,7 @@ const TrackedConsignRoute = track()((props: ConsignRouteProps) => {
 export const ArtistConsignRouteFragmentContainer = createFragmentContainer(
   TrackedConsignRoute,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment ArtistConsignRoute_artist on Artist {
         ...ArtistConsignMeta_artist

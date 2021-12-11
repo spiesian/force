@@ -195,6 +195,7 @@ export class ArtworkSidebarCommercialContainer extends React.Component<
             this.props.relay.environment,
             {
               // TODO: Inputs to the mutation might have changed case of the keys!
+              // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
               mutation: graphql`
                 mutation ArtworkSidebarCommercialOrderMutation(
                   $input: CommerceCreateOrderWithArtworkInput!
@@ -284,6 +285,7 @@ export class ArtworkSidebarCommercialContainer extends React.Component<
             this.props.relay.environment,
             {
               // TODO: Inputs to the mutation might have changed case of the keys!
+              // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
               mutation: graphql`
                 mutation ArtworkSidebarCommercialOfferOrderMutation(
                   $input: CommerceCreateOfferOrderWithArtworkInput!

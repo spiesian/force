@@ -71,6 +71,7 @@ const TrackingWrappedExampleArtworkRoute: React.FC<ExampleArtworkRouteProps> = p
 export const ExampleArtworkRouteFragmentContainer = createFragmentContainer(
   TrackingWrappedExampleArtworkRoute,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment ExampleArtworkRoute_artwork on Artwork {
         title

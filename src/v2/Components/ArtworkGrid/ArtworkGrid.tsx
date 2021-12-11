@@ -234,6 +234,7 @@ const InnerContainer = styled(Flex)`
 `
 
 export default createFragmentContainer(ArtworkGrid, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   artworks: graphql`
     fragment ArtworkGrid_artworks on ArtworkConnectionInterface {
       edges {

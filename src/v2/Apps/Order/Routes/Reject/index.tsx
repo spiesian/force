@@ -5,7 +5,7 @@ import { ArtworkSummaryItemFragmentContainer as ArtworkSummaryItem } from "v2/Ap
 import { ConditionsOfSaleDisclaimer } from "v2/Apps/Order/Components/ConditionsOfSaleDisclaimer"
 import { TwoColumnLayout } from "v2/Apps/Order/Components/TwoColumnLayout"
 import { Router } from "found"
-import { Component } from "react";
+import { Component } from "react"
 
 import { CountdownTimer } from "v2/Components/CountdownTimer"
 import { StepSummaryItem } from "v2/Components/StepSummaryItem"
@@ -38,6 +38,7 @@ export class Reject extends Component<RejectProps> {
     return this.props.commitMutation<RejectOfferMutation>({
       variables,
       // TODO: Inputs to the mutation might have changed case of the keys!
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       mutation: graphql`
         mutation RejectOfferMutation($input: CommerceBuyerRejectOfferInput!) {
           commerceBuyerRejectOffer(input: $input) {
@@ -174,6 +175,7 @@ export class Reject extends Component<RejectProps> {
 export const RejectFragmentContainer = createFragmentContainer(
   injectCommitMutation(injectDialog(Reject)),
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     order: graphql`
       fragment Reject_order on CommerceOrder {
         internalID

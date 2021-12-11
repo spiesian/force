@@ -1,6 +1,6 @@
 import { Clickable, Spacer } from "@artsy/palette"
 import { ArtworkSidebarCurrentBidInfo_artwork } from "v2/__generated__/ArtworkSidebarCurrentBidInfo_artwork.graphql"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { AnalyticsSchema, useTracking } from "v2/System"
 import {
@@ -172,6 +172,7 @@ export const ArtworkSidebarCurrentBidInfo: React.FC<ArtworkSidebarCurrentBidInfo
 export const ArtworkSidebarCurrentBidInfoFragmentContainer = createFragmentContainer(
   ArtworkSidebarCurrentBidInfo,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment ArtworkSidebarCurrentBidInfo_artwork on Artwork {
         sale {

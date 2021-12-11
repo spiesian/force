@@ -43,6 +43,7 @@ export const ArtistConsignHeaderImages: React.FC<HeaderImageProps> = props => {
 export const ArtistConsignHeaderImagesFragmentContainer = createFragmentContainer(
   ArtistConsignHeaderImages,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment ArtistConsignHeaderImages_artist on Artist {
         targetSupply {

@@ -20,6 +20,7 @@ const { getWrapper } = setupTestWrapper<HomeHeroUnit_Test_Query>({
       />
     )
   },
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query HomeHeroUnit_Test_Query {
       homePage {

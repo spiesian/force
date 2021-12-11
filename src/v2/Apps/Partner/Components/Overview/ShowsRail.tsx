@@ -94,6 +94,7 @@ const ShowsRail: React.FC<ShowsRailProps> = ({ partner, ...rest }) => {
 }
 
 export const ShowsRailFragmentContainer = createFragmentContainer(ShowsRail, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   partner: graphql`
     fragment ShowsRail_partner on Partner {
       slug

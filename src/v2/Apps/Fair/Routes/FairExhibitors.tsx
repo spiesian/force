@@ -69,6 +69,7 @@ const FairExhibitors: React.FC<FairExhibitorsProps> = ({ fair }) => {
 export const FairExhibitorsFragmentContainer = createFragmentContainer(
   FairExhibitors,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     fair: graphql`
       fragment FairExhibitors_fair on Fair {
         exhibitorsGroupedByName {

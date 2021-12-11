@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { FeatureMetaFragmentContainer as FeatureMeta } from "./Components/FeatureMeta"
 import { FeatureHeaderFragmentContainer as FeatureHeader } from "./Components/FeatureHeader"
@@ -45,6 +45,7 @@ const FeatureApp: React.FC<FeatureAppProps> = ({ feature }) => {
 
 // Top-level route needs to be exported for bundle splitting in the router
 export const FeatureAppFragmentContainer = createFragmentContainer(FeatureApp, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   feature: graphql`
     fragment FeatureApp_feature on Feature {
       ...FeatureMeta_feature

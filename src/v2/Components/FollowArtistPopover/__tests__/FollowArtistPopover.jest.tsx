@@ -38,6 +38,7 @@ describe("Follow Artist Popover", () => {
   const getWrapper = async (breakpoint: Breakpoint = "xl") => {
     return await renderRelayTree({
       Component: FollowArtistPopover,
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query: graphql`
         query FollowArtistPopover_Test_Query($artistID: String!)
           @raw_response_type {

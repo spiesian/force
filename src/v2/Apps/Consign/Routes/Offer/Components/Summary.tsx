@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { Box, StackableBorderBox, Text } from "@artsy/palette"
 
@@ -25,6 +25,7 @@ const Summary: React.FC<SummaryProps> = ({ offer }) => {
 }
 
 export const SummaryFragmentContainer = createFragmentContainer(Summary, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   offer: graphql`
     fragment Summary_offer on ConsignmentOffer {
       ...SubmissionSummary_offer

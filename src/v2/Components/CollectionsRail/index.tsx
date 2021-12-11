@@ -1,5 +1,5 @@
-import { useContext } from "react";
-import * as React from "react";
+import { useContext } from "react"
+import * as React from "react"
 import { graphql } from "react-relay"
 
 import { CollectionsRailQuery } from "v2/__generated__/CollectionsRailQuery.graphql"
@@ -24,6 +24,7 @@ export const CollectionsRailContent: React.FC<Props> = passedProps => {
         size: 4,
         randomizationSeed: passedProps.articleId,
       }}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query CollectionsRailQuery(
           $showOnEditorial: Boolean

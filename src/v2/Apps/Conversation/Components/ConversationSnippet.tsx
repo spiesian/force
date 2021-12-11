@@ -154,6 +154,7 @@ const ConversationSnippet: React.FC<ConversationSnippetProps> = props => {
 export const ConversationSnippetFragmentContainer = createFragmentContainer(
   ConversationSnippet,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     conversation: graphql`
       fragment ConversationSnippet_conversation on Conversation {
         internalID

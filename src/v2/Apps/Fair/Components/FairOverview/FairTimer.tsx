@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { Box, Text } from "@artsy/palette"
 import { Timer } from "v2/Components/Timer"
 import { createFragmentContainer, graphql } from "react-relay"
@@ -27,6 +27,7 @@ export const FairTimer: React.FC<FairTimerProps> = ({ fair: { endAt } }) => {
 }
 
 export const FairTimerFragmentContainer = createFragmentContainer(FairTimer, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   fair: graphql`
     fragment FairTimer_fair on Fair {
       endAt

@@ -151,6 +151,7 @@ export const ConversationMessages = ({
 export const ConversationMessagesFragmentContainer = createFragmentContainer(
   ConversationMessages,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     messages: graphql`
       fragment ConversationMessages_messages on MessageConnection {
         edges {
@@ -166,6 +167,7 @@ export const ConversationMessagesFragmentContainer = createFragmentContainer(
         }
       }
     `,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     events: graphql`
       fragment ConversationMessages_events on CommerceOrderConnectionWithTotalCount {
         edges {

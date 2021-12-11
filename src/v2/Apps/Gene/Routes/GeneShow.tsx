@@ -86,6 +86,7 @@ export const GeneShow: React.FC<GeneShowProps> = ({ gene }) => {
   )
 }
 export const GeneShowFragmentContainer = createFragmentContainer(GeneShow, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   gene: graphql`
     fragment GeneShow_gene on Gene
       @argumentDefinitions(

@@ -185,6 +185,7 @@ const FairArticles: React.FC<FairArticlesProps> = ({ fair, relay }) => {
   )
 }
 
+// PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
 export const FAIR_ARTICLES_QUERY = graphql`
   query FairArticlesQuery($id: String!, $first: Int!, $after: String) {
     fair(id: $id) {
@@ -196,6 +197,7 @@ export const FAIR_ARTICLES_QUERY = graphql`
 export const FairArticlesPaginationContainer = createPaginationContainer(
   FairArticles,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     fair: graphql`
       fragment FairArticles_fair on Fair
         @argumentDefinitions(

@@ -126,6 +126,7 @@ export const ArtistsIndex: React.FC<ArtistsIndexProps> = ({
 export const ArtistsIndexFragmentContainer = createFragmentContainer(
   ArtistsIndex,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     featuredArtists: graphql`
       fragment ArtistsIndex_featuredArtists on OrderedSet @relay(plural: true) {
         name
@@ -137,6 +138,7 @@ export const ArtistsIndexFragmentContainer = createFragmentContainer(
         }
       }
     `,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     featuredGenes: graphql`
       fragment ArtistsIndex_featuredGenes on OrderedSet @relay(plural: true) {
         name

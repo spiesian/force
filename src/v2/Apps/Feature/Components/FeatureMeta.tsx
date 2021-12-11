@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { Link, Meta, Title } from "react-head"
 import { createFragmentContainer, graphql } from "react-relay"
 import { FeatureMeta_feature } from "v2/__generated__/FeatureMeta_feature.graphql"
@@ -35,6 +35,7 @@ const FeatureMeta: React.FC<FeatureMetaProps> = ({
 export const FeatureMetaFragmentContainer = createFragmentContainer(
   FeatureMeta,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     feature: graphql`
       fragment FeatureMeta_feature on Feature {
         slug

@@ -406,6 +406,7 @@ export class PaymentPicker extends React.Component<
   ) {
     return this.props.commitMutation<PaymentPickerCreateCreditCardMutation>({
       variables,
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       mutation: graphql`
         mutation PaymentPickerCreateCreditCardMutation(
           $input: CreditCardInput!

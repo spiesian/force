@@ -104,6 +104,7 @@ const Articles: React.FC<ArticlesProps> = ({ partner, relay }) => {
 export const ArticlesPaginationContainer = createRefetchContainer(
   Articles,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     partner: graphql`
       fragment Articles_partner on Partner
         @argumentDefinitions(

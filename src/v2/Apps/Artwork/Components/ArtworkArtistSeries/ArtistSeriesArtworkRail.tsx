@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { ArtistSeriesArtworkRail_artwork } from "v2/__generated__/ArtistSeriesArtworkRail_artwork.graphql"
 import { ShelfArtworkFragmentContainer } from "v2/Components/Artwork/ShelfArtwork"
@@ -84,6 +84,7 @@ export const ArtistSeriesArtworkRail: React.FC<Props> = ({ artwork }) => {
 export const ArtistSeriesArtworkRailFragmentContainer = createFragmentContainer(
   ArtistSeriesArtworkRail,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment ArtistSeriesArtworkRail_artwork on Artwork {
         internalID

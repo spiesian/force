@@ -292,6 +292,7 @@ const ExtraSmallAuctionItem: FC<Props> = props => {
 export const ArtistAuctionResultItemFragmentContainer = createFragmentContainer(
   ArtistAuctionResultItem,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     auctionResult: graphql`
       fragment ArtistAuctionResultItem_auctionResult on AuctionResult {
         title

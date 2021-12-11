@@ -343,6 +343,7 @@ export const ArtworkSidebarBidActionFragmentContainer = createFragmentContainer(
     return <ArtworkSidebarBidAction {...props} />
   },
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment ArtworkSidebarBidAction_artwork on Artwork {
         myLotStanding(live: true) {
@@ -374,6 +375,7 @@ export const ArtworkSidebarBidActionFragmentContainer = createFragmentContainer(
         }
       }
     `,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment ArtworkSidebarBidAction_me on Me {
         identityVerified

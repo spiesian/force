@@ -34,7 +34,8 @@ type SetupTestWrapper<T extends OperationType> = {
     Component: (props: any) => {
       return <ShowMetaFragmentContainer show={props.show} />
     },
-    query: graphql`
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
+query: graphql`
       query ExampleOverviewRoute_Test_Query($showID: String!) {
         show(id: $showID) {
           description

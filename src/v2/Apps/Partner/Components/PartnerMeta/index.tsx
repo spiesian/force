@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { Link, Meta, Title } from "react-head"
 import { createFragmentContainer, graphql } from "react-relay"
 import { PartnerMeta_partner } from "v2/__generated__/PartnerMeta_partner.graphql"
@@ -53,6 +53,7 @@ const PartnerMeta: React.FC<PartnerMetaProps> = ({
 export const PartnerMetaFragmentContainer = createFragmentContainer(
   PartnerMeta,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     partner: graphql`
       fragment PartnerMeta_partner on Partner {
         locationsConnection(first: 1) {

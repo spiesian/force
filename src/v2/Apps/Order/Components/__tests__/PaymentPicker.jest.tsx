@@ -155,6 +155,7 @@ describe("PaymentPickerFragmentContainer", () => {
     defaultMutationResults: {
       ...creatingCreditCardSuccess,
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query PaymentPickerTestQuery @raw_response_type {
         me {
@@ -175,6 +176,7 @@ describe("PaymentPickerFragmentContainer", () => {
     defaultMutationResults: {
       ...creatingCreditCardSuccess,
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query PaymentPickerEigenTestQuery @raw_response_type {
         me {

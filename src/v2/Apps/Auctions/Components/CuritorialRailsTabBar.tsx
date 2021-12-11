@@ -41,6 +41,7 @@ export const CuritorialRailsTabBar: React.FC<CuritorialRailsTabBarProps> = ({
 export const CuritorialRailsTabBarFragmentContainer = createFragmentContainer(
   CuritorialRailsTabBar,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewer: graphql`
       fragment CuritorialRailsTabBar_viewer on Viewer {
         ...WorksByArtistsYouFollowRail_viewer

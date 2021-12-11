@@ -82,6 +82,7 @@ export class CollectionEntity extends Component<CollectionProps> {
 export const CollectionEntityFragmentContainer = createFragmentContainer(
   CollectionEntity,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     collection: graphql`
       fragment CollectionEntity_collection on MarketingCollection {
         slug

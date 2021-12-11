@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import {
   Box,
   Column,
@@ -96,6 +96,7 @@ export const ShowInfo: React.FC<ShowInfoProps> = ({
 }
 
 export const ShowInfoFragmentContainer = createFragmentContainer(ShowInfo, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   show: graphql`
     fragment ShowInfo_show on Show {
       ...ShowInfoLocation_show

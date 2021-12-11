@@ -19,6 +19,7 @@ describe("MyBidsBidItem", () => {
         />
       )
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query MyBidsBidItem_Test_Query {
         saleArtwork(id: "foo") {

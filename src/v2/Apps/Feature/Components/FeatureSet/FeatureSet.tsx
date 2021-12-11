@@ -54,6 +54,7 @@ export const FeatureSet: React.FC<FeatureSetProps> = ({ set, ...rest }) => {
 }
 
 export const FeatureSetFragmentContainer = createFragmentContainer(FeatureSet, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   set: graphql`
     fragment FeatureSet_set on OrderedSet {
       id

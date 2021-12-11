@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { FairHeaderImage_fair } from "v2/__generated__/FairHeaderImage_fair.graphql"
 import { FullBleedHeader } from "v2/Components/FullBleedHeader"
@@ -20,6 +20,7 @@ export const FairHeaderImage: React.FC<FairHeaderImageProps> = ({
 export const FairHeaderImageFragmentContainer = createFragmentContainer(
   FairHeaderImage,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     fair: graphql`
       fragment FairHeaderImage_fair on Fair {
         image {

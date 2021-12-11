@@ -13,6 +13,7 @@ export const updateUserDefaultAddress = async (
         userAddressID: userAddressID,
       },
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     mutation: graphql`
       mutation UpdateUserDefaultAddressMutation(
         $input: UpdateUserDefaultAddressInput!

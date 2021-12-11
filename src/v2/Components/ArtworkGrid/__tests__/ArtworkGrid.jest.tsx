@@ -30,6 +30,7 @@ const TestContainer = createFragmentContainer(
     return <ArtworkGrid {...props} artworks={artist.artworks_connection} />
   },
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment ArtworkGrid_artist on Artist {
         artworks_connection: artworksConnection(first: 4) {
@@ -119,6 +120,7 @@ describe("ArtworkGrid", () => {
       return await renderRelayTree({
         Component: TestContainer,
         componentProps,
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query ArtworkGrid_Test_Query @raw_response_type {
             artist(id: "pablo-picasso") {

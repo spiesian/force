@@ -12,6 +12,7 @@ export const ConfirmPassword = (
   return new Promise<ConfirmPasswordMutationResponse>(
     async (resolve, reject) => {
       commitMutation<ConfirmPasswordMutation>(environment, {
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         mutation: graphql`
           mutation ConfirmPasswordMutation($input: ConfirmPasswordInput!)
             @raw_response_type {

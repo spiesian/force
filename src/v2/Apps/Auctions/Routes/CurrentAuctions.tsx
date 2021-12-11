@@ -80,6 +80,7 @@ const CurrentAuctions: React.FC<CurrentAuctionsProps> = ({ viewer, relay }) => {
 export const CurrentAuctionsPaginationContainer = createPaginationContainer(
   CurrentAuctions,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewer: graphql`
       fragment CurrentAuctions_viewer on Viewer
         @argumentDefinitions(
@@ -124,6 +125,7 @@ export const CurrentAuctionsPaginationContainer = createPaginationContainer(
         after: cursor,
       }
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query CurrentAuctionsQuery($first: Int!, $after: String) {
         viewer {

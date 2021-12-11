@@ -53,6 +53,7 @@ export const LotInfo: React.FC<Props> = ({ artwork, saleArtwork }) => {
 }
 
 export const LotInfoFragmentContainer = createFragmentContainer(LotInfo, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   artwork: graphql`
     fragment LotInfo_artwork on Artwork {
       internalID
@@ -62,6 +63,7 @@ export const LotInfoFragmentContainer = createFragmentContainer(LotInfo, {
       artistNames
     }
   `,
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   saleArtwork: graphql`
     fragment LotInfo_saleArtwork on SaleArtwork {
       counts {

@@ -14,6 +14,7 @@ jest.mock("v2/Components/Pagination", () => ({
 describe("ArtistArticlesRoute", () => {
   const { getWrapper } = setupTestWrapper<ArtistArticlesRoute_Test_Query>({
     Component: ArtistArticlesRouteFragmentContainer,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query ArtistArticlesRoute_Test_Query {
         artist(id: "example") {

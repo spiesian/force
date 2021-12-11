@@ -32,6 +32,7 @@ export const showRoutes: AppRouteConfig[] = [
       ShowApp.preload()
     },
     prepareVariables: initializeVariablesWithFilterState,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query showRoutes_ShowQuery(
         $slug: String!
@@ -60,6 +61,7 @@ export const showRoutes: AppRouteConfig[] = [
         onClientSideRender: () => {
           ShowInfoRoute.preload()
         },
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query showRoutes_ShowInfoQuery($slug: String!) {
             show(id: $slug) @principalField {
@@ -80,6 +82,7 @@ export const showRoutes: AppRouteConfig[] = [
     onClientSideRender: () => {
       ShowSubApp.preload()
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query showRoutes_ShowSubAppQuery($slug: String!) {
         show(id: $slug) @principalField {

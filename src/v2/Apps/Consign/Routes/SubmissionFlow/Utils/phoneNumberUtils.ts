@@ -8,6 +8,7 @@ export const getPhoneNumberInformation = async (
 ) => {
   const response = await fetchQuery<phoneNumberUtils_PhoneNumber_Query>(
     relayEnvironment,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     graphql`
       query phoneNumberUtils_PhoneNumber_Query(
         $phoneNumber: String!

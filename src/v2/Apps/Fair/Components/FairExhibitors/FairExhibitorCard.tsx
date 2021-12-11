@@ -101,6 +101,7 @@ export const FairExhibitorCard: React.FC<FairExhibitorCardProps> = ({
 export const FairExhibitorCardFragmentContainer = createFragmentContainer(
   FairExhibitorCard,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     exhibitor: graphql`
       fragment FairExhibitorCard_exhibitor on FairExhibitor {
         profileID

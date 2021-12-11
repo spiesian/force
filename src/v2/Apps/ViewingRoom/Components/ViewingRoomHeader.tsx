@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { Box, Flex, FullBleed, Image, Text, TEXT_SHADOW } from "@artsy/palette"
 import { Media } from "v2/Utils/Responsive"
 import { createFragmentContainer, graphql } from "react-relay"
@@ -29,6 +29,7 @@ const ViewingRoomHeader: React.FC<ViewingRoomHeaderProps> = props => {
 export const ViewingRoomHeaderFragmentContainer = createFragmentContainer(
   ViewingRoomHeader,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewingRoom: graphql`
       fragment ViewingRoomHeader_viewingRoom on ViewingRoom {
         image {

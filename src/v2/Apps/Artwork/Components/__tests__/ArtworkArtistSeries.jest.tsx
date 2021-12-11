@@ -31,6 +31,7 @@ describe("ArtworkArtistSeries", () => {
           </MockBoot>
         )
       },
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query: graphql`
         query ArtworkArtistSeries_Query($slug: String!) @raw_response_type {
           artwork(id: $slug) {

@@ -85,6 +85,7 @@ const entityTabs = Object.entries(tabsToEntitiesMap).map(([key, entities]) => {
         entities,
       }
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query searchRoutes_SearchResultsEntityQuery(
         $keyword: String!
@@ -108,6 +109,7 @@ export const searchRoutes: AppRouteConfig[] = [
     onClientSideRender: () => {
       SearchApp.preload()
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query searchRoutes_SearchResultsTopLevelQuery($keyword: String!) {
         viewer {
@@ -149,6 +151,7 @@ export const searchRoutes: AppRouteConfig[] = [
             },
           }
         },
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query searchRoutes_ArtworksViewerQuery(
             $input: FilterArtworksInput
@@ -173,6 +176,7 @@ export const searchRoutes: AppRouteConfig[] = [
           SearchResultsArtists.preload()
         },
         prepareVariables,
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query searchRoutes_SearchResultsArtistsQuery(
             $keyword: String!

@@ -87,6 +87,7 @@ function getActions(dispatch: Dispatch<Action>, relayEnvironment: Environment) {
         ConsignPriceEstimateContext_ArtistInsights_Query
       >(
         relayEnvironment,
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         graphql`
           query ConsignPriceEstimateContext_ArtistInsights_Query(
             $artistInternalID: ID!
@@ -144,6 +145,7 @@ function getActions(dispatch: Dispatch<Action>, relayEnvironment: Environment) {
         ConsignPriceEstimateContext_SearchConnection_Query
       >(
         relayEnvironment,
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         graphql`
           query ConsignPriceEstimateContext_SearchConnection_Query(
             $searchQuery: String!

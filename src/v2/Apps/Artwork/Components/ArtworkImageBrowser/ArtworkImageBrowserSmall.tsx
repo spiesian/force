@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import {
   ProgressDots,
   Swiper,
@@ -89,6 +89,7 @@ const Rail: React.FC<SwiperRailProps> = props => {
 export const ArtworkImageBrowserSmallFragmentContainer = createFragmentContainer(
   ArtworkImageBrowserSmall,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment ArtworkImageBrowserSmall_artwork on Artwork {
         ...ArtworkLightbox_artwork

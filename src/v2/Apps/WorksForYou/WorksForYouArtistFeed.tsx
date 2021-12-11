@@ -99,6 +99,7 @@ export class WorksForYouArtistFeed extends Component<Props, State> {
 export const WorksForYouArtistFeedPaginationContainer = createPaginationContainer(
   WorksForYouArtistFeed,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewer: graphql`
       fragment WorksForYouArtistFeed_viewer on Viewer
         @argumentDefinitions(
@@ -164,6 +165,7 @@ export const WorksForYouArtistFeedPaginationContainer = createPaginationContaine
         cursor,
       }
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query WorksForYouArtistFeedPaginationQuery(
         $artistID: String!

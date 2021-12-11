@@ -48,6 +48,7 @@ describe("Payment", () => {
     defaultMutationResults: {
       ...settingOrderPaymentSuccess,
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query PaymentTestQuery @raw_response_type {
         me {

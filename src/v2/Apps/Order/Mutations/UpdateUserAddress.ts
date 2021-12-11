@@ -20,6 +20,7 @@ export const updateUserAddress = async (
         attributes: values,
       },
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     mutation: graphql`
       mutation UpdateUserAddressMutation($input: UpdateUserAddressInput!) {
         updateUserAddress(input: $input) {

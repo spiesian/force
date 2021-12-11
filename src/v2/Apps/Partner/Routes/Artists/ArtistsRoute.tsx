@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import * as React from "react";
+import { useEffect } from "react"
+import * as React from "react"
 import { Box, Text, themeProps } from "@artsy/palette"
 import { Match } from "found"
 import {
@@ -84,6 +84,7 @@ export const ArtistsRoute: React.FC<ArtistsRouteProps> = ({
 export const ArtistsRouteFragmentContainer = createFragmentContainer(
   ArtistsRoute,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     partner: graphql`
       fragment ArtistsRoute_partner on Partner {
         ...PartnerArtists_partner

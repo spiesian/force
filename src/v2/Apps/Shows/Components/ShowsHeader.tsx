@@ -11,7 +11,7 @@ import {
 import { themeGet } from "@styled-system/theme-get"
 import { graphql } from "lib/graphql"
 import { uniqBy } from "lodash"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer } from "react-relay"
 import styled from "styled-components"
 import { RouterLink } from "v2/System/Router/RouterLink"
@@ -76,6 +76,7 @@ export const ShowsHeader: React.FC<ShowsHeaderProps> = ({
 export const ShowsHeaderFragmentContainer = createFragmentContainer(
   ShowsHeader,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewer: graphql`
       fragment ShowsHeader_viewer on Viewer {
         allCities: cities {

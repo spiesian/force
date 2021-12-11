@@ -64,6 +64,7 @@ const FeaturedRails: React.FC<FeaturedRailsProps> = props => {
 export const FeaturedRailsFragmentContainer = createFragmentContainer(
   FeaturedRails,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewer: graphql`
       fragment FeaturedRails_viewer on Viewer
         @argumentDefinitions(

@@ -62,6 +62,7 @@ const FeaturedAuctionsRail: React.FC<FeaturedAuctionsRailProps> = props => {
 export const FeaturedAuctionsRailFragmentContainer = createFragmentContainer(
   FeaturedAuctionsRail,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     auctions: graphql`
       fragment FeaturedAuctions_auctions on SaleConnection {
         edges {

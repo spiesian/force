@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { Button, GridColumns, Column, Text } from "@artsy/palette"
 import { ViewingRoomArtworkDetails_artwork } from "v2/__generated__/ViewingRoomArtworkDetails_artwork.graphql"
 import { createFragmentContainer, graphql } from "react-relay"
@@ -70,6 +70,7 @@ export const ViewingRoomArtworkDetails: React.FC<ViewingRoomArtworkDetailsProps>
 export const ViewingRoomArtworkDetailsFragmentContainer = createFragmentContainer(
   ViewingRoomArtworkDetails,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment ViewingRoomArtworkDetails_artwork on Artwork {
         id

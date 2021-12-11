@@ -106,6 +106,7 @@ export class ArtistInfo extends Component<ArtistInfoProps> {
 export const ArtistInfoFragmentContainer = createFragmentContainer(
   ArtistInfo as React.ComponentType<ArtistInfoProps>,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment ArtistInfo_artist on Artist
         @argumentDefinitions(
@@ -209,6 +210,7 @@ export const ArtistInfoQueryRenderer: React.FC<{
       environment={relayEnvironment}
       variables={{ slug }}
       placeholder={PLACEHOLDER}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query ArtistInfoQuery($slug: String!) {
           artist(id: $slug) {

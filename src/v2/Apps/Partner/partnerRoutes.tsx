@@ -71,6 +71,8 @@ export const partnerRoutes: AppRouteConfig[] = [
     onClientSideRender: () => {
       PartnerApp.preload()
     },
+
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query partnerRoutes_PartnerQuery($partnerId: String!) {
         partner(id: $partnerId) @principalField {
@@ -111,6 +113,8 @@ export const partnerRoutes: AppRouteConfig[] = [
         onClientSideRender: () => {
           OverviewRoute.preload()
         },
+
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query partnerRoutes_OverviewQuery($partnerId: String!) {
             partner(id: $partnerId) @principalField {
@@ -136,6 +140,8 @@ export const partnerRoutes: AppRouteConfig[] = [
         onClientSideRender: () => {
           ShowsRoute.preload()
         },
+
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query partnerRoutes_ShowsQuery($partnerId: String!) {
             partner(id: $partnerId) @principalField {
@@ -178,6 +184,8 @@ export const partnerRoutes: AppRouteConfig[] = [
         onClientSideRender: () => {
           ViewinRoomsRoute.preload()
         },
+
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query partnerRoutes_ViewingRoomsQuery($partnerId: String!) {
             partner(id: $partnerId) @principalField {
@@ -232,6 +240,8 @@ export const partnerRoutes: AppRouteConfig[] = [
             shouldFetchCounts: !!props.context.user,
           }
         },
+
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query partnerRoutes_WorksQuery(
             $partnerId: String!
@@ -286,6 +296,8 @@ export const partnerRoutes: AppRouteConfig[] = [
         onClientSideRender: () => {
           ArtistsRoute.preload()
         },
+
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query partnerRoutes_ArtistsQuery($partnerId: String!) {
             partner(id: $partnerId) @principalField {
@@ -334,6 +346,8 @@ export const partnerRoutes: AppRouteConfig[] = [
             page: location.query.page,
           }
         },
+
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query partnerRoutes_ArticlesQuery($partnerId: String!, $page: Int) {
             partner(id: $partnerId) @principalField {
@@ -376,6 +390,8 @@ export const partnerRoutes: AppRouteConfig[] = [
         onClientSideRender: () => {
           ContactRoute.preload()
         },
+
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query partnerRoutes_ContactQuery($partnerId: String!) {
             partner(id: $partnerId) @principalField {

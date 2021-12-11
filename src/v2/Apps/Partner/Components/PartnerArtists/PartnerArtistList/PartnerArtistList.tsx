@@ -81,6 +81,7 @@ export const PartnerArtistList: React.FC<PartnerArtistListProps> = ({
 export const PartnerArtistListFragmentContainer = createFragmentContainer(
   PartnerArtistList,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artists: graphql`
       fragment PartnerArtistList_artists on ArtistPartnerEdge
         @relay(plural: true) {

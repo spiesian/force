@@ -1,8 +1,8 @@
 import { ContextModule, OwnerType } from "@artsy/cohesion"
 import { Box, Column, GridColumns, Select, Text } from "@artsy/palette"
 import { rest } from "lodash"
-import { useEffect, useRef, useState } from "react";
-import * as React from "react";
+import { useEffect, useRef, useState } from "react"
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { useTracking } from "react-tracking"
 import type RelayModernEnvironment from "relay-runtime/lib/store/RelayModernEnvironment"
@@ -214,6 +214,7 @@ export const MarketStats: React.FC<MarketStatsProps> = ({
 export const MarketStatsFragmentContainer = createFragmentContainer(
   MarketStats,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     priceInsightsConnection: graphql`
       fragment MarketStats_priceInsightsConnection on PriceInsightConnection {
         edges {
@@ -250,6 +251,7 @@ export const MarketStatsQueryRenderer: React.FC<{
       environment={environment}
       variables={{ artistInternalID }}
       placeholder={<MarketStatsPlaceholder {...rest} />}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query MarketStatsQuery($artistInternalID: ID!) {
           priceInsightsConnection: priceInsights(

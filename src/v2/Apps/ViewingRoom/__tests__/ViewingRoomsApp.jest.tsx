@@ -30,6 +30,7 @@ describe("ViewingRoomsApp", () => {
           )
         },
         mockData: response,
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query ViewingRoomsApp_Test_Query @raw_response_type {
             allViewingRooms: viewer {

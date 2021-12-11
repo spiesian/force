@@ -12,6 +12,7 @@ const { renderWithRelay } = setupTestWrapperTL<
   PartnersSpecialtyAutocomplete_Test_Query
 >({
   Component: PartnersSpecialtyAutocompleteFragmentContainer,
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query PartnersSpecialtyAutocomplete_Test_Query {
       viewer {

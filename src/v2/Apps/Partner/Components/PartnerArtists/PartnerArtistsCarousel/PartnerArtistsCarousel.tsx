@@ -84,6 +84,7 @@ export const PartnerArtistsCarousel: React.FC<PartnerArtistsCarouselProps> = ({
 export const PartnerArtistsCarouselFragmentContainer = createFragmentContainer(
   PartnerArtistsCarousel,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     partner: graphql`
       fragment PartnerArtistsCarousel_partner on Partner {
         slug
@@ -117,6 +118,7 @@ export const PartnerArtistsCarouselRenderer: React.FC<{
     <SystemQueryRenderer<PartnerArtistsCarouselRendererQuery>
       lazyLoad
       environment={relayEnvironment}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query PartnerArtistsCarouselRendererQuery($partnerId: String!) {
           partner(id: $partnerId) @principalField {

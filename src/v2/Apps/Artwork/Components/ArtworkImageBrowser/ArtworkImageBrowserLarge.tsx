@@ -7,7 +7,7 @@ import {
 } from "@artsy/palette"
 import { themeGet } from "@styled-system/theme-get"
 import { compact } from "lodash"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import styled from "styled-components"
 import { ArtworkLightboxFragmentContainer } from "../ArtworkLightbox"
@@ -127,6 +127,7 @@ const NextPrevious = styled(Clickable)`
 export const ArtworkImageBrowserLargeFragmentContainer = createFragmentContainer(
   ArtworkImageBrowserLarge,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment ArtworkImageBrowserLarge_artwork on Artwork {
         ...ArtworkLightbox_artwork

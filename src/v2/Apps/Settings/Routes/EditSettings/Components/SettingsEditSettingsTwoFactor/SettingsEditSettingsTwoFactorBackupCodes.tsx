@@ -140,6 +140,7 @@ export const SettingsEditSettingsTwoFactorBackupCodes: FC<SettingsEditSettingsTw
 export const SettingsEditSettingsTwoFactorBackupCodesFragmentContainer = createFragmentContainer(
   SettingsEditSettingsTwoFactorBackupCodes,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment SettingsEditSettingsTwoFactorBackupCodes_me on Me {
         backupSecondFactors: secondFactors(kinds: [backup]) {

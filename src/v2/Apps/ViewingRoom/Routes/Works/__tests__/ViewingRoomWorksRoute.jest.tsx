@@ -32,6 +32,7 @@ describe("ViewingRoomWorksRoute", () => {
           </MockBoot>
         )
       },
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query: graphql`
         query ViewingRoomWorksRoute_Test_Query($slug: ID!) @raw_response_type {
           viewingRoom(id: $slug) {

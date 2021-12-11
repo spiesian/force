@@ -30,6 +30,7 @@ export const EnableSecondFactor = (
         onError: error => {
           reject(error)
         },
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         mutation: graphql`
           mutation EnableSecondFactorMutation($input: EnableSecondFactorInput!)
             @raw_response_type {

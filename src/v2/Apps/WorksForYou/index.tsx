@@ -43,6 +43,7 @@ export class WorksForYou extends Component<Props> {
 
                 <SystemQueryRenderer<WorksForYouQuery>
                   environment={relayEnvironment}
+                  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
                   query={graphql`
                     query WorksForYouQuery(
                       $includeSelectedArtist: Boolean!

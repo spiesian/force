@@ -1,5 +1,5 @@
 import { Image } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import styled from "styled-components"
 import { ViewInRoomArtwork_artwork } from "v2/__generated__/ViewInRoomArtwork_artwork.graphql"
@@ -71,6 +71,7 @@ const Wall = styled.div`
 export const ViewInRoomArtworkFragmentContainer = createFragmentContainer(
   ViewInRoomArtwork,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment ViewInRoomArtwork_artwork on Artwork {
         widthCm

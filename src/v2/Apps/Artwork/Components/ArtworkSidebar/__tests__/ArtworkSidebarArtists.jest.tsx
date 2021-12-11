@@ -35,6 +35,7 @@ describe("ArtworkSidebarArtists", () => {
           </SystemContextProvider>
         )
       },
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query: graphql`
         query ArtworkSidebarArtists_Test_Query @raw_response_type {
           artwork(id: "josef-albers-homage-to-the-square-85") {

@@ -10,6 +10,7 @@ jest.mock("v2/Components/Pagination/CommercePagination", () => ({
 
 const { renderWithRelay } = setupTestWrapperTL({
   Component: SettingsPurchasesFragmentContainer,
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query SettingsPurchases_Test_Query {
       me {

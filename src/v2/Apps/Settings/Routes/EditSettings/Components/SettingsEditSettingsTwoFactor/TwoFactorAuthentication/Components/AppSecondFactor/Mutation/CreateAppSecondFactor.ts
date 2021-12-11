@@ -28,6 +28,7 @@ export const CreateAppSecondFactor = (
         onError: error => {
           reject(error)
         },
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         mutation: graphql`
           mutation CreateAppSecondFactorMutation(
             $input: CreateAppSecondFactorInput!

@@ -286,6 +286,7 @@ export const AppSecondFactor: React.FC<AppSecondFactorProps> = ({
 export const AppSecondFactorRefetchContainer = createRefetchContainer(
   AppSecondFactor,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment AppSecondFactor_me on Me {
         hasSecondFactorEnabled

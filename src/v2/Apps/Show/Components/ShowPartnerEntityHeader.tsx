@@ -59,6 +59,7 @@ const ShowPartnerEntityHeader: React.FC<ShowPartnerEntityHeaderProps> = ({
 export const ShowPartnerEntityHeaderFragmentContainer = createFragmentContainer(
   ShowPartnerEntityHeader,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     partner: graphql`
       fragment ShowPartnerEntityHeader_partner on Partner {
         type

@@ -77,6 +77,7 @@ describe("buildServerApp", () => {
         {
           path: "/relay",
           Component,
+          // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
           query: graphql`
             query buildServerAppTestQuery {
               me {

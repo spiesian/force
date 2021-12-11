@@ -1,6 +1,6 @@
 import Autosuggest from "react-autosuggest"
-import { Ref, useEffect, useState } from "react";
-import * as React from "react";
+import { Ref, useEffect, useState } from "react"
+import * as React from "react"
 import {
   MagnifyingGlassIcon,
   usePosition,
@@ -176,6 +176,8 @@ const fetchSuggestions = async (searchQuery, relayEnvironment) => {
     PriceDatabaseArtistAutosuggest_SearchConnection_Query
   >(
     relayEnvironment,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     graphql`
       query PriceDatabaseArtistAutosuggest_SearchConnection_Query(
         $searchQuery: String!

@@ -8,7 +8,7 @@ import {
   Spacer,
   Text,
 } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { useTracking } from "react-tracking"
 import { Rail } from "v2/Components/Rail"
@@ -118,6 +118,7 @@ const ArtistCurrentShowsRail: React.FC<ArtistCurrentShowsRailProps> = ({
 export const ArtistCurrentShowsRailFragmentContainer = createFragmentContainer(
   ArtistCurrentShowsRail,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment ArtistCurrentShowsRail_artist on Artist {
         internalID
@@ -179,6 +180,7 @@ export const ArtistCurrentShowsRailQueryRenderer: React.FC<{
         environment={relayEnvironment}
         variables={{ slug }}
         placeholder={PLACEHOLDER}
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query={graphql`
           query ArtistCurrentShowsRailQuery($slug: String!) {
             artist(id: $slug) {

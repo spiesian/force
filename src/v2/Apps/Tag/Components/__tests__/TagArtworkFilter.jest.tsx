@@ -29,6 +29,7 @@ const { getWrapper } = setupTestWrapper<TagArtworkFilter_Query>({
       <TagArtworkFilterRefetchContainer tag={tag!} />
     </MockBoot>
   ),
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query TagArtworkFilter_Query($slug: String!) {
       tag(id: $slug) {

@@ -15,6 +15,7 @@ const { getWrapper } = setupTestWrapper<
       <ArtistsIndexFragmentContainer {...props} />
     </MockBoot>
   ),
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query ArtistsIndexFragmentContainer_Test_Query {
       featuredArtists: orderedSets(key: "homepage:featured-artists") {

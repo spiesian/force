@@ -61,6 +61,7 @@ export const FairsPastFairs: React.FC<FairsPastFairsProps> = ({
   )
 }
 
+// PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
 export const FAIRS_PAST_FAIRS_QUERY = graphql`
   query FairsPastFairsQuery($first: Int!, $after: String) {
     viewer {
@@ -72,6 +73,7 @@ export const FAIRS_PAST_FAIRS_QUERY = graphql`
 export const FairsPastFairsPaginationContainer = createPaginationContainer(
   FairsPastFairs,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewer: graphql`
       fragment FairsPastFairs_viewer on Viewer
         @argumentDefinitions(

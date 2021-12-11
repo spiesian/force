@@ -102,6 +102,7 @@ const ResponseForm: React.FC<ResponseFormProps> = ({ offer }) => {
 export const ResponseFormFragmentContainer = createFragmentContainer(
   ResponseForm,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     offer: graphql`
       fragment ResponseForm_offer on ConsignmentOffer {
         id

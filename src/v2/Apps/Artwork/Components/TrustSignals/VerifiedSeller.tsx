@@ -32,6 +32,7 @@ export const VerifiedSeller: React.FC<VerifiedSellerProps> = ({
 export const VerifiedSellerFragmentContainer = createFragmentContainer(
   VerifiedSeller,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment VerifiedSeller_artwork on Artwork {
         is_biddable: isBiddable

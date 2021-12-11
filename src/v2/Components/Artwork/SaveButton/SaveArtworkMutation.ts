@@ -12,6 +12,7 @@ export const SaveArtwork = (
 ) => {
   return new Promise<SaveArtworkMutationResponse>(async (resolve, reject) => {
     commitMutation<SaveArtworkMutation>(environment, {
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       mutation: graphql`
         mutation SaveArtworkMutation($input: SaveArtworkInput!) {
           saveArtwork(input: $input) {

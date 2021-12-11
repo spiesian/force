@@ -31,6 +31,7 @@ const SettingsEditProfileRoute: React.FC<SettingsEditProfileRouteProps> = ({
 export const SettingsEditProfileRouteFragmentContainer = createFragmentContainer(
   SettingsEditProfileRoute,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment SettingsEditProfileRoute_me on Me {
         ...SettingsEditProfileAboutYou_me

@@ -89,6 +89,7 @@ describe("Payment", () => {
       ...creatingCreditCardSuccess,
       ...fixFailedPaymentSuccess,
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query NewPaymentTestQuery @raw_response_type {
         me {

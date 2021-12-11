@@ -2,7 +2,7 @@ import { RelatedCollectionsRail_collections } from "v2/__generated__/RelatedColl
 import { useTracking } from "v2/System/Analytics"
 import * as Schema from "v2/System/Analytics/Schema"
 import { once } from "lodash"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import Waypoint from "react-waypoint"
 import { RelatedCollectionEntityFragmentContainer as RelatedCollectionEntity } from "./RelatedCollectionEntity"
@@ -67,6 +67,7 @@ export const RelatedCollectionsRail: React.FC<RelatedCollectionsRailProps> = pro
 export const RelatedCollectionsRailFragmentContainer = createFragmentContainer(
   RelatedCollectionsRail as React.FC<RelatedCollectionsRailProps>,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     collections: graphql`
       fragment RelatedCollectionsRail_collections on MarketingCollection
         @relay(plural: true) {

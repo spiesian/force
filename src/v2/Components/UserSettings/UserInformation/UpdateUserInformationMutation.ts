@@ -12,6 +12,7 @@ export const UpdateUserInformation = (
   return new Promise<UpdateUserInformationMutationResponse>(
     async (resolve, reject) => {
       commitMutation<UpdateUserInformationMutation>(environment, {
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         mutation: graphql`
           mutation UpdateUserInformationMutation($input: UpdateMyProfileInput!)
             @raw_response_type {

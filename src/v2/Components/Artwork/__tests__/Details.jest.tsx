@@ -20,6 +20,7 @@ describe("Details", () => {
       Component: props => (
         <DetailsFragmentContainer {...(props as any)} {...restProps} />
       ),
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query: graphql`
         query Details_Test_Query @raw_response_type {
           artwork(id: "gerhard-richter-bagdad-ii-flow-p10-1") {

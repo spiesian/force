@@ -9,6 +9,7 @@ const getLocalTimestampInMilliSeconds = () => {
 export async function getOffsetBetweenGravityClock(
   relayEnvironment: Environment
 ): Promise<number> {
+  //
   const query = graphql`
     query timeQuery {
       system {

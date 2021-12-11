@@ -30,6 +30,7 @@ const { getWrapper } = setupTestWrapper<Works_Query>({
       <ArtworksRefetchContainer partner={partner!} />
     </MockBoot>
   ),
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query Works_Query($partnerId: String!) {
       partner(id: $partnerId) {

@@ -21,6 +21,7 @@ export const ContactRoute: React.FC<ContactRouteProps> = ({ partner }) => {
 export const ContactRouteFragmentContainer = createFragmentContainer(
   ContactRoute,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     partner: graphql`
       fragment Contact_partner on Partner {
         locations: locationsConnection(first: 50) {

@@ -15,6 +15,7 @@ jest.mock("v2/Components/LocationAutocompleteInput", () => ({
 
 const { getWrapper } = setupTestWrapper({
   Component: InquiryBasicInfoFragmentContainer,
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query InquiryBasicInfo_Test_Query {
       artwork(id: "example") {

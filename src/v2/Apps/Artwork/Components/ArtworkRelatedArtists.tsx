@@ -122,6 +122,7 @@ const ShowMoreButton: React.FC<{ onClick: () => void; loading: boolean }> = ({
 export const ArtworkRelatedArtistsPaginationContainer = createPaginationContainer(
   ArtworkRelatedArtists,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment ArtworkRelatedArtists_artwork on Artwork
         @argumentDefinitions(
@@ -168,6 +169,7 @@ export const ArtworkRelatedArtistsPaginationContainer = createPaginationContaine
         artworkID: props.artwork.slug,
       }
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query ArtworkRelatedArtistsPaginationQuery(
         $count: Int!
@@ -227,6 +229,7 @@ export const ArtworkRelatedArtistsQueryRenderer: React.FC<{
         environment={relayEnvironment}
         variables={{ slug }}
         placeholder={PLACEHOLDER}
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query={graphql`
           query ArtworkRelatedArtistsQuery($slug: String!) {
             artwork(id: $slug) {

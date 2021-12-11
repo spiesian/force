@@ -32,6 +32,7 @@ export const ArtistSeriesMeta: React.FC<ArtistSeriesMetaProps> = props => {
 export const ArtistSeriesMetaFragmentContainer = createFragmentContainer(
   ArtistSeriesMeta,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artistSeries: graphql`
       fragment ArtistSeriesMeta_artistSeries on ArtistSeries {
         title

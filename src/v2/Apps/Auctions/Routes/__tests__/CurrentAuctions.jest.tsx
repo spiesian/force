@@ -19,6 +19,7 @@ describe("CurrentAuctions", () => {
         </MockBoot>
       )
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query CurrentAuctions_Test_Query {
         viewer {

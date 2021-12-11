@@ -71,6 +71,7 @@ const ArtistsRail: React.FC<ArtistsRailProps> = ({ partner, ...rest }) => {
 export const ArtistsRailFragmentContainer = createFragmentContainer(
   ArtistsRail,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     partner: graphql`
       fragment ArtistsRail_partner on Partner {
         slug

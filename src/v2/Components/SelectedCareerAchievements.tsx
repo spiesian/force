@@ -198,6 +198,7 @@ export const SelectedCareerAchievementsFragmentContainer = createFragmentContain
     )
   },
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment SelectedCareerAchievements_artist on Artist
         @argumentDefinitions(

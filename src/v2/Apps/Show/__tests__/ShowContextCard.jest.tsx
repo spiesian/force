@@ -22,6 +22,7 @@ const { getWrapper } = setupTestWrapper<ShowContextCard_Test_Query>({
       <ShowContextCardFragmentContainer {...props} />
     </AnalyticsContext.Provider>
   ),
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query ShowContextCard_Test_Query {
       show(id: "xxx") {

@@ -224,6 +224,7 @@ const SettingsPurchasesRow: FC<SettingsPurchasesRowProps> = ({ order }) => {
 export const SettingsPurchasesRowFragmentContainer = createFragmentContainer(
   SettingsPurchasesRow,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     order: graphql`
       fragment SettingsPurchasesRow_order on CommerceOrder {
         internalID

@@ -77,6 +77,7 @@ export class CollectionsRail extends Component<CollectionRailsProps> {
 export const CollectionsRailFragmentContainer = createFragmentContainer(
   CollectionsRail,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     collections: graphql`
       fragment CollectionsRail_collections on MarketingCollection
         @relay(plural: true) {

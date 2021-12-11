@@ -42,6 +42,7 @@ export const SendConversationMessage = (
         replyToMessageID: conversation?.lastMessageID ?? "",
       },
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     mutation: graphql`
       mutation SendConversationMessageMutation(
         $input: SendConversationMessageMutationInput!

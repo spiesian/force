@@ -31,6 +31,7 @@ const testOrder: RejectTestQueryRawResponse["order"] = {
 describe("Buyer rejects seller offer", () => {
   const { mutations, buildPage, routes } = createTestEnv({
     Component: RejectFragmentContainer,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query RejectTestQuery @raw_response_type {
         order: commerceOrder(id: "unused") {

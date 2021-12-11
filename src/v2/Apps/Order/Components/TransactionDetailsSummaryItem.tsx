@@ -306,6 +306,7 @@ graphql`
 export const TransactionDetailsSummaryItemFragmentContainer = createFragmentContainer(
   withSystemContext(TransactionDetailsSummaryItem),
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     order: graphql`
       fragment TransactionDetailsSummaryItem_order on CommerceOrder {
         __typename

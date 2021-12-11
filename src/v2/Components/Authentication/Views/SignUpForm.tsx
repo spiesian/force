@@ -280,6 +280,7 @@ export class SignUpForm extends Component<SignUpFormProps, SignUpFormState> {
 }
 
 const SignUpFormFragmentContainer = createFragmentContainer(SignUpForm, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   requestLocation: graphql`
     fragment SignUpForm_requestLocation on RequestLocation {
       countryCode
@@ -294,6 +295,7 @@ export const SignUpFormQueryRenderer: React.FC<FormProps> = passedProps => {
     <SystemQueryRenderer<SignUpFormLocationQuery>
       environment={relayEnvironment!}
       variables={{ ip: sd.IP_ADDRESS || "0.0.0.0" }}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query SignUpFormLocationQuery($ip: String!) {
           requestLocation(ip: $ip) {

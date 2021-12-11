@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { useTracking } from "react-tracking"
 import {
@@ -55,6 +55,7 @@ const FairEditorialItemLink: React.FC<FairEditorialItemLinkProps> = ({
 export const FairEditorialItemLinkFragmentContainer = createFragmentContainer(
   FairEditorialItemLink,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     article: graphql`
       fragment FairEditorialItemLink_article on Article {
         internalID

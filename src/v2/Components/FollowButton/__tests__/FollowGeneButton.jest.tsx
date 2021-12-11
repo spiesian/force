@@ -25,6 +25,7 @@ const { getWrapper } = setupTestWrapper<FollowGeneButton_Test_Query>({
       </SystemContextProvider>
     )
   },
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query FollowGeneButton_Test_Query {
       gene(id: "example") {

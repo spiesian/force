@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import styled from "styled-components"
 import { Link, Image, ResponsiveBox } from "@artsy/palette"
 import {
@@ -66,6 +66,7 @@ export const PartnerContactMap: React.FC<PartnerContactMapProps> = ({
 export const PartnerContactMapFragmentContainer = createFragmentContainer(
   PartnerContactMap,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     location: graphql`
       fragment PartnerContactMap_location on Location {
         city

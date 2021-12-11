@@ -21,6 +21,7 @@ const setupTestEnv = () => {
   return createTestEnv({
     TestPage: IdentityVerificationAppTestPage,
     Component: IdentityVerificationAppFragmentContainer,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query IdentityVerificationAppTestQuery @raw_response_type {
         me {

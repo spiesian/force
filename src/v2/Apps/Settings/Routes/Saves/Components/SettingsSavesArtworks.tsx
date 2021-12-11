@@ -113,6 +113,7 @@ export const SETTINGS_SAVES_ARTWORKS_QUERY = graphql`
 export const SettingsSavesArtworksRefetchContainer = createRefetchContainer(
   SettingsSavesArtworks,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment SettingsSavesArtworks_me on Me
         @argumentDefinitions(page: { type: "Int" }) {

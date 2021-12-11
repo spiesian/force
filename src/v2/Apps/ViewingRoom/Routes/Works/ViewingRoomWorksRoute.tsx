@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import {
   Box,
   Column,
@@ -105,6 +105,7 @@ const ViewingRoomWorksRoute: React.FC<WorksRouteProps> = ({ viewingRoom }) => {
 export const ViewingRoomWorksRouteFragmentContainer = createFragmentContainer(
   ViewingRoomWorksRoute,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewingRoom: graphql`
       fragment ViewingRoomWorksRoute_viewingRoom on ViewingRoom {
         artworksConnection {

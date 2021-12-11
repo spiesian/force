@@ -100,6 +100,7 @@ export const SETTINGS_SAVES_CATEGORIES_QUERY = graphql`
 export const SettingsSavesCategoriesPaginationContainer = createPaginationContainer(
   SettingsSavesCategories,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment SettingsSavesCategories_me on Me
         @argumentDefinitions(after: { type: "String" }) {

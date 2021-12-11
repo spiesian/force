@@ -72,6 +72,7 @@ export const ItemReview: React.FC<ItemReviewProps> = ({
 )
 
 export const ItemReviewFragmentContainer = createFragmentContainer(ItemReview, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   lineItem: graphql`
     fragment ItemReview_lineItem on CommerceLineItem {
       artwork {

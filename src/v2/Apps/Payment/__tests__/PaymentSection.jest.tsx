@@ -27,6 +27,7 @@ const { getWrapper } = setupTestWrapper<PaymentSection_Test_Query>({
     // @ts-expect-error PLEASE_FIX_ME_STRICT_NULL_CHECK_MIGRATION
     return <PaymentSectionFragmentContainer {...props} />
   },
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query PaymentSection_Test_Query {
       me {

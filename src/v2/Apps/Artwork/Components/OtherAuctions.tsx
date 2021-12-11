@@ -5,8 +5,8 @@ import { SystemContext } from "v2/System"
 import { renderWithLoadProgress } from "v2/System/Relay/renderWithLoadProgress"
 import { SystemQueryRenderer } from "v2/System/Relay/SystemQueryRenderer"
 import { AuctionCardFragmentContainer } from "v2/Components/AuctionCard"
-import { useContext } from "react";
-import * as React from "react";
+import { useContext } from "react"
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { data as sd } from "sharify"
 import { Header } from "./OtherWorks/Header"
@@ -42,6 +42,7 @@ export const OtherAuctions: React.FC<OtherAuctionsProps> = ({
 export const OtherAuctionsFragmentContainer = createFragmentContainer(
   OtherAuctions,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     salesConnection: graphql`
       fragment OtherAuctions_salesConnection on SaleConnection {
         edges {
@@ -63,6 +64,7 @@ export const OtherAuctionsQueryRenderer = () => {
       lazyLoad
       environment={relayEnvironment}
       variables={{ first: 4, sort: "TIMELY_AT_NAME_ASC" }}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query OtherAuctionsQuery($first: Int, $sort: SaleSorts) {
           salesConnection(first: $first, sort: $sort) {

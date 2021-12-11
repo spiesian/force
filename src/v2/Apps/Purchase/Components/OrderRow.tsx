@@ -299,6 +299,7 @@ const OrderRow: React.FC<OrderRowProps> = props => {
 export const OrderRowFragmentContainer = createFragmentContainer(
   OrderRow as React.ComponentType<OrderRowProps>,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     order: graphql`
       fragment OrderRow_order on CommerceOrder {
         internalID

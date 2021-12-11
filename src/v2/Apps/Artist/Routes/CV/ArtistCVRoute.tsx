@@ -1,5 +1,5 @@
 import { Join, Spacer } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { ArtistCVGroupRefetchContainer } from "./Components/ArtistCVGroup"
 import { ArtistCVRoute_viewer } from "v2/__generated__/ArtistCVRoute_viewer.graphql"
@@ -34,6 +34,7 @@ const ArtistCVRoute: React.FC<ArtistCVRouteProps> = ({ viewer }) => {
 export const ArtistCVRouteFragmentContainer = createFragmentContainer(
   ArtistCVRoute,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewer: graphql`
       fragment ArtistCVRoute_viewer on Viewer
         @argumentDefinitions(

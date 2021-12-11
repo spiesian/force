@@ -227,6 +227,7 @@ export const BidForm: React.FC<Props> = ({
 }
 
 export const BidFormFragmentContainer = createFragmentContainer(BidForm, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   saleArtwork: graphql`
     fragment BidForm_saleArtwork on SaleArtwork {
       minimumNextBid: minimumNextBid {
@@ -244,6 +245,7 @@ export const BidFormFragmentContainer = createFragmentContainer(BidForm, {
       }
     }
   `,
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   me: graphql`
     fragment BidForm_me on Me {
       hasQualifiedCreditCards

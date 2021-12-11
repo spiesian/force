@@ -185,6 +185,7 @@ const InquiryBasicInfoPlaceholder: React.FC = () => {
 export const InquiryBasicInfoFragmentContainer = createFragmentContainer(
   InquiryBasicInfo,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment InquiryBasicInfo_artwork on Artwork {
         partner {
@@ -192,6 +193,7 @@ export const InquiryBasicInfoFragmentContainer = createFragmentContainer(
         }
       }
     `,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment InquiryBasicInfo_me on Me {
         location {
@@ -211,6 +213,7 @@ export const InquiryBasicInfoQueryRenderer: React.FC = () => {
     <SystemQueryRenderer<InquiryBasicInfoQuery>
       environment={relayEnvironment.current!}
       placeholder={<InquiryBasicInfoPlaceholder />}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query InquiryBasicInfoQuery($id: String!) {
           artwork(id: $id) {

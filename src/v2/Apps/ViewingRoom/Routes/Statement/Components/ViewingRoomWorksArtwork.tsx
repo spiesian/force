@@ -82,6 +82,7 @@ const ViewingRoomWorksArtwork: React.FC<ViewingRoomWorksArtworkProps> = ({
 export const ViewingRoomWorksArtworkFragmentContainer = createFragmentContainer(
   ViewingRoomWorksArtwork,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment ViewingRoomWorksArtwork_artwork on Artwork {
         artistNames

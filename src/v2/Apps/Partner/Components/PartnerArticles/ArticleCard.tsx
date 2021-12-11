@@ -73,6 +73,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article }): JSX.Element => {
 export const ArticleCardFragmentContainer = createFragmentContainer(
   ArticleCard,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     article: graphql`
       fragment ArticleCard_article on Article {
         channelID

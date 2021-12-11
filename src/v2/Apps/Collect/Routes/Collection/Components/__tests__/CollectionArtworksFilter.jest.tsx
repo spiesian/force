@@ -42,6 +42,7 @@ const { getWrapper } = setupTestWrapper<CollectionArtworksFilter_Query>({
       />
     </MockBoot>
   ),
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query CollectionArtworksFilter_Query(
       $input: FilterArtworksInput

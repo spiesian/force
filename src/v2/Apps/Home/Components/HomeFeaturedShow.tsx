@@ -5,7 +5,7 @@ import {
   OwnerType,
 } from "@artsy/cohesion"
 import { Box, Image, Spacer, Text } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { useTracking } from "v2/System"
 import { RouterLink } from "v2/System/Router/RouterLink"
@@ -85,6 +85,7 @@ const HomeFeaturedShow: React.FC<HomeFeaturedShowProps> = ({ show }) => {
 export const HomeFeaturedShowFragmentContainer = createFragmentContainer(
   HomeFeaturedShow,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     show: graphql`
       fragment HomeFeaturedShow_show on Show {
         internalID

@@ -79,6 +79,7 @@ const PLACEHOLDER = (
 export const HomeFeaturedGalleriesRailFragmentContainer = createFragmentContainer(
   HomeFeaturedGalleriesRail,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     orderedSet: graphql`
       fragment HomeFeaturedGalleriesRail_orderedSet on OrderedSet {
         orderedItemsConnection(first: 20) {
@@ -105,6 +106,7 @@ export const HomeFeaturedGalleriesRailQueryRenderer: React.FC = () => {
     <SystemQueryRenderer<HomeFeaturedGalleriesRailQuery>
       lazyLoad
       environment={relayEnvironment}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query HomeFeaturedGalleriesRailQuery {
           orderedSet(id: "6193c9ede70512000fbf3e8d") {

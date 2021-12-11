@@ -31,6 +31,7 @@ const PartnersFeaturedCarousel: FC<PartnersFeaturedCarouselProps> = ({
 export const PartnersFeaturedCarouselFragmentContainer = createFragmentContainer(
   PartnersFeaturedCarousel,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewer: graphql`
       fragment PartnersFeaturedCarousel_viewer on Viewer
         @argumentDefinitions(id: { type: "String!" }) {

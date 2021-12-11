@@ -1,5 +1,5 @@
 import { groupBy } from "lodash"
-import * as React from "react";
+import * as React from "react"
 import { RouterLink } from "v2/System/Router/RouterLink"
 import { extractNodes } from "v2/Utils/extractNodes"
 import { ArtistCVGroup_artist } from "v2/__generated__/ArtistCVGroup_artist.graphql"
@@ -132,6 +132,7 @@ const ArtistCVGroup: React.FC<ArtistCVGroupProps> = ({
 export const ArtistCVGroupRefetchContainer = createPaginationContainer(
   ArtistCVGroup,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment ArtistCVGroup_artist on Artist
         @argumentDefinitions(
@@ -188,6 +189,7 @@ export const ArtistCVGroupRefetchContainer = createPaginationContainer(
         slug: props.artist.slug,
       }
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query ArtistCVGroupQuery(
         $count: Int

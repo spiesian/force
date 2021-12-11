@@ -96,6 +96,7 @@ export const NavBarMobileMenuLoggedIn: React.FC<NavBarMobileMenuLoggedInProps> =
 const NavBarMobileMenuLoggedInFragmentContainer = createFragmentContainer(
   NavBarMobileMenuLoggedIn,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment NavBarMobileMenuAuthentication_me on Me {
         unreadNotificationsCount
@@ -113,6 +114,7 @@ export const NavBarMobileMenuLoggedInQueryRenderer: React.FC<{}> = () => {
   ) : (
     <SystemQueryRenderer<NavBarMobileMenuAuthenticationQuery>
       environment={relayEnvironment}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query NavBarMobileMenuAuthenticationQuery {
           me {

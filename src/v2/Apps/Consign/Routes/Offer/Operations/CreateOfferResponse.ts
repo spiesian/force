@@ -17,6 +17,7 @@ export const CreateOfferResponse = (
 ) => {
   return new Promise<CreateOfferResponseMutationResponse>((resolve, reject) => {
     commitMutation<CreateOfferResponseMutation>(relayEnvironment, {
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       mutation: graphql`
         mutation CreateOfferResponseMutation(
           $input: CreateOfferResponseMutationInput!

@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { withSystemContext } from "v2/System"
 import { createFragmentContainer, graphql } from "react-relay"
 import { ContextModule } from "@artsy/cohesion"
@@ -57,6 +57,7 @@ const ArtworkArtistSeries: React.FC<ArtworkArtistSeriesProps> = ({
 export const ArtworkArtistSeriesFragmentContainer = createFragmentContainer<{
   artwork: ArtworkArtistSeries_artwork
 }>(withSystemContext(ArtworkArtistSeries), {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   artwork: graphql`
     fragment ArtworkArtistSeries_artwork on Artwork {
       ...ArtistSeriesArtworkRail_artwork
@@ -119,6 +120,7 @@ export const ArtworkArtistSeriesQueryRenderer: React.FC<{
       environment={relayEnvironment}
       variables={{ slug }}
       placeholder={PLACEHOLDER}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query ArtworkArtistSeriesQuery($slug: String!) {
           artwork(id: $slug) {

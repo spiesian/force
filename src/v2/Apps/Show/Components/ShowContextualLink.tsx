@@ -67,6 +67,7 @@ export const ContextualLink: React.FC<Props> = ({ show }) => {
 export const ShowContextualLinkFragmentContainer = createFragmentContainer(
   ShowContextualLink,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     show: graphql`
       fragment ShowContextualLink_show on Show {
         isFairBooth

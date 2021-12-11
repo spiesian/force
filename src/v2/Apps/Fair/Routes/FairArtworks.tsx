@@ -94,6 +94,7 @@ const FairArtworksFilter: React.FC<FairArtworksFilterProps> = props => {
 export const FairArtworksRefetchContainer = createRefetchContainer(
   FairArtworksFilter,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     fair: graphql`
       fragment FairArtworks_fair on Fair
         @argumentDefinitions(

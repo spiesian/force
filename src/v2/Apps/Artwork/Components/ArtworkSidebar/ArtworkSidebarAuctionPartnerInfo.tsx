@@ -1,6 +1,6 @@
 import { Text } from "@artsy/palette"
 import { createFragmentContainer, graphql } from "react-relay"
-import { Component } from "react";
+import { Component } from "react"
 import { ArtworkSidebarAuctionPartnerInfo_artwork } from "v2/__generated__/ArtworkSidebarAuctionPartnerInfo_artwork.graphql"
 
 export interface ArtworkSidebarAuctionPartnerInfoProps {
@@ -34,6 +34,7 @@ export class ArtworkSidebarAuctionPartnerInfo extends Component<
 export const ArtworkSidebarAuctionPartnerInfoFragmentContainer = createFragmentContainer(
   ArtworkSidebarAuctionPartnerInfo,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment ArtworkSidebarAuctionPartnerInfo_artwork on Artwork {
         partner {

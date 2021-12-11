@@ -20,6 +20,7 @@ const SettingsOverviewRoute: React.FC<SettingsOverviewRouteProps> = ({
 export const SettingsOverviewRouteFragmentContainer = createFragmentContainer(
   SettingsOverviewRoute,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment SettingsOverviewRoute_me on Me {
         name

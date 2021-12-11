@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { Separator, FullBleed } from "@artsy/palette"
 import { createFragmentContainer, graphql } from "react-relay"
 import { NavigationTabsFragmentContainer as NavigationTabs } from "v2/Apps/Partner/Components/NavigationTabs"
@@ -56,6 +56,7 @@ export const PartnerApp: React.FC<PartnerAppProps> = ({
 }
 
 export const PartnerAppFragmentContainer = createFragmentContainer(PartnerApp, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   partner: graphql`
     fragment PartnerApp_partner on Partner {
       partnerType

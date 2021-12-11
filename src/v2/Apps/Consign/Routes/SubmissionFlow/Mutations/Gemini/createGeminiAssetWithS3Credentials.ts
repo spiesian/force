@@ -12,6 +12,7 @@ export const createGeminiAssetWithS3Credentials = (
     commitMutation<createGeminiAssetWithS3CredentialsMutation>(
       relayEnvironment,
       {
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         mutation: graphql`
           mutation createGeminiAssetWithS3CredentialsMutation(
             $input: CreateGeminiEntryForAssetInput!

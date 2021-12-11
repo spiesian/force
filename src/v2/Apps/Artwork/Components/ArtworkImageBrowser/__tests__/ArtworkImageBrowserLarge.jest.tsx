@@ -24,6 +24,7 @@ const { getWrapper } = setupTestWrapper<ArtworkImageBrowserLarge_Test_Query>({
       </MockBoot>
     )
   },
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query ArtworkImageBrowserLarge_Test_Query {
       artwork(id: "example") {

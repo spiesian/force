@@ -1,5 +1,5 @@
 import { ChevronIcon, Text } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { RouterLink } from "v2/System/Router/RouterLink"
 import { ShowsAllCities_viewer } from "v2/__generated__/ShowsAllCities_viewer.graphql"
@@ -45,6 +45,7 @@ export const ShowsAllCities: React.FC<ShowsAllCitiesProps> = ({
 export const ShowsAllCitiesFragmentContainer = createFragmentContainer(
   ShowsAllCities,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewer: graphql`
       fragment ShowsAllCities_viewer on Viewer {
         cities {

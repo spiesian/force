@@ -19,6 +19,7 @@ export const ArtistAuctionResultsCount = ({
 export const ArtistAuctionResultsCountFragmentContainer = createFragmentContainer(
   ArtistAuctionResultsCount,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     results: graphql`
       fragment ArtistAuctionResultsCount_results on AuctionResultConnection {
         totalCount

@@ -47,6 +47,7 @@ export const viewingRoomRoutes: AppRouteConfig[] = [
       // Accomodates the grid of 3x items and 2x items well.
       return { count: 12 }
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query viewingRoomRoutes_ViewingRoomsAppQuery(
         $count: Int!
@@ -73,6 +74,7 @@ export const viewingRoomRoutes: AppRouteConfig[] = [
     onClientSideRender: () => {
       ViewingRoomApp.preload()
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query viewingRoomRoutes_ViewingRoomQuery($slug: ID!) {
         viewingRoom(id: $slug) @principalField {
@@ -84,6 +86,7 @@ export const viewingRoomRoutes: AppRouteConfig[] = [
       {
         path: "/",
         Component: StatementRoute,
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query viewingRoomRoutes_ViewingRoomStatementRouteQuery($slug: ID!) {
             viewingRoom(id: $slug) @principalField {
@@ -105,6 +108,7 @@ export const viewingRoomRoutes: AppRouteConfig[] = [
       {
         path: "artworks",
         Component: WorksRoute,
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query viewingRoomRoutes_ViewingRoomWorksRouteQuery($slug: ID!) {
             viewingRoom(id: $slug) @principalField {

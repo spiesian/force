@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { Link, Meta, Title } from "react-head"
 import { createFragmentContainer, graphql } from "react-relay"
 import { FairMeta_fair } from "v2/__generated__/FairMeta_fair.graphql"
@@ -35,6 +35,7 @@ const FairMeta: React.FC<FairMetaProps> = ({
 }
 
 export const FairMetaFragmentContainer = createFragmentContainer(FairMeta, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   fair: graphql`
     fragment FairMeta_fair on Fair {
       name

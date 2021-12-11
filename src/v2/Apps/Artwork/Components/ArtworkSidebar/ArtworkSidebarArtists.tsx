@@ -56,6 +56,7 @@ export const ArtworkSidebarArtists: React.FC<ArtistsProps> = ({
 export const ArtworkSidebarArtistsFragmentContainer = createFragmentContainer(
   ArtworkSidebarArtists,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment ArtworkSidebarArtists_artwork on Artwork
         @argumentDefinitions(

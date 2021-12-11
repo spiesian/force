@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import styled from "styled-components"
 import { Flex, HTML, Text, FullBleed } from "@artsy/palette"
 import { createFragmentContainer, graphql } from "react-relay"
@@ -83,6 +83,7 @@ export const FeatureHeaderDefault: React.FC<FeatureHeaderDefaultProps> = ({
 export const FeatureHeaderDefaultFragmentContainer = createFragmentContainer(
   FeatureHeaderDefault,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     feature: graphql`
       fragment FeatureHeaderDefault_feature on Feature {
         name

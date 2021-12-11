@@ -1,5 +1,5 @@
-import { useMemo } from "react";
-import * as React from "react";
+import { useMemo } from "react"
+import * as React from "react"
 import qs from "qs"
 import { graphql } from "react-relay"
 import { Banner } from "@artsy/palette"
@@ -89,6 +89,7 @@ export const FlashBannerQueryRenderer: React.FC = () => {
   return user ? (
     <SystemQueryRenderer<FlashBannerQuery>
       environment={relayEnvironment}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query FlashBannerQuery {
           me {

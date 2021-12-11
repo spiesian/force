@@ -14,7 +14,7 @@ import {
   TextArea,
 } from "@artsy/palette"
 import { useSystemContext } from "v2/System"
-import * as React from "react";
+import * as React from "react"
 import { useState } from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { InquiryInquiry_artwork } from "v2/__generated__/InquiryInquiry_artwork.graphql"
@@ -220,6 +220,7 @@ const InquiryInquiry: React.FC<InquiryInquiryProps> = ({ artwork }) => {
 const InquiryInquiryFragmentContainer = createFragmentContainer(
   InquiryInquiry,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment InquiryInquiry_artwork on Artwork {
         internalID
@@ -304,6 +305,7 @@ export const InquiryInquiryQueryRenderer: React.FC = () => {
     <SystemQueryRenderer<InquiryInquiryQuery>
       environment={relayEnvironment}
       placeholder={<InquiryInquiryPlaceholder />}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query InquiryInquiryQuery($id: String!) {
           artwork(id: $id) {

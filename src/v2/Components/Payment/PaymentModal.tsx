@@ -59,6 +59,7 @@ const validator = (values: any) => {
   return errorsTrimmed
 }
 
+// PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
 const mutation = graphql`
   mutation PaymentModalCreateCreditCardMutation($input: CreditCardInput!) {
     createCreditCard(input: $input) {

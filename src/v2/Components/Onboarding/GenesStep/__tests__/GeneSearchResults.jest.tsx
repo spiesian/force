@@ -24,6 +24,7 @@ describe("GeneSearchResults", () => {
         />
       )
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query GeneSearchResults_Test_Query($term: String!) {
         viewer {

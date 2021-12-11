@@ -1,5 +1,5 @@
 import { ArtistSeriesRail_collectionGroup } from "v2/__generated__/ArtistSeriesRail_collectionGroup.graphql"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { ArtistSeriesRailContainer as ArtistSeriesEntity } from "./ArtistSeriesEntity"
 import { Rail } from "v2/Components/Rail"
@@ -31,6 +31,7 @@ export const ArtistSeriesRail: React.FC<ArtistSeriesRailProps> = ({
 export const ArtistSeriesRailContainer = createFragmentContainer(
   ArtistSeriesRail as React.FC<ArtistSeriesRailProps>,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     collectionGroup: graphql`
       fragment ArtistSeriesRail_collectionGroup on MarketingCollectionGroup {
         groupType

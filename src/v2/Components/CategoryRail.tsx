@@ -107,6 +107,7 @@ export const CATEGORY_RAIL_PLACEHOLDER = (
 export const CategoryRailFragmentContainer = createFragmentContainer(
   CategoryRail,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     category: graphql`
       fragment CategoryRail_category on Gene {
         name
@@ -142,6 +143,7 @@ export const CategoryRailQueryRenderer: FC<CategoryRailQueryRendererProps> = ({
     <SystemQueryRenderer<CategoryRailQuery>
       placeholder={CATEGORY_RAIL_PLACEHOLDER}
       variables={{ id }}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query CategoryRailQuery($id: String!) {
           category: gene(id: $id) {

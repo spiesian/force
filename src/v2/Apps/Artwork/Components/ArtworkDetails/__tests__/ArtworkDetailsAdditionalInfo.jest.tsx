@@ -30,6 +30,7 @@ const { getWrapper } = setupTestWrapper<
       </MockBoot>
     )
   },
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query ArtworkDetailsAdditionalInfo_Test_Query {
       artwork(id: "xxx") {

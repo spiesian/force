@@ -85,6 +85,7 @@ describe("PricingContext", () => {
         </div>
       ),
       mockData: mockData as PricingContextTestQueryRawResponse,
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query: graphql`
         query PricingContextTestQuery @raw_response_type {
           artwork(id: "unused") {

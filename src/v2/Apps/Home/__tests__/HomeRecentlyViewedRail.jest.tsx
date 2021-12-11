@@ -13,6 +13,7 @@ const { getWrapper } = setupTestWrapper<HomeRecentlyViewedRail_Test_Query>({
       <HomeRecentlyViewedRailFragmentContainer homePage={props.homePage!} />
     )
   },
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query HomeRecentlyViewedRail_Test_Query {
       homePage {

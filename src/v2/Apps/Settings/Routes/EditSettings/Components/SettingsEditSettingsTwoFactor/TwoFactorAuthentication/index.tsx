@@ -59,6 +59,7 @@ const TwoFactorAuthentication: React.FC<TwoFactorAuthenticationProps> = props =>
 export const TwoFactorAuthenticationRefetchContainer = createRefetchContainer(
   TwoFactorAuthentication,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment TwoFactorAuthentication_me on Me {
         hasSecondFactorEnabled
@@ -89,6 +90,7 @@ export const TwoFactorAuthenticationQueryRenderer = () => {
     <SystemQueryRenderer<TwoFactorAuthenticationQuery>
       environment={relayEnvironment}
       variables={{}}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query TwoFactorAuthenticationQuery @raw_response_type {
           me {

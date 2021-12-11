@@ -57,6 +57,7 @@ export const auctionsRoutes: AppRouteConfig[] = [
       AuctionsApp.preload()
     },
 
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query auctionsRoutes_AuctionsQuery {
         viewer {
@@ -68,6 +69,7 @@ export const auctionsRoutes: AppRouteConfig[] = [
       {
         path: "", // represents current auctions aka /auctions/current
         Component: CurrentAuctionsPaginationContainer,
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query auctionsRoutes_Current_AuctionsQuery {
             viewer {
@@ -79,6 +81,7 @@ export const auctionsRoutes: AppRouteConfig[] = [
       {
         path: "upcoming",
         Component: UpcomingAuctionsPaginationContainer,
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query auctionsRoutes_Upcoming_AuctionsQuery {
             viewer {
@@ -90,6 +93,7 @@ export const auctionsRoutes: AppRouteConfig[] = [
       {
         path: "past",
         Component: PastAuctionsPaginationContainer,
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query auctionsRoutes_Past_AuctionsQuery {
             viewer {
@@ -101,6 +105,7 @@ export const auctionsRoutes: AppRouteConfig[] = [
       {
         path: "auctions",
         getComponent: () => AuctionsRoute,
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query auctionsRoutes_Auctions_AuctionsQuery {
             viewer {
@@ -112,6 +117,7 @@ export const auctionsRoutes: AppRouteConfig[] = [
       {
         path: "artworks",
         getComponent: () => ArtworksRoute,
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query auctionsRoutes_Artworks_AuctionsQuery {
             viewer {

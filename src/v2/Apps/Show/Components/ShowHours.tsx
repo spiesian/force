@@ -1,5 +1,5 @@
 import { BoxProps } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { ShowLocationHoursFragmentContainer } from "./ShowLocationHours"
 import { ShowHours_show } from "v2/__generated__/ShowHours_show.graphql"
@@ -19,6 +19,7 @@ export const ShowHours: React.FC<ShowHoursProps> = ({ show, ...rest }) => {
 }
 
 export const ShowHoursFragmentContainer = createFragmentContainer(ShowHours, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   show: graphql`
     fragment ShowHours_show on Show {
       location {

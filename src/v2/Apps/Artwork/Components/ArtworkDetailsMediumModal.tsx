@@ -35,6 +35,7 @@ export const ArtworkDetailsMediumModal: React.FC<ArtworkDetailsMediumModalProps>
 export const ArtworkDetailsMediumModalFragmentContainer = createFragmentContainer(
   ArtworkDetailsMediumModal,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment ArtworkDetailsMediumModal_artwork on Artwork {
         mediumType {

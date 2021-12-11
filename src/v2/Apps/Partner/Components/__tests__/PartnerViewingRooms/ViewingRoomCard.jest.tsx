@@ -12,6 +12,7 @@ const { getWrapper } = setupTestWrapper({
       />
     )
   },
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query ViewingRoomCard_Test_Query {
       partner(id: "white-cube") @principalField {

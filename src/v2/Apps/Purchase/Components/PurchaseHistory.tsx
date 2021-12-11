@@ -154,6 +154,7 @@ const PurchaseHistory: React.FC<PurchaseHistoryProps> = (
 export const PurchaseHistoryFragmentContainer = createRefetchContainer(
   PurchaseHistory as React.ComponentType<PurchaseHistoryProps>,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment PurchaseHistory_me on Me
         @argumentDefinitions(

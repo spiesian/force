@@ -37,6 +37,7 @@ export const fairsRoutes: AppRouteConfig[] = [
         onClientSideRender: () => {
           return FairsIndexRoute.preload()
         },
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query fairsRoutes_FairsQuery {
             featuredFairs: orderedSets(key: "art-fairs:featured") {

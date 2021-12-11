@@ -30,6 +30,7 @@ const SettingsEditProfileYourGalleryIntro: FC<SettingsEditProfileYourGalleryIntr
 export const SettingsEditProfileYourGalleryIntroFragmentContainer = createFragmentContainer(
   SettingsEditProfileYourGalleryIntro,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment SettingsEditProfileYourGalleryIntro_me on Me {
         inquiryIntroduction

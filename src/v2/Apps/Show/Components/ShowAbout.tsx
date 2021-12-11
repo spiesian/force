@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { Box, BoxProps, Text } from "@artsy/palette"
 import { createFragmentContainer, graphql } from "react-relay"
 import { ShowAbout_show } from "v2/__generated__/ShowAbout_show.graphql"
@@ -31,6 +31,7 @@ export const ShowAbout: React.FC<ShowAboutProps> = ({
   )
 }
 export const ShowAboutFragmentContainer = createFragmentContainer(ShowAbout, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   show: graphql`
     fragment ShowAbout_show on Show {
       about: description

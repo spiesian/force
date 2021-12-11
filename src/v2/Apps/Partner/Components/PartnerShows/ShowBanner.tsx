@@ -140,6 +140,7 @@ const ShowBanner: React.FC<ShowBannerProps> = ({
 }
 
 export const ShowBannerFragmentContainer = createFragmentContainer(ShowBanner, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   show: graphql`
     fragment ShowBanner_show on Show {
       slug

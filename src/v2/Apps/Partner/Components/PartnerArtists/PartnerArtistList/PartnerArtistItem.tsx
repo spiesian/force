@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import styled from "styled-components"
 import { createFragmentContainer, graphql } from "react-relay"
 import { RouterLink } from "v2/System/Router/RouterLink"
@@ -47,6 +47,7 @@ export const PartnerArtistItem: React.FC<PartnerArtistItemProps> = ({
 export const PartnerArtistItemFragmentContainer = createFragmentContainer(
   PartnerArtistItem,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment PartnerArtistItem_artist on Artist {
         name

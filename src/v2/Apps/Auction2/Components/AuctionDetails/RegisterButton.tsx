@@ -191,6 +191,7 @@ const ButtonAction: React.FC<{
 export const RegisterButtonFragmentContainer = createFragmentContainer(
   RegisterButton,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment RegisterButton_me on Me {
         identityVerified
@@ -199,6 +200,7 @@ export const RegisterButtonFragmentContainer = createFragmentContainer(
         }
       }
     `,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     sale: graphql`
       fragment RegisterButton_sale on Sale {
         bidder {

@@ -30,6 +30,7 @@ const SubmissionSummary: React.FC<SubmissionSummaryProps> = ({ offer }) => {
 export const SubmissionSummaryFragmentContainer = createFragmentContainer(
   SubmissionSummary,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     offer: graphql`
       fragment SubmissionSummary_offer on ConsignmentOffer {
         submission {

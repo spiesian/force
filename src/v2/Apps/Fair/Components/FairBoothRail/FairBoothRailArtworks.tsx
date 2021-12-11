@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { useSystemContext } from "v2/System"
 import { FairBoothRailArtworksQuery } from "v2/__generated__/FairBoothRailArtworksQuery.graphql"
@@ -102,6 +102,7 @@ const PLACEHOLDER = (
 export const FairBoothRailArtworksFragmentContainer = createFragmentContainer(
   FairBoothRailArtworks,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     show: graphql`
       fragment FairBoothRailArtworks_show on Show {
         artworksConnection(first: 20) {
@@ -127,6 +128,7 @@ export const FairBoothRailArtworksQueryRenderer: React.FC<{
     <SystemQueryRenderer<FairBoothRailArtworksQuery>
       lazyLoad
       environment={relayEnvironment}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query FairBoothRailArtworksQuery($id: String!) {
           show(id: $id) {

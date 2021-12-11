@@ -75,6 +75,7 @@ const ArtworkSummaryItem: React.FC<ArtworkSummaryItemProps> = ({
 export const ArtworkSummaryItemFragmentContainer = createFragmentContainer(
   ArtworkSummaryItem,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     order: graphql`
       fragment ArtworkSummaryItem_order on CommerceOrder {
         sellerDetails {

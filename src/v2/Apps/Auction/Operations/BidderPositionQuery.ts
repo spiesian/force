@@ -11,6 +11,7 @@ export const bidderPositionQuery = (
 ) => {
   return fetchQuery<BidderPositionQuery>(
     environment,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     graphql`
       query BidderPositionQuery($bidderPositionID: String!) {
         me {

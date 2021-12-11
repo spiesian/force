@@ -58,6 +58,7 @@ export const DefaultHeaderArtwork: React.FC<DefaultHeaderArtworkProps> = ({
 export const DefaultHeaderArtworkFragmentContainer = createFragmentContainer(
   DefaultHeaderArtwork,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment DefaultHeaderArtwork_artwork on Artwork {
         id

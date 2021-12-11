@@ -1,5 +1,5 @@
 import { Column, GridColumns, Text } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { TagApp_tag } from "v2/__generated__/TagApp_tag.graphql"
 import { TagMetaFragmentContainer } from "./Components/TagMeta"
@@ -28,6 +28,7 @@ const TagApp: React.FC<TagAppProps> = ({ tag }) => {
 }
 
 export const TagAppFragmentContainer = createFragmentContainer(TagApp, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   tag: graphql`
     fragment TagApp_tag on Tag
       @argumentDefinitions(

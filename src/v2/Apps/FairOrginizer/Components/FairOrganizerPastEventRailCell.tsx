@@ -1,5 +1,5 @@
 import { Box, Image, Text } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { RouterLink } from "v2/System/Router/RouterLink"
 import { FairOrganizerPastEventRailCell_fair } from "v2/__generated__/FairOrganizerPastEventRailCell_fair.graphql"
@@ -35,6 +35,7 @@ export const FairOrganizerPastEventRailCell: React.FC<FairOrganizerPastEventRail
 export const FairOrganizerPastEventRailCellFragmentContainer = createFragmentContainer(
   FairOrganizerPastEventRailCell,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     fair: graphql`
       fragment FairOrganizerPastEventRailCell_fair on Fair {
         slug

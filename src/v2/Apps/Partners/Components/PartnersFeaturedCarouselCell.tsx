@@ -112,6 +112,7 @@ const PartnersFeaturedCarouselCell: FC<PartnersFeaturedCarouselCellProps> = ({
 export const PartnersFeaturedCarouselCellFragmentContainer = createFragmentContainer(
   PartnersFeaturedCarouselCell,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     profile: graphql`
       fragment PartnersFeaturedCarouselCell_profile on Profile {
         ...FollowProfileButton_profile

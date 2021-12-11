@@ -45,6 +45,7 @@ export const showsRoutes: RouteConfig[] = [
         onClientSideRender: () => {
           return ShowsIndexRoute.preload()
         },
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query showsRoutes_ShowsIndexQuery {
             viewer {
@@ -62,6 +63,7 @@ export const showsRoutes: RouteConfig[] = [
         onClientSideRender: () => {
           return ShowsAllCities.preload()
         },
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query showsRoutes_ShowsAllCitiesQuery {
             viewer {
@@ -89,6 +91,7 @@ export const showsRoutes: RouteConfig[] = [
             page: parseInt(props.location.query.page, 10) || 1,
           }
         },
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query showsRoutes_ShowsCityQuery($slug: String!, $page: Int) {
             viewer {

@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import {
   ChevronIcon,
   Clickable,
@@ -129,6 +129,7 @@ const ArtistSeriesHeader: React.FC<ArtistSeriesHeaderProps> = ({
 export const ArtistSeriesHeaderFragmentContainer = createFragmentContainer(
   ArtistSeriesHeader,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artistSeries: graphql`
       fragment ArtistSeriesHeader_artistSeries on ArtistSeries {
         title

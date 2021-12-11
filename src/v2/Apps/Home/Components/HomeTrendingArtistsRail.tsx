@@ -151,6 +151,7 @@ const PLACEHOLDER = (
 export const HomeTrendingArtistsRailFragmentContainer = createFragmentContainer(
   HomeTrendingArtistsRail,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewer: graphql`
       fragment HomeTrendingArtistsRail_viewer on Viewer {
         artistsConnection(sort: TRENDING_DESC, first: 99) {
@@ -186,6 +187,7 @@ export const HomeTrendingArtistsRailQueryRenderer: React.FC = () => {
     <SystemQueryRenderer<HomeTrendingArtistsRailQuery>
       lazyLoad
       environment={relayEnvironment}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query HomeTrendingArtistsRailQuery {
           viewer {

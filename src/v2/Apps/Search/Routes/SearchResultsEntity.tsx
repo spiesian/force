@@ -182,6 +182,7 @@ export class SearchResultsEntityRoute extends React.Component<Props, State> {
 export const SearchResultsEntityRouteFragmentContainer = createRefetchContainer(
   withRouter(SearchResultsEntityRoute) as React.ComponentType<Props>,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewer: graphql`
       fragment SearchResultsEntity_viewer on Viewer
         @argumentDefinitions(

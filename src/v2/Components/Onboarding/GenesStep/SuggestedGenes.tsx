@@ -78,6 +78,7 @@ class SuggestedGenesContent extends React.Component<Props> {
       this.props.relay.environment,
       {
         // TODO: Inputs to the mutation might have changed case of the keys!
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         mutation: graphql`
           mutation SuggestedGenesFollowGeneMutation(
             $input: FollowGeneInput!
@@ -150,6 +151,7 @@ class SuggestedGenesContent extends React.Component<Props> {
 export const SuggestedGenesContainer = createFragmentContainer(
   SuggestedGenesContent,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     suggested_genes: graphql`
       fragment SuggestedGenes_suggested_genes on Gene @relay(plural: true) {
         id
@@ -172,6 +174,7 @@ const SuggestedGenesComponent: React.SFC<
   return (
     <SystemQueryRenderer<SuggestedGenesQuery>
       environment={relayEnvironment}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query SuggestedGenesQuery {
           highlights {

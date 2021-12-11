@@ -1,5 +1,5 @@
 import { Text } from "@artsy/palette"
-import { Component } from "react";
+import { Component } from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { ArtworkSidebarClassificationFragmentContainer } from "./ArtworkSidebarClassification"
 import { ArtworkSidebarSizeInfoFragmentContainer } from "./ArtworkSidebarSizeInfo"
@@ -48,6 +48,7 @@ export class ArtworkSidebarMetadata extends Component<
 export const ArtworkSidebarMetadataFragmentContainer = createFragmentContainer(
   ArtworkSidebarMetadata,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment ArtworkSidebarMetadata_artwork on Artwork {
         is_biddable: isBiddable

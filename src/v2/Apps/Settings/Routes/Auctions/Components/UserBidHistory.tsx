@@ -55,6 +55,7 @@ export const UserBidHistory: React.FC<UserBidHistoryProps> = ({ me }) => {
 export const UserBidHistoryFragmentContainer = createFragmentContainer(
   UserBidHistory,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment UserBidHistory_me on Me {
         myBids {

@@ -22,6 +22,8 @@ export const followArtistMutation: FollowArtistMutationProps = (
 
         resolve(res)
       },
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       mutation: graphql`
         mutation FollowArtistMutation($input: FollowArtistInput!) {
           followArtist(input: $input) {

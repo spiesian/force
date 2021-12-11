@@ -11,6 +11,7 @@ const { getWrapper } = setupTestWrapper<SettingsPaymentsRoute_Test_Query>({
   Component: ({ me }) => {
     return <SettingsPaymentsRouteFragmentContainer me={me as any} />
   },
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query SettingsPaymentsRoute_Test_Query {
       me {

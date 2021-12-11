@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { Box } from "@artsy/palette"
 import { ShowSubApp_show } from "v2/__generated__/ShowSubApp_show.graphql"
@@ -44,6 +44,7 @@ const ShowApp: React.FC<ShowAppProps> = ({ children, show }) => {
 
 // Top-level route needs to be exported for bundle splitting in the router
 export const ShowSubAppFragmentContainer = createFragmentContainer(ShowApp, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   show: graphql`
     fragment ShowSubApp_show on Show {
       id

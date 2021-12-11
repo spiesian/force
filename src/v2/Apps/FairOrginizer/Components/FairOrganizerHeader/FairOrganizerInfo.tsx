@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { Join, Spacer } from "@artsy/palette"
 import { InfoSection } from "v2/Components/InfoSection"
@@ -35,6 +35,7 @@ const InfoSectionContainer = styled.div`
 export const FairOrganizerInfoFragmentContainer = createFragmentContainer(
   FairOrganizerInfo,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     fairOrganizer: graphql`
       fragment FairOrganizerInfo_fairOrganizer on FairOrganizer {
         about(format: HTML)

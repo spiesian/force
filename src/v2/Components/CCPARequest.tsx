@@ -179,6 +179,7 @@ const sendDataRequest = ({
   setSubmitted,
 }) => {
   commitMutation<CCPARequestMutation>(relayEnvironment, {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     mutation: graphql`
       mutation CCPARequestMutation($input: CreateAccountRequestMutationInput!) {
         createAccountRequest(input: $input) {

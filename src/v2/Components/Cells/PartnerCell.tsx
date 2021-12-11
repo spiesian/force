@@ -145,6 +145,7 @@ export const PartnerCellPlaceholder: React.FC<PartnerCellPlaceholderProps> = ({
 export const PartnerCellFragmentContainer = createFragmentContainer(
   PartnerCell,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     partner: graphql`
       fragment PartnerCell_partner on Partner {
         internalID

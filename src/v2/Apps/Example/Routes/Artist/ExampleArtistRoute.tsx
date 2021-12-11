@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { ExampleArtistRoute_artist } from "v2/__generated__/ExampleArtistRoute_artist.graphql"
 import { Box, Text } from "@artsy/palette"
@@ -56,6 +56,7 @@ const TrackingWrappedExampleArtistRoute: React.FC<ExampleArtistAppProps> = props
 export const ExampleArtistRouteFragmentContainer = createFragmentContainer(
   TrackingWrappedExampleArtistRoute,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment ExampleArtistRoute_artist on Artist {
         ...FollowArtistButton_artist

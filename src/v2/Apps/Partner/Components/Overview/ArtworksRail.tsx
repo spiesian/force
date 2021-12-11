@@ -95,6 +95,7 @@ const ArtworksRail: React.FC<ArtworksRailProps> = ({ partner, ...rest }) => {
 }
 
 const ArtworksRailFragmentContainer = createFragmentContainer(ArtworksRail, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   partner: graphql`
     fragment ArtworksRail_partner on Partner {
       slug
@@ -125,6 +126,7 @@ export const ArtworksRailRenderer: React.FC<
     <SystemQueryRenderer<ArtworksRailRendererQuery>
       lazyLoad
       environment={relayEnvironment}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query ArtworksRailRendererQuery($partnerId: String!) {
           partner(id: $partnerId) @principalField {

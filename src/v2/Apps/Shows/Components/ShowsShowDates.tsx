@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { Text, TextProps } from "@artsy/palette"
 import { createFragmentContainer, graphql } from "react-relay"
 import { useCurrentTime } from "v2/Utils/Hooks/useCurrentTime"
@@ -39,6 +39,7 @@ const ShowsShowDates: React.FC<ShowsShowDatesProps> = ({ show, ...rest }) => {
 export const ShowsShowDatesFragmentContainer = createFragmentContainer(
   ShowsShowDates,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     show: graphql`
       fragment ShowsShowDates_show on Show {
         startAt

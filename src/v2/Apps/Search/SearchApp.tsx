@@ -96,6 +96,7 @@ export const SearchApp: React.FC<SearchAppProps> = ({ viewer, children }) => {
 }
 
 export const SearchAppFragmentContainer = createFragmentContainer(SearchApp, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   viewer: graphql`
     fragment SearchApp_viewer on Viewer
       @argumentDefinitions(term: { type: "String!", defaultValue: "" }) {

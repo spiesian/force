@@ -67,6 +67,7 @@ export const OpenInquiryModalCTA: React.FC<OpenInquiryModalCTAProps> = ({
 export const OpenInquiryModalCTAFragmentContainer = createFragmentContainer(
   OpenInquiryModalCTA,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     conversation: graphql`
       fragment OpenInquiryModalCTA_conversation on Conversation {
         internalID

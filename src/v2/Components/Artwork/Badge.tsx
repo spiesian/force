@@ -49,6 +49,7 @@ class Badge extends Component<BadgeProps> {
 }
 
 export default createFragmentContainer(Badge, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   artwork: graphql`
     fragment Badge_artwork on Artwork {
       is_biddable: isBiddable

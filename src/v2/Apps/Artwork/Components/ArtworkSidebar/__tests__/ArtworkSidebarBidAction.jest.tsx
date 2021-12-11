@@ -29,6 +29,7 @@ describe("ArtworkSidebarBidAction", () => {
   ) => {
     return renderRelayTree({
       Component: ArtworkSidebarBidActionFragmentContainer,
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query: graphql`
         query ArtworkSidebarBidAction_Test_Query @raw_response_type {
           artwork(id: "auction_artwork") {

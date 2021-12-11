@@ -54,6 +54,7 @@ const FeaturedFairsRail: React.FC<FeaturedFairsRailProps> = props => {
 export const FeaturedFairsRailFragmentContainer = createFragmentContainer(
   FeaturedFairsRail,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     fairs: graphql`
       fragment FeaturedFairs_fairs on Fair @relay(plural: true) {
         internalID

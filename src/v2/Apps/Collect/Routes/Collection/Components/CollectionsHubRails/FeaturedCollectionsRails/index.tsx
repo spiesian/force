@@ -117,6 +117,7 @@ export const FeaturedCollectionEntity: React.FC<FeaturedCollectionEntityProps> =
 export const FeaturedCollectionsRailsContainer = createFragmentContainer(
   FeaturedCollectionsRails as React.FC<Props>,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     collectionGroup: graphql`
       fragment FeaturedCollectionsRails_collectionGroup on MarketingCollectionGroup {
         groupType

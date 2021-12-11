@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { Column, GridColumns } from "@artsy/palette"
 import { createFragmentContainer, graphql } from "react-relay"
 import { PartnerContactAddressFragmentContainer as PartnerContactAddress } from "./PartnerContactAddress"
@@ -27,6 +27,7 @@ export const PartnerContactCard: React.FC<PartnerContactCardProps> = ({
 export const PartnerContactCardFragmentContainer = createFragmentContainer(
   PartnerContactCard,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     location: graphql`
       fragment PartnerContactCard_location on Location {
         ...PartnerContactAddress_location

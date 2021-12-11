@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { Button, Column, GridColumns, Text } from "@artsy/palette"
 import { createFragmentContainer, graphql } from "react-relay"
 import { RouterLink } from "v2/System/Router/RouterLink"
@@ -45,6 +45,7 @@ const ViewingRoomContentNotAccessible: React.FC<ViewingRoomContentNotAccessibleP
 export const ViewingRoomContentNotAccessibleFragmentContainer = createFragmentContainer(
   ViewingRoomContentNotAccessible,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewingRoom: graphql`
       fragment ViewingRoomContentNotAccessible_viewingRoom on ViewingRoom {
         status

@@ -50,6 +50,7 @@ export const collectRoutes: AppRouteConfig[] = [
     onClientSideRender: () => {
       CollectionsApp.preload()
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query collectRoutes_MarketingCollectionsAppQuery {
         marketingCategories @principalField {
@@ -66,6 +67,7 @@ export const collectRoutes: AppRouteConfig[] = [
       CollectionApp.preload()
     },
     prepareVariables: initializeVariablesWithFilterState,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query collectRoutes_CollectionQuery(
         $input: FilterArtworksInput

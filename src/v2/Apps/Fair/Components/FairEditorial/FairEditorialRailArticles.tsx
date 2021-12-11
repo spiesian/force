@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { FairEditorialRailArticles_fair } from "v2/__generated__/FairEditorialRailArticles_fair.graphql"
 import { FairEditorialItemFragmentContainer as FairEditorialItem } from "./FairEditorialItem"
@@ -32,6 +32,7 @@ const FairEditorialRailArticles: React.FC<FairBoothRailArtworksProps> = ({
 export const FairEditorialRailArticlesFragmentContainer = createFragmentContainer(
   FairEditorialRailArticles,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     fair: graphql`
       fragment FairEditorialRailArticles_fair on Fair {
         articlesConnection(first: 6, sort: PUBLISHED_AT_DESC) {

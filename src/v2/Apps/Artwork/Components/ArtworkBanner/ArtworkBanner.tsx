@@ -1,5 +1,5 @@
 import { ArtworkBanner_artwork } from "v2/__generated__/ArtworkBanner_artwork.graphql"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import {
   Box,
@@ -119,6 +119,7 @@ const computeBannerProps = (props: ArtworkBannerProps) => {
 export const ArtworkBannerFragmentContainer = createFragmentContainer(
   ArtworkBanner,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment ArtworkBanner_artwork on Artwork {
         partner {

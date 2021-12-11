@@ -51,6 +51,7 @@ export const ArtworksRefetchContainer = createRefetchContainer(
   // @ts-expect-error PLEASE_FIX_ME_STRICT_NULL_CHECK_MIGRATION
   withRouter<PartnerArtworkFilterProps & RouterState>(Artworks),
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     partner: graphql`
       fragment Works_partner on Partner
         @argumentDefinitions(

@@ -50,6 +50,7 @@ export const identityVerificationRoutes: AppRouteConfig[] = [
     onClientSideRender: () => {
       IdentityVerificationApp.preload()
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query identityVerificationRoutes_IdentityVerificationAppQuery(
         $id: String!

@@ -797,6 +797,7 @@ export class ShippingRoute extends Component<ShippingProps, ShippingState> {
 export const ShippingFragmentContainer = createFragmentContainer(
   withSystemContext(injectCommitMutation(injectDialog(ShippingRoute))),
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     order: graphql`
       fragment Shipping_order on CommerceOrder {
         internalID
@@ -855,6 +856,7 @@ export const ShippingFragmentContainer = createFragmentContainer(
         ...TransactionDetailsSummaryItem_order
       }
     `,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment Shipping_me on Me
         @argumentDefinitions(

@@ -19,6 +19,7 @@ const { getWrapper } = setupTestWrapper({
   variables: {
     partnerId: "unit-london",
   },
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query ArtistsRail_Test_Query($partnerId: String!) {
       partner(id: $partnerId) @principalField {

@@ -13,6 +13,7 @@ const { getWrapper } = setupTestWrapper<ShowContextualLink_Test_Query>({
       <ShowContextualLinkFragmentContainer {...props} />
     </MockBoot>
   ),
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query ShowContextualLink_Test_Query {
       show(id: "catty-show") {

@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { Box, BoxProps, HTML, Text } from "@artsy/palette"
 import { createFragmentContainer, graphql } from "react-relay"
 import { FeatureSetMeta_set } from "v2/__generated__/FeatureSetMeta_set.graphql"
@@ -29,6 +29,7 @@ export const FeatureSetMeta: React.FC<FeatureSetMetaProps> = ({
 export const FeatureSetMetaFragmentContainer = createFragmentContainer(
   FeatureSetMeta,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     set: graphql`
       fragment FeatureSetMeta_set on OrderedSet {
         name

@@ -82,6 +82,7 @@ export const ShowViewingRoom: React.FC<ShowViewingRoomProps> = ({
 export const ShowViewingRoomFragmentContainer = createFragmentContainer(
   ShowViewingRoom,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     show: graphql`
       fragment ShowViewingRoom_show on Show {
         partner {

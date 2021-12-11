@@ -135,6 +135,7 @@ export const ArtistsByLetter: React.FC<ArtistsByLetterProps> = ({
   )
 }
 
+// PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
 export const ARTISTS_BY_LETTER_QUERY = graphql`
   query ArtistsByLetterQuery($letter: String!, $size: Int, $page: Int) {
     viewer {
@@ -147,6 +148,7 @@ export const ARTISTS_BY_LETTER_QUERY = graphql`
 export const ArtistsByLetterFragmentContainer = createRefetchContainer(
   ArtistsByLetter,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewer: graphql`
       fragment ArtistsByLetter_viewer on Viewer
         @argumentDefinitions(

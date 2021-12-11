@@ -43,6 +43,7 @@ describe("AuctionResults", () => {
   const getWrapper = async (breakpoint: Breakpoint = "xl") => {
     return await renderRelayTree({
       Component: AuctionResultsRoute,
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query: graphql`
         query ArtistAuctionResults_Test_Query($artistID: String!)
           @raw_response_type {

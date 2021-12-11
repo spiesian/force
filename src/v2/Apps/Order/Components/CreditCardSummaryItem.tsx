@@ -23,6 +23,7 @@ const CreditCardSummaryItem = ({
 export const CreditCardSummaryItemFragmentContainer = createFragmentContainer(
   CreditCardSummaryItem,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     order: graphql`
       fragment CreditCardSummaryItem_order on CommerceOrder {
         creditCard {

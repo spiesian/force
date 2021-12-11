@@ -38,6 +38,7 @@ export const ShippingAddress = ({
 export const ShippingAddressFragmentContainer = createFragmentContainer(
   ShippingAddress,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     ship: graphql`
       fragment ShippingAddress_ship on CommerceRequestedFulfillmentUnion {
         ... on CommerceShip {

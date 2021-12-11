@@ -9,7 +9,7 @@ import {
   ResponsiveBox,
   Box,
 } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import GridItem from "v2/Components/Artwork/GridItem"
 import { extractNodes } from "v2/Utils/extractNodes"
@@ -78,6 +78,7 @@ const ShowsCurrentShow: React.FC<ShowsCurrentShowProps> = ({ show }) => {
 export const ShowsCurrentShowFragmentContainer = createFragmentContainer(
   ShowsCurrentShow,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     show: graphql`
       fragment ShowsCurrentShow_show on Show {
         name

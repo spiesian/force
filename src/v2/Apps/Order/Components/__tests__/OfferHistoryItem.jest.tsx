@@ -35,6 +35,7 @@ const render = (
         ...extraOrderProps,
       },
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query OfferHistoryItemTestQuery @raw_response_type {
         order: commerceOrder(id: "foo") {

@@ -102,6 +102,7 @@ export class OfferRoute extends Component<OfferProps, OfferState> {
   addInitialOfferToOrder(variables: OfferMutation["variables"]) {
     return this.props.commitMutation<OfferMutation>({
       // TODO: Inputs to the mutation might have changed case of the keys!
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       mutation: graphql`
         mutation OfferMutation($input: CommerceAddInitialOfferToOrderInput!) {
           commerceAddInitialOfferToOrder(input: $input) {
@@ -327,6 +328,7 @@ export class OfferRoute extends Component<OfferProps, OfferState> {
 export const OfferFragmentContainer = createFragmentContainer(
   injectCommitMutation(injectDialog(OfferRoute)),
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     order: graphql`
       fragment Offer_order on CommerceOrder {
         internalID

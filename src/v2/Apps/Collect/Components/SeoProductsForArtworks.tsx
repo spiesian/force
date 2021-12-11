@@ -114,6 +114,7 @@ export class SeoProducts extends Component<SeoProductsProps> {
 }
 
 export const SeoProductsForArtworks = createFragmentContainer(SeoProducts, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   artworks: graphql`
     fragment SeoProductsForArtworks_artworks on FilterArtworksConnection {
       edges {

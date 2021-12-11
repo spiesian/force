@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import truncate from "trunc-html"
 import { Box, Spacer } from "@artsy/palette"
@@ -51,6 +51,7 @@ const FairOrganizerApp: React.FC<FairOrganizerAppProps> = ({
 export const FairOrganizerAppFragmentContainer = createFragmentContainer(
   FairOrganizerApp,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     fairOrganizer: graphql`
       fragment FairOrganizerApp_fairOrganizer on FairOrganizer {
         name

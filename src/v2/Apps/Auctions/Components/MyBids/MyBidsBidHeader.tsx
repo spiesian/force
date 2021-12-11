@@ -69,6 +69,7 @@ export const MyBidsBidHeader: React.FC<MyBidsBidHeaderProps> = ({ sale }) => {
 export const MyBidsBidHeaderFragmentContainer = createFragmentContainer(
   MyBidsBidHeader,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     sale: graphql`
       fragment MyBidsBidHeader_sale on Sale {
         coverImage {

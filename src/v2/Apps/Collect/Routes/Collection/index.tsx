@@ -166,6 +166,7 @@ const TrackingWrappedCollectionApp: React.FC<CollectionAppProps> = props => {
 export const CollectionFragmentContainer = createFragmentContainer(
   withSystemContext(TrackingWrappedCollectionApp),
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     collection: graphql`
       fragment Collection_collection on MarketingCollection
         @argumentDefinitions(

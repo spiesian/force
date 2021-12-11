@@ -264,6 +264,7 @@ export const HomeHeroUnit: React.FC<HomeHeroUnitProps> = ({
 export const HomeHeroUnitFragmentContainer = createFragmentContainer(
   HomeHeroUnit,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     heroUnit: graphql`
       fragment HomeHeroUnit_heroUnit on HomePageHeroUnit {
         backgroundImageURL

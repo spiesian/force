@@ -110,6 +110,7 @@ const ShowPaginatedEvents: React.FC<ShowEventsProps> = ({
 export const ShowEventsRefetchContainer = createRefetchContainer(
   ShowPaginatedEvents,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     partner: graphql`
       fragment ShowPaginatedEvents_partner on Partner
         @argumentDefinitions(
@@ -190,6 +191,7 @@ export const ShowPaginatedEventsRenderer: React.FC<ShowPaginatedEventsRendererPr
   return (
     <SystemQueryRenderer<ShowPaginatedEventsRendererQuery>
       environment={relayEnvironment}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query ShowPaginatedEventsRendererQuery(
           $partnerId: String!

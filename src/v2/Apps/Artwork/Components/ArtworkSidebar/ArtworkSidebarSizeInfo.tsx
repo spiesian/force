@@ -1,5 +1,5 @@
 import { Box, Text } from "@artsy/palette"
-import { Component } from "react";
+import { Component } from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 
 import { ArtworkSidebarSizeInfo_piece } from "v2/__generated__/ArtworkSidebarSizeInfo_piece.graphql"
@@ -34,6 +34,7 @@ export class ArtworkSidebarSizeInfo extends Component<
 export const ArtworkSidebarSizeInfoFragmentContainer = createFragmentContainer(
   ArtworkSidebarSizeInfo,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     piece: graphql`
       fragment ArtworkSidebarSizeInfo_piece on Sellable {
         dimensions {

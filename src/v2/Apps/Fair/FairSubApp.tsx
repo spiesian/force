@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { FairSubApp_fair } from "v2/__generated__/FairSubApp_fair.graphql"
 import { BackLink } from "v2/Components/Links/BackLink"
@@ -34,6 +34,7 @@ const FairApp: React.FC<FairAppProps> = ({ children, fair }) => {
 
 // Top-level route needs to be exported for bundle splitting in the router
 export const FairSubAppFragmentContainer = createFragmentContainer(FairApp, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   fair: graphql`
     fragment FairSubApp_fair on Fair {
       ...FairMeta_fair

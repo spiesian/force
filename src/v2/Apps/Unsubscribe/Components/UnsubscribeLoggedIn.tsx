@@ -100,6 +100,7 @@ export const UnsubscribeLoggedIn: React.FC<UnsubscribeLoggedInProps> = ({
 export const UnsubscribeLoggedInFragmentContainer = createFragmentContainer(
   UnsubscribeLoggedIn,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment UnsubscribeLoggedIn_me on Me {
         id

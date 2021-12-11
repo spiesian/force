@@ -86,6 +86,7 @@ export const ArtistsArtistCard: React.FC<ArtistsArtistCardProps> = ({
 export const ArtistsArtistCardFragmentContainer = createFragmentContainer(
   ArtistsArtistCard,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment ArtistsArtistCard_artist on Artist {
         ...FollowArtistButton_artist

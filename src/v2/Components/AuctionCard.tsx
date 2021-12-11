@@ -1,7 +1,7 @@
 import { Image, ResponsiveBox, Spacer, Text } from "@artsy/palette"
 import { AuctionCard_sale } from "v2/__generated__/AuctionCard_sale.graphql"
 import { DateTime } from "luxon"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { RouterLink } from "v2/System/Router/RouterLink"
 
@@ -119,6 +119,7 @@ export const AuctionCard: React.FC<AuctionCardProps> = ({ sale }) => {
 export const AuctionCardFragmentContainer = createFragmentContainer(
   AuctionCard,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     sale: graphql`
       fragment AuctionCard_sale on Sale {
         coverImage {

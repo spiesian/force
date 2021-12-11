@@ -14,6 +14,7 @@ jest.mock("v2/System/Analytics/useTracking", () => ({
 
 const { getWrapper } = setupTestWrapper({
   Component: ArtworkSidebarFragmentContainer,
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query ArtworkSidebar_Test_Query {
       artwork(id: "josef-albers-homage-to-the-square-85") {

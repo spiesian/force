@@ -87,6 +87,7 @@ const SettingsPurchases: FC<SettingsPurchasesProps> = ({
 export const SettingsPurchasesFragmentContainer = createRefetchContainer(
   SettingsPurchases,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment SettingsPurchases_me on Me
         @argumentDefinitions(

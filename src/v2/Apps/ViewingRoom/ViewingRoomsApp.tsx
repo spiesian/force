@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { Join, Spacer, Text } from "@artsy/palette"
 import { ViewingRoomsLatestGridFragmentContainer } from "./Components/ViewingRoomsLatestGrid"
 import { ViewingRoomsMeta } from "./Components/ViewingRoomsMeta"
@@ -44,6 +44,7 @@ const ViewingRoomsApp: React.FC<ViewingRoomsAppProps> = props => {
 export const ViewingRoomsAppFragmentContainer = createFragmentContainer(
   ViewingRoomsApp,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     allViewingRooms: graphql`
       fragment ViewingRoomsApp_allViewingRooms on Viewer
         @argumentDefinitions(
@@ -54,6 +55,7 @@ export const ViewingRoomsAppFragmentContainer = createFragmentContainer(
           @arguments(count: $count, after: $after)
       }
     `,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     featuredViewingRooms: graphql`
       fragment ViewingRoomsApp_featuredViewingRooms on ViewingRoomConnection {
         ...ViewingRoomsFeaturedRail_featuredViewingRooms

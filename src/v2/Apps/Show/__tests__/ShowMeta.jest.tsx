@@ -18,6 +18,7 @@ describe("ShowMeta", () => {
         </MockBoot>
       )
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query ShowMeta_Test_Query {
         show(id: "some-show") {

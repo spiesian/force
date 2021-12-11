@@ -7,6 +7,7 @@ jest.unmock("react-relay")
 
 const { renderWithRelay } = setupTestWrapperTL({
   Component: ViewingRoomSubsectionsFragmentContainer,
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query ViewingRoomSubsections_Test_Query {
       viewingRoom(id: "exmaple") {

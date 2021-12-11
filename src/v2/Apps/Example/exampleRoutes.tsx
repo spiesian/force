@@ -58,6 +58,7 @@ export const exampleRoutes: AppRouteConfig[] = [
     onClientSideRender: () => {
       ExampleApp.preload()
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query exampleRoutes_ExampleQuery {
         system {
@@ -78,6 +79,7 @@ export const exampleRoutes: AppRouteConfig[] = [
         onClientSideRender: () => {
           ArtistRoute.preload()
         },
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query exampleRoutes_ArtistQuery($slug: String!) {
             artist(id: $slug) @principalField {
@@ -94,6 +96,7 @@ export const exampleRoutes: AppRouteConfig[] = [
         onClientSideRender: () => {
           ArtworkRoute.preload()
         },
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query exampleRoutes_ArtworkQuery($slug: String!) {
             artwork(id: $slug) {
@@ -110,6 +113,7 @@ export const exampleRoutes: AppRouteConfig[] = [
         onClientSideRender: () => {
           ArtworkRoute.preload()
         },
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query exampleRoutes_TagQuery(
             $slug: String!

@@ -53,6 +53,7 @@ describe("Submit Pending Counter Offer", () => {
 
   const { buildPage, mutations, routes } = createTestEnv({
     Component: CounterFragmentContainer,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query CounterTestQuery @raw_response_type {
         order: commerceOrder(id: "") {

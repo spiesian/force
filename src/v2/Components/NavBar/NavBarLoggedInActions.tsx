@@ -123,6 +123,7 @@ export const NavBarLoggedInActionsQueryRenderer: React.FC<{}> = () => {
   ) : (
     <SystemQueryRenderer<NavBarLoggedInActionsQuery>
       environment={relayEnvironment}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query NavBarLoggedInActionsQuery {
           me {

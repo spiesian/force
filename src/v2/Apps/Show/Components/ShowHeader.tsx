@@ -43,6 +43,7 @@ export const ShowHeader: React.FC<ShowHeaderProps> = ({ show, ...rest }) => {
   )
 }
 export const ShowHeaderFragmentContainer = createFragmentContainer(ShowHeader, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   show: graphql`
     fragment ShowHeader_show on Show {
       name

@@ -18,6 +18,7 @@ const { getWrapper } = setupTestWrapper<GeneShow_Test_Query>({
       </MockBoot>
     )
   },
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query GeneShow_Test_Query {
       gene(id: "example") {

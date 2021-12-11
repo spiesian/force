@@ -59,6 +59,7 @@ const SettingsEditSettingsTwoFactorBackupCodesDialog: FC<SettingsEditSettingsTwo
 const SettingsEditSettingsTwoFactorBackupCodesDialogFragmentContainer = createFragmentContainer(
   SettingsEditSettingsTwoFactorBackupCodesDialog,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment SettingsEditSettingsTwoFactorBackupCodesDialog_me on Me {
         backupSecondFactors: secondFactors(kinds: [backup]) {
@@ -77,6 +78,7 @@ export const SettingsEditSettingsTwoFactorBackupCodesDialogQueryRenderer = () =>
       placeholder={
         <SettingsEditSettingsTwoFactorBackupCodesDialogFragmentContainer />
       }
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query SettingsEditSettingsTwoFactorBackupCodesDialogQuery {
           me {

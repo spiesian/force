@@ -159,6 +159,7 @@ export const OtherWorks = track()(
 export const OtherWorksFragmentContainer = createFragmentContainer<{
   artwork: OtherWorks_artwork
 }>(withSystemContext(OtherWorks), {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   artwork: graphql`
     fragment OtherWorks_artwork on Artwork {
       contextGrids {
@@ -231,6 +232,7 @@ export const OtherWorksQueryRenderer: React.FC<{
         environment={relayEnvironment}
         variables={{ slug }}
         placeholder={PLACEHOLDER}
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query={graphql`
           query OtherWorksQuery($slug: String!) {
             artwork(id: $slug) {

@@ -6,6 +6,7 @@ jest.unmock("react-relay")
 
 const { getWrapper } = setupTestWrapper({
   Component: ShowInfoFragmentContainer,
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query ShowInfo_Test_Query {
       show(id: "xxx") {

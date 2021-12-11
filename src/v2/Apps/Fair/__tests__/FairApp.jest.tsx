@@ -28,6 +28,7 @@ const { getWrapper } = setupTestWrapper<FairApp_Test_Query>({
       </MockBoot>
     )
   },
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query FairApp_Test_Query {
       fair(id: "example") {

@@ -1,5 +1,5 @@
-import { useState } from "react";
-import * as React from "react";
+import { useState } from "react"
+import * as React from "react"
 import {
   Box,
   Button,
@@ -89,6 +89,7 @@ export const CollectionsCategory: React.FC<CollectionsCategoryProps> = ({
 export const CollectionsCategoryFragmentContainer = createFragmentContainer(
   CollectionsCategory,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     category: graphql`
       fragment CollectionsCategory_category on MarketingCollectionCategory {
         name

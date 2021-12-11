@@ -5,7 +5,7 @@ import {
   HeartFillIcon,
   HeartIcon,
 } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { useSaveArtwork } from "v2/Components/Artwork/SaveButton/useSaveArtwork"
 import { ArtworkActionsSaveButton_artwork } from "v2/__generated__/ArtworkActionsSaveButton_artwork.graphql"
@@ -56,6 +56,7 @@ const ArtworkActionsSaveButton: React.FC<ArtworkActionsSaveButtonProps> = ({
 export const ArtworkActionsSaveButtonFragmentContainer = createFragmentContainer(
   ArtworkActionsSaveButton,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment ArtworkActionsSaveButton_artwork on Artwork {
         internalID

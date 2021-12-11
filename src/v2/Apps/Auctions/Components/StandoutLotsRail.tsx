@@ -1,6 +1,6 @@
 import { AuthContextModule } from "@artsy/cohesion"
 import { graphql } from "lib/graphql"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer } from "react-relay"
 import { useTracking } from "react-tracking"
 import { ShelfArtworkFragmentContainer } from "v2/Components/Artwork/ShelfArtwork"
@@ -66,6 +66,7 @@ const StandoutLotsRail: React.FC<StandoutLotsRailProps> = ({ viewer }) => {
 export const StandoutLotsRailFragmentContainer = createFragmentContainer(
   StandoutLotsRail,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewer: graphql`
       fragment StandoutLotsRail_viewer on Viewer {
         StandoutLotsRailConnection: saleArtworksConnection(

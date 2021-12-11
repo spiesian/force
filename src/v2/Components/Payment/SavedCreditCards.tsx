@@ -85,6 +85,7 @@ export class CreditCard extends React.Component<
             }
           },
           onError: this.onMutationError.bind(this),
+          // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
           mutation: graphql`
             mutation SavedCreditCardsDeleteCreditCardMutation(
               $input: DeleteCreditCardInput!

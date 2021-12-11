@@ -36,6 +36,7 @@ const updateCollectorProfile: ProfileUpdater = (intents, relayEnvironment) => {
   commitMutation<CollectorIntentUpdateCollectorProfileMutation>(
     relayEnvironment,
     {
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       mutation: graphql`
         mutation CollectorIntentUpdateCollectorProfileMutation(
           $input: UpdateCollectorProfileInput!

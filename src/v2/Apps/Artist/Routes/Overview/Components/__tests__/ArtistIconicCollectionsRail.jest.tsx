@@ -15,6 +15,7 @@ describe("ArtistIconicCollectionsRail", () => {
     ArtistIconicCollectionsRail_Test_Query
   >({
     Component: ArtistIconicCollectionsRailFragmentContainer,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query ArtistIconicCollectionsRail_Test_Query(
         $isFeaturedArtistContent: Boolean

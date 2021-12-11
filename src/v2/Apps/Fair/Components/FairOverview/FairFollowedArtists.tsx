@@ -117,6 +117,7 @@ export const FairFollowedArtists: React.FC<FairFollowedArtistsProps> = ({
 export const FairFollowedArtistsFragmentContainer = createFragmentContainer(
   FairFollowedArtists,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     fair: graphql`
       fragment FairFollowedArtists_fair on Fair {
         internalID

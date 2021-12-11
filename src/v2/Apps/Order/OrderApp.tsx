@@ -6,7 +6,7 @@ import { findCurrentRoute } from "v2/System/Router/Utils/findCurrentRoute"
 import { ErrorPage } from "v2/Components/ErrorPage"
 import { MinimalNavBar } from "v2/Components/NavBar/MinimalNavBar"
 import { RouterState, withRouter } from "found"
-import { Component } from "react";
+import { Component } from "react"
 import { Meta, Title } from "react-head"
 import { graphql } from "react-relay"
 import { loadStripe } from "@stripe/stripe-js"
@@ -173,6 +173,7 @@ const SafeAreaContainer = styled(Box)`
   margin-bottom: 75px;
 `
 
+// PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
 graphql`
   fragment OrderApp_order on CommerceOrder {
     mode

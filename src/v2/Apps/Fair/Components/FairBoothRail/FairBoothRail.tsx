@@ -1,5 +1,5 @@
-import { useRef } from "react";
-import * as React from "react";
+import { useRef } from "react"
+import * as React from "react"
 import { Box, BoxProps, Flex, Text } from "@artsy/palette"
 import { createFragmentContainer, graphql } from "react-relay"
 import { FairBoothRail_show } from "v2/__generated__/FairBoothRail_show.graphql"
@@ -87,6 +87,7 @@ export const FairBoothRail: React.FC<FairBoothRailProps> = ({
 export const FairBoothRailFragmentContainer = createFragmentContainer(
   FairBoothRail,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     show: graphql`
       fragment FairBoothRail_show on Show {
         internalID

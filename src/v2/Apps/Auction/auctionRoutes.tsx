@@ -36,6 +36,7 @@ export const auctionRoutes: AppRouteConfig[] = [
     onClientSideRender: () => {
       AuctionFAQRoute.preload()
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query auctionRoutes_AuctionFAQQuery {
         viewer {
@@ -66,6 +67,7 @@ export const auctionRoutes: AppRouteConfig[] = [
         return <Component {...props} />
       }
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query auctionRoutes_ConfirmBidQuery(
         $saleID: String!
@@ -122,6 +124,7 @@ export const auctionRoutes: AppRouteConfig[] = [
         return <Component {...props} />
       }
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query auctionRoutes_RegisterQuery($saleID: String!) @raw_response_type {
         sale(id: $saleID) @principalField {

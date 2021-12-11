@@ -6,7 +6,7 @@ import {
   SkeletonBox,
   Spacer,
 } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { useSystemContext, useTracking } from "v2/System"
 import { SystemQueryRenderer } from "v2/System/Relay/SystemQueryRenderer"
@@ -92,6 +92,7 @@ const PLACEHOLDER = (
 export const HomeRecentlyViewedRailFragmentContainer = createFragmentContainer(
   HomeRecentlyViewedRail,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     homePage: graphql`
       fragment HomeRecentlyViewedRail_homePage on HomePage {
         artworkModule(key: RECENTLY_VIEWED_WORKS) {
@@ -113,6 +114,7 @@ export const HomeRecentlyViewedRailQueryRenderer: React.FC = () => {
     <SystemQueryRenderer<HomeRecentlyViewedRailQuery>
       lazyLoad
       environment={relayEnvironment}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query HomeRecentlyViewedRailQuery {
           homePage {

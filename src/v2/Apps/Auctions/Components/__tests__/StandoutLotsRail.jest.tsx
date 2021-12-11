@@ -14,6 +14,7 @@ describe("StandoutLotsRail", () => {
     Component: (props: any) => {
       return <StandoutLotsRailFragmentContainer viewer={props.viewer} />
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query StandoutLotsRail_Test_Query {
         viewer {

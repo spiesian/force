@@ -3,7 +3,7 @@ import { Accept_order } from "v2/__generated__/Accept_order.graphql"
 import { TwoColumnLayout } from "v2/Apps/Order/Components/TwoColumnLayout"
 import { track } from "v2/System/Analytics"
 import { RouteConfig, Router } from "found"
-import { Component } from "react";
+import { Component } from "react"
 import { Media } from "v2/Utils/Responsive"
 import {
   OrderStepper,
@@ -57,6 +57,7 @@ export class Accept extends Component<AcceptProps & StripeProps> {
         input: { offerId: this.props.order.lastOffer?.internalID },
       },
       // TODO: Inputs to the mutation might have changed case of the keys!
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       mutation: graphql`
         mutation AcceptOfferMutation($input: CommerceBuyerAcceptOfferInput!) {
           commerceBuyerAcceptOffer(input: $input) {
@@ -135,6 +136,7 @@ export class Accept extends Component<AcceptProps & StripeProps> {
     return this.props.commitMutation<AcceptRouteSetOrderPaymentMutation>({
       variables,
       // TODO: Inputs to the mutation might have changed case of the keys!
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       mutation: graphql`
         mutation AcceptRouteSetOrderPaymentMutation(
           $input: CommerceFixFailedPaymentInput!
@@ -336,6 +338,7 @@ export class Accept extends Component<AcceptProps & StripeProps> {
 export const AcceptFragmentContainer = createFragmentContainer(
   createStripeWrapper(injectCommitMutation(injectDialog(Accept)) as any),
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     order: graphql`
       fragment Accept_order on CommerceOrder {
         internalID

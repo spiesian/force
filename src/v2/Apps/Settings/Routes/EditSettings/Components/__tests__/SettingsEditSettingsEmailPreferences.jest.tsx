@@ -7,6 +7,7 @@ jest.unmock("react-relay")
 
 const { renderWithRelay } = setupTestWrapperTL({
   Component: SettingsEditSettingsEmailPreferencesFragmentContainer,
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query SettingsEditSettingsEmailPreferences_Test_Query {
       me {

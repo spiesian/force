@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import compact from "lodash/compact"
 import { createFragmentContainer, graphql } from "react-relay"
 import { ViewingRooms_partner } from "v2/__generated__/ViewingRooms_partner.graphql"
@@ -45,6 +45,7 @@ export const ViewingRooms: React.FC<PartnerShowsProps> = ({ partner }) => {
 export const ViewingRoomFragmentContainer = createFragmentContainer(
   ViewingRooms,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     partner: graphql`
       fragment ViewingRooms_partner on Partner {
         slug

@@ -7,7 +7,7 @@ import {
   Spacer,
   Text,
 } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { AnalyticsSchema, Type, useSystemContext } from "v2/System"
 import { SystemQueryRenderer } from "v2/System/Relay/SystemQueryRenderer"
@@ -114,6 +114,7 @@ const PLACEHOLDER = (
 export const ArtistIconicCollectionsRailFragmentContainer = createFragmentContainer(
   ArtistIconicCollectionsRail,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     marketingCollections: graphql`
       fragment ArtistIconicCollectionsRail_marketingCollections on MarketingCollection
         @relay(plural: true) {
@@ -158,6 +159,7 @@ export const ArtistIconicCollectionsRailQueryRenderer = props => {
           isFeaturedArtistContent: true,
           size: 16,
         }}
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query={graphql`
           query ArtistIconicCollectionsRailQuery(
             $isFeaturedArtistContent: Boolean

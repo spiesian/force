@@ -1,5 +1,5 @@
-import { useState } from "react";
-import * as React from "react";
+import { useState } from "react"
+import * as React from "react"
 import { createFragmentContainer, graphql, RelayProp } from "react-relay"
 import { useTracking } from "react-tracking"
 import { Button } from "@artsy/palette"
@@ -85,6 +85,7 @@ export const ConfirmArtworkButton: React.FC<ConfirmArtworkButtonProps> = props =
 export const ConfirmArtworkButtonFragmentContainer = createFragmentContainer(
   ConfirmArtworkButton,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment ConfirmArtworkButton_artwork on Artwork {
         internalID

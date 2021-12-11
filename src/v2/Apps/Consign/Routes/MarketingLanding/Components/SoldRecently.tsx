@@ -106,6 +106,7 @@ const SoldRecently: React.FC<SoldRecentlyProps> = ({ targetSupply }) => {
 }
 
 const SoldRecentlyFragmentContainer = createFragmentContainer(SoldRecently, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   targetSupply: graphql`
     fragment SoldRecently_targetSupply on TargetSupply {
       microfunnel {
@@ -130,6 +131,7 @@ export const SoldRecentlyQueryRenderer: React.FC = () => {
     <SystemQueryRenderer<SoldRecentlyQuery>
       lazyLoad
       environment={relayEnvironment}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query SoldRecentlyQuery {
           targetSupply {

@@ -35,6 +35,7 @@ const ShowEvents: React.FC<ShowEventsProps> = ({
 }
 
 export const ShowEventsFragmentContainer = createFragmentContainer(ShowEvents, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   edges: graphql`
     fragment ShowEvents_edges on ShowEdge @relay(plural: true) {
       node {

@@ -146,6 +146,7 @@ const ArtistConsignFAQ: React.FC<ArtistConsignFAQProps> = props => {
 export const ArtistConsignFAQFragmentContainer = createFragmentContainer(
   ArtistConsignFAQ,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment ArtistConsignFAQ_artist on Artist {
         href

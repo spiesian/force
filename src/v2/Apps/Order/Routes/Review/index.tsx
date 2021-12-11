@@ -144,6 +144,7 @@ export class ReviewRoute extends Component<ReviewProps> {
         },
       },
       // TODO: Inputs to the mutation might have changed case of the keys!
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       mutation: graphql`
         mutation ReviewSubmitOrderMutation($input: CommerceSubmitOrderInput!) {
           commerceSubmitOrder(input: $input) {
@@ -181,6 +182,7 @@ export class ReviewRoute extends Component<ReviewProps> {
         },
       },
       // TODO: Inputs to the mutation might have changed case of the keys!
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       mutation: graphql`
         mutation ReviewSubmitOfferOrderMutation(
           $input: CommerceSubmitOrderWithOfferInput!
@@ -468,6 +470,7 @@ export const ReviewFragmentContainer = createFragmentContainer(
     createStripeWrapper(injectCommitMutation(injectDialog(ReviewRoute)) as any)
   ),
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     order: graphql`
       fragment Review_order on CommerceOrder {
         internalID

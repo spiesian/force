@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import {
   Text,
   BlueChipIcon,
@@ -56,6 +56,7 @@ const ConsignInDemandNowQueryRenderer: React.FC = () => {
         medium: "PAINTING",
       }}
       // FIXME: Must be logged in for diffusion data to work
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query ConsignInDemandNowQuery(
           $artistInternalId: ID!

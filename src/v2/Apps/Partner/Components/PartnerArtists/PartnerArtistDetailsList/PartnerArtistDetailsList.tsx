@@ -79,6 +79,7 @@ export const PartnerArtistDetailsList: React.FC<PartnerArtistDetailsListProps> =
   )
 }
 
+// PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
 export const ARTISTS_DETAILS_QUERY = graphql`
   query PartnerArtistDetailsListQuery(
     $partnerId: String!
@@ -95,6 +96,7 @@ export const ARTISTS_DETAILS_QUERY = graphql`
 export const PartnerArtistDetailsListPaginationContainer = createPaginationContainer(
   PartnerArtistDetailsList,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     partner: graphql`
       fragment PartnerArtistDetailsList_partner on Partner
         @argumentDefinitions(
@@ -142,6 +144,7 @@ export const PartnerArtistDetailsListRenderer: React.FC<{
     <SystemQueryRenderer<PartnerArtistDetailsListQuery>
       lazyLoad
       environment={relayEnvironment}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query PartnerArtistDetailsListRendererQuery($partnerId: String!) {
           partner(id: $partnerId) @principalField {

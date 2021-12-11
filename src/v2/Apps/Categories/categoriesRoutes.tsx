@@ -16,6 +16,7 @@ export const categoriesRoutes: AppRouteConfig[] = [
     onClientSideRender: () => {
       CategoriesApp.preload()
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query categoriesRoutes_Query {
         geneFamiliesConnection(first: 20) {

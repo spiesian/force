@@ -15,6 +15,7 @@ describe("FairOrganizerFollowButton", () => {
   const { getWrapper } = setupTestWrapper<FairOrganizerFollowButton_Test_Query>(
     {
       Component: FairOrganizerFollowButtonFragmentContainer,
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query: graphql`
         query FairOrganizerFollowButton_Test_Query($id: String!) {
           fairOrganizer(id: $id) {

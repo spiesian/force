@@ -1,5 +1,5 @@
 import { clickedEntityGroup, ContextModule, OwnerType } from "@artsy/cohesion"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { useTracking } from "react-tracking"
 import { useAnalyticsContext, useSystemContext } from "v2/System"
@@ -97,6 +97,7 @@ const ArtistNotableWorksRail: React.FC<ArtistNotableWorksRailProps> = ({
 export const ArtistNotableWorksRailFragmentContainer = createFragmentContainer(
   ArtistNotableWorksRail,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment ArtistNotableWorksRail_artist on Artist {
         slug
@@ -150,6 +151,7 @@ export const ArtistNotableWorksRailQueryRenderer: React.FC<{
         environment={relayEnvironment}
         variables={{ slug }}
         placeholder={PLACEHOLDER}
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query={graphql`
           query ArtistNotableWorksRailQuery($slug: String!) {
             artist(id: $slug) {

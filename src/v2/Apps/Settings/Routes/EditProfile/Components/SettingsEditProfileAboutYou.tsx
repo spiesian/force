@@ -148,6 +148,7 @@ const SettingsEditProfileAboutYou: FC<SettingsEditProfileAboutYouProps> = ({
 export const SettingsEditProfileAboutYouFragmentContainer = createFragmentContainer(
   SettingsEditProfileAboutYou,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment SettingsEditProfileAboutYou_me on Me {
         location {

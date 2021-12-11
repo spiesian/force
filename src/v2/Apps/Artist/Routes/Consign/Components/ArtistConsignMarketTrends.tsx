@@ -104,6 +104,7 @@ const Statistic: React.FC<{ top: string; middle: string; bottom: string }> = ({
 export const ArtistConsignMarketTrendsFragmentContainer = createFragmentContainer(
   ArtistConsignMarketTrends,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment ArtistConsignMarketTrends_artist on Artist {
         href

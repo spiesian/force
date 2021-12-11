@@ -68,6 +68,7 @@ const ArtistWorksForSaleRoute: React.FC<ArtistWorksForSaleRouteProps> = ({
 export const ArtistWorksForSaleRouteFragmentContainer = createFragmentContainer(
   ArtistWorksForSaleRoute,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment ArtistWorksForSaleRoute_artist on Artist
         @argumentDefinitions(

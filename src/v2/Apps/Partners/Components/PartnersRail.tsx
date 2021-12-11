@@ -66,6 +66,7 @@ export const PartnersRailPlaceholder: React.FC<PartnersRailPlaceholderProps> = (
 export const PartnersRailFragmentContainer = createFragmentContainer(
   PartnersRail,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     partnerCategory: graphql`
       fragment PartnersRail_partnerCategory on PartnerCategory
         @argumentDefinitions(
@@ -116,6 +117,7 @@ export const PartnersRailQueryRenderer: React.FC<PartnersRailQueryRendererProps>
       lazyLoad
       placeholder={<PartnersRailPlaceholder name={name} />}
       variables={{ id, category: type, type: type }}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query PartnersRailQuery(
           $id: String!

@@ -83,6 +83,7 @@ class PopularArtistsContent extends React.Component<Props, null> {
       this.props.relay.environment,
       {
         // TODO: Inputs to the mutation might have changed case of the keys!
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         mutation: graphql`
           mutation PopularArtistsFollowArtistMutation(
             $input: FollowArtistInput!
@@ -180,6 +181,7 @@ export const PopularArtistContentContainer = createFragmentContainer(
   // @ts-expect-error PLEASE_FIX_ME_STRICT_NULL_CHECK_MIGRATION
   PopularArtistsContent,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     popular_artists: graphql`
       fragment PopularArtists_popular_artists on Artist @relay(plural: true) {
         slug
@@ -202,6 +204,7 @@ const PopularArtistsComponent: React.SFC<
   return (
     <SystemQueryRenderer<PopularArtistsQuery>
       environment={relayEnvironment}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query PopularArtistsQuery {
           highlights {

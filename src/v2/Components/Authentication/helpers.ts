@@ -45,6 +45,7 @@ export const checkEmail = ({
   actions,
   shouldExist,
 }) => {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   const query = graphql`
     query helpersEmailQuery($email: String!) {
       user(email: $email) {

@@ -122,6 +122,7 @@ export class Artwork extends React.Component<ArtworkProps, ArtworkState> {
 }
 
 export default createFragmentContainer(Artwork, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   artwork: graphql`
     fragment Artwork_artwork on Artwork {
       slug

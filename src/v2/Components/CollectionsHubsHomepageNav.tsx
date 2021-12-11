@@ -55,6 +55,7 @@ export const CollectionsHubsHomepageNav = track(
 export const CollectionsHubsHomepageNavFragmentContainer = createFragmentContainer(
   CollectionsHubsHomepageNav,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     marketingHubCollections: graphql`
       fragment CollectionsHubsHomepageNav_marketingHubCollections on MarketingCollection
         @relay(plural: true) {

@@ -1,5 +1,5 @@
 import { Spacer, Join, FullBleed } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { HomeApp_homePage } from "v2/__generated__/HomeApp_homePage.graphql"
 import { HomeApp_featuredEventsOrderedSet } from "v2/__generated__/HomeApp_featuredEventsOrderedSet.graphql"
@@ -69,11 +69,13 @@ export const HomeApp: React.FC<HomeAppProps> = ({
 }
 
 export const HomeAppFragmentContainer = createFragmentContainer(HomeApp, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   homePage: graphql`
     fragment HomeApp_homePage on HomePage {
       ...HomeHeroUnits_homePage
     }
   `,
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   featuredEventsOrderedSet: graphql`
     fragment HomeApp_featuredEventsOrderedSet on OrderedSet {
       ...HomeFeaturedEventsRail_orderedSet

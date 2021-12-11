@@ -271,6 +271,7 @@ export const ArtworkSidebarExtraLinks: React.FC<ArtworkSidebarExtraLinksProps> =
 export const ArtworkSidebarExtraLinksFragmentContainer = createFragmentContainer(
   ArtworkSidebarExtraLinks,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment ArtworkSidebarExtraLinks_artwork on Artwork {
         internalID

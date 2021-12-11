@@ -80,6 +80,7 @@ const SHOWS_CURRENT_SHOWS_QUERY = graphql`
 const ShowsCurrentShowsPaginationContainer = createPaginationContainer(
   ShowsCurrentShows,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewer: graphql`
       fragment ShowsCurrentShows_viewer on Viewer
         @argumentDefinitions(

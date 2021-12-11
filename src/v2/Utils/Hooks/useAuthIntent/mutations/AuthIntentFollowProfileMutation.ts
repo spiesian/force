@@ -15,6 +15,7 @@ export const followProfileMutation: AuthIntentMutation = (
 
         resolve(res)
       },
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       mutation: graphql`
         mutation AuthIntentFollowProfileMutation($input: FollowProfileInput!) {
           followProfile(input: $input) {

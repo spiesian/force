@@ -11,6 +11,7 @@ const { getWrapper } = setupTestWrapper<HomeTrendingArtistsRail_Test_Query>({
   Component: props => {
     return <HomeTrendingArtistsRailFragmentContainer viewer={props.viewer!} />
   },
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query HomeTrendingArtistsRail_Test_Query {
       viewer {

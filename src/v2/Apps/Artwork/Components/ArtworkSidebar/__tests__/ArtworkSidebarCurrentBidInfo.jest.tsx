@@ -31,6 +31,7 @@ describe("ArtworkSidebarCurrentBidInfo", () => {
   ) => {
     return renderRelayTree({
       Component,
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query: graphql`
         query ArtworkSidebarCurrentBidInfo_Test_Query @raw_response_type {
           artwork(id: "auction_artwork_estimate_premium") {

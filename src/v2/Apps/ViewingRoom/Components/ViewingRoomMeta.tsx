@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { Meta, Title, Link } from "react-head"
 import { createFragmentContainer, graphql } from "react-relay"
 import { getENV } from "v2/Utils/getENV"
@@ -59,6 +59,7 @@ const ViewingRoomMeta: React.FC<ViewingRoomMetaProps> = ({ viewingRoom }) => {
 export const ViewingRoomMetaFragmentContainer = createFragmentContainer(
   ViewingRoomMeta,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewingRoom: graphql`
       fragment ViewingRoomMeta_viewingRoom on ViewingRoom {
         title

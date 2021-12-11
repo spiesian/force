@@ -11,7 +11,7 @@ import {
 import { TransactionDetailsSummaryItemFragmentContainer as TransactionDetailsSummaryItem } from "v2/Apps/Order/Components/TransactionDetailsSummaryItem"
 import { TwoColumnLayout } from "v2/Apps/Order/Components/TwoColumnLayout"
 import { Router } from "found"
-import { createRef, Component } from "react";
+import { createRef, Component } from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import type { Stripe, StripeElements } from "@stripe/stripe-js"
 import createLogger from "v2/Utils/logger"
@@ -176,6 +176,7 @@ export class PaymentRoute extends Component<
     return this.props.commitMutation<PaymentRouteSetOrderPaymentMutation>({
       variables,
       // TODO: Inputs to the mutation might have changed case of the keys!
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       mutation: graphql`
         mutation PaymentRouteSetOrderPaymentMutation(
           $input: CommerceSetPaymentInput!
@@ -215,11 +216,13 @@ export class PaymentRoute extends Component<
 export const PaymentFragmentContainer = createFragmentContainer(
   injectCommitMutation(injectDialog(PaymentRoute)),
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment Payment_me on Me {
         ...PaymentPicker_me
       }
     `,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     order: graphql`
       fragment Payment_order on CommerceOrder {
         internalID

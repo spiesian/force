@@ -15,6 +15,7 @@ const Metadata = createFragmentContainer(
     <div>{props.artworkMetadata.title}</div>
   ),
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artworkMetadata: graphql`
       fragment MockRelayRendererFixtures_artworkMetadata on Artwork {
         title
@@ -35,6 +36,7 @@ export const Artwork = createFragmentContainer(
     </div>
   ),
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment MockRelayRendererFixtures_artwork on Artwork {
         image {
@@ -54,6 +56,7 @@ const Artist = createFragmentContainer(
     <div>{props.artist.name}</div>
   ),
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment MockRelayRendererFixtures_artist on Artist {
         name
@@ -69,6 +72,7 @@ const ArtistQueryRenderer = (props: { id: string }) => (
         <SystemQueryRenderer<MockRelayRendererFixturesArtistQuery>
           environment={relayEnvironment}
           variables={props}
+          // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
           query={graphql`
             query MockRelayRendererFixturesArtistQuery($id: String!)
               @raw_response_type {

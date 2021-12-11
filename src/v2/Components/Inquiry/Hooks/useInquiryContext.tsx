@@ -1,5 +1,12 @@
-import { createContext, useCallback, useContext, useEffect, useRef, useState } from "react";
-import * as React from "react";
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from "react"
+import * as React from "react"
 import { Engine } from "../Engine"
 import { useEngine } from "../config"
 import { createFragmentContainer, graphql, Environment } from "react-relay"
@@ -197,6 +204,7 @@ const InquiryContextContext: React.FC<InquiryContextContextProps> = ({
 const InquiryContextContextFragmentContainer = createFragmentContainer(
   InquiryContextContext,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment useInquiryContext_me on Me {
         collectorLevel
@@ -218,6 +226,7 @@ export const InquiryContextContextQueryRenderer: React.FC = ({ children }) => {
     <SystemQueryRenderer<useInquiryContextQuery>
       environment={relayEnvironment}
       placeholder={<Spinner color="white100" />}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query useInquiryContextQuery {
           me {

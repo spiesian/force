@@ -38,6 +38,7 @@ const SelectedWorks: React.FC<SelectedWorksProps> = props => {
 export const SelectedWorksFragmentContainer = createFragmentContainer(
   SelectedWorks,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     selectedWorks: graphql`
       fragment SelectedWorks_selectedWorks on OrderedSet {
         itemsConnection(first: 6) {

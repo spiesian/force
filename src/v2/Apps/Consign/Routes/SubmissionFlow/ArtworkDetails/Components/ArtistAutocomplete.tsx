@@ -186,6 +186,7 @@ const fetchSuggestions = async (
 ) => {
   const response = await fetchQuery<ArtistAutocomplete_SearchConnection_Query>(
     relayEnvironment,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     graphql`
       query ArtistAutocomplete_SearchConnection_Query($searchQuery: String!) {
         searchConnection(

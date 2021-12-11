@@ -1,5 +1,5 @@
-import { useState } from "react";
-import * as React from "react";
+import { useState } from "react"
+import * as React from "react"
 import { RelayRefetchProp, createRefetchContainer, graphql } from "react-relay"
 import { Box, Flex, FullBleed, Title, ThemeProviderV3 } from "@artsy/palette"
 import { Match } from "found"
@@ -76,6 +76,7 @@ export const ConversationRoute: React.FC<ConversationRouteProps> = props => {
 export const ConversationPaginationContainer = createRefetchContainer(
   ConversationRoute,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment Conversation_me on Me
         @argumentDefinitions(conversationID: { type: "String!" }) {

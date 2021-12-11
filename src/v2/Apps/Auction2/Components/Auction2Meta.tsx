@@ -27,6 +27,7 @@ const Auction2Meta: React.FC<Auction2MetaProps> = props => {
 export const Auction2MetaFragmentContainer = createFragmentContainer(
   Auction2Meta,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     sale: graphql`
       fragment Auction2Meta_sale on Sale {
         name

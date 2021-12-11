@@ -111,6 +111,7 @@ const Image = styled(BaseImage)`
 export const ArtworkGridItemFragmentContainer = createFragmentContainer(
   ArtworkGridItem,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment GridItem_artwork on Artwork {
         internalID

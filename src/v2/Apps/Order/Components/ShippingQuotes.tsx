@@ -85,6 +85,7 @@ export const ShippingQuotes: React.FC<ShippingQuotesProps> = ({
 export const ShippingQuotesFragmentContainer = createFragmentContainer(
   ShippingQuotes,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     shippingQuotes: graphql`
       fragment ShippingQuotes_shippingQuotes on CommerceShippingQuoteEdge
         @relay(plural: true) {

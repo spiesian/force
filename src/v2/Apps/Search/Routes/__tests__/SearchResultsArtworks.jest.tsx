@@ -29,6 +29,7 @@ const { getWrapper } = setupTestWrapper<SearchResultsArtworks_Query>({
       <SearchResultsArtworks viewer={viewer!} />
     </MockBoot>
   ),
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query SearchResultsArtworks_Query {
       viewer {

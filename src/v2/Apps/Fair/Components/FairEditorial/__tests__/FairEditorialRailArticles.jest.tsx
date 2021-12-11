@@ -9,6 +9,7 @@ describe("FairEditorialRailArticles", () => {
     Component: (props: any) => {
       return <FairEditorialRailArticlesFragmentContainer fair={props.fair} />
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query FairEditorialRailArticles_Test_Query {
         fair(id: "test") {

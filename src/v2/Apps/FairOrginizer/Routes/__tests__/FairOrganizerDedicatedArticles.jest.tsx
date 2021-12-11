@@ -22,6 +22,7 @@ const { getWrapper } = setupTestWrapper<
       <FairOrganizerDedicatedArticlesFragmentContainer {...(props as any)} />
     )
   },
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query FairOrganizerDedicatedArticles_Test_Query {
       fairOrganizer(id: "example") {

@@ -17,6 +17,7 @@ describe("SelectedCareerAchievements", () => {
   ) => {
     return await renderRelayTree({
       Component: SelectedCareerAchievements,
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query: graphql`
         query SelectedCareerAchievementsTestQuery @raw_response_type {
           artist(id: "pablo-picasso") {

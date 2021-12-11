@@ -60,6 +60,7 @@ const TrendingLotsRail: React.FC<TrendingLotsRailProps> = ({ viewer }) => {
 export const TrendingLotsRailFragmentContainer = createFragmentContainer(
   TrendingLotsRail,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewer: graphql`
       fragment TrendingLotsRail_viewer on Viewer {
         trendingLotsConnection: saleArtworksConnection(

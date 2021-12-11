@@ -48,6 +48,7 @@ class SendFeedbackForm extends Component<SystemContextProps, State> {
     // @ts-expect-error PLEASE_FIX_ME_STRICT_NULL_CHECK_MIGRATION
     commitMutation<SendFeedbackSearchResultsMutation>(relayEnvironment, {
       // TODO: Inputs to the mutation might have changed case of the keys!
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       mutation: graphql`
         mutation SendFeedbackSearchResultsMutation(
           $input: SendFeedbackMutationInput!

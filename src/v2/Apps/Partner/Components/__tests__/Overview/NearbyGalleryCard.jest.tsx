@@ -7,6 +7,7 @@ import { FollowProfileButtonFragmentContainer } from "v2/Components/FollowButton
 
 jest.unmock("react-relay")
 
+// PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
 const NearbyGalleryCardTestQuery = graphql`
   query NearbyGalleryCard_Test_Query($partnerId: String!) {
     partner(id: $partnerId) @principalField {
@@ -25,6 +26,7 @@ describe("NearbyGalleryCard with London as a preferred city", () => {
     variables: {
       partnerId: "unit-london",
     },
+    //
     query: NearbyGalleryCardTestQuery,
   })
 

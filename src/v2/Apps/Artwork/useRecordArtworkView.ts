@@ -1,5 +1,5 @@
-import { useCallback, useEffect } from "react";
-import * as React from "react";
+import { useCallback, useEffect } from "react"
+import * as React from "react"
 import { commitMutation, graphql } from "relay-runtime"
 import { useSystemContext } from "v2/System"
 import { useRouter } from "v2/System/Router/useRouter"
@@ -18,6 +18,7 @@ export const useRecordArtworkView = () => {
     (artworkID: string) => {
       commitMutation<useRecordArtworkViewMutation>(relayEnvironment!, {
         variables: { artworkID },
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         mutation: graphql`
           mutation useRecordArtworkViewMutation($artworkID: String!) {
             recordArtworkView(input: { artwork_id: $artworkID }) {

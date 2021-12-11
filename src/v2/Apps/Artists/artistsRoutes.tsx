@@ -38,6 +38,7 @@ export const artistsRoutes: AppRouteConfig[] = [
         onClientSideRender: () => {
           return ArtistsIndexRoute.preload()
         },
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query artistsRoutes_ArtistsQuery {
             featuredArtists: orderedSets(key: "homepage:featured-artists") {
@@ -63,6 +64,7 @@ export const artistsRoutes: AppRouteConfig[] = [
             size: 100,
           }
         },
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query artistsRoutes_ArtistsByLetterQuery(
             $letter: String!

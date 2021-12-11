@@ -174,6 +174,7 @@ const FairBoothsWithContext: React.FC<FairBoothsProps> = ({ ...props }) => {
 export const FairBoothsFragmentContainer = createRefetchContainer(
   FairBoothsWithContext,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     fair: graphql`
       fragment FairBooths_fair on Fair
         @argumentDefinitions(
@@ -249,6 +250,7 @@ export const FairBoothsQueryRenderer: React.FC<{ slug: string }> = ({
     <SystemQueryRenderer<FairBoothsContainerQuery>
       lazyLoad
       environment={relayEnvironment}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query FairBoothsContainerQuery(
           $slug: String!

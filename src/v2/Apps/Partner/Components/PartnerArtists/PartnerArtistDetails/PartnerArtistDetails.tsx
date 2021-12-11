@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { SystemQueryRenderer } from "v2/System/Relay/SystemQueryRenderer"
 import { PartnerArtistDetails_partnerArtist } from "v2/__generated__/PartnerArtistDetails_partnerArtist.graphql"
@@ -90,6 +90,7 @@ export const PartnerArtistDetails: React.FC<PartnerArtistDetailsProps> = ({
 export const PartnerArtistDetailsFragmentContainer = createFragmentContainer(
   PartnerArtistDetails,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     partnerArtist: graphql`
       fragment PartnerArtistDetails_partnerArtist on ArtistPartnerEdge {
         biographyBlurb(format: HTML) {
@@ -119,6 +120,7 @@ export const PartnerArtistDetailsRenderer: React.FC<{
     <SystemQueryRenderer<PartnerArtistDetailsQuery>
       lazyLoad
       environment={relayEnvironment}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query PartnerArtistDetailsQuery(
           $partnerId: String!

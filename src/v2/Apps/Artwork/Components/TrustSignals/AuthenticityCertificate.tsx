@@ -7,8 +7,8 @@ import {
   Spacer,
 } from "@artsy/palette"
 import { AuthenticityCertificate_artwork } from "v2/__generated__/AuthenticityCertificate_artwork.graphql"
-import { useState } from "react";
-import * as React from "react";
+import { useState } from "react"
+import * as React from "react"
 import { createFragmentContainer } from "react-relay"
 import { graphql } from "react-relay"
 import { TrustSignal, TrustSignalProps } from "./TrustSignal"
@@ -87,6 +87,7 @@ export const AuthenticityCertificate: React.FC<AuthenticityCertificateProps> = (
 export const AuthenticityCertificateFragmentContainer = createFragmentContainer(
   AuthenticityCertificate,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment AuthenticityCertificate_artwork on Artwork {
         hasCertificateOfAuthenticity

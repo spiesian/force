@@ -278,6 +278,7 @@ const SpinnerContainer = styled.div`
 export const ConversationPaginationContainer = createPaginationContainer(
   Conversation,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     conversation: graphql`
       fragment Conversation_conversation on Conversation
         @argumentDefinitions(
@@ -375,6 +376,7 @@ export const ConversationPaginationContainer = createPaginationContainer(
         conversationID: props.conversation.id,
       }
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query ConversationPaginationQuery(
         $count: Int

@@ -10,6 +10,7 @@ export function ArtworkGridExample(props: {
 }) {
   return (
     <RootQueryRenderer<ArtworkGridExampleQuery>
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query ArtworkGridExampleQuery($artistID: String!) {
           artist(id: $artistID) {

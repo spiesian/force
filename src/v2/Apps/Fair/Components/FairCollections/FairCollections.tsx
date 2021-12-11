@@ -35,6 +35,7 @@ export const FairCollections: React.FC<FairCollectionsProps> = ({
 export const FairCollectionsFragmentContainer = createFragmentContainer(
   FairCollections,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     fair: graphql`
       fragment FairCollections_fair on Fair {
         marketingCollections(size: 5) {

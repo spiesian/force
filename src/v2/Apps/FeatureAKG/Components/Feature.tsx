@@ -165,6 +165,7 @@ const Feature: React.FC<FeatureProps> = props => {
 }
 
 export const FeatureFragmentContainer = createFragmentContainer(Feature, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   viewer: graphql`
     fragment Feature_viewer on Viewer
       @argumentDefinitions(

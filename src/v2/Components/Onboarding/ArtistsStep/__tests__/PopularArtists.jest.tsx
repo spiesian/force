@@ -22,6 +22,7 @@ describe("PopularArtists", () => {
       )
     },
     //
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query PopularArtists_Test_Query {
         highlights {

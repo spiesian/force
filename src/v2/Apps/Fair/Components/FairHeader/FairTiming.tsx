@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { Text } from "@artsy/palette"
 import { createFragmentContainer, graphql } from "react-relay"
 import { FairTiming_fair } from "v2/__generated__/FairTiming_fair.graphql"
@@ -31,6 +31,7 @@ const FairTiming: React.FC<Props> = ({
 }
 
 export const FairTimingFragmentContainer = createFragmentContainer(FairTiming, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   fair: graphql`
     fragment FairTiming_fair on Fair {
       exhibitionPeriod

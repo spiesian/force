@@ -1,5 +1,5 @@
-import { useState } from "react";
-import * as React from "react";
+import { useState } from "react"
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import {
   Button,
@@ -104,6 +104,7 @@ export const ConfirmArtworkModal: React.FC<ConfirmArtworkModalProps> = ({
 export const ConfirmArtworkModalFragmentContainer = createFragmentContainer(
   ConfirmArtworkModal,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment ConfirmArtworkModal_artwork on Artwork {
         ...CollapsibleArtworkDetails_artwork
@@ -130,6 +131,7 @@ export const ConfirmArtworkModalQueryRenderer: React.FC<{
   return (
     <SystemQueryRenderer<ConfirmArtworkModalQuery>
       environment={relayEnvironment}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query ConfirmArtworkModalQuery($artworkID: String!) {
           artwork(id: $artworkID) {

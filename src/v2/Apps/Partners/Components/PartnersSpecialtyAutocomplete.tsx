@@ -114,6 +114,7 @@ const PartnersSpecialtyAutocompletePlaceholder: FC = () => {
 export const PartnersSpecialtyAutocompleteFragmentContainer = createFragmentContainer(
   PartnersSpecialtyAutocomplete,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewer: graphql`
       fragment PartnersSpecialtyAutocomplete_viewer on Viewer
         @argumentDefinitions(
@@ -171,6 +172,7 @@ export const PartnersSpecialtyAutocompleteQueryRenderer: FC<PartnersSpecialtyAut
       environment={relayEnvironment}
       placeholder={<PartnersSpecialtyAutocompletePlaceholder />}
       variables={{ near: match.location.query.near ?? null, type }}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query PartnersSpecialtyAutocompleteQuery(
           $near: String

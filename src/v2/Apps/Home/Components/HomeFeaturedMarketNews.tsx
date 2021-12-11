@@ -18,7 +18,7 @@ import {
   ResponsiveBox,
 } from "@artsy/palette"
 import { compact, take } from "lodash"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { Masonry } from "v2/Components/Masonry"
 import { useSystemContext, useTracking } from "v2/System"
@@ -28,7 +28,7 @@ import { Media } from "v2/Utils/Responsive"
 import { HomeFeaturedMarketNewsQuery } from "v2/__generated__/HomeFeaturedMarketNewsQuery.graphql"
 import { HomeFeaturedMarketNews_articles } from "v2/__generated__/HomeFeaturedMarketNews_articles.graphql"
 import styled from "styled-components"
-import { themeGet } from "@styled-system/theme-get";
+import { themeGet } from "@styled-system/theme-get"
 
 const ARTICLE_COUNT = 6
 
@@ -44,7 +44,7 @@ const StyledRouterLink = styled(RouterLink)`
 `
 
 const HomeFeaturedMarketNews: React.FC<HomeFeaturedMarketNewsProps> = ({
-  articles
+  articles,
 }) => {
   const { trackEvent } = useTracking()
   const [firstArticle, ...restOfArticles] = articles
@@ -91,7 +91,7 @@ const HomeFeaturedMarketNews: React.FC<HomeFeaturedMarketNewsProps> = ({
             <Text variant="xs" textTransform="uppercase" my={1}>
               {firstArticle.vertical}
             </Text>
-          
+
             <Text variant="xl">{firstArticle.title}</Text>
 
             <Text variant="lg" mt={1}>
@@ -145,9 +145,9 @@ const HomeFeaturedMarketNews: React.FC<HomeFeaturedMarketNewsProps> = ({
                     <Text variant="xs" textTransform="uppercase" my={1}>
                       {article.vertical}
                     </Text>
-                    
-                      <Text variant="lg">{article.title}</Text>
-                    
+
+                    <Text variant="lg">{article.title}</Text>
+
                     <Text variant="md" mt={1}>
                       By {article.author?.name}
                     </Text>
@@ -201,6 +201,7 @@ const HomeFeaturedMarketNewsContainer: React.FC = ({ children }) => {
 export const HomeFeaturedMarketNewsFragmentContainer = createFragmentContainer(
   HomeFeaturedMarketNews,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     articles: graphql`
       fragment HomeFeaturedMarketNews_articles on Article @relay(plural: true) {
         internalID
@@ -314,6 +315,7 @@ export const HomeFeaturedMarketNewsQueryRenderer: React.FC = () => {
     <SystemQueryRenderer<HomeFeaturedMarketNewsQuery>
       lazyLoad
       environment={relayEnvironment}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query HomeFeaturedMarketNewsQuery {
           articles(featured: true, published: true, sort: PUBLISHED_AT_DESC) {

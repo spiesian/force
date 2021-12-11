@@ -1,5 +1,5 @@
 import { Flex, StackableBorderBox, Text } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 
 import { OfferSummary_offer } from "v2/__generated__/OfferSummary_offer.graphql"
@@ -22,6 +22,7 @@ const OfferSummary: React.FC<OfferSummaryProps> = ({ offer }) => {
 export const OfferSummaryFragmentContainer = createFragmentContainer(
   OfferSummary,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     offer: graphql`
       fragment OfferSummary_offer on ConsignmentOffer {
         saleDate

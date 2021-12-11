@@ -89,6 +89,7 @@ describe("Save artwork", () => {
       TestPage: SaveButtonTestPage,
       defaultData,
       defaultMutationResults,
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query: graphql`
         query SaveButtonTestQuery {
           artwork(id: "example-artwork-id") {

@@ -35,6 +35,7 @@ const PartnersRails: FC<PartnersRailsProps> = ({ viewer, type }) => {
 }
 
 const PartnersRailsFragmentContainer = createFragmentContainer(PartnersRails, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   viewer: graphql`
     fragment PartnersRails_viewer on Viewer
       @argumentDefinitions(
@@ -91,6 +92,7 @@ export const PartnersRailsQueryRenderer: FC<PartnersRailsQueryRendererProps> = (
       environment={relayEnvironment}
       placeholder={<PartnersRailsPlaceholder />}
       variables={{ categoryType: type, type }}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query PartnersRailsQuery(
           $categoryType: PartnerCategoryType

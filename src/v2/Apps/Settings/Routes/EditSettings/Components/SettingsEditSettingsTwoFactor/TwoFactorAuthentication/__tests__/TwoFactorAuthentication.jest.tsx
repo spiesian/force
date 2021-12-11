@@ -30,6 +30,7 @@ const setupTestEnv = () => {
       // @ts-expect-error PLEASE_FIX_ME_STRICT_NULL_CHECK_MIGRATION
       <TwoFactorAuthenticationRefetchContainer {...props} />
     ),
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query TwoFactorAuthenticationTestQuery {
         me {

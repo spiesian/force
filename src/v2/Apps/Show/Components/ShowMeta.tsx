@@ -42,6 +42,7 @@ const ShowMeta: React.FC<ShowMetaProps> = ({
 }
 
 export const ShowMetaFragmentContainer = createFragmentContainer(ShowMeta, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   show: graphql`
     fragment ShowMeta_show on Show {
       name

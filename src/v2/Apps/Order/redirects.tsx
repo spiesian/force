@@ -223,6 +223,7 @@ export const redirects: RedirectRecord<OrderQuery> = {
   ],
 }
 
+// PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
 graphql`
   fragment redirects_order on CommerceOrder {
     internalID

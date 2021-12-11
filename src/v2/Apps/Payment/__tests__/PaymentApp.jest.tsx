@@ -15,6 +15,7 @@ const { getWrapper } = setupTestWrapper<PaymentApp_Test_Query>({
       </HeadProvider>
     )
   },
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query PaymentApp_Test_Query {
       me {

@@ -13,6 +13,7 @@ export const UpdateUserEmailPreferencesMutation = (
   return new Promise<UserEmailPreferencesMutationResponse>(
     async (resolve, reject) => {
       commitMutation<UserEmailPreferencesMutation>(environment, {
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         mutation: graphql`
           mutation UserEmailPreferencesMutation($input: UpdateMyProfileInput!)
             @raw_response_type {

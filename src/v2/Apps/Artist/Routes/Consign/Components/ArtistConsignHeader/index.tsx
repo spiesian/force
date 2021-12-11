@@ -80,6 +80,7 @@ export const ArtistConsignHeader: React.FC<ArtistConsignHeaderProps> = ({
 export const ArtistConsignHeaderFragmentContainer = createFragmentContainer(
   ArtistConsignHeader,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment ArtistConsignHeader_artist on Artist {
         ...ArtistConsignHeaderImages_artist

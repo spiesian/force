@@ -31,6 +31,7 @@ const getRelayWrapper = async ({
     Component: props => {
       return <FlashBanner {...props} {...passedProps} />
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query FlashBannerTestQuery @raw_response_type {
         me {

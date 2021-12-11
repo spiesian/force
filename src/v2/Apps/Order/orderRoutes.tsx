@@ -97,6 +97,7 @@ export const orderRoutes: AppRouteConfig[] = [
 
     // TODO: Better support `@principalField` in Metaphysics.
     // This currently only works because of the `order` field alias.
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query orderRoutes_OrderQuery($orderID: ID!) @raw_response_type {
         me {
@@ -144,6 +145,7 @@ export const orderRoutes: AppRouteConfig[] = [
         Component: RespondRoute,
         shouldWarnBeforeLeaving: true,
         hideFooter: true,
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query orderRoutes_RespondQuery($orderID: ID!) {
             order: commerceOrder(id: $orderID) {
@@ -160,6 +162,7 @@ export const orderRoutes: AppRouteConfig[] = [
         Component: OfferRoute,
         shouldWarnBeforeLeaving: true,
         hideFooter: true,
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query orderRoutes_OfferQuery($orderID: ID!) {
             order: commerceOrder(id: $orderID) {
@@ -176,6 +179,7 @@ export const orderRoutes: AppRouteConfig[] = [
         Component: ShippingRoute,
         shouldWarnBeforeLeaving: true,
         hideFooter: true,
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query orderRoutes_ShippingQuery($orderID: ID!) {
             order: commerceOrder(id: $orderID) {
@@ -195,6 +199,7 @@ export const orderRoutes: AppRouteConfig[] = [
         Component: PaymentRoute,
         shouldWarnBeforeLeaving: true,
         hideFooter: true,
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query orderRoutes_PaymentQuery($orderID: ID!) {
             me {
@@ -214,6 +219,7 @@ export const orderRoutes: AppRouteConfig[] = [
         Component: NewPaymentRoute,
         shouldWarnBeforeLeaving: true,
         hideFooter: true,
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query orderRoutes_NewPaymentQuery($orderID: ID!) {
             me {
@@ -233,6 +239,7 @@ export const orderRoutes: AppRouteConfig[] = [
         Component: CounterRoute,
         shouldWarnBeforeLeaving: true,
         hideFooter: true,
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query orderRoutes_CounterQuery($orderID: ID!) {
             order: commerceOrder(id: $orderID) {
@@ -249,6 +256,7 @@ export const orderRoutes: AppRouteConfig[] = [
         Component: ReviewRoute,
         shouldWarnBeforeLeaving: true,
         hideFooter: true,
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query orderRoutes_ReviewQuery($orderID: ID!) {
             order: commerceOrder(id: $orderID) {
@@ -264,6 +272,7 @@ export const orderRoutes: AppRouteConfig[] = [
         path: "review/accept",
         Component: AcceptRoute,
         hideFooter: true,
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query orderRoutes_AcceptQuery($orderID: ID!) {
             order: commerceOrder(id: $orderID) {
@@ -279,6 +288,7 @@ export const orderRoutes: AppRouteConfig[] = [
         path: "review/decline",
         Component: DeclineRoute,
         hideFooter: true,
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query orderRoutes_RejectQuery($orderID: ID!) {
             order: commerceOrder(id: $orderID) {
@@ -291,6 +301,7 @@ export const orderRoutes: AppRouteConfig[] = [
         path: "status",
         Component: StatusRoute,
         hideFooter: true,
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query orderRoutes_StatusQuery($orderID: ID!) {
             order: commerceOrder(id: $orderID) {

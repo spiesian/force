@@ -128,6 +128,7 @@ const HomeFeaturedEventsRail: React.FC<HomeFeaturedEventsRailProps> = ({
 export const HomeFeaturedEventsRailFragmentContainer = createFragmentContainer(
   HomeFeaturedEventsRail,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     orderedSet: graphql`
       fragment HomeFeaturedEventsRail_orderedSet on OrderedSet {
         items {

@@ -7,8 +7,8 @@ import {
   Sup,
   Message,
 } from "@artsy/palette"
-import { useMemo, useRef, useState } from "react";
-import * as React from "react";
+import { useMemo, useRef, useState } from "react"
+import * as React from "react"
 import { createRefetchContainer, graphql, RelayRefetchProp } from "react-relay"
 import { ShowsHeaderFragmentContainer } from "../Components/ShowsHeader"
 import { ShowsCity_viewer } from "v2/__generated__/ShowsCity_viewer.graphql"
@@ -236,11 +236,13 @@ export const ShowsCity: React.FC<ShowsCityProps> = ({
 export const ShowsCityRefetchContainer = createRefetchContainer(
   ShowsCity,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewer: graphql`
       fragment ShowsCity_viewer on Viewer {
         ...ShowsHeader_viewer
       }
     `,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     city: graphql`
       fragment ShowsCity_city on City
         @argumentDefinitions(after: { type: "String" }, page: { type: "Int" }) {

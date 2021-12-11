@@ -25,6 +25,7 @@ export const partnersRoutes: AppRouteConfig[] = [
     onClientSideRender: () => {
       return GalleriesRoute.preload()
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query partnersRoutes_GalleriesRouteQuery {
         viewer {
@@ -39,6 +40,7 @@ export const partnersRoutes: AppRouteConfig[] = [
     onClientSideRender: () => {
       return InstitutionsRoute.preload()
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query partnersRoutes_InstitutionsRouteQuery {
         viewer {

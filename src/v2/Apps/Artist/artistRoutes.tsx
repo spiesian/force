@@ -93,6 +93,7 @@ export const artistRoutes: AppRouteConfig[] = [
       OverviewRoute.preload()
       WorksForSaleRoute.preload()
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query artistRoutes_TopLevelQuery($artistID: String!) {
         artist(id: $artistID) @principalField {
@@ -111,6 +112,7 @@ export const artistRoutes: AppRouteConfig[] = [
         onClientSideRender: () => {
           OverviewRoute.preload()
         },
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query artistRoutes_OverviewQuery($artistID: String!) {
             artist(id: $artistID) {
@@ -126,6 +128,7 @@ export const artistRoutes: AppRouteConfig[] = [
           WorksForSaleRoute.preload()
         },
         prepareVariables: getWorksForSaleRouteVariables,
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query artistRoutes_WorksForSaleQuery(
             $artistID: String!
@@ -156,6 +159,7 @@ export const artistRoutes: AppRouteConfig[] = [
             ...allowedAuctionResultFilters(urlFilterState),
           }
         },
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query artistRoutes_AuctionResultsQuery(
             $artistID: String!
@@ -190,6 +194,7 @@ export const artistRoutes: AppRouteConfig[] = [
         onClientSideRender: () => {
           ArticlesRoute.preload()
         },
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query artistRoutes_ArticlesQuery($artistID: String!) {
             artist(id: $artistID) {
@@ -207,6 +212,7 @@ export const artistRoutes: AppRouteConfig[] = [
         onClientSideRender: () => {
           ConsignRoute.preload()
         },
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query artistRoutes_ArtistConsignQuery($artistID: String!) {
             artist(id: $artistID) {
@@ -241,6 +247,7 @@ export const artistRoutes: AppRouteConfig[] = [
         onClientSideRender: () => {
           CVRoute.preload()
         },
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query artistRoutes_CVQuery($artistID: String!) {
             viewer {
@@ -256,6 +263,7 @@ export const artistRoutes: AppRouteConfig[] = [
         onClientSideRender: () => {
           ShowsRoute.preload()
         },
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query artistRoutes_ShowsQuery($artistID: String!) {
             viewer {

@@ -36,6 +36,7 @@ const AuctionInfoSidebar: React.FC<AuctionInfoSidebarProps> = ({ sale }) => {
 export const AuctionInfoSidebarFragmentContainer = createFragmentContainer(
   AuctionInfoSidebar,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     sale: graphql`
       fragment AuctionInfoSidebar_sale on Sale {
         liveStartAt

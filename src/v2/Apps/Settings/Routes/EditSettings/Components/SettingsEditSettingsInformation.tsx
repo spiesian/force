@@ -150,6 +150,7 @@ export const SettingsEditSettingsInformation: React.FC<SettingsEditSettingsInfor
 export const SettingsEditSettingsInformationFragmentContainer = createFragmentContainer(
   SettingsEditSettingsInformation,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment SettingsEditSettingsInformation_me on Me {
         email

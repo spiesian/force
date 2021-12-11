@@ -10,6 +10,7 @@ const { getWrapper } = setupTestWrapper<NavigationTabs_Test_PartnerQuery>({
   Component: ({ partner }: any) => {
     return <NavigationTabs partner={partner} />
   },
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query NavigationTabs_Test_PartnerQuery @raw_response_type {
       partner(id: "white-cube") {

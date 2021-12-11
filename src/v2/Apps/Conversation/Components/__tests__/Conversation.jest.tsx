@@ -30,6 +30,7 @@ const { renderWithRelay } = setupTestWrapperTL<
       />
     )
   },
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query ConversationPagination_Test_Query {
       node(id: "example") {

@@ -1,5 +1,5 @@
-import { ComponentProps } from "react";
-import * as React from "react";
+import { ComponentProps } from "react"
+import * as React from "react"
 import { Box } from "@artsy/palette"
 import { createFragmentContainer, graphql } from "react-relay"
 import { FeatureFeaturedLinkFragmentContainer as FeatureFeaturedLink } from "../FeatureFeaturedLink"
@@ -41,6 +41,7 @@ export const FeatureSetItem: React.FC<FeatureSetItemProps> = ({
 export const FeatureSetItemFragmentContainer = createFragmentContainer(
   FeatureSetItem,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     setItem: graphql`
       fragment FeatureSetItem_setItem on OrderedSetItem {
         __typename

@@ -73,6 +73,7 @@ export const geneRoutes: AppRouteConfig[] = [
             slug,
           }
         },
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query geneRoutes_GeneShowQuery(
             $slug: String!

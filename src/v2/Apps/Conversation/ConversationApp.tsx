@@ -86,6 +86,7 @@ export const ConversationApp: React.FC<ConversationAppProps> = props => {
 export const ConversationAppFragmentContainer = createFragmentContainer(
   ConversationApp,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment ConversationApp_me on Me
         @argumentDefinitions(

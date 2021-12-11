@@ -39,6 +39,7 @@ const FairEntityHeader: FC<FairEntityHeaderProps> = ({ fair, ...rest }) => {
 export const FairEntityHeaderFragmentContainer = createFragmentContainer(
   FairEntityHeader,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     fair: graphql`
       fragment FairEntityHeader_fair on Fair {
         internalID

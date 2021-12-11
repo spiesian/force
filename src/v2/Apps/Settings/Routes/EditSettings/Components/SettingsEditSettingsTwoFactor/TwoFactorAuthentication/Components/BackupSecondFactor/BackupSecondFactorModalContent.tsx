@@ -42,6 +42,7 @@ export const BackupSecondFactorModalContent: React.FC<BackupSecondFactorModalCon
 export const ModalContentFragmentContainer = createFragmentContainer(
   BackupSecondFactorModalContent,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment BackupSecondFactorModalContent_me on Me {
         backupSecondFactors: secondFactors(kinds: [backup]) {
@@ -61,6 +62,7 @@ export const BackupSecondFactorModalContentQueryRenderer = () => {
     <SystemQueryRenderer<BackupSecondFactorModalContentQuery>
       environment={relayEnvironment}
       variables={{}}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query BackupSecondFactorModalContentQuery @raw_response_type {
           me {

@@ -15,6 +15,7 @@ const { getWrapper } = setupTestWrapper<HomeFeaturedGalleriesRail_Test_Query>({
       />
     )
   },
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query HomeFeaturedGalleriesRail_Test_Query {
       orderedSet(id: "example") {

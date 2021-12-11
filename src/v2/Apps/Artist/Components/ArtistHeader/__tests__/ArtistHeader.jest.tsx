@@ -14,6 +14,7 @@ jest.mock("v2/Components/SelectedCareerAchievements", () => ({
 describe("ArtistHeader", () => {
   const { getWrapper } = setupTestWrapper<ArtistHeader_Test_Query>({
     Component: ArtistHeaderFragmentContainer,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query ArtistHeader_Test_Query {
         artist(id: "example") {

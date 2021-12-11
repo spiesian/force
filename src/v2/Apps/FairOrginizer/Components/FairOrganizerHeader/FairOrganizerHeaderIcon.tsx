@@ -13,6 +13,7 @@ export const FairOrganizerHeaderIcon: React.FC<any> = ({
 export const FairOrganizerHeaderIconFragmentContainer = createFragmentContainer(
   FairOrganizerHeaderIcon,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     fairOrganizer: graphql`
       fragment FairOrganizerHeaderIcon_fairOrganizer on FairOrganizer {
         name

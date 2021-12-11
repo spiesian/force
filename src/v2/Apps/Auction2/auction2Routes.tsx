@@ -69,6 +69,7 @@ export const auction2Routes: AppRouteConfig[] = [
     path: "/auction2/:slug",
     theme: "v3",
     getComponent: () => Auction2App,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query auction2Routes_TopLevelQuery($slug: String!) {
         sale(id: $slug) @principalField {
@@ -83,6 +84,7 @@ export const auction2Routes: AppRouteConfig[] = [
       {
         path: "/",
         getComponent: () => ArtworksRoute,
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query auction2Routes_ArtworksRouteQuery($slug: String!) {
             sale(id: $slug) @principalField {

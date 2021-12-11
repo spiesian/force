@@ -1,6 +1,6 @@
 import { RouterLink } from "v2/System/Router/RouterLink"
 import { Image, ResponsiveBox, Text } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { ViewingRoomCard_viewingRoom } from "v2/__generated__/ViewingRoomCard_viewingRoom.graphql"
 import { cropped } from "v2/Utils/resized"
@@ -58,6 +58,7 @@ const ViewingRoomCard: React.FC<ViewingRoomCardProps> = ({ viewingRoom }) => {
 export const ViewingRoomCardFragmentContainer = createFragmentContainer(
   ViewingRoomCard,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewingRoom: graphql`
       fragment ViewingRoomCard_viewingRoom on ViewingRoom {
         href

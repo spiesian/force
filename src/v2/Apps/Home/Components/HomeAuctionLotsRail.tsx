@@ -5,7 +5,7 @@ import {
   SkeletonText,
   SkeletonBox,
 } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { useSystemContext } from "v2/System"
 import { SystemQueryRenderer } from "v2/System/Relay/SystemQueryRenderer"
@@ -111,6 +111,7 @@ const PLACEHOLDER = (
 export const HomeAuctionLotsRailFragmentContainer = createFragmentContainer(
   HomeAuctionLotsRail,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewer: graphql`
       fragment HomeAuctionLotsRail_viewer on Viewer {
         saleArtworksConnection(first: 50, geneIDs: "highlights-at-auction") {
@@ -138,6 +139,7 @@ export const HomeAuctionLotsRailQueryRenderer: React.FC = () => {
     <SystemQueryRenderer<HomeAuctionLotsRailQuery>
       lazyLoad
       environment={relayEnvironment}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query HomeAuctionLotsRailQuery {
           viewer {

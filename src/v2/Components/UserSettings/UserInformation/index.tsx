@@ -177,6 +177,7 @@ export const UserInformation: React.FC<UserInformationProps> = ({
 export const UserInformationRefetchContainer = createRefetchContainer(
   UserInformation,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment UserInformation_me on Me {
         email
@@ -208,6 +209,7 @@ export const UserInformationQueryRenderer = () => {
       // @ts-expect-error STRICT_NULL_CHECK
       environment={relayEnvironment}
       variables={{}}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query UserInformationQuery @raw_response_type {
           me {

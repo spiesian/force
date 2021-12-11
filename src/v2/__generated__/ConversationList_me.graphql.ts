@@ -1,0 +1,190 @@
+/* tslint:disable */
+/* eslint-disable */
+// @ts-nocheck
+
+import { ReaderFragment } from "relay-runtime";
+import {  } from "relay-runtime";
+export type ConversationList_me = {
+    readonly conversationsConnection: {
+        readonly edges: ReadonlyArray<{
+            readonly cursor: string;
+            readonly node: {
+                readonly id: string;
+                readonly internalID: string | null;
+                readonly lastMessage: string | null;
+                readonly " $fragmentRefs": FragmentRefs<"ConversationSnippet_conversation">;
+            } | null;
+        } | null> | null;
+        readonly pageInfo: {
+            readonly endCursor: string | null;
+            readonly hasNextPage: boolean;
+            readonly hasPreviousPage: boolean;
+            readonly startCursor: string | null;
+        };
+    } | null;
+    readonly " $refType": "ConversationList_me";
+};
+export type ConversationList_me$data = ConversationList_me;
+export type ConversationList_me$key = {
+    readonly " $data"?: ConversationList_me$data | undefined;
+    readonly " $fragmentRefs": FragmentRefs<"ConversationList_me">;
+};
+
+
+
+const node: ReaderFragment = {
+  "argumentDefinitions": [
+    {
+      "defaultValue": null,
+      "kind": "LocalArgument",
+      "name": "after"
+    },
+    {
+      "defaultValue": null,
+      "kind": "LocalArgument",
+      "name": "before"
+    },
+    {
+      "defaultValue": 25,
+      "kind": "LocalArgument",
+      "name": "first"
+    },
+    {
+      "defaultValue": null,
+      "kind": "LocalArgument",
+      "name": "last"
+    }
+  ],
+  "kind": "Fragment",
+  "metadata": {
+    "connection": [
+      {
+        "count": null,
+        "cursor": null,
+        "direction": "bidirectional",
+        "path": [
+          "conversationsConnection"
+        ]
+      }
+    ]
+  },
+  "name": "ConversationList_me",
+  "selections": [
+    {
+      "alias": "conversationsConnection",
+      "args": null,
+      "concreteType": "ConversationConnection",
+      "kind": "LinkedField",
+      "name": "__ConversationList_conversationsConnection_connection",
+      "plural": false,
+      "selections": [
+        {
+          "alias": null,
+          "args": null,
+          "concreteType": "ConversationEdge",
+          "kind": "LinkedField",
+          "name": "edges",
+          "plural": true,
+          "selections": [
+            {
+              "alias": null,
+              "args": null,
+              "kind": "ScalarField",
+              "name": "cursor",
+              "storageKey": null
+            },
+            {
+              "alias": null,
+              "args": null,
+              "concreteType": "Conversation",
+              "kind": "LinkedField",
+              "name": "node",
+              "plural": false,
+              "selections": [
+                {
+                  "alias": null,
+                  "args": null,
+                  "kind": "ScalarField",
+                  "name": "id",
+                  "storageKey": null
+                },
+                {
+                  "alias": null,
+                  "args": null,
+                  "kind": "ScalarField",
+                  "name": "internalID",
+                  "storageKey": null
+                },
+                {
+                  "alias": null,
+                  "args": null,
+                  "kind": "ScalarField",
+                  "name": "lastMessage",
+                  "storageKey": null
+                },
+                {
+                  "alias": null,
+                  "args": null,
+                  "kind": "ScalarField",
+                  "name": "__typename",
+                  "storageKey": null
+                },
+                {
+                  "args": null,
+                  "kind": "FragmentSpread",
+                  "name": "ConversationSnippet_conversation"
+                }
+              ],
+              "storageKey": null
+            }
+          ],
+          "storageKey": null
+        },
+        {
+          "alias": null,
+          "args": null,
+          "concreteType": "PageInfo",
+          "kind": "LinkedField",
+          "name": "pageInfo",
+          "plural": false,
+          "selections": [
+            {
+              "alias": null,
+              "args": null,
+              "kind": "ScalarField",
+              "name": "endCursor",
+              "storageKey": null
+            },
+            {
+              "alias": null,
+              "args": null,
+              "kind": "ScalarField",
+              "name": "hasNextPage",
+              "storageKey": null
+            },
+            {
+              "alias": null,
+              "args": null,
+              "kind": "ScalarField",
+              "name": "hasPreviousPage",
+              "storageKey": null
+            },
+            {
+              "alias": null,
+              "args": null,
+              "kind": "ScalarField",
+              "name": "startCursor",
+              "storageKey": null
+            }
+          ],
+          "storageKey": null
+        }
+      ],
+      "storageKey": null
+    }
+  ],
+  "type": "Me",
+  "abstractKey": null
+};
+(node as any).hash = '8e470b78b98786a863204910006d8372';
+export default node;

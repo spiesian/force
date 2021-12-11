@@ -42,6 +42,7 @@ function createBidder(
     (resolve, reject) => {
       commitMutation<RegisterCreateBidderMutation>(relayEnvironment, {
         // TODO: Inputs to the mutation might have changed case of the keys!
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         mutation: graphql`
           mutation RegisterCreateBidderMutation($input: CreateBidderInput!) {
             createBidder(input: $input) {

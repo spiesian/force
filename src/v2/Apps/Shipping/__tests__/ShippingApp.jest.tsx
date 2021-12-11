@@ -19,6 +19,7 @@ const { getWrapper } = setupTestWrapper<ShippingApp_Test_Query>({
       </HeadProvider>
     )
   },
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query ShippingApp_Test_Query {
       me {

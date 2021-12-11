@@ -31,6 +31,7 @@ const render = (extraOrderProps?: ShippingQuotes_Test_QueryResponse["order"]) =>
         ...extraOrderProps,
       },
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query ShippingQuotes_Test_Query @raw_response_type {
         order: commerceOrder {

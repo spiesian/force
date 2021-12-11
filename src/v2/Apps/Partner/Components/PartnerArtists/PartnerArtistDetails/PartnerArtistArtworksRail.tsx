@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import * as React from "react";
+import { useEffect, useState } from "react"
+import * as React from "react"
 import { Carousel } from "v2/Components/Carousel"
 import {
   createPaginationContainer,
@@ -78,6 +78,7 @@ export const PartnerArtistArtworksRail: React.FC<PartnerArtistArtworksRailProps>
   )
 }
 
+// PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
 export const ARTISTS_ARTWORKS_QUERY = graphql`
   query PartnerArtistArtworksRailQuery(
     $partnerId: String!
@@ -99,6 +100,7 @@ export const ARTISTS_ARTWORKS_QUERY = graphql`
 export const PartnerArtistArtworksRailPaginationContainer = createPaginationContainer(
   PartnerArtistArtworksRail,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     partnerArtist: graphql`
       fragment PartnerArtistArtworksRail_partnerArtist on ArtistPartnerEdge
         @argumentDefinitions(

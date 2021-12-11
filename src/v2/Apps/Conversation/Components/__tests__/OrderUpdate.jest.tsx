@@ -14,6 +14,7 @@ const { renderWithRelay } = setupTestWrapperTL<OrderUpdate_Test_Query>({
 
     return <OrderUpdateFragmentContainer event={event} />
   },
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query OrderUpdate_Test_Query($conversationID: String!) {
       me {

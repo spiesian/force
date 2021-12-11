@@ -95,6 +95,7 @@ class GeneSearchResultsContent extends React.Component<Props, null> {
       this.props.relay.environment,
       {
         // TODO: Inputs to the mutation might have changed case of the keys!
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         mutation: graphql`
           mutation GeneSearchResultsFollowGeneMutation(
             $input: FollowGeneInput!
@@ -174,6 +175,7 @@ export const GeneSearchResultsContentContainer = createFragmentContainer(
   // @ts-expect-error PLEASE_FIX_ME_STRICT_NULL_CHECK_MIGRATION
   GeneSearchResultsContent,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewer: graphql`
       fragment GeneSearchResults_viewer on Viewer {
         match_gene: searchConnection(
@@ -209,6 +211,7 @@ const GeneSearchResultsComponent: React.SFC<
   return (
     <SystemQueryRenderer<GeneSearchResultsQuery>
       environment={relayEnvironment}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query GeneSearchResultsQuery($term: String!) {
           viewer {

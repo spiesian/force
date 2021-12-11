@@ -80,6 +80,7 @@ graphql`
 export const PaymentSectionFragmentContainer = createFragmentContainer(
   PaymentSection,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment PaymentSection_me on Me {
         id

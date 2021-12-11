@@ -29,6 +29,7 @@ const SettingsShippingRoute: React.FC<SettingsShippingRouteProps> = ({
 export const SettingsShippingRouteFragmentContainer = createFragmentContainer(
   SettingsShippingRoute,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment SettingsShippingRoute_me on Me {
         ...UserSettingsAddresses_me

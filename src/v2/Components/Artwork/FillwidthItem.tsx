@@ -2,7 +2,7 @@ import { AuthContextModule } from "@artsy/cohesion"
 import { Box, BoxProps, Image } from "@artsy/palette"
 import { FillwidthItem_artwork } from "v2/__generated__/FillwidthItem_artwork.graphql"
 import { useSystemContext } from "v2/System"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import createLogger from "v2/Utils/logger"
 import { userIsTeam } from "v2/Utils/user"
@@ -120,6 +120,7 @@ export const FillwidthItem: React.FC<FillwidthItemProps> = ({
 }
 
 export default createFragmentContainer(FillwidthItem, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   artwork: graphql`
     fragment FillwidthItem_artwork on Artwork {
       image {

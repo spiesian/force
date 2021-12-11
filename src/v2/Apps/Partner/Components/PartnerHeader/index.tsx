@@ -99,6 +99,7 @@ export const PartnerHeader: React.FC<PartnerHeaderProps> = ({ partner }) => {
 export const PartnerHeaderFragmentContainer = createFragmentContainer(
   PartnerHeader,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     partner: graphql`
       fragment PartnerHeader_partner on Partner {
         name

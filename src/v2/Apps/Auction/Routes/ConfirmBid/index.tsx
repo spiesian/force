@@ -87,6 +87,7 @@ export const ConfirmBidRoute: React.FC<
     return new Promise<ConfirmBidCreateBidderPositionMutationResponse>(
       (resolve, reject) => {
         commitMutation<ConfirmBidCreateBidderPositionMutation>(environment, {
+          // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
           mutation: graphql`
             mutation ConfirmBidCreateBidderPositionMutation(
               $input: BidderPositionInput!

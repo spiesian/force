@@ -40,6 +40,7 @@ describe("Saved Addresses", () => {
       ),
       defaultData: userAddressMutation,
       TestPage: SavedAddressesTestPage,
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query: graphql`
         query SavedAddressesMutation_Test_Query {
           me {
@@ -75,6 +76,7 @@ describe("Saved Addresses", () => {
       Component: (props: any) => (
         <SavedAddressesFragmentContainer inCollectorProfile {...props} />
       ),
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query: graphql`
         query SavedAddressesInCollectorProfile_Test_Query {
           me {
@@ -185,6 +187,7 @@ describe("Saved Addresses", () => {
           {...props}
         />
       ),
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query: graphql`
         query SavedAddressesOutsiseCollectorProfile_Test_Query {
           me {

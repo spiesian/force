@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { SearchResultsArtworks_viewer } from "v2/__generated__/SearchResultsArtworks_viewer.graphql"
 import { ZeroState } from "v2/Apps/Search/Components/ZeroState"
 import { ArtworkFilter } from "v2/Components/ArtworkFilter"
@@ -37,6 +37,7 @@ export const SearchResultsArtworksRoute: React.FC<SearchResultsRouteProps> = pro
 export const SearchResultsArtworksRouteFragmentContainer = createFragmentContainer(
   SearchResultsArtworksRoute,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewer: graphql`
       fragment SearchResultsArtworks_viewer on Viewer
         @argumentDefinitions(

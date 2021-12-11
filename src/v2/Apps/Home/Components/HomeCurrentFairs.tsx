@@ -158,6 +158,7 @@ const PLACEHOLDER = (
 export const HomeCurrentFairsFragmentContainer = createFragmentContainer(
   HomeCurrentFairs,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewer: graphql`
       fragment HomeCurrentFairs_viewer on Viewer {
         fairs(
@@ -202,6 +203,7 @@ export const HomeCurrentFairsQueryRenderer: React.FC = () => {
     <SystemQueryRenderer<HomeCurrentFairsQuery>
       lazyLoad
       environment={relayEnvironment}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query HomeCurrentFairsQuery {
           viewer {

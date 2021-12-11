@@ -18,6 +18,7 @@ export const conversationRoutes: AppRouteConfig[] = [
             component.ConversationAppFragmentContainer,
         }
       ),
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query conversationRoutes_ConversationQuery {
         me {
@@ -54,6 +55,7 @@ export const conversationRoutes: AppRouteConfig[] = [
         conversationID: params.conversationID,
       }
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query conversationRoutes_DetailQuery($conversationID: String!) {
         me {

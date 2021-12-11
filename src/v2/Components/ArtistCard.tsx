@@ -1,6 +1,6 @@
 import { ArtistCard_artist } from "v2/__generated__/ArtistCard_artist.graphql"
 import { FollowArtistButtonFragmentContainer } from "v2/Components/FollowButton/FollowArtistButton"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { EntityHeader } from "@artsy/palette"
 import { AuthContextModule } from "@artsy/cohesion"
@@ -43,6 +43,7 @@ export const ArtistCard: React.FC<ArtistCardProps> = ({
 export const ArtistCardFragmentContainer = createFragmentContainer(
   ArtistCard as React.ComponentType<ArtistCardProps>,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment ArtistCard_artist on Artist {
         name

@@ -17,6 +17,7 @@ const getWrapperWithBreakpoint = (breakpoint: Breakpoint = "lg") =>
         <ExhibitorsLetterNavFragmentContainer fair={fair!} />
       </MockBoot>
     ),
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query ExhibitorsLetterNav_Test_Query {
         fair(id: "one-x-artsy") {

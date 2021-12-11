@@ -13,8 +13,8 @@ import {
   useThemeConfig,
   TextVariant,
 } from "@artsy/palette"
-import { useEffect, useState } from "react";
-import * as React from "react";
+import { useEffect, useState } from "react"
+import * as React from "react"
 import { createRefetchContainer, graphql, RelayRefetchProp } from "react-relay"
 import styled from "styled-components"
 import { SavedAddresses_me } from "v2/__generated__/SavedAddresses_me.graphql"
@@ -354,6 +354,7 @@ const ModifyAddressWrapper = styled(Flex)`
 export const SavedAddressesFragmentContainer = createRefetchContainer(
   SavedAddresses,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment SavedAddresses_me on Me
         @argumentDefinitions(

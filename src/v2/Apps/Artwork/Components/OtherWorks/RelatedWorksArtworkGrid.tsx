@@ -134,6 +134,7 @@ export const RelatedWorksArtworkGridRefetchContainer = createRefetchContainer<
 >(
   withSystemContext(RelatedWorksArtworkGrid),
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment RelatedWorksArtworkGrid_artwork on Artwork
         @argumentDefinitions(layerId: { type: "String" }) {

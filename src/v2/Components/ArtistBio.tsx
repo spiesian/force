@@ -1,7 +1,7 @@
 import { RouterLink } from "v2/System/Router/RouterLink"
 import { HTML, Text } from "@artsy/palette"
 import { ArtistBio_bio } from "v2/__generated__/ArtistBio_bio.graphql"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { data as sd } from "sharify"
 
@@ -29,6 +29,7 @@ export const ArtistBio: React.FC<ArtistBioProps> = ({ bio }) => {
 }
 
 export const ArtistBioFragmentContainer = createFragmentContainer(ArtistBio, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   bio: graphql`
     fragment ArtistBio_bio on Artist {
       biographyBlurb: biographyBlurb(format: HTML, partnerBio: false) {

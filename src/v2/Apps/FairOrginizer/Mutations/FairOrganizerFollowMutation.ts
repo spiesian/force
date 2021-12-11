@@ -24,6 +24,7 @@ export const fairOrganizerFollowMutation: FollowFairOrganizerMutationProps = (
 
         resolve(response)
       },
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       mutation: graphql`
         mutation FairOrganizerFollowMutation($input: FollowProfileInput!) {
           followProfile(input: $input) {

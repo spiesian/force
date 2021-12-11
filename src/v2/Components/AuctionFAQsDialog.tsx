@@ -10,7 +10,7 @@ import {
   Tabs,
   Text,
 } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { useSystemContext } from "v2/System"
 import { SystemQueryRenderer } from "v2/System/Relay/SystemQueryRenderer"
@@ -83,6 +83,7 @@ const AuctionFAQsDialog: React.FC<AuctionFAQsDialogProps> = ({
 export const AuctionFAQsDialogFragmentContainer = createFragmentContainer(
   AuctionFAQsDialog,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewer: graphql`
       fragment AuctionFAQsDialog_viewer on Viewer {
         bidding: page(id: "how-auctions-work-bidding") {
@@ -128,6 +129,7 @@ export const AuctionFAQsDialogQueryRenderer: React.FC<AuctionFAQsDialogQueryRend
       <SystemQueryRenderer<AuctionFAQsDialogQuery>
         environment={relayEnvironment}
         placeholder={<Spinner color="white100" />}
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query={graphql`
           query AuctionFAQsDialogQuery {
             viewer {

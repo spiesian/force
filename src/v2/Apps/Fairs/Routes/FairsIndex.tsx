@@ -309,6 +309,7 @@ export const FairsIndex: React.FC<FairsIndexProps> = ({
   )
 }
 export const FairsIndexFragmentContainer = createFragmentContainer(FairsIndex, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   featuredFairs: graphql`
     fragment FairsIndex_featuredFairs on OrderedSet @relay(plural: true) {
       items {
@@ -327,6 +328,7 @@ export const FairsIndexFragmentContainer = createFragmentContainer(FairsIndex, {
       }
     }
   `,
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   viewer: graphql`
     fragment FairsIndex_viewer on Viewer {
       runningFairs: fairs(

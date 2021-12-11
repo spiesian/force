@@ -33,6 +33,7 @@ describe("FairSubApp", () => {
         )
       },
       mockData: response,
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query: graphql`
         query FairSubApp_Query($slug: String!) @raw_response_type {
           fair(id: $slug) {

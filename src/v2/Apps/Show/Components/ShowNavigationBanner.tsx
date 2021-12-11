@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { BoxProps } from "@artsy/palette"
 import { BackLink } from "v2/Components/Links/BackLink"
 import { ShowNavigationBanner_show } from "v2/__generated__/ShowNavigationBanner_show.graphql"
@@ -31,6 +31,7 @@ const ShowNavigationBanner: React.FC<ShowNavigationBannerProps & BoxProps> = ({
 export const ShowNavigationBannerFragmentContainer = createFragmentContainer(
   ShowNavigationBanner,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     show: graphql`
       fragment ShowNavigationBanner_show on Show {
         partner {

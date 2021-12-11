@@ -17,6 +17,7 @@ describe("ArtistSeriesMeta", () => {
           </MockBoot>
         )
       },
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query: graphql`
         query ArtistSeriesMeta_TestQuery($slug: ID!) @raw_response_type {
           artistSeries(id: $slug) {

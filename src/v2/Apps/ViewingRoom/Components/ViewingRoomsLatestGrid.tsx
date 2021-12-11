@@ -1,5 +1,5 @@
-import { useState } from "react";
-import * as React from "react";
+import { useState } from "react"
+import * as React from "react"
 import { Button, Card, GridColumns, Column, Box } from "@artsy/palette"
 import {
   RelayPaginationProp,
@@ -98,6 +98,7 @@ export const ViewingRoomsLatestGrid: React.FC<ViewingRoomsLatestGridProps> = pro
 export const ViewingRoomsLatestGridFragmentContainer = createPaginationContainer(
   ViewingRoomsLatestGrid,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewingRooms: graphql`
       fragment ViewingRoomsLatestGrid_viewingRooms on Viewer
         @argumentDefinitions(
@@ -147,6 +148,7 @@ export const ViewingRoomsLatestGridFragmentContainer = createPaginationContainer
         after: cursor,
       }
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query ViewingRoomsLatestGrid_ViewingRoomsAppQuery(
         $count: Int!

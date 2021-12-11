@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { Box, Text } from "@artsy/palette"
 import { FairEditorialRailArticlesFragmentContainer as FairEditorialRailArticles } from "./FairEditorialRailArticles"
@@ -27,6 +27,7 @@ export const FairEditorial: React.FC<FairEditorialProps> = ({ fair }) => {
 export const FairEditorialFragmentContainer = createFragmentContainer(
   FairEditorial,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     fair: graphql`
       fragment FairEditorial_fair on Fair {
         ...FairEditorialRailArticles_fair

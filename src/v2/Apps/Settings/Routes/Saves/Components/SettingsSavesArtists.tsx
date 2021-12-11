@@ -81,6 +81,7 @@ const SettingsSavesArtists: FC<SettingsSavesArtistsProps> = ({ me, relay }) => {
   )
 }
 
+// PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
 export const SETTINGS_SAVES_ARTISTS_QUERY = graphql`
   query SettingsSavesArtistsQuery($after: String) {
     me {
@@ -92,6 +93,7 @@ export const SETTINGS_SAVES_ARTISTS_QUERY = graphql`
 export const SettingsSavesArtistsPaginationContainer = createPaginationContainer(
   SettingsSavesArtists,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment SettingsSavesArtists_me on Me
         @argumentDefinitions(after: { type: "String" }) {

@@ -39,6 +39,7 @@ const BuyerGuarantee: React.FC<Props> = props => {
 export const BuyerGuaranteeFragmentContainer = createFragmentContainer(
   BuyerGuarantee,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment BuyerGuarantee_artwork on Artwork {
         is_acquireable: isAcquireable

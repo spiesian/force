@@ -1,5 +1,5 @@
 import { ArtistAuctionResultsRoute_artist } from "v2/__generated__/ArtistAuctionResultsRoute_artist.graphql"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { ArtistAuctionResultsRefetchContainer } from "./ArtistAuctionResults"
 
@@ -14,6 +14,7 @@ export const ArtistAuctionResultsRoute: React.FC<AuctionResultsRouteProps> = pro
 export const AuctionResultsRouteFragmentContainer = createFragmentContainer(
   ArtistAuctionResultsRoute,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment ArtistAuctionResultsRoute_artist on Artist
         @argumentDefinitions(

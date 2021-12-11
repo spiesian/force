@@ -11,6 +11,7 @@ export function createCreditCardAndUpdatePhone(relayEnvironment, phone, token) {
         onCompleted: (data, errors) =>
           errors ? reject(errors) : resolve(data),
         onError: reject,
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         mutation: graphql`
           mutation CreateCreditCardAndUpdatePhoneMutation(
             $creditCardInput: CreditCardInput!

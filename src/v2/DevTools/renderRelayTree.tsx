@@ -1,7 +1,7 @@
 import { LoadingClassName } from "v2/System/Relay/renderWithLoadProgress"
 import "v2/DevTools/renderUntil"
 import { RenderUntilPredicate, mount } from "enzyme"
-import * as React from "react";
+import * as React from "react"
 import { MockRelayRenderer, MockRelayRendererProps } from "./MockRelayRenderer"
 
 /**
@@ -52,7 +52,8 @@ export const RelayFinishedLoading: RenderUntilPredicate<any, any, any> = tree =>
          <img src={props.artwork.image.url} />
        </div>
      ),
-     graphql`
+       // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
+    graphql`
        fragment MockRelayRenderer_artwork on Artwork {
          image {
            url
@@ -64,7 +65,8 @@ export const RelayFinishedLoading: RenderUntilPredicate<any, any, any> = tree =>
    it("renders a Relay tree", () => {
      return renderRelayTree({
        Component: Artwork,
-       query: graphql`
+       // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
+query: graphql`
          query MockRelayRendererQuery {
            artwork(id: "mona-lisa") {
              ...MockRelayRenderer_artwork

@@ -9,7 +9,7 @@ import {
   Text,
 } from "@artsy/palette"
 import { compact } from "lodash"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { useSystemContext } from "v2/System"
 import { SystemQueryRenderer } from "v2/System/Relay/SystemQueryRenderer"
@@ -117,6 +117,7 @@ const AuctionBuyersPremiumDialog: React.FC<AuctionBuyersPremiumDialogProps> = ({
 export const AuctionBuyersPremiumDialogFragmentContainer = createFragmentContainer(
   AuctionBuyersPremiumDialog,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     sale: graphql`
       fragment AuctionBuyersPremiumDialog_sale on Sale {
         buyersPremium {
@@ -146,6 +147,7 @@ export const AuctionBuyersPremiumDialogQueryRenderer: React.FC<AuctionBuyersPrem
         environment={relayEnvironment}
         placeholder={<Spinner color="white100" />}
         variables={{ saleID }}
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query={graphql`
           query AuctionBuyersPremiumDialogQuery($saleID: String!) {
             sale(id: $saleID) {

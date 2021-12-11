@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import {
   BoxProps,
   Flex,
@@ -198,6 +198,7 @@ const Rail: React.FC<SwiperRailProps> = props => {
 export const NavigationTabsFragmentContainer = createFragmentContainer(
   NavigationTabs,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     searchableConnection: graphql`
       fragment NavigationTabs_searchableConnection on SearchableConnection {
         aggregations {

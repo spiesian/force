@@ -97,6 +97,7 @@ const Row: React.FC<FlexProps> = ({ children, ...others }) => (
 export const OfferHistoryItemFragmentContainer = createFragmentContainer(
   OfferHistoryItem,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     order: graphql`
       fragment OfferHistoryItem_order on CommerceOrder {
         lineItems {

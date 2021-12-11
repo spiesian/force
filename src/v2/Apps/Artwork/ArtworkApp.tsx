@@ -246,6 +246,7 @@ const TrackingWrappedArtworkApp: React.FC<Props> = props => {
 export const ArtworkAppFragmentContainer = createFragmentContainer(
   withSystemContext(TrackingWrappedArtworkApp),
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment ArtworkApp_artwork on Artwork {
         slug
@@ -283,6 +284,7 @@ export const ArtworkAppFragmentContainer = createFragmentContainer(
         ...ArtworkImageBrowser_artwork
       }
     `,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment ArtworkApp_me on Me {
         ...ArtworkSidebar_me

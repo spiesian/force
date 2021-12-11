@@ -176,6 +176,7 @@ export class PricingContext extends React.Component<PricingContextProps> {
 export const PricingContextFragmentContainer = createFragmentContainer(
   PricingContext,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment PricingContext_artwork on Artwork {
         # FIXME: Does this need to support exact prices?
@@ -240,6 +241,7 @@ export const PricingContextQueryRenderer: React.FC<{
       environment={relayEnvironment}
       variables={{ slug }}
       placeholder={PLACEHOLDER}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query PricingContextQuery($slug: String!) {
           artwork(id: $slug) {

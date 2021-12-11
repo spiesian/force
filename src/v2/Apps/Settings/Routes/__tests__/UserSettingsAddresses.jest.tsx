@@ -18,6 +18,7 @@ describe("ToastComponent", () => {
     Component: (props: any) => {
       return <UserSettingsAddressesFragmentContainer me={props.me} />
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query UserSettingsAddresses_test_Query {
         me {

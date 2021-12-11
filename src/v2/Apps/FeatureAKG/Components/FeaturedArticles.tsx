@@ -134,6 +134,7 @@ const FeaturedArticles: React.FC<FeaturedArticlesProps> = props => {
 export const FeaturedArticlesFragmentContainer = createFragmentContainer(
   FeaturedArticles,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     articles: graphql`
       fragment FeaturedArticles_articles on Article @relay(plural: true) {
         thumbnailTitle

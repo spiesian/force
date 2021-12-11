@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { Button } from "@artsy/palette"
 import { createFragmentContainer, graphql } from "react-relay"
 import { FairOrganizerFollowButton_fairOrganizer } from "v2/__generated__/FairOrganizerFollowButton_fairOrganizer.graphql"
@@ -61,6 +61,7 @@ export const FairOrganizerFollowButton: React.FC<FairOrganizerFollowButtonProps>
 export const FairOrganizerFollowButtonFragmentContainer = createFragmentContainer(
   FairOrganizerFollowButton,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     fairOrganizer: graphql`
       fragment FairOrganizerFollowButton_fairOrganizer on FairOrganizer {
         slug

@@ -1,5 +1,5 @@
 import { Join, Text, Image, Box, Flex, Spacer } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { extractNodes } from "v2/Utils/extractNodes"
 import { ArtistArticlesRoute_artist } from "v2/__generated__/ArtistArticlesRoute_artist.graphql"
 import { createRefetchContainer, graphql, RelayRefetchProp } from "react-relay"
@@ -134,6 +134,7 @@ const ArtistArticlesRoute: React.FC<ArtistArticlesRouteProps> = ({
 export const ArtistArticlesRouteFragmentContainer = createRefetchContainer(
   ArtistArticlesRoute,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment ArtistArticlesRoute_artist on Artist
         @argumentDefinitions(

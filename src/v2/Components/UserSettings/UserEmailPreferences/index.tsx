@@ -82,6 +82,7 @@ export const UserEmailPreferencesQueryRenderer = () => {
     <SystemQueryRenderer<UserEmailPreferencesQuery>
       environment={relayEnvironment}
       variables={{}}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query UserEmailPreferencesQuery {
           me {

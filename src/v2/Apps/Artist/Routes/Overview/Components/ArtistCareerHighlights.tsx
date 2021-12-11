@@ -9,7 +9,7 @@ import {
   Spacer,
   Text,
 } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { RouterLink } from "v2/System/Router/RouterLink"
 import { SelectedCareerAchievementsFragmentContainer } from "v2/Components/SelectedCareerAchievements"
@@ -80,6 +80,7 @@ const ArtistCareerHighlights: React.FC<ArtistCareerHighlightsProps> = ({
 export const ArtistCareerHighlightsFragmentContainer = createFragmentContainer(
   ArtistCareerHighlights,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment ArtistCareerHighlights_artist on Artist {
         ...SelectedCareerAchievements_artist
@@ -130,6 +131,7 @@ export const ArtistCareerHighlightsQueryRenderer: React.FC<{
       environment={relayEnvironment}
       variables={{ slug }}
       placeholder={PLACEHOLDER}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query ArtistCareerHighlightsQuery($slug: String!) {
           artist(id: $slug) {

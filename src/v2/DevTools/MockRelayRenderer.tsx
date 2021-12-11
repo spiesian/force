@@ -91,7 +91,8 @@ export interface MockRelayRendererState {
          <img src={props.artwork.image.url} />
        </div>
      ),
-     graphql`
+       // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
+    graphql`
        fragment MockRelayRenderer_artwork on Artwork {
          image {
            url
@@ -104,7 +105,8 @@ export interface MockRelayRendererState {
      const wrapper = mount(
        <MockRelayRenderer
          Component={Artwork}
-         query={graphql`
+         // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
+      query={graphql`
            query AnotherMockRelayRendererQuery {
              artwork(id: "mona-lisa") {
                ...MockRelayRenderer_artwork

@@ -79,6 +79,7 @@ const ArtworkSidebarClassificationsModal: React.FC<ArtworkSidebarClassifications
 export const ArtworkSidebarClassificationsModalFragmentContainer = createFragmentContainer(
   ArtworkSidebarClassificationsModal,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewer: graphql`
       fragment ArtworkSidebarClassificationsModal_viewer on Viewer {
         artworkAttributionClasses {
@@ -91,6 +92,7 @@ export const ArtworkSidebarClassificationsModalFragmentContainer = createFragmen
   }
 )
 
+// PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
 export const ARTWORK_SIDEBAR_CLASSIFICATIONS_MODAL_QUERY = graphql`
   query ArtworkSidebarClassificationsModalQuery {
     viewer {

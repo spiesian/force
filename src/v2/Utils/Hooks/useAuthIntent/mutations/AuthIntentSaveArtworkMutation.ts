@@ -15,6 +15,7 @@ export const saveArtworkMutation: AuthIntentMutation = (
 
         resolve(res)
       },
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       mutation: graphql`
         mutation AuthIntentSaveArtworkMutation($input: SaveArtworkInput!) {
           saveArtwork(input: $input) {

@@ -29,6 +29,7 @@ describe("HomeApp", () => {
         <HomeAppFragmentContainer {...props} />
       </MockBoot>
     ),
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query HomeApp_Test_Query {
         homePage {

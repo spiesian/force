@@ -35,6 +35,7 @@ describe("createMockNetworkLayer", () => {
   ) {
     return _fetchQueryWithResolvers<createMockNetworkLayerTestQuery>(
       options,
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       graphql`
         query createMockNetworkLayerTestQuery {
           artwork(id: "untitled") {

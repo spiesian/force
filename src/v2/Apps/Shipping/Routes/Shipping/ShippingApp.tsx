@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { Title } from "react-head"
 import { ShippingApp_me } from "v2/__generated__/ShippingApp_me.graphql"
@@ -33,6 +33,7 @@ const ShippingApp: React.FC<ShippingAppProps> = props => {
 export const ShippingAppFragmentContainer = createFragmentContainer(
   ShippingApp,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment ShippingApp_me on Me {
         name

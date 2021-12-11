@@ -1,6 +1,6 @@
 import { AuthContextModule } from "@artsy/cohesion"
 import { SaveButton_artwork } from "v2/__generated__/SaveButton_artwork.graphql"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import styled, { css } from "styled-components"
 import { CloseIcon, Flex, HeartIcon, Clickable } from "@artsy/palette"
@@ -102,6 +102,7 @@ const Inner = styled(Flex)<{ isSaved: boolean }>`
 `
 
 export const SaveButtonFragmentContainer = createFragmentContainer(SaveButton, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   artwork: graphql`
     fragment SaveButton_artwork on Artwork {
       id

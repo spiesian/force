@@ -61,6 +61,7 @@ const ShowCard: React.FC<ShowCardProps> = ({ show }): JSX.Element => {
 }
 
 export const ShowCardFragmentContainer = createFragmentContainer(ShowCard, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   show: graphql`
     fragment ShowCard_show on Show {
       href

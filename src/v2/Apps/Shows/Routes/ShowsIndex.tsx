@@ -6,7 +6,7 @@ import {
   Text,
   Separator,
 } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { ShowsIndex_featuredShows } from "v2/__generated__/ShowsIndex_featuredShows.graphql"
 import { ShowsIndex_viewer } from "v2/__generated__/ShowsIndex_viewer.graphql"
@@ -65,11 +65,13 @@ export const ShowsIndex: React.FC<ShowsIndexProps> = ({
 }
 
 export const ShowsIndexFragmentContainer = createFragmentContainer(ShowsIndex, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   viewer: graphql`
     fragment ShowsIndex_viewer on Viewer {
       ...ShowsHeader_viewer
     }
   `,
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   featuredShows: graphql`
     fragment ShowsIndex_featuredShows on OrderedSet {
       name

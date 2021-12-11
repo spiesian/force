@@ -216,6 +216,7 @@ export const Details: React.FC<DetailsProps> = ({
 }
 
 export const DetailsFragmentContainer = createFragmentContainer(Details, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   artwork: graphql`
     fragment Details_artwork on Artwork {
       href

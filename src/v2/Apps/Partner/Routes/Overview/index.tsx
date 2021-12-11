@@ -73,6 +73,7 @@ const Overview: React.FC<OverviewProps> = ({ partner }) => {
 }
 
 export const OverviewFragmentContainer = createFragmentContainer(Overview, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   partner: graphql`
     fragment Overview_partner on Partner {
       slug

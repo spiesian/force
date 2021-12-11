@@ -7,6 +7,7 @@ jest.unmock("react-relay")
 
 const { getWrapper } = setupTestWrapper<ShowArtworksEmptyState_Test_Query>({
   Component: ShowArtworksEmptyStateFragmentContainer,
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query ShowArtworksEmptyState_Test_Query {
       show(id: "example-show-id") {

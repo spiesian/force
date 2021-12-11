@@ -9,6 +9,7 @@ jest.unmock("react-relay")
 describe("FairTimer", () => {
   const { getWrapper } = setupTestWrapper<FairTimer_Test_Query>({
     Component: FairTimerFragmentContainer,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query FairTimer_Test_Query {
         fair(id: "example") {

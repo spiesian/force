@@ -32,6 +32,7 @@ const useRouter = jest.spyOn(require("v2/System/Router/useRouter"), "useRouter")
 
 const { getWrapper } = setupTestWrapper<ShowApp_Test_Query>({
   Component: ShowAppFragmentContainer,
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query ShowApp_Test_Query {
       show(id: "xxx") {

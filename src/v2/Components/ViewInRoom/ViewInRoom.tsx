@@ -1,5 +1,5 @@
 import { ModalBase } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { useState } from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { AnalyticsSchema, useTracking } from "v2/System"
@@ -44,6 +44,7 @@ const ViewInRoom: React.FC<ViewInRoomProps> = ({ artwork, onClose }) => {
 }
 
 export const ViewInRoomFragmentContainer = createFragmentContainer(ViewInRoom, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   artwork: graphql`
     fragment ViewInRoom_artwork on Artwork {
       ...ViewInRoomArtwork_artwork

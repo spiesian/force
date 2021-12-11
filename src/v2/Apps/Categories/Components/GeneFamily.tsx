@@ -1,5 +1,5 @@
 import { Box, Spacer, Text } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { GeneFamily_geneFamily } from "v2/__generated__/GeneFamily_geneFamily.graphql"
 import { sortBy } from "lodash"
@@ -48,6 +48,7 @@ export const GeneFamily: React.FC<GeneFamilyProps> = props => {
 }
 
 export const GeneFamilyFragmentContainer = createFragmentContainer(GeneFamily, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   geneFamily: graphql`
     fragment GeneFamily_geneFamily on GeneFamily {
       id

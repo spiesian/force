@@ -49,6 +49,7 @@ export const createUserAddress = async (
         attributes: address,
       },
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     mutation: graphql`
       mutation CreateUserAddressMutation($input: CreateUserAddressInput!) {
         createUserAddress(input: $input) {

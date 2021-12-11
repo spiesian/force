@@ -51,6 +51,7 @@ export const PartnersSearchQueryRenderer: FC<PartnersSearchQueryRendererProps> =
         term: query,
         type,
       }}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query PartnersSearchQuery(
           $near: String

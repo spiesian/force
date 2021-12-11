@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { Box, BoxProps, Text } from "@artsy/palette"
 import { createFragmentContainer, graphql } from "react-relay"
 import {
@@ -69,6 +69,7 @@ const FairOverview: React.FC<FairOverviewProps> = ({ fair }) => {
 export const FairOverviewFragmentContainer = createFragmentContainer(
   FairOverview,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     fair: graphql`
       fragment FairOverview_fair on Fair {
         ...FairEditorial_fair

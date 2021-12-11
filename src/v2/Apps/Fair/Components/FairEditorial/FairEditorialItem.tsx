@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { FairEditorialItem_article } from "v2/__generated__/FairEditorialItem_article.graphql"
 import {
@@ -105,6 +105,7 @@ export const FairEditorialItem: React.FC<FairEditorialItemProps> = ({
 export const FairEditorialItemFragmentContainer = createFragmentContainer(
   FairEditorialItem,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     article: graphql`
       fragment FairEditorialItem_article on Article {
         id

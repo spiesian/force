@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import styled from "styled-components"
 import {
   Col,
@@ -106,6 +106,7 @@ export const FeatureFeaturedLink: React.FC<FeatureFeaturedLinkProps> = ({
 export const FeatureFeaturedLinkFragmentContainer = createFragmentContainer(
   FeatureFeaturedLink,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     featuredLink: graphql`
       fragment FeatureFeaturedLink_featuredLink on FeaturedLink {
         href

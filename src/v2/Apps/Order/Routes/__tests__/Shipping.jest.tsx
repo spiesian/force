@@ -138,6 +138,7 @@ describe("Shipping", () => {
       ...deleteAddressSuccess,
       ...selectShippingQuoteSuccess,
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query ShippingTestQuery @raw_response_type {
         order: commerceOrder(id: "unused") {

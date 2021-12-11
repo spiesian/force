@@ -12,6 +12,7 @@ export const DisableSecondFactor = (
   return new Promise<DisableSecondFactorMutationResponse>(
     async (resolve, reject) => {
       commitMutation<DisableSecondFactorMutation>(environment, {
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         mutation: graphql`
           mutation DisableSecondFactorMutation(
             $input: DisableSecondFactorInput!

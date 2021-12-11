@@ -272,6 +272,7 @@ export const SmsSecondFactor: React.FC<SmsSecondFactorProps> = ({
 export const SmsSecondFactorRefetchContainer = createRefetchContainer(
   SmsSecondFactor,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment SmsSecondFactor_me on Me {
         hasSecondFactorEnabled

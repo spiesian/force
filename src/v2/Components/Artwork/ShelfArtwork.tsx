@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { RouterLink } from "v2/System/Router/RouterLink"
 import { ShelfArtwork_artwork } from "v2/__generated__/ShelfArtwork_artwork.graphql"
@@ -133,6 +133,7 @@ const Container = styled(Flex)`
 export const ShelfArtworkFragmentContainer = createFragmentContainer(
   ShelfArtwork,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment ShelfArtwork_artwork on Artwork
         @argumentDefinitions(width: { type: "Int", defaultValue: 200 }) {

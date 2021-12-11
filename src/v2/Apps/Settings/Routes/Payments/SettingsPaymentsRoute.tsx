@@ -20,6 +20,7 @@ const SettingsPaymentsRoute: React.FC<SettingsPaymentsRouteProps> = ({
 export const SettingsPaymentsRouteFragmentContainer = createFragmentContainer(
   SettingsPaymentsRoute,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment SettingsPaymentsRoute_me on Me {
         ...PaymentSection_me

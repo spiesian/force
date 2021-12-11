@@ -198,6 +198,7 @@ export class SelectedExhibitionsContainer extends React.Component<
 export const SelectedExhibitionFragmentContainer = createFragmentContainer(
   SelectedExhibitions,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     exhibitions: graphql`
       fragment SelectedExhibitions_exhibitions on Show @relay(plural: true) {
         partner {

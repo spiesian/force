@@ -149,6 +149,7 @@ const Component = createFragmentContainer(
     </div>
   ),
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment createTestEnv_artwork on Artwork {
         title
@@ -196,6 +197,7 @@ describe("test envs", () => {
       ...orderSuccess,
       ...creditCardSuccess,
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query createTestEnvQuery @raw_response_type {
         artwork(id: "unused") {

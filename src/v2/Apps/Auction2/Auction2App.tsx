@@ -48,6 +48,7 @@ const Auction2App: React.FC<Auction2AppProps> = ({ children, sale, me }) => {
 export const Auction2AppFragmentContainer = createFragmentContainer(
   Auction2App,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     sale: graphql`
       fragment Auction2App_sale on Sale {
         ...Auction2Meta_sale
@@ -135,6 +136,7 @@ export const Auction2AppFragmentContainer = createFragmentContainer(
         symbol
       }
     `,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment Auction2App_me on Me {
         ...AuctionDetails_me

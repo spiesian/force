@@ -1,5 +1,5 @@
 import { BorderBox, Box, Flex, Image, Join, Spacer, Text } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { RouterLink } from "v2/System/Router/RouterLink"
 import { ArtworkDetailsArticles_artwork } from "v2/__generated__/ArtworkDetailsArticles_artwork.graphql"
@@ -65,6 +65,7 @@ export const ArtworkDetailsArticles: React.FC<ArtworkDetailsArticlesProps> = ({
 export const ArtworkDetailsArticlesFragmentContainer = createFragmentContainer(
   ArtworkDetailsArticles,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment ArtworkDetailsArticles_artwork on Artwork {
         articles(size: 10) {

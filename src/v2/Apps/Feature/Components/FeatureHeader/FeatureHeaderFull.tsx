@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import styled from "styled-components"
 import {
   Box,
@@ -74,6 +74,7 @@ export const FeatureHeaderFull: React.FC<FeatureHeaderFullProps> = ({
 export const FeatureHeaderFullFragmentContainer = createFragmentContainer(
   FeatureHeaderFull,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     feature: graphql`
       fragment FeatureHeaderFull_feature on Feature {
         name

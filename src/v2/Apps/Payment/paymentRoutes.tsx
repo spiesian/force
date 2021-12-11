@@ -20,6 +20,7 @@ export const paymentRoutes: AppRouteConfig[] = [
     onClientSideRender: () => {
       PaymentApp.preload()
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query paymentRoutes_PaymentQuery {
         me {

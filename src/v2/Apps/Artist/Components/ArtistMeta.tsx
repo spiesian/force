@@ -241,6 +241,7 @@ export class ArtistMeta extends Component<Props> {
 }
 
 export const ArtistMetaFragmentContainer = createFragmentContainer(ArtistMeta, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   artist: graphql`
     fragment ArtistMeta_artist on Artist {
       slug

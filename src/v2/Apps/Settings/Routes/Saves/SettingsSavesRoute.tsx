@@ -28,6 +28,7 @@ const SettingsSavesRoute: React.FC<SettingsSavesRouteProps> = ({ me }) => {
 export const SettingsSavesRouteFragmentContainer = createFragmentContainer(
   SettingsSavesRoute,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment SettingsSavesRoute_me on Me {
         name

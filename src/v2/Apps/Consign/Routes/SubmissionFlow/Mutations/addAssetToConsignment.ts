@@ -12,6 +12,7 @@ export const addAssetToConsignment = (
   return new Promise<addAssetToConsignmentMutationResponse>(
     (resolve, reject) => {
       commitMutation<addAssetToConsignmentMutation>(relayEnvironment, {
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         mutation: graphql`
           mutation addAssetToConsignmentMutation(
             $input: AddAssetToConsignmentSubmissionInput!

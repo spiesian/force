@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { FairOrganizerPastEventRailCellFragmentContainer as FairOrganizerPastEventRailCell } from "./FairOrganizerPastEventRailCell"
 import { FairOrganizerPastEventsRail_fairOrganizer } from "v2/__generated__/FairOrganizerPastEventsRail_fairOrganizer.graphql"
@@ -32,6 +32,7 @@ export const FairOrganizerPastEventsRail: React.FC<FairOrganizerPastEventsRailPr
 export const FairOrganizerPastEventsRailFragmentContainer = createFragmentContainer(
   FairOrganizerPastEventsRail,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     fairOrganizer: graphql`
       fragment FairOrganizerPastEventsRail_fairOrganizer on FairOrganizer {
         pastFairs: fairsConnection(

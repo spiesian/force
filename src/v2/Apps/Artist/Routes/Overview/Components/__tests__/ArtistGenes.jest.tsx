@@ -11,6 +11,7 @@ jest.mock("sharify", () => ({
 describe("ArtistGenes", () => {
   const { getWrapper } = setupTestWrapper<ArtistGenes_Test_Query>({
     Component: ArtistGenesFragmentContainer,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query ArtistGenes_Test_Query {
         artist(id: "example") {

@@ -49,6 +49,7 @@ export const tagRoutes: AppRouteConfig[] = [
         shouldFetchCounts: !!props.context.user,
       }
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query tagRoutes_TagQuery(
         $slug: String!

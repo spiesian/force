@@ -467,6 +467,7 @@ export class SearchBar extends Component<Props, State> {
 export const SearchBarRefetchContainer = createRefetchContainer(
   withSystemContext(SearchBar),
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewer: graphql`
       fragment SearchBar_viewer on Viewer
         @argumentDefinitions(
@@ -543,6 +544,7 @@ export const SearchBarQueryRenderer: React.FC<BoxProps> = props => {
   return (
     <SystemQueryRenderer<SearchBarSuggestQuery>
       environment={relayEnvironment}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query SearchBarSuggestQuery($term: String!, $hasTerm: Boolean!) {
           viewer {

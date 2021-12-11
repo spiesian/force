@@ -11,6 +11,7 @@ const { getWrapper } = setupTestWrapper<HomeAuctionLotsRail_Test_Query>({
   Component: props => {
     return <HomeAuctionLotsRailFragmentContainer viewer={props.viewer!} />
   },
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query HomeAuctionLotsRail_Test_Query {
       viewer {

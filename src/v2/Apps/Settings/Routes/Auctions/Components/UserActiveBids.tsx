@@ -128,6 +128,7 @@ export const UserActiveBids: React.FC<UserActiveBidsProps> = ({ me }) => {
 export const UserActiveBidsFragmentContainer = createFragmentContainer(
   UserActiveBids,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment UserActiveBids_me on Me {
         lotStandings {

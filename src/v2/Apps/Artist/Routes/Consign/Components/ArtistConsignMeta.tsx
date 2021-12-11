@@ -45,6 +45,7 @@ export const ArtistConsignMeta: React.FC<ArtistConsignMetaProps> = props => {
 export const ArtistConsignMetaFragmentContainer = createFragmentContainer(
   ArtistConsignMeta,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment ArtistConsignMeta_artist on Artist {
         name

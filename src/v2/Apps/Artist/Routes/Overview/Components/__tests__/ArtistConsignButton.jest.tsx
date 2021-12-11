@@ -21,6 +21,7 @@ describe("ArtistConsignButton", () => {
     const TestRenderer = () => (
       <QueryRenderer<ArtistConsignButton_Test_Query>
         environment={env}
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query={graphql`
           query ArtistConsignButton_Test_Query {
             artist(id: "alex-katz") {

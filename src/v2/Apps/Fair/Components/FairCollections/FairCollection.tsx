@@ -99,6 +99,7 @@ export const FairCollection: React.FC<FairCollectionProps> = ({
 export const FairCollectionFragmentContainer = createFragmentContainer(
   FairCollection,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     collection: graphql`
       fragment FairCollection_collection on MarketingCollection {
         id

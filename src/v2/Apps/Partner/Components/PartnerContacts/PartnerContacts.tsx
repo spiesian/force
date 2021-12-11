@@ -31,6 +31,7 @@ export const PartnerContacts: React.FC<ContactRouteProps> = ({ edges }) => {
 export const PartnerContactsFragmentContainer = createFragmentContainer(
   PartnerContacts,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     edges: graphql`
       fragment PartnerContacts_edges on LocationEdge @relay(plural: true) {
         node {

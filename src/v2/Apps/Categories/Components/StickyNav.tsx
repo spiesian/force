@@ -1,5 +1,5 @@
 import { Pill, Spacer, Flex, HorizontalOverflow } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { AppContainer } from "v2/Apps/Components/AppContainer"
 import { extractNodes } from "v2/Utils/extractNodes"
@@ -28,8 +28,8 @@ const StickyNav: React.FC<StickyNavProps> = props => {
   return (
     <HorizontalOverflow my={-1} py={1}>
       {/* This AppContainer looks weird considering we wrap StickyNav in an
-      AppConainer in the parent. It's necessary to get the rail to align with 
-      the rest of the content on the page on first load, but then go all the 
+      AppConainer in the parent. It's necessary to get the rail to align with
+      the rest of the content on the page on first load, but then go all the
       way to the edge of the screen as the user swipes/scrolls */}
       <AppContainer display="flex">
         <Spacer pr={[2, 4]} />
@@ -50,6 +50,7 @@ const StickyNav: React.FC<StickyNavProps> = props => {
 }
 
 export const StickyNavFragmentContainer = createFragmentContainer(StickyNav, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   geneFamiliesConnection: graphql`
     fragment StickyNav_geneFamiliesConnection on GeneFamilyConnection {
       edges {

@@ -18,6 +18,7 @@ const { renderWithRelay } = setupTestWrapperTL<
   PartnerCellFragmentContainer_Test_Query
 >({
   Component: PartnerCellFragmentContainer,
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query PartnerCellFragmentContainer_Test_Query {
       partner(id: "example") {

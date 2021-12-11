@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { createRefetchContainer, RelayRefetchProp, graphql } from "react-relay"
 import { useRouter } from "v2/System/Router/useRouter"
 import { BaseArtworkFilter } from "v2/Components/ArtworkFilter"
@@ -42,6 +42,7 @@ const ExampleArtworkFilter: React.FC<ExampleArtworkFilteProps> = ({
 export const ExampleArtworkFilterRefetchContainer = createRefetchContainer(
   ExampleArtworkFilter,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     tag: graphql`
       fragment ExampleArtworkFilter_tag on Tag
         @argumentDefinitions(input: { type: "FilterArtworksInput" }) {

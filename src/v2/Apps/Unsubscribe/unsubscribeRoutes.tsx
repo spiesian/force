@@ -14,6 +14,7 @@ export const unsubscribeRoutes: AppRouteConfig[] = [
     onClientSideRender: () => {
       UnsubscribeApp.preload()
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query unsubscribeRoutes_UnsubscribeQuery {
         me {

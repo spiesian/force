@@ -59,6 +59,7 @@ export const ArtistMetaCanonicalLink: React.FC<ArtistMetaCanonicalLinkProps> = (
 export const ArtistMetaCanonicalLinkFragmentContainer = createFragmentContainer(
   ArtistMetaCanonicalLink,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment ArtistMetaCanonicalLink_artist on Artist
         @argumentDefinitions(

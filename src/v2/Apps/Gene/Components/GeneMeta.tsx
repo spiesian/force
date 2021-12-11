@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { GeneMeta_gene } from "v2/__generated__/GeneMeta_gene.graphql"
 import { MetaTags } from "v2/Components/MetaTags"
@@ -21,6 +21,7 @@ const GeneMeta: React.FC<GeneMetaProps> = ({ gene }) => {
 }
 
 export const GeneMetaFragmentContainer = createFragmentContainer(GeneMeta, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   gene: graphql`
     fragment GeneMeta_gene on Gene {
       name

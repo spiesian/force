@@ -64,6 +64,7 @@ const ExampleApp: React.FC<ExampleAppProps> = ({ system, children }) => {
 }
 
 export const ExampleAppFragmentContainer = createFragmentContainer(ExampleApp, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   system: graphql`
     fragment ExampleApp_system on System {
       time {

@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import styled from "styled-components"
 import {
   Box,
@@ -76,6 +76,7 @@ export const PartnerArtistsCarouselItem: React.FC<PartnerArtistsCarouselItemProp
 export const PartnerArtistsCarouselItemFragmentContainer = createFragmentContainer(
   PartnerArtistsCarouselItem,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment PartnerArtistsCarouselItem_artist on ArtistPartnerEdge {
         artworksConnection(first: 1) {

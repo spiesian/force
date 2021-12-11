@@ -103,6 +103,7 @@ Pagination.defaultProps = {
 }
 
 export const PaginationFragmentContainer = createFragmentContainer(Pagination, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   pageCursors: graphql`
     fragment Pagination_pageCursors on PageCursors {
       around {

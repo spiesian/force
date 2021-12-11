@@ -35,6 +35,7 @@ export const NavBarMobileMenuInboxNotificationCount: React.FC<NavBarMobileMenuIn
 const NavBarMobileMenuInboxNotificationCountFragmentContainer = createFragmentContainer(
   NavBarMobileMenuInboxNotificationCount,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment NavBarMobileMenuInboxNotificationCount_me on Me {
         unreadConversationCount
@@ -51,6 +52,7 @@ export const NavBarMobileMenuInboxNotificationCountQueryRenderer: React.FC<{}> =
   ) : (
     <SystemQueryRenderer<NavBarMobileMenuInboxNotificationCountQuery>
       environment={relayEnvironment}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query NavBarMobileMenuInboxNotificationCountQuery {
           me {

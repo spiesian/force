@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { Breadcrumbs, Text, Image, Flex, ArrowLeftIcon } from "@artsy/palette"
 import { RouterLink } from "v2/System/Router/RouterLink"
@@ -40,6 +40,7 @@ export const DedicatedArticlesBreadcrumbs: React.FC<DedicatedArticlesBreadcrumbs
 export const DedicatedArticlesBreadcrumbsFragmentContainer = createFragmentContainer(
   DedicatedArticlesBreadcrumbs,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     fairOrganizer: graphql`
       fragment DedicatedArticlesBreadcrumbs_fairOrganizer on FairOrganizer {
         slug

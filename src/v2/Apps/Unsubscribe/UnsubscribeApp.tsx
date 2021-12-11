@@ -1,5 +1,5 @@
 import { Column, GridColumns, Spacer, Text, Message } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { Title } from "react-head"
 import { createFragmentContainer, graphql } from "react-relay"
 import { useRouter } from "v2/System/Router/useRouter"
@@ -57,6 +57,7 @@ export const UnsubscribeApp: React.FC<UnsubscribeAppProps> = ({ me }) => {
 export const UnsubscribeAppFragmentContainer = createFragmentContainer(
   UnsubscribeApp,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment UnsubscribeApp_me on Me {
         ...UnsubscribeLoggedIn_me

@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { Text, Message } from "@artsy/palette"
 import { RouterLink } from "v2/System/Router/RouterLink"
 import { createFragmentContainer, graphql } from "react-relay"
@@ -28,6 +28,7 @@ export const SubscriberBanner: React.FC<SubscriberBannerProps> = ({
 export const SubscriberBannerFragmentContainer = createFragmentContainer(
   SubscriberBanner,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     partner: graphql`
       fragment SubscriberBanner_partner on Partner {
         hasFairPartnership

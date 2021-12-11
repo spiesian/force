@@ -54,6 +54,7 @@ jest.mock(
 describe("ArtistOverviewRoute", () => {
   const { getWrapper } = setupTestWrapper<ArtistOverviewRoute_Test_Query>({
     Component: ArtistOverviewRouteFragmentContainer,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query ArtistOverviewRoute_Test_Query {
         artist(id: "test") {

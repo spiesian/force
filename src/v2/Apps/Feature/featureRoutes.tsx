@@ -16,6 +16,7 @@ export const featureRoutes: AppRouteConfig[] = [
     onClientSideRender: () => {
       FeatureApp.preload()
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query featureRoutes_FeatureQuery($slug: ID!) {
         feature(id: $slug) @principalField {

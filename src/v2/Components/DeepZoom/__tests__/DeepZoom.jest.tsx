@@ -12,6 +12,7 @@ const { getWrapper } = setupTestWrapper<DeepZoom_Test_Query>({
     const image = artwork!.images![0]!
     return <DeepZoomFragmentContainer image={image} onClose={handleClose} />
   },
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query DeepZoom_Test_Query {
       artwork(id: "example") {

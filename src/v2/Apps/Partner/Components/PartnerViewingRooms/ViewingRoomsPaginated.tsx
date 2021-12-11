@@ -1,5 +1,5 @@
-import { useState } from "react";
-import * as React from "react";
+import { useState } from "react"
+import * as React from "react"
 import { createRefetchContainer, graphql, RelayRefetchProp } from "react-relay"
 import { Box } from "@artsy/palette"
 import { compact } from "lodash"
@@ -114,6 +114,7 @@ const ViewingRoomsPaginated: React.FC<ViewingRoomsProps> = ({
 export const ViewingRoomsRefetchContainer = createRefetchContainer(
   ViewingRoomsPaginated,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     partner: graphql`
       fragment ViewingRoomsPaginated_partner on Partner
         @argumentDefinitions(
@@ -168,6 +169,7 @@ export const ViewingRoomsPaginatedRenderer: React.FC<
     <SystemQueryRenderer<ViewingRoomsPaginatedRendererQuery>
       lazyLoad
       environment={relayEnvironment}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query ViewingRoomsPaginatedRendererQuery(
           $partnerId: String!

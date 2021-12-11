@@ -58,6 +58,7 @@ describe("ViewingRoomApp", () => {
           )
         },
         mockData: response,
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query ViewingRoomApp_DraftTest_Query($slug: ID!) @raw_response_type {
             viewingRoom(id: $slug) {
@@ -101,6 +102,7 @@ describe("ViewingRoomApp", () => {
           )
         },
         mockData: response,
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query ViewingRoomApp_ScheduledTest_Query($slug: ID!)
             @raw_response_type {
@@ -168,6 +170,7 @@ describe("ViewingRoomApp", () => {
           )
         },
         mockData: response,
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query ViewingRoomApp_OpenTest_Query($slug: ID!) @raw_response_type {
             viewingRoom(id: $slug) {
@@ -245,6 +248,7 @@ describe("ViewingRoomApp", () => {
           )
         },
         mockData: response,
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query ViewingRoomApp_ClosedTest_Query($slug: ID!) @raw_response_type {
             viewingRoom(id: $slug) {
@@ -308,6 +312,7 @@ describe("ViewingRoomApp", () => {
           )
         },
         mockData: response,
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query ViewingRoomApp_LoggedOutTest_Query($slug: ID!)
             @raw_response_type {

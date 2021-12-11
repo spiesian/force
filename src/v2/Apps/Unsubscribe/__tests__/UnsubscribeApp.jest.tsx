@@ -21,6 +21,7 @@ const { getWrapper } = setupTestWrapper<UnsubscribeApp_Test_Query>({
       <UnsubscribeAppFragmentContainer {...props} />
     </MockBoot>
   ),
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query UnsubscribeApp_Test_Query {
       me {

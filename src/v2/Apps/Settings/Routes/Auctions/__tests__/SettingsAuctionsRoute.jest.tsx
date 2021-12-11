@@ -10,6 +10,7 @@ describe("SettingsAuctionsRoute", () => {
     SettingsAuctionsRouteQuery_Test_Query
   >({
     Component: SettingsAuctionsRouteFragmentContainer,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query SettingsAuctionsRouteQuery_Test_Query {
         me {

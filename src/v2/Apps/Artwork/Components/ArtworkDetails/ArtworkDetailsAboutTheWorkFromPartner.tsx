@@ -152,6 +152,7 @@ export class ArtworkDetailsAboutTheWorkFromPartner extends Component<
 export const ArtworkDetailsAboutTheWorkFromPartnerFragmentContainer = createFragmentContainer(
   ArtworkDetailsAboutTheWorkFromPartner,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment ArtworkDetailsAboutTheWorkFromPartner_artwork on Artwork {
         additional_information: additionalInformation(format: HTML)

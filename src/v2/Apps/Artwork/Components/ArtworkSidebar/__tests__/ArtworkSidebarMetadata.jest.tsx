@@ -22,6 +22,7 @@ describe("ArtworkSidebarMetadata", () => {
   ) => {
     return await renderRelayTree({
       Component: ArtworkSidebarMetadataFragmentContainer,
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query: graphql`
         query ArtworkSidebarMetadata_Test_Query @raw_response_type {
           artwork(id: "josef-albers-homage-to-the-square-85") {

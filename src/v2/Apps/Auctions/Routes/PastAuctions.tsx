@@ -77,6 +77,7 @@ const PastAuctions: React.FC<PastAuctionsProps> = ({ viewer, relay }) => {
 export const PastAuctionsPaginationContainer = createPaginationContainer(
   PastAuctions,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewer: graphql`
       fragment PastAuctions_viewer on Viewer
         @argumentDefinitions(
@@ -119,6 +120,7 @@ export const PastAuctionsPaginationContainer = createPaginationContainer(
         after: cursor,
       }
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query PastAuctionsQuery($first: Int!, $after: String) {
         viewer {

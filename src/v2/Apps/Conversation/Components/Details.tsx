@@ -232,6 +232,7 @@ export const Details: FC<DetailsProps> = ({
 }
 
 export const DetailsFragmentContainer = createFragmentContainer(Details, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   conversation: graphql`
     fragment Details_conversation on Conversation
       @argumentDefinitions(

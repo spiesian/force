@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { Box, BoxProps, ProgressDots } from "@artsy/palette"
 import { createFragmentContainer, graphql } from "react-relay"
 import { ShowBannersRail_partner } from "v2/__generated__/ShowBannersRail_partner.graphql"
@@ -81,6 +81,7 @@ const ShowBannersRail: React.FC<ShowBannersRailProps> = ({
 const ShowBannersRailFragmentContainer = createFragmentContainer(
   ShowBannersRail,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     partner: graphql`
       fragment ShowBannersRail_partner on Partner {
         slug
@@ -156,6 +157,7 @@ export const ShowBannersRailRenderer: React.FC<
     <SystemQueryRenderer<ShowBannersRailRendererQuery>
       lazyLoad
       environment={relayEnvironment}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query ShowBannersRailRendererQuery($partnerId: String!) {
           partner(id: $partnerId) @principalField {

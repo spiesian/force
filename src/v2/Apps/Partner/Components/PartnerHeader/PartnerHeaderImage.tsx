@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { PartnerHeaderImage_profile } from "v2/__generated__/PartnerHeaderImage_profile.graphql"
 import { FullBleedHeader } from "v2/Components/FullBleedHeader"
@@ -17,6 +17,7 @@ export const PartnerHeaderImage: React.FC<PartnerHeaderImageProps> = ({
 export const PartnerHeaderImageFragmentContainer = createFragmentContainer(
   PartnerHeaderImage,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     profile: graphql`
       fragment PartnerHeaderImage_profile on Profile {
         image {

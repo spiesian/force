@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { Column, GridColumns, Text } from "@artsy/palette"
 import { Media } from "v2/Utils/Responsive"
 import { createFragmentContainer, graphql } from "react-relay"
@@ -65,6 +65,7 @@ export const AboutPartner: React.FC<AboutPartnerProps> = ({
 export const AboutPartnerFragmentContainer = createFragmentContainer(
   AboutPartner,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     partner: graphql`
       fragment AboutPartner_partner on Partner {
         profile {

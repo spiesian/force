@@ -30,6 +30,7 @@ const { renderWithRelay } = setupTestWrapperTL<ConversationAppTestQuery>({
       </MockBoot>
     )
   },
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query ConversationAppTestQuery @raw_response_type {
       me {

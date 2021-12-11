@@ -82,6 +82,7 @@ const ArticlesRail: React.FC<ArticlesRailProps> = ({
 export const ArticlesRailFragmentContainer = createFragmentContainer(
   ArticlesRail,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     articles: graphql`
       fragment ArticlesRail_articles on ArticleEdge @relay(plural: true) {
         node {

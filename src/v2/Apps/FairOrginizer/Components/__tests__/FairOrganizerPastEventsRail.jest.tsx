@@ -11,6 +11,7 @@ describe("FairOrganizerPastEventsRail", () => {
     FairOrganizerPastEventsRail_Test_Query
   >({
     Component: FairOrganizerPastEventsRail,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query FairOrganizerPastEventsRail_Test_Query {
         fairOrganizer(id: "the-armory-show") {

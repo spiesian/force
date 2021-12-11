@@ -33,6 +33,7 @@ describe("FairCollection", () => {
           </AnalyticsContext.Provider>
         )
       },
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query: graphql`
         query FairCollection_Query($slug: String!) @raw_response_type {
           marketingCollection(slug: $slug) {

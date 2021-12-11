@@ -115,6 +115,7 @@ export const SettingsEditProfileArtistsYouCollect: FC<SettingsEditProfileArtists
 export const SettingsEditProfileArtistsYouCollectFragmentContainer = createFragmentContainer(
   SettingsEditProfileArtistsYouCollect,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment SettingsEditProfileArtistsYouCollect_me on Me {
         collectorProfile {
@@ -156,6 +157,7 @@ const SettingsEditProfileArtistsYouCollectAutocompleteInput: FC<SettingsEditProf
     <SystemQueryRenderer<SettingsEditProfileArtistsYouCollectAutocompleteQuery>
       environment={relayEnvironment}
       variables={{ term }}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query SettingsEditProfileArtistsYouCollectAutocompleteQuery(
           $term: String!

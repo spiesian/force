@@ -99,6 +99,7 @@ export class SeoProducts extends Component<SeoProductsProps> {
 }
 
 export const SeoProductsForCollections = createFragmentContainer(SeoProducts, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   descending_artworks: graphql`
     fragment SeoProductsForCollections_descending_artworks on FilterArtworksConnection {
       edges {
@@ -126,6 +127,7 @@ export const SeoProductsForCollections = createFragmentContainer(SeoProducts, {
       }
     }
   `,
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   ascending_artworks: graphql`
     fragment SeoProductsForCollections_ascending_artworks on FilterArtworksConnection {
       edges {

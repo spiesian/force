@@ -60,6 +60,7 @@ export const ConversationCTA: React.FC<ConversationCTAProps> = ({
 export const ConversationCTAFragmentContainer = createFragmentContainer(
   ConversationCTA,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     conversation: graphql`
       fragment ConversationCTA_conversation on Conversation {
         internalID

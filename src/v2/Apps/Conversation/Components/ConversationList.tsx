@@ -1,5 +1,5 @@
-import { useState } from "react";
-import * as React from "react";
+import { useState } from "react"
+import * as React from "react"
 import {
   RelayPaginationProp,
   createPaginationContainer,
@@ -102,6 +102,7 @@ const ConversationList: React.FC<ConversationsProps> = props => {
 export const ConversationListPaginationContainer = createPaginationContainer(
   ConversationList as React.ComponentType<ConversationsProps>,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment ConversationList_me on Me
         @argumentDefinitions(
@@ -151,6 +152,7 @@ export const ConversationListPaginationContainer = createPaginationContainer(
         after: cursor,
       }
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query ConversationListQuery(
         $first: Int!

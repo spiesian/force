@@ -46,6 +46,7 @@ const OfferSummaryItem = ({
 export const OfferSummaryItemFragmentContainer = createFragmentContainer(
   OfferSummaryItem,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     order: graphql`
       fragment OfferSummaryItem_order on CommerceOrder {
         currencyCode

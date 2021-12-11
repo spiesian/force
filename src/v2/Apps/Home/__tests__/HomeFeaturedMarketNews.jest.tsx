@@ -9,6 +9,7 @@ jest.mock("v2/System/Analytics/useTracking")
 
 const { getWrapper } = setupTestWrapper<HomeFeaturedMarketNews_Test_Query>({
   Component: HomeFeaturedMarketNewsFragmentContainer,
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query HomeFeaturedMarketNews_Test_Query {
       articles {

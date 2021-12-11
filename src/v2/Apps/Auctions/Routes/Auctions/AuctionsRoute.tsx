@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { AuctionsRoute_viewer } from "v2/__generated__/AuctionsRoute_viewer.graphql"
 
@@ -13,6 +13,7 @@ const AuctionsRoute: React.FC<AuctionsRouteProps> = () => {
 export const AuctionsRouteFragmentContainer = createFragmentContainer(
   AuctionsRoute,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewer: graphql`
       fragment AuctionsRoute_viewer on Viewer {
         salesConnection(

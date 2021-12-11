@@ -1,6 +1,6 @@
 import { Box, Serif, Spacer, Theme, Toggle, media, space } from "@artsy/palette"
 import { AuctionFAQ_viewer } from "v2/__generated__/AuctionFAQ_viewer.graphql"
-import * as React from "react";
+import * as React from "react"
 import Markdown from "react-markdown"
 import { createFragmentContainer, graphql } from "react-relay"
 import styled from "styled-components"
@@ -117,6 +117,7 @@ const StyledMarkdown = styled(Markdown)`
 `
 
 export const AuctionFAQFragmentContainer = createFragmentContainer(AuctionFAQ, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   viewer: graphql`
     fragment AuctionFAQ_viewer on Viewer {
       bidding: staticContent(id: "how-auctions-work-bidding") {

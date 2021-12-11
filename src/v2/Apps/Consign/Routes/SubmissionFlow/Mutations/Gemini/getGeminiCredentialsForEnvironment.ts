@@ -19,6 +19,7 @@ export const getGeminiCredentialsForEnvironment = (
     commitMutation<getGeminiCredentialsForEnvironmentMutation>(
       relayEnvironment,
       {
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         mutation: graphql`
           mutation getGeminiCredentialsForEnvironmentMutation(
             $input: RequestCredentialsForAssetUploadInput!

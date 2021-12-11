@@ -1,5 +1,5 @@
-import { useContext } from "react";
-import * as React from "react";
+import { useContext } from "react"
+import * as React from "react"
 import {
   Banner,
   ClosedEyeIcon,
@@ -73,6 +73,7 @@ const ViewingRoomApp: React.FC<ViewingRoomAppProps> = ({
 export const ViewingRoomAppFragmentContainer = createFragmentContainer(
   ViewingRoomApp,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewingRoom: graphql`
       fragment ViewingRoomApp_viewingRoom on ViewingRoom {
         ...ViewingRoomMeta_viewingRoom

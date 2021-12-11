@@ -14,6 +14,7 @@ describe("TrendingLotsRail", () => {
     Component: (props: any) => {
       return <TrendingLotsRailFragmentContainer viewer={props.viewer} />
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query TrendingLotsRail_Test_Query {
         viewer {

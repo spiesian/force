@@ -57,6 +57,7 @@ export const RecentlyViewed: React.FC<RecentlyViewedProps> = ({ me }) => {
 export const RecentlyViewedFragmentContainer = createFragmentContainer(
   RecentlyViewed,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment RecentlyViewed_me on Me {
         recentlyViewedArtworksConnection(first: 20) {
@@ -81,6 +82,7 @@ export const RecentlyViewedQueryRenderer = () => {
     <SystemQueryRenderer<RecentlyViewedQuery>
       lazyLoad
       environment={relayEnvironment}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query RecentlyViewedQuery {
           me {

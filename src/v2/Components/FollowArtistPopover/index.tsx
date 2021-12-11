@@ -3,8 +3,8 @@ import { FollowArtistPopover_artist } from "v2/__generated__/FollowArtistPopover
 import { FollowArtistPopoverQuery } from "v2/__generated__/FollowArtistPopoverQuery.graphql"
 import { SystemContext, SystemContextProps } from "v2/System"
 import { SystemQueryRenderer } from "v2/System/Relay/SystemQueryRenderer"
-import { useContext } from "react";
-import * as React from "react";
+import { useContext } from "react"
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { Provider } from "unstated"
 import {
@@ -55,6 +55,7 @@ const FollowArtistPopover: React.FC<FollowArtistPopoverProps> = ({
 export const FollowArtistPopoverFragmentContainer = createFragmentContainer(
   FollowArtistPopover,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment FollowArtistPopover_artist on Artist {
         related {
@@ -85,6 +86,7 @@ export const FollowArtistPopoverQueryRenderer = ({
       environment={relayEnvironment}
       variables={{ artistID }}
       placeholder={<FollowArtistPopoverPlaceholder />}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query FollowArtistPopoverQuery($artistID: String!) {
           artist(id: $artistID) {

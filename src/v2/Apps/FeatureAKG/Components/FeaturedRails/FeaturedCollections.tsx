@@ -55,6 +55,7 @@ const FeaturedCollectionsRail: React.FC<FeaturedCollectionsRailProps> = props =>
 export const FeaturedCollectionsRailFragmentContainer = createFragmentContainer(
   FeaturedCollectionsRail,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     collections: graphql`
       fragment FeaturedCollections_collections on MarketingCollection
         @relay(plural: true) {

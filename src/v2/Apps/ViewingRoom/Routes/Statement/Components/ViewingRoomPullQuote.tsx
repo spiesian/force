@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { Text } from "@artsy/palette"
 import { createFragmentContainer, graphql } from "react-relay"
 import { ViewingRoomPullQuote_viewingRoom } from "v2/__generated__/ViewingRoomPullQuote_viewingRoom.graphql"
@@ -24,6 +24,7 @@ const ViewingRoomPullQuote: React.FC<ViewingRoomPullQuoteProps> = ({
 export const ViewingRoomPullQuoteFragmentContainer = createFragmentContainer(
   ViewingRoomPullQuote,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewingRoom: graphql`
       fragment ViewingRoomPullQuote_viewingRoom on ViewingRoom {
         pullQuote

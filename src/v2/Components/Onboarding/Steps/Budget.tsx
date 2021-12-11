@@ -32,6 +32,7 @@ const updateUserProfile: UserUpdater = (priceRangeMax, relayEnvironment) => {
   }
 
   commitMutation<BudgetUpdateMyUserProfileMutation>(relayEnvironment, {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     mutation: graphql`
       mutation BudgetUpdateMyUserProfileMutation(
         $input: UpdateMyProfileInput!

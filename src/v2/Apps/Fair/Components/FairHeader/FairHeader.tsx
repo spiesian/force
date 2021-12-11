@@ -81,6 +81,7 @@ const FairHeader: React.FC<FairHeaderProps> = ({ fair, stuck = false }) => {
 }
 
 export const FairHeaderFragmentContainer = createFragmentContainer(FairHeader, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   fair: graphql`
     fragment FairHeader_fair on Fair {
       name

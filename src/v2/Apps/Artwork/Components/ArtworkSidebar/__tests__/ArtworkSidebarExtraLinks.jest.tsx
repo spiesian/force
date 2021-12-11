@@ -22,6 +22,7 @@ describe("ArtworkSidebarExtraLinks", () => {
   ) => {
     return await renderRelayTree({
       Component: ArtworkSidebarExtraLinksFragmentContainer,
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query: graphql`
         query ArtworkSidebarExtraLinks_Test_Query @raw_response_type {
           artwork(id: "josef-albers-homage-to-the-square-85") {

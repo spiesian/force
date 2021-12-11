@@ -86,6 +86,7 @@ const AuctionDetails: React.FC<AuctionDetailsProps> = ({ sale, me }) => {
 export const AuctionDetailsFragmentContainer = createFragmentContainer(
   AuctionDetails,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     sale: graphql`
       fragment AuctionDetails_sale on Sale {
         ...RegisterButton_sale
@@ -101,6 +102,7 @@ export const AuctionDetailsFragmentContainer = createFragmentContainer(
         href
       }
     `,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment AuctionDetails_me on Me {
         ...RegisterButton_me

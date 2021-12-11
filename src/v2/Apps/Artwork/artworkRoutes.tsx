@@ -22,6 +22,7 @@ export const artworkRoutes: AppRouteConfig[] = [
         artworkID,
       }
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query artworkRoutes_ArtworkQuery($artworkID: String!) {
         artwork(id: $artworkID) @principalField {

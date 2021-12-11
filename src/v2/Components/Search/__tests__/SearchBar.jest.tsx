@@ -67,6 +67,7 @@ const getWrapper = (
 ) => {
   return renderRelayTree({
     Component: SearchBar,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query SearchBarTestQuery($term: String!, $hasTerm: Boolean!)
         @raw_response_type {

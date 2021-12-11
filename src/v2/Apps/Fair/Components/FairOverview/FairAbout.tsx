@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import {
   Column,
   GridColumns,
@@ -43,6 +43,7 @@ const FairAbout: React.FC<FairAboutProps> = ({ fair }) => {
 }
 
 export const FairAboutFragmentContainer = createFragmentContainer(FairAbout, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   fair: graphql`
     fragment FairAbout_fair on Fair {
       ...FairTimer_fair

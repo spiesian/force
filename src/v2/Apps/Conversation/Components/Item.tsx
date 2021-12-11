@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { Flex, Image, Link, Text } from "@artsy/palette"
 import { Item_item } from "v2/__generated__/Item_item.graphql"
@@ -90,6 +90,7 @@ export const Item: React.FC<ItemProps> = props => {
 }
 
 export const ItemFragmentContainer = createFragmentContainer(Item, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   item: graphql`
     fragment Item_item on ConversationItemType {
       __typename

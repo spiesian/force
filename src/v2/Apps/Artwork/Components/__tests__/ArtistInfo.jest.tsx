@@ -8,6 +8,7 @@ import { EntityHeader } from "@artsy/palette"
 
 jest.unmock("react-tracking")
 
+// PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
 graphql`
   query ArtistInfo_Test_Query @raw_response_type {
     artist(id: "banksy") {

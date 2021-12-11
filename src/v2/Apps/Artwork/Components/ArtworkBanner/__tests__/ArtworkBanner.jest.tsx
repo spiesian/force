@@ -8,6 +8,7 @@ jest.unmock("react-relay")
 describe("ArtworkBanner", () => {
   const { getWrapper } = setupTestWrapper<ArtworkBanner_Test_Query>({
     Component: ArtworkBannerFragmentContainer,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query ArtworkBanner_Test_Query {
         artwork(id: "richard-anuszkiewicz-lino-yellow-318") {

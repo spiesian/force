@@ -56,6 +56,7 @@ const IdentityVerificationApp: React.FC<Props> = ({ me, relay }) => {
   function startIdentityVerification() {
     const mutation = new Promise<string>((resolve, reject) => {
       commitMutation<IdentityVerificationAppStartMutation>(relay.environment, {
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         mutation: graphql`
           mutation IdentityVerificationAppStartMutation(
             $input: startIdentityVerificationMutationInput!

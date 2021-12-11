@@ -3,7 +3,7 @@ import { settingOrderPaymentFailed } from "v2/Apps/Order/Routes/__fixtures__/Mut
 import { SystemContextProvider } from "v2/System"
 import { createMockNetworkLayer2 } from "v2/DevTools"
 import { mount } from "enzyme"
-import * as React from "react";
+import * as React from "react"
 import { graphql } from "react-relay"
 import { Environment, RecordSource, Store } from "relay-runtime"
 import { flushPromiseQueue } from "v2/DevTools"
@@ -68,6 +68,7 @@ describe(injectCommitMutation, () => {
                     },
                   },
                   // TODO: Inputs to the mutation might have changed case of the keys!
+                  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
                   mutation: graphql`
                     mutation commitMutationTest1Mutation(
                       $input: CommerceSetPaymentInput!

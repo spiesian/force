@@ -25,6 +25,7 @@ describe("ConsignRoute", () => {
           </SystemContextProvider>
         )
       },
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query: graphql`
         query ArtistConsignRoute_Test_Query($artistID: String!)
           @raw_response_type {

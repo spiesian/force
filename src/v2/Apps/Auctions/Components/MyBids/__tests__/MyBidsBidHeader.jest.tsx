@@ -14,6 +14,7 @@ describe("MyBidsBidHeaderFragmentContainer", () => {
     Component: (props: any) => {
       return <MyBidsBidHeaderFragmentContainer sale={props.sale} />
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query MyBidsBidHeader_Test_Query {
         sale(id: "foo") {

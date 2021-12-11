@@ -69,6 +69,7 @@ export const SeoDataForArtwork: React.FC<SeoDataForArtworkProps> = ({
 export const SeoDataForArtworkFragmentContainer = createFragmentContainer(
   SeoDataForArtwork,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment SeoDataForArtwork_artwork on Artwork {
         href

@@ -16,6 +16,7 @@ const SettingsPurchasesRoute: React.FC<SettingsPurchasesRouteProps> = ({
 export const SettingsPurchasesRouteFragmentContainer = createFragmentContainer(
   SettingsPurchasesRoute,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment SettingsPurchasesRoute_me on Me {
         ...SettingsPurchases_me

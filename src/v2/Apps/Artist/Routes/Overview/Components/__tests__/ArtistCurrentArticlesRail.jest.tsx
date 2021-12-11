@@ -11,6 +11,7 @@ describe("ArtistCurrentArticlesRail", () => {
   const { getWrapper } = setupTestWrapper<ArtistCurrentArticlesRail_Test_Query>(
     {
       Component: ArtistCurrentArticlesRailFragmentContainer,
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query: graphql`
         query ArtistCurrentArticlesRail_Test_Query {
           artist(id: "test") {

@@ -77,6 +77,7 @@ const ArtistArtworkFilter: React.FC<ArtistArtworkFilterProps> = props => {
 export const ArtistArtworkFilterRefetchContainer = createRefetchContainer(
   ArtistArtworkFilter,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment ArtistArtworkFilter_artist on Artist
         @argumentDefinitions(input: { type: "FilterArtworksInput" }) {

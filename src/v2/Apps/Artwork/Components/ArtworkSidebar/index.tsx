@@ -1,6 +1,6 @@
 import { Box, Spacer, Join } from "@artsy/palette"
 import { AuctionTimerFragmentContainer } from "v2/Components/AuctionTimer"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { ArtworkSidebarArtistsFragmentContainer } from "./ArtworkSidebarArtists"
 import { ArtworkSidebarAuctionPartnerInfoFragmentContainer } from "./ArtworkSidebarAuctionPartnerInfo"
@@ -77,6 +77,7 @@ export const ArtworkSidebar: React.FC<ArtworkSidebarProps> = ({
 export const ArtworkSidebarFragmentContainer = createFragmentContainer(
   ArtworkSidebar,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment ArtworkSidebar_artwork on Artwork {
         is_in_auction: isInAuction
@@ -98,6 +99,7 @@ export const ArtworkSidebarFragmentContainer = createFragmentContainer(
         }
       }
     `,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment ArtworkSidebar_me on Me {
         ...ArtworkSidebarBidAction_me

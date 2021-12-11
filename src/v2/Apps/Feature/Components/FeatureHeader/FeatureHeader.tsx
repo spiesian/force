@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { FeatureHeader_feature } from "v2/__generated__/FeatureHeader_feature.graphql"
 import { FeatureHeaderFullFragmentContainer as FeatureHeaderFull } from "./FeatureHeaderFull"
@@ -19,6 +19,7 @@ export const FeatureHeader: React.FC<FeatureHeaderProps> = ({ feature }) => {
 export const FeatureHeaderFragmentContainer = createFragmentContainer(
   FeatureHeader,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     feature: graphql`
       fragment FeatureHeader_feature on Feature {
         ...FeatureHeaderDefault_feature

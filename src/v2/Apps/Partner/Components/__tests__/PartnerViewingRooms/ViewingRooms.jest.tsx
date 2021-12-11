@@ -8,6 +8,7 @@ const { getWrapper } = setupTestWrapper({
   Component: ({ partner }: any) => {
     return <ViewingRoomFragmentContainer partner={partner} />
   },
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query ViewingRooms_Test_Query {
       partner(id: "white-cube") @principalField {

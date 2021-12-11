@@ -13,6 +13,7 @@ export const createSavedSearchAlert = (
 ): Promise<createSavedSearchAlertMutationResponse> => {
   return new Promise((resolve, reject) => {
     commitMutation<createSavedSearchAlertMutation>(environment, {
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       mutation: graphql`
         mutation createSavedSearchAlertMutation(
           $input: CreateSavedSearchInput!

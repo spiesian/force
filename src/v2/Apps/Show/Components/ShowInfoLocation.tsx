@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { Box, BoxProps, Text } from "@artsy/palette"
 import { createFragmentContainer, graphql } from "react-relay"
 import { ShowInfoLocation_show } from "v2/__generated__/ShowInfoLocation_show.graphql"
@@ -37,6 +37,7 @@ export const ShowInfoLocation: React.FC<ShowInfoLocationProps> = ({
 export const ShowInfoLocationFragmentContainer = createFragmentContainer(
   ShowInfoLocation,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     show: graphql`
       fragment ShowInfoLocation_show on Show {
         fair {

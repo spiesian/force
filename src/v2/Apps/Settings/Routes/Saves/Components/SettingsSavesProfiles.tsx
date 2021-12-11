@@ -123,6 +123,7 @@ export const SETTINGS_SAVES_PROFILES_QUERY = graphql`
 export const SettingsSavesProfilesPaginationContainer = createPaginationContainer(
   SettingsSavesProfiles,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment SettingsSavesProfiles_me on Me
         @argumentDefinitions(after: { type: "String" }) {

@@ -1,6 +1,6 @@
 import { Box, Spacer } from "@artsy/palette"
 import { GeneFamilyFragmentContainer } from "./GeneFamily"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { GeneFamilies_geneFamiliesConnection } from "v2/__generated__/GeneFamilies_geneFamiliesConnection.graphql"
 import { extractNodes } from "v2/Utils/extractNodes"
@@ -30,6 +30,7 @@ const GeneFamilies: React.FC<GeneFamiliesProps> = props => {
 export const GeneFamiliesFragmentContainer = createFragmentContainer(
   GeneFamilies,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     geneFamiliesConnection: graphql`
       fragment GeneFamilies_geneFamiliesConnection on GeneFamilyConnection {
         edges {

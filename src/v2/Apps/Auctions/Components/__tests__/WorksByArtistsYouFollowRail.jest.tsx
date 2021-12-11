@@ -16,6 +16,7 @@ describe("WorksByArtistsYouFollowRail", () => {
         <WorksByArtistsYouFollowRailFragmentContainer viewer={props.viewer} />
       )
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query WorksByArtistsYouFollowRail_Test_Query {
         viewer {

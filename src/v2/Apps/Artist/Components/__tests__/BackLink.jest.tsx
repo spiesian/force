@@ -10,6 +10,7 @@ jest.mock("react-tracking")
 describe("BackLink", () => {
   const { getWrapper } = setupTestWrapper<BackLink_Test_Query>({
     Component: BackLinkFragmentContainer,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query BackLink_Test_Query {
         artist(id: "example") {

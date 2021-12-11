@@ -24,6 +24,7 @@ describe("an offer on the work with price hidden", () => {
     defaultMutationResults: {
       ...initialOfferSuccess,
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query Offer2TestQuery @raw_response_type {
         order: commerceOrder(id: "1234567") {

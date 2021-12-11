@@ -1,5 +1,5 @@
 import { Join, Spacer } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { Title } from "react-head"
 import { createFragmentContainer, graphql } from "react-relay"
 import { ArtistIconicCollectionsRailQueryRenderer } from "v2/Apps/Artist/Routes/Overview/Components/ArtistIconicCollectionsRail"
@@ -42,6 +42,7 @@ const ArtistOverviewRoute: React.FC<ArtistOverviewRouteProps> = ({
 export const ArtistOverviewRouteFragmentContainer = createFragmentContainer(
   ArtistOverviewRoute,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment ArtistOverviewRoute_artist on Artist {
         slug

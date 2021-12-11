@@ -32,6 +32,7 @@ const FollowGeneButton: React.FC<FollowGeneButtonProps> = ({
 
     // @ts-expect-error PLEASE_FIX_ME_STRICT_NULL_CHECK_MIGRATION
     commitMutation<FollowGeneButtonMutation>(relayEnvironment, {
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       mutation: graphql`
         mutation FollowGeneButtonMutation($input: FollowGeneInput!) {
           followGene(input: $input) {
@@ -72,6 +73,7 @@ const FollowGeneButton: React.FC<FollowGeneButtonProps> = ({
 export const FollowGeneButtonFragmentContainer = createFragmentContainer(
   FollowGeneButton,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     gene: graphql`
       fragment FollowGeneButton_gene on Gene {
         id

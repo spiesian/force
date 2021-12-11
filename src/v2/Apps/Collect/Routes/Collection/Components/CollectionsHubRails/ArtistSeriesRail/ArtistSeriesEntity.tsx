@@ -122,6 +122,7 @@ export const ArtistSeriesEntity: React.FC<ArtistSeriesEntityProps> = ({
 export const ArtistSeriesRailContainer = createFragmentContainer(
   ArtistSeriesEntity as React.FC<ArtistSeriesEntityProps>,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     member: graphql`
       fragment ArtistSeriesEntity_member on MarketingCollection {
         id

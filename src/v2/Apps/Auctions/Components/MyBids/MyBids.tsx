@@ -114,6 +114,7 @@ const MyBids: React.FC<MyBidsProps> = props => {
 }
 
 export const MyBidsFragmentContainer = createFragmentContainer(MyBids, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   me: graphql`
     fragment MyBids_me on Me {
       myBids {
@@ -213,6 +214,7 @@ export const MyBidsQueryRenderer: React.FC = () => {
     <SystemQueryRenderer<MyBidsQuery>
       lazyLoad
       environment={relayEnvironment}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query MyBidsQuery {
           me {

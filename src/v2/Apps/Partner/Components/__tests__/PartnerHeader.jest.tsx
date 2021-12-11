@@ -16,6 +16,7 @@ const { getWrapper } = setupTestWrapper<PartnerHeader_Test_Query>({
   Component: ({ partner }: any) => {
     return <PartnerHeader partner={partner} />
   },
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query PartnerHeader_Test_Query @raw_response_type {
       partner(id: "white-cube") {

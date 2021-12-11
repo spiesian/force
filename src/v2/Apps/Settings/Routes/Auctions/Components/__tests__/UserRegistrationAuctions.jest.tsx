@@ -8,6 +8,7 @@ jest.unmock("react-relay")
 describe("UserRegistrationAuctions", () => {
   const { getWrapper } = setupTestWrapper<UserRegistrationAuctions_Test_Query>({
     Component: UserRegistrationAuctionsFragmentContainer,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query UserRegistrationAuctions_Test_Query {
         me {

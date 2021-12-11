@@ -85,6 +85,7 @@ export const ArtistSeriesItem: React.FC<ArtistSeriesItemProps> = ({
 export const ArtistSeriesItemFragmentContainer = createFragmentContainer(
   ArtistSeriesItem,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artistSeries: graphql`
       fragment ArtistSeriesItem_artistSeries on ArtistSeries {
         title

@@ -1,5 +1,5 @@
 import { Box } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { ArtistSeriesRail_artist } from "v2/__generated__/ArtistSeriesRail_artist.graphql"
 import { ArtistSeriesItemFragmentContainer as ArtistSeriesItem } from "./ArtistSeriesItem"
@@ -55,6 +55,7 @@ const ArtistSeriesRail: React.FC<Props> = ({
 export const ArtistSeriesRailFragmentContainer = createFragmentContainer(
   ArtistSeriesRail as React.FC<Props>,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment ArtistSeriesRail_artist on Artist {
         artistSeriesConnection(first: 50) {

@@ -90,6 +90,7 @@ const FairsFairRow: React.FC<FairsFairRowProps> = ({ fair, ...rest }) => {
 export const FairsFairRowFragmentContainer = createFragmentContainer(
   FairsFairRow,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     fair: graphql`
       fragment FairsFairRow_fair on Fair {
         href

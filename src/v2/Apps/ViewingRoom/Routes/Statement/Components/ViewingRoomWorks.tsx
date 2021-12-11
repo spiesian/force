@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { Column, GridColumns } from "@artsy/palette"
 import { useRouter } from "v2/System/Router/useRouter"
 import { createFragmentContainer, graphql } from "react-relay"
@@ -50,6 +50,7 @@ const ViewingRoomWorks: React.FC<ViewingRoomWorksProps> = ({ viewingRoom }) => {
 export const ViewingRoomWorksFragmentContainer = createFragmentContainer(
   ViewingRoomWorks,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewingRoom: graphql`
       fragment ViewingRoomWorks_viewingRoom on ViewingRoom {
         artworksConnection(first: 2) {

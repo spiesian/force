@@ -46,6 +46,7 @@ class FollowArtistPopoverRow extends Component<Props, State> {
     if (user && user.id) {
       commitMutation<FollowArtistPopoverRowMutation>(relay.environment, {
         // TODO: Inputs to the mutation might have changed case of the keys!
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         mutation: graphql`
           mutation FollowArtistPopoverRowMutation(
             $input: FollowArtistInput!
@@ -151,6 +152,7 @@ export const FollowArtistPopoverRowFragmentContainer = createFragmentContainer(
     )
   },
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment FollowArtistPopoverRow_artist on Artist {
         internalID

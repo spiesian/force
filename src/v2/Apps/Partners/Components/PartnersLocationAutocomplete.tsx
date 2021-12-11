@@ -100,6 +100,7 @@ const PartnersLocationAutocompletePlaceholder: FC = () => {
 export const PartnersLocationAutocompleteFragmentContainer = createFragmentContainer(
   PartnersLocationAutocomplete,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     viewer: graphql`
       fragment PartnersLocationAutocomplete_viewer on Viewer {
         featuredCities: cities(featured: true) {
@@ -130,6 +131,7 @@ export const PartnersLocationAutocompleteQueryRenderer: FC = () => {
     <SystemQueryRenderer<PartnersLocationAutocompleteQuery>
       environment={relayEnvironment}
       placeholder={<PartnersLocationAutocompletePlaceholder />}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query PartnersLocationAutocompleteQuery {
           viewer {

@@ -75,6 +75,7 @@ describe("Accept seller offer", () => {
 
   const { mutations, buildPage, routes } = createTestEnv({
     Component: AcceptFragmentContainer,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query AcceptTestQuery @raw_response_type {
         order: commerceOrder(id: "") {

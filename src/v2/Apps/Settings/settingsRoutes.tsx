@@ -96,6 +96,7 @@ export const settingsRoutes: AppRouteConfig[] = [
     onClientSideRender: () => {
       SettingsApp.preload()
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query settingsRoutes_SettingsQuery {
         me @principalField {
@@ -117,6 +118,7 @@ export const settingsRoutes: AppRouteConfig[] = [
         onClientSideRender: () => {
           AuctionsRoute.preload()
         },
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query settingsRoutes_SettingsAuctionsRouteQuery {
             me {
@@ -131,6 +133,7 @@ export const settingsRoutes: AppRouteConfig[] = [
         onClientSideRender: () => {
           EditProfileRoute.preload()
         },
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query settingsRoutes_EditProfileRouteQuery {
             me {
@@ -145,6 +148,7 @@ export const settingsRoutes: AppRouteConfig[] = [
         onClientSideRender: () => {
           PaymentsRoute.preload()
         },
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query settingsRoutes_PaymentsRouteQuery {
             me {
@@ -159,6 +163,7 @@ export const settingsRoutes: AppRouteConfig[] = [
         onClientSideRender: () => {
           PurchasesRoute.preload()
         },
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query settingsRoutes_PurchasesRouteQuery {
             me {
@@ -173,6 +178,7 @@ export const settingsRoutes: AppRouteConfig[] = [
         onClientSideRender: () => {
           SavesRoute.preload()
         },
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query settingsRoutes_SavesRouteQuery {
             me {
@@ -187,6 +193,7 @@ export const settingsRoutes: AppRouteConfig[] = [
         onClientSideRender: () => {
           EditSettingsRoute.preload()
         },
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query settingsRoutes_SettingsEditSettingsRouteQuery {
             me {
@@ -201,6 +208,7 @@ export const settingsRoutes: AppRouteConfig[] = [
         onClientSideRender: () => {
           ShippingRoute.preload()
         },
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query: graphql`
           query settingsRoutes_ShippingRouteQuery {
             me {

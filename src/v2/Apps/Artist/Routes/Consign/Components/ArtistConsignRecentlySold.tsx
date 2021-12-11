@@ -66,6 +66,7 @@ export const ArtistConsignRecentlySold: React.FC<ArtistConsignRecentlySoldProps>
 export const ArtistConsignRecentlySoldFragmentContainer = createFragmentContainer(
   ArtistConsignRecentlySold,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment ArtistConsignRecentlySold_artist on Artist {
         targetSupply {

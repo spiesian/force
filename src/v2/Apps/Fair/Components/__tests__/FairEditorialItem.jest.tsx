@@ -31,6 +31,7 @@ describe("FairEditorialItem", () => {
         </AnalyticsContext.Provider>
       )
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query FairEditorialItem_Test_Query {
         article(id: "test") {

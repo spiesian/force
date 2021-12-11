@@ -74,6 +74,7 @@ export class AuctionTimer extends Component<Props> {
 export const AuctionTimerFragmentContainer = createFragmentContainer(
   AuctionTimer,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     sale: graphql`
       fragment AuctionTimer_sale on Sale {
         liveStartAt
@@ -89,6 +90,7 @@ export const AuctionTimerQueryRenderer = ({ saleID }: { saleID: string }) => {
     <SystemQueryRenderer<AuctionTimerQuery>
       environment={relayEnvironment}
       variables={{ saleID }}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query AuctionTimerQuery($saleID: String!) {
           sale(id: $saleID) {

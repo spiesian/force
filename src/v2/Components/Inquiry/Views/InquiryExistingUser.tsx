@@ -1,5 +1,5 @@
 import { Box, Spinner } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { graphql } from "react-relay"
 import { useSystemContext } from "v2/System"
 import { SystemQueryRenderer } from "v2/System/Relay/SystemQueryRenderer"
@@ -24,6 +24,7 @@ export const InquiryExistingUserQueryRenderer: React.FC = () => {
     <SystemQueryRenderer<InquiryExistingUserQuery>
       environment={relayEnvironment!}
       variables={{ email: inquiry.email }}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query InquiryExistingUserQuery($email: String!) {
           user(email: $email) {

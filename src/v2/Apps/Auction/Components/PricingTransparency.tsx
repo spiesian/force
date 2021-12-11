@@ -53,6 +53,7 @@ export const PricingTransparencyQueryRenderer = withSystemContext(
     return (
       <SystemQueryRenderer<PricingTransparencyQuery>
         environment={relayEnvironment}
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query={graphql`
           query PricingTransparencyQuery(
             $saleId: String!

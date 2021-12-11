@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { Meta, Title } from "react-head"
 
@@ -46,6 +46,7 @@ const OfferDetailApp: React.FC<OfferDetailAppProps> = ({ offer }) => {
 export const OfferDetailAppFragmentContainer = createFragmentContainer(
   OfferDetailApp,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     offer: graphql`
       fragment OfferDetailApp_offer on ConsignmentOffer {
         ...ResponseForm_offer

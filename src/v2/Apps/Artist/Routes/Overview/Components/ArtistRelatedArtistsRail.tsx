@@ -7,7 +7,7 @@ import {
   SkeletonBox,
   SkeletonText,
 } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { useTracking } from "react-tracking"
 import { FollowArtistButtonFragmentContainer } from "v2/Components/FollowButton/FollowArtistButton"
@@ -126,6 +126,7 @@ const ArtistRelatedArtistsRail: React.FC<ArtistRelatedArtistsRailProps> = ({
 export const ArtistRelatedArtistsRailFragmentContainer = createFragmentContainer(
   ArtistRelatedArtistsRail,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artist: graphql`
       fragment ArtistRelatedArtistsRail_artist on Artist {
         name
@@ -207,6 +208,7 @@ export const ArtistRelatedArtistsRailQueryRenderer: React.FC<{
         environment={relayEnvironment}
         variables={{ slug }}
         placeholder={PLACEHOLDER}
+        // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
         query={graphql`
           query ArtistRelatedArtistsRailQuery($slug: String!) {
             artist(id: $slug) {

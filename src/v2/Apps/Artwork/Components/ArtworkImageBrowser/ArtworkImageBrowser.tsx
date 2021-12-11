@@ -1,5 +1,5 @@
 import { ArtworkImageBrowser_artwork } from "v2/__generated__/ArtworkImageBrowser_artwork.graphql"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { ArtworkActionsFragmentContainer as ArtworkActions } from "./ArtworkActions"
 import { Box, Spacer } from "@artsy/palette"
@@ -67,6 +67,7 @@ export const ArtworkImageBrowser: React.FC<ArtworkImageBrowserProps> = ({
 export const ArtworkImageBrowserFragmentContainer = createFragmentContainer<
   ArtworkImageBrowserProps
 >(ArtworkImageBrowser, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   artwork: graphql`
     fragment ArtworkImageBrowser_artwork on Artwork {
       ...ArtworkActions_artwork

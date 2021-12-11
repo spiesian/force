@@ -106,6 +106,8 @@ const PageWrapper: React.FC<Omit<ArtistAppProps, "match"> & BoxProps> = ({
 }
 
 export const ArtistAppFragmentContainer = createFragmentContainer(ArtistApp, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   artist: graphql`
     fragment ArtistApp_artist on Artist {
       ...ArtistApp_sharedMetadata @relay(mask: false)
@@ -130,6 +132,7 @@ export const ArtistAppFragmentContainer = createFragmentContainer(ArtistApp, {
  * Shared fragment between main artist routes and overview, used to determine
  * if we redirect to works-for sale and hide `Overview` tab.
  */
+// PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
 export const sharedMetaDataQuery = graphql`
   fragment ArtistApp_sharedMetadata on Artist {
     slug

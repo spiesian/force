@@ -3,7 +3,7 @@ import {
   StepSummaryItem,
   StepSummaryItemProps,
 } from "v2/Components/StepSummaryItem"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { Text } from "@artsy/palette"
 import { startCase } from "lodash"
@@ -36,6 +36,7 @@ const ShippingArtaSummaryItem: React.FC<
 export const ShippingArtaSummaryItemFragmentContainer = createFragmentContainer(
   ShippingArtaSummaryItem,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     order: graphql`
       fragment ShippingArtaSummaryItem_order on CommerceOrder {
         requestedFulfillment {

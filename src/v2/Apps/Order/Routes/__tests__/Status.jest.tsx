@@ -40,6 +40,7 @@ const testOrder: StatusQueryRawResponse["order"] = {
 describe("Status", () => {
   const env = createTestEnv({
     Component: StatusFragmentContainer,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query StatusQuery @raw_response_type {
         order: commerceOrder(id: "42") {

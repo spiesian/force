@@ -44,6 +44,7 @@ const FairOrganizerEntityHeader: FC<FairOrganizerEntityHeaderProps> = ({
 export const FairOrganizerEntityHeaderFragmentContainer = createFragmentContainer(
   FairOrganizerEntityHeader,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     fairOrganizer: graphql`
       fragment FairOrganizerEntityHeader_fairOrganizer on FairOrganizer {
         internalID

@@ -31,6 +31,7 @@ const BackLink: React.FC<BackLinkProps> = ({ artist }) => {
 }
 
 export const BackLinkFragmentContainer = createFragmentContainer(BackLink, {
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   artist: graphql`
     fragment BackLink_artist on Artist {
       name

@@ -1,5 +1,5 @@
 import { Join, Spacer } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { CollectionsHubRails_linkedCollections } from "v2/__generated__/CollectionsHubRails_linkedCollections.graphql"
 import { ArtistSeriesRailContainer as ArtistSeriesRail } from "./ArtistSeriesRail"
@@ -46,6 +46,7 @@ export const CollectionsHubRails: React.FC<CollectionsHubRailsProps> = ({
 export const CollectionsHubRailsContainer = createFragmentContainer(
   CollectionsHubRails,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     linkedCollections: graphql`
       fragment CollectionsHubRails_linkedCollections on MarketingCollectionGroup
         @relay(plural: true) {

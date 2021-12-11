@@ -11,6 +11,7 @@ const { getWrapper } = setupTestWrapper<
   Component: props => {
     return <DedicatedArticlesBreadcrumbsFragmentContainer {...(props as any)} />
   },
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query DedicatedArticlesBreadcrumbs_Test_Query {
       fairOrganizer(id: "example") {

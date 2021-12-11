@@ -10,6 +10,7 @@ jest.mock("react-tracking")
 describe("MarketStats", () => {
   const { getWrapper } = setupTestWrapper<MarketStats_Test_Query>({
     Component: MarketStatsFragmentContainer,
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query MarketStats_Test_Query($artistInternalID: ID!) {
         priceInsightsConnection: priceInsights(

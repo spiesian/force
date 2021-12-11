@@ -12,7 +12,7 @@ import {
   SkeletonText,
 } from "@artsy/palette"
 import { compact, take } from "lodash"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { Rail } from "v2/Components/Rail"
 import { useSystemContext, useTracking } from "v2/System"
@@ -72,6 +72,7 @@ const HomeFeaturedShowsRail: React.FC<HomeFeaturedShowsRailProps> = ({
 export const HomeFeaturedShowsRailFragmentContainer = createFragmentContainer(
   HomeFeaturedShowsRail,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     orderedSet: graphql`
       fragment HomeFeaturedShowsRail_orderedSet on OrderedSet {
         items {
@@ -124,6 +125,7 @@ export const HomeFeaturedShowsRailQueryRenderer: React.FC = () => {
     <SystemQueryRenderer<HomeFeaturedShowsRailQuery>
       lazyLoad
       environment={relayEnvironment}
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       query={graphql`
         query HomeFeaturedShowsRailQuery {
           orderedSet(id: "530ebe92139b21efd6000071") {

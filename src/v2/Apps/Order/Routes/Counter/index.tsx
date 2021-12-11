@@ -48,6 +48,7 @@ export class CounterRoute extends Component<CounterProps> {
   submitPendingOffer(variables: CounterSubmitMutation["variables"]) {
     return this.props.commitMutation<CounterSubmitMutation>({
       // TODO: Inputs to the mutation might have changed case of the keys!
+      // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
       mutation: graphql`
         mutation CounterSubmitMutation(
           $input: CommerceSubmitPendingOfferInput!
@@ -209,6 +210,7 @@ export class CounterRoute extends Component<CounterProps> {
 export const CounterFragmentContainer = createFragmentContainer(
   injectCommitMutation(injectDialog(CounterRoute)),
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     order: graphql`
       fragment Counter_order on CommerceOrder {
         internalID

@@ -90,6 +90,7 @@ const ArtistsCarouselCell: React.FC<ArtistsCarouselCellProps> = ({
 export const ArtistsCarouselCellFragmentContainer = createFragmentContainer(
   ArtistsCarouselCell,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     featuredLink: graphql`
       fragment ArtistsCarouselCell_featuredLink on FeaturedLink {
         internalID

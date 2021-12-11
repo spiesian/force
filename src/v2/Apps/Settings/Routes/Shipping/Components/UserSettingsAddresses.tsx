@@ -67,6 +67,7 @@ export const UserSettingsAddresses: React.FC<UserSettingsAddressesProps> = props
 export const UserSettingsAddressesFragmentContainer = createFragmentContainer(
   injectCommitMutation(UserSettingsAddresses),
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment UserSettingsAddresses_me on Me {
         id

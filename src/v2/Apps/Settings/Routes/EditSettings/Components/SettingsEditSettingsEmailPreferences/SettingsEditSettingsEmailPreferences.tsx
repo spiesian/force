@@ -28,7 +28,7 @@ export const SettingsEditSettingsEmailPreferences: React.FC<SettingEditSettingsE
 
   const handleSelect = async newEmailFrequency => {
     const variables = { emailFrequency: newEmailFrequency }
-    try{
+    try {
       await UpdateUserEmailPreferencesMutation(
         // @ts-expect-error PLEASE_FIX_ME_STRICT_NULL_CHECK_MIGRATION
         relayEnvironment,
@@ -73,6 +73,7 @@ export const SettingsEditSettingsEmailPreferences: React.FC<SettingEditSettingsE
 export const SettingsEditSettingsEmailPreferencesFragmentContainer = createFragmentContainer(
   SettingsEditSettingsEmailPreferences,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment SettingsEditSettingsEmailPreferences_me on Me {
         emailFrequency

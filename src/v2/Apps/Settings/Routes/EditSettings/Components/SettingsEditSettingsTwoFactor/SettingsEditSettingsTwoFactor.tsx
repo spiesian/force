@@ -41,6 +41,7 @@ export const SettingsEditSettingsTwoFactor: React.FC<SettingsEditSettingsTwoFact
 export const SettingsEditSettingsTwoFactorFragmentContainer = createFragmentContainer(
   SettingsEditSettingsTwoFactor,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     me: graphql`
       fragment SettingsEditSettingsTwoFactor_me on Me {
         hasSecondFactorEnabled

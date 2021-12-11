@@ -102,6 +102,7 @@ describe("The respond page", () => {
     defaultMutationResults: {
       ...buyerCounterOfferSuccess,
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query RespondTestQuery @raw_response_type {
         order: commerceOrder(id: "unused") {

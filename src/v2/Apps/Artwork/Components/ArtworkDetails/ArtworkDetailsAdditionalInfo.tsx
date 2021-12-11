@@ -8,8 +8,8 @@ import {
   Text,
 } from "@artsy/palette"
 import { ArtworkDetailsAdditionalInfo_artwork } from "v2/__generated__/ArtworkDetailsAdditionalInfo_artwork.graphql"
-import { useState } from "react";
-import * as React from "react";
+import { useState } from "react"
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { RequestConditionReportQueryRenderer } from "./RequestConditionReport"
 import { ArtworkDetailsMediumModalFragmentContainer } from "../ArtworkDetailsMediumModal"
@@ -146,6 +146,7 @@ export const ArtworkDetailsAdditionalInfo: React.FC<ArtworkDetailsAdditionalInfo
 export const ArtworkDetailsAdditionalInfoFragmentContainer = createFragmentContainer(
   ArtworkDetailsAdditionalInfo,
   {
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     artwork: graphql`
       fragment ArtworkDetailsAdditionalInfo_artwork on Artwork {
         category

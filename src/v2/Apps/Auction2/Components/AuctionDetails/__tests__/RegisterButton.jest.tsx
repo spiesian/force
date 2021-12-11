@@ -10,6 +10,7 @@ jest.mock("v2/System/Analytics/useTracking")
 
 const { renderWithRelay } = setupTestWrapperTL<RegisterButton_Test_Query>({
   Component: RegisterButtonFragmentContainer,
+  // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
   query: graphql`
     query RegisterButton_Test_Query {
       sale(id: "foo") {

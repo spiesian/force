@@ -63,6 +63,7 @@ const setupTestEnv = (
       createCreditCard: {},
       updateMyUserProfile: {},
     },
+    // PLEASE_FIXME: REMOVE_THIS_COMMENT_RELAY_UPGRADE
     query: graphql`
       query RegisterValidTestQuery @raw_response_type {
         sale(id: "example-auction-id") {
