@@ -1,4 +1,4 @@
-import { graphql } from "relay-runtime"
+import { graphql } from "react-relay"
 import { useTracking as baseUseTracking } from "react-tracking"
 import { setupTestWrapper } from "v2/DevTools/setupTestWrapper"
 import { FairEditorialItemFragmentContainer } from "../FairEditorial/FairEditorialItem"

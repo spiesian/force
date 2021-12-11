@@ -7,12 +7,10 @@ import { PopularArtistsQuery } from "v2/__generated__/PopularArtistsQuery.graphq
 import { SystemContextProps, withSystemContext } from "v2/System"
 import { SystemQueryRenderer } from "v2/System/Relay/SystemQueryRenderer"
 import * as React from "react"
-import {
-  RelayProp,
-  commitMutation,
-  createFragmentContainer,
-  graphql,
-} from "react-relay"
+import { RelayProp, commitMutation, createFragmentContainer } from "react-relay"
+
+import { graphql } from "react-relay"
+
 import { RecordSourceSelectorProxy } from "relay-runtime"
 import { get } from "v2/Utils/get"
 import ReplaceTransition from "../../Animation/ReplaceTransition"

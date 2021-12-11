@@ -31,12 +31,7 @@ module.exports = {
     "@babel/plugin-proposal-nullish-coalescing-operator",
     "@loadable/babel-plugin",
     "@babel/plugin-syntax-dynamic-import",
-    [
-      "relay",
-      {
-        artifactDirectory: "./src/v2/__generated__",
-      },
-    ],
+    "relay",
     [
       "babel-plugin-styled-components",
       {

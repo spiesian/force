@@ -1,11 +1,11 @@
-import { useEffect, useRef, useState } from "react";
-import * as React from "react";
+import { useEffect, useRef, useState } from "react"
+import * as React from "react"
 import {
   RelayPaginationProp,
   RelayRefetchProp,
   createPaginationContainer,
 } from "react-relay"
-import { graphql } from "relay-runtime"
+import { graphql } from "react-relay"
 import Waypoint from "react-waypoint"
 import { Box, Flex, Spacer, Spinner } from "@artsy/palette"
 import compact from "lodash/compact"

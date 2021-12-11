@@ -1,5 +1,5 @@
-import { useContext } from "react";
-import * as React from "react";
+import { useContext } from "react"
+import * as React from "react"
 import { NavBarNotificationsQueryRenderer, NavBarUserMenu } from "./Menus"
 import { AnalyticsSchema, SystemContext, useTracking } from "v2/System"
 import {
@@ -9,7 +9,7 @@ import {
   Flex,
   SoloIcon,
 } from "@artsy/palette"
-import { graphql } from "relay-runtime"
+import { graphql } from "react-relay"
 import { SystemQueryRenderer } from "v2/System/Relay/SystemQueryRenderer"
 import {
   NavBarLoggedInActionsQuery,

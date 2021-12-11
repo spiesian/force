@@ -1,4 +1,4 @@
-import { graphql } from "relay-runtime"
+import { graphql } from "react-relay"
 import { setupTestWrapper } from "v2/DevTools/setupTestWrapper"
 import { DeepZoomFragmentContainer } from "../DeepZoom"
 import { DeepZoom_Test_Query } from "v2/__generated__/DeepZoom_Test_Query.graphql"

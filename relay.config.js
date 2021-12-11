@@ -1,4 +1,5 @@
 module.exports = {
+  // src: "./src/relay-test",
   src: "./src/v2",
   schema: "./data/schema.graphql",
   language: "typescript",

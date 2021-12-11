@@ -1,4 +1,4 @@
-import { graphql } from "relay-runtime"
+import { graphql } from "react-relay"
 import { setupTestWrapper } from "v2/DevTools/setupTestWrapper"
 import { MyBidsFragmentContainer } from "../MyBids"
 import { useTracking as baseUseTracking } from "react-tracking"

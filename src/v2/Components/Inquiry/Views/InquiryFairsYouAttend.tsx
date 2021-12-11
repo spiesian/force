@@ -1,6 +1,6 @@
 import { Banner, Box, Button, Text } from "@artsy/palette"
-import * as React from "react";
-import { graphql } from "relay-runtime"
+import * as React from "react"
+import { graphql } from "react-relay"
 import { InquiryFairsYouAttendQuery } from "v2/__generated__/InquiryFairsYouAttendQuery.graphql"
 import { InquiryAffiliatedAutocomplete } from "../Components/InquiryAffiliatedAutocomplete"
 import { InquiryAffiliatedSelectedOptions } from "../Components/InquiryAffiliatedSelectedOptions"

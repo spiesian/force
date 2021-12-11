@@ -3,7 +3,7 @@ import { SystemContextProvider } from "v2/System"
 import { useTracking } from "v2/System/Analytics/useTracking"
 import { MockBoot, renderRelayTree } from "v2/DevTools"
 import { cloneDeep } from "lodash"
-import { graphql } from "relay-runtime"
+import { graphql } from "react-relay"
 import { ArtistConsignRouteFragmentContainer } from "../ArtistConsignRoute"
 
 jest.unmock("react-relay")

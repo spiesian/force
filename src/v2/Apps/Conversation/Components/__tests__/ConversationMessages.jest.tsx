@@ -1,7 +1,7 @@
 import { ConversationMessagesFragmentContainer } from "../ConversationMessages"
 import { screen } from "@testing-library/react"
 import { setupTestWrapperTL } from "v2/DevTools/setupTestWrapper"
-import { graphql } from "relay-runtime"
+import { graphql } from "react-relay"
 
 jest.unmock("react-relay")
 

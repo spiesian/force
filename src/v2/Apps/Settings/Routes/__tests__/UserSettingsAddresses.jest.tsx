@@ -1,9 +1,10 @@
 import { UserSettingsAddressesFragmentContainer } from "../Shipping/Components/UserSettingsAddresses"
 import { setupTestWrapper } from "v2/DevTools/setupTestWrapper"
-import { commitMutation as _commitMutation, graphql } from "relay-runtime"
+import { commitMutation as _commitMutation } from "relay-runtime"
 import ToastComponent from "v2/Components/Toast/ToastComponent"
 import { deleteUserAddress } from "v2/Apps/Order/Mutations/DeleteUserAddress"
 import { useTracking } from "v2/System"
+import { graphql } from "react-relay"
 
 jest.unmock("react-relay")
 jest.mock("v2/System/Analytics/useTracking")

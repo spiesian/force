@@ -1,10 +1,10 @@
-import { useContext } from "react";
-import * as React from "react";
+import { useContext } from "react"
+import * as React from "react"
 import { Box } from "@artsy/palette"
 import { isServer } from "lib/isServer"
 import { SystemContext, useSystemContext } from "v2/System"
 import { NavBarMobileMenuItemLink } from "./NavBarMobileMenuItem"
-import { graphql } from "relay-runtime"
+import { graphql } from "react-relay"
 import { SystemQueryRenderer } from "v2/System/Relay/SystemQueryRenderer"
 import { NavBarMobileMenuAuthenticationQuery } from "v2/__generated__/NavBarMobileMenuAuthenticationQuery.graphql"
 import { NavBarMobileMenuAuthentication_me } from "v2/__generated__/NavBarMobileMenuAuthentication_me.graphql"

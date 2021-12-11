@@ -1,4 +1,4 @@
-import { graphql } from "relay-runtime"
+import { graphql } from "react-relay"
 import { setupTestWrapper } from "v2/DevTools/setupTestWrapper"
 import { HomeFeaturedMarketNewsFragmentContainer } from "../Components/HomeFeaturedMarketNews"
 import { HomeFeaturedMarketNews_Test_Query } from "v2/__generated__/HomeFeaturedMarketNews_Test_Query.graphql"

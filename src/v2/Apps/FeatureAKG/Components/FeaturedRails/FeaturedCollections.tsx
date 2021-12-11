@@ -6,9 +6,9 @@ import {
 } from "v2/Apps/FeatureAKG/Components/FeaturedRails"
 import { AnalyticsSchema } from "v2/System"
 import { compact } from "lodash"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer } from "react-relay"
-import { graphql } from "relay-runtime"
+import { graphql } from "react-relay"
 
 interface FeaturedCollectionsRailProps {
   collections: FeaturedCollections_collections

@@ -1,5 +1,5 @@
 import { screen } from "@testing-library/react"
-import { graphql } from "relay-runtime"
+import { graphql } from "react-relay"
 import { setupTestWrapperTL } from "v2/DevTools/setupTestWrapper"
 import { ViewingRoomSubsectionsFragmentContainer } from "../Components/ViewingRoomSubsections"
 

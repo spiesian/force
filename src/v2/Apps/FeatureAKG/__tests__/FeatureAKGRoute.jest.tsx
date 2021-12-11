@@ -1,6 +1,6 @@
 import { useTracking } from "v2/System/Analytics/useTracking"
 import { MockBoot, renderRelayTree } from "v2/DevTools"
-import { graphql } from "relay-runtime"
+import { graphql } from "react-relay"
 
 import { Breakpoint } from "@artsy/palette"
 import { FeatureAKGRoute_Test_QueryRawResponse } from "v2/__generated__/FeatureAKGRoute_Test_Query.graphql"

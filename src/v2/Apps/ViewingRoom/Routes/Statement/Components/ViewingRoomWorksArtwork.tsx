@@ -1,8 +1,8 @@
 import { Image, ResponsiveBox, Text } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer } from "react-relay"
 import { useTracking } from "v2/System/Analytics/useTracking"
-import { graphql } from "relay-runtime"
+import { graphql } from "react-relay"
 import { AnalyticsSchema } from "v2/System"
 import { RouterLink } from "v2/System/Router/RouterLink"
 import { useScrollTo } from "v2/Utils/Hooks/useScrollTo"

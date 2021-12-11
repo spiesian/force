@@ -3,7 +3,7 @@ import { useUpdateMyUserProfile } from "../../Hooks/useUpdateMyUserProfile"
 import { useInquiryContext } from "../../Hooks/useInquiryContext"
 import { flushPromiseQueue } from "v2/DevTools"
 import { setupTestWrapper } from "v2/DevTools/setupTestWrapper"
-import { graphql } from "relay-runtime"
+import { graphql } from "react-relay"
 import { fill } from "../util"
 
 jest.unmock("react-relay")

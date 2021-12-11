@@ -1,6 +1,6 @@
 import loadable from "@loadable/component"
 import { AppRouteConfig } from "v2/System/Router/Route"
-import { graphql } from "relay-runtime"
+import { graphql } from "react-relay"
 import { initialArtworkFilterState } from "v2/Components/ArtworkFilter/ArtworkFilterContext"
 import { allowedFilters } from "v2/Components/ArtworkFilter/Utils/allowedFilters"
 import { paramsToCamelCase } from "v2/Components/ArtworkFilter/Utils/urlBuilder"

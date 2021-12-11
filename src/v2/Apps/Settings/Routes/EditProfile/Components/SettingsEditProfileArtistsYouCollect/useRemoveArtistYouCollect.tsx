@@ -1,4 +1,5 @@
-import { commitMutation, graphql } from "relay-runtime"
+import { graphql } from "react-relay"
+import { commitMutation } from "relay-runtime"
 import { useSystemContext } from "v2/System"
 import { useRemoveArtistYouCollectMutation } from "v2/__generated__/useRemoveArtistYouCollectMutation.graphql"
 

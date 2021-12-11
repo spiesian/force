@@ -21,6 +21,7 @@ describe("PopularArtists", () => {
         />
       )
     },
+    //
     query: graphql`
       query PopularArtists_Test_Query {
         highlights {

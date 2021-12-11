@@ -3,9 +3,9 @@ import { SelectedWorks_selectedWorks } from "v2/__generated__/SelectedWorks_sele
 import { AnalyticsSchema } from "v2/System"
 import { useTracking } from "v2/System/Analytics/useTracking"
 import ArtworkGrid from "v2/Components/ArtworkGrid"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer } from "react-relay"
-import { graphql } from "relay-runtime"
+import { graphql } from "react-relay"
 
 interface SelectedWorksProps {
   selectedWorks: SelectedWorks_selectedWorks
