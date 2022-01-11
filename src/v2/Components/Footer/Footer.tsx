@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import styled from "styled-components"
 import { Media } from "v2/Utils/Responsive"
 import {
@@ -92,10 +92,6 @@ export const Footer: React.FC<FooterProps> = props => {
 
               <FooterLink my={2} to="/categories">
                 The Art Genome Project
-              </FooterLink>
-
-              <FooterLink mt={2} to="/artsy-education">
-                Education
               </FooterLink>
             </Text>
           </Column>
