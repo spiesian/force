@@ -20,6 +20,7 @@
     "clean": "scripts/clean.sh",
     "clean:relay": "rm -rf '$TMPDIR'/RelayFindGraphQLTags-*",
     "compile": "babel src/v2 --out-dir dist/v2 -s --source-map --extensions '.js,.jsx,.ts,.tsx' --ignore src/v2/**/__tests__",
+    "compile-formatjs": "formatjs compile",
     "cypress:run": "./node_modules/.bin/cypress run",
     "cypress": "./node_modules/.bin/cypress open",
     "delete-review-app": "kubectl --context staging delete namespace",

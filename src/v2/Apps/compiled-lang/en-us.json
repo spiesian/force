@@ -1,0 +1,12 @@
+{
+  "myMessage": [
+    {
+      "type": 1,
+      "value": "name"
+    },
+    {
+      "type": 0,
+      "value": " has apples"
+    }
+  ]
+}
