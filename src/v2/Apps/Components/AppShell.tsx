@@ -85,14 +85,6 @@ export const AppShell: React.FC<AppShellProps> = props => {
 
   return (
     <IntlProvider messages={data["ro-RO"]} locale="en-us" defaultLocale="en-us">
-      <FormattedMessage
-        id="myMessage"
-        description="Hello react_intl"
-        values={{
-          name: "Ana",
-        }}
-      />
-
       <Flex
         width="100%"
         // Prevents horizontal scrollbars from `FullBleed` + persistent vertical scrollbars

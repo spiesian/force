@@ -1,12 +1,20 @@
 {
-  "myMessage": [
-    {
-      "type": 1,
-      "value": "name"
-    },
+  "home.newWorksByArtistsYouFollow": [
     {
       "type": 0,
-      "value": " has apples"
+      "value": "New Works by Artists you Follow"
+    }
+  ],
+  "home.recentlyViewed": [
+    {
+      "type": 0,
+      "value": "Recently Viewed"
+    }
+  ],
+  "home.trendingArtistsOnArtsy": [
+    {
+      "type": 0,
+      "value": "Trending Artists on Artsy"
     }
   ],
   "navbar.artists": [

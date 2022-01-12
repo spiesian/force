@@ -23,6 +23,7 @@ import {
 } from "@artsy/cohesion"
 import { FollowArtistButtonFragmentContainer } from "v2/Components/FollowButton/FollowArtistButton"
 import { Rail } from "v2/Components/Rail"
+import { useIntl } from "react-intl"
 
 interface HomeTrendingArtistsRailProps {
   viewer: HomeTrendingArtistsRail_viewer
@@ -34,6 +35,7 @@ const HomeTrendingArtistsRail: React.FC<HomeTrendingArtistsRailProps> = ({
   const { trackEvent } = useTracking()
   const { user } = useSystemContext()
   const nodes = extractNodes(viewer.artistsConnection)
+  const intl = useIntl()
 
   if (nodes.length === 0) {
     return null
@@ -42,7 +44,7 @@ const HomeTrendingArtistsRail: React.FC<HomeTrendingArtistsRailProps> = ({
   return (
     <Rail
       alignItems="flex-start"
-      title="Trending Artists on Artsy"
+      title={intl.formatMessage({ id: "home.trendingArtistsOnArtsy" })}
       viewAllLabel="View All Artists"
       viewAllHref="/artists"
       viewAllOnClick={() => {

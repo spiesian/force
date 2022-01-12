@@ -1,11 +1,13 @@
 import { Tab, Tabs } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { useSystemContext } from "v2/System"
 import { HomeRecentlyViewedRailQueryRenderer } from "./HomeRecentlyViewedRail"
 import { HomeWorksByArtistsYouFollowRailQueryRenderer } from "./HomeWorksByArtistsYouFollowRail"
+import { useIntl } from "react-intl"
 
 export const HomeWorksForYouTabBar: React.FC = () => {
   const { user } = useSystemContext()
+  const intl = useIntl()
 
   if (!user) {
     return null
@@ -13,10 +15,10 @@ export const HomeWorksForYouTabBar: React.FC = () => {
 
   return (
     <Tabs>
-      <Tab name="New Works by Artists You Follow">
+      <Tab name={intl.formatMessage({ id: "home.newWorksByArtistsYouFollow" })}>
         <HomeWorksByArtistsYouFollowRailQueryRenderer />
       </Tab>
-      <Tab name="Recently Viewed">
+      <Tab name={intl.formatMessage({ id: "home.recentlyViewed" })}>
         <HomeRecentlyViewedRailQueryRenderer />
       </Tab>
     </Tabs>

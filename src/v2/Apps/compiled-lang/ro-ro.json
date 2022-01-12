@@ -1,12 +1,20 @@
 {
-  "myMessage": [
-    {
-      "type": 1,
-      "value": "name"
-    },
+  "home.newWorksByArtistsYouFollow": [
     {
       "type": 0,
-      "value": " are mere"
+      "value": "Lucrări noi ale artiștilor pe care îi urmăriți"
+    }
+  ],
+  "home.recentlyViewed": [
+    {
+      "type": 0,
+      "value": "Vizualizat recent"
+    }
+  ],
+  "home.trendingArtistsOnArtsy": [
+    {
+      "type": 0,
+      "value": "Artiști în tendințe pe Artsy"
     }
   ]
 }

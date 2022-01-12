@@ -50,5 +50,17 @@
   },
   "navbar.mueuns": {
     "defaultMessage": "Museuns"
+  },
+  "home.newWorksByArtistsYouFollow": {
+    "defaultMessage": "New Works by Artists you Follow",
+    "description": "Tab Title for the Artists you follow Rail on the Home Screen"
+  },
+  "home.recentlyViewed": {
+    "defaultMessage": "Recently Viewed",
+    "description": "Tab Title for the recently viewed Artists Rail on the Home Screen"
+  },
+  "home.trendingArtistsOnArtsy": {
+    "defaultMessage": "Trending Artists on Artsy",
+    "description": "Trending Artists Rail Title"
   }
 }

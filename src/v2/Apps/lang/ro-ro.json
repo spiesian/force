@@ -6,6 +6,17 @@
   "header": {
     "downloadapp": {
       "defaultMessage": "Download App"
-    }
+    },
+  "home.newWorksByArtistsYouFollow": {
+    "defaultMessage": "Lucrări noi ale artiștilor pe care îi urmăriți",
+    "description": "Tab Title for the Artists you follow Rail on the Home Screen"
+  },
+  "home.recentlyViewed": {
+    "defaultMessage": "Vizualizat recent",
+    "description": "Tab Title for the recently viewed Artists Rail on the Home Screen"
+  },
+  "home.trendingArtistsOnArtsy": {
+    "defaultMessage": "Artiști în tendințe pe Artsy",
+    "description": "Trending Artists Rail Title"
   }
 }
