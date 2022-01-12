@@ -19,12 +19,19 @@ import { useNavBarHeight } from "v2/Components/NavBar/useNavBarHeight"
 import { useProductionEnvironmentWarning } from "v2/Utils/Hooks/useProductionEnvironmentWarning"
 import { useAuthValidation } from "v2/Utils/Hooks/useAuthValidation"
 import { IntlProvider, FormattedMessage } from "react-intl"
+import locale_en_us from "../lang/en-us.json"
+import locale_ro_ro from "../lang/ro-ro.json"
 
 const logger = createLogger("Apps/Components/AppShell")
 
 interface AppShellProps {
   children: React.ReactNode
   match: Match
+}
+
+const data = {
+  "en-US": locale_en_us,
+  "ro-RO": locale_ro_ro,
 }
 
 export const AppShell: React.FC<AppShellProps> = props => {
@@ -76,22 +83,17 @@ export const AppShell: React.FC<AppShellProps> = props => {
   useNetworkOfflineMonitor()
   useProductionEnvironmentWarning()
 
-  const localizations = {
-    ro_RO: {
-      myMessage: "{name} are mere.",
-    },
-  }
+  // const localizations = {
+  //   ro_RO: {
+  //     myMessage: "{name} are mere.",
+  //   },
+  // }
 
   return (
-    <IntlProvider
-      messages={localizations["ro_RO"]}
-      locale="ro"
-      defaultLocale="en"
-    >
+    <IntlProvider messages={locale_en_us} locale="en-us" defaultLocale="en-us">
       <FormattedMessage
         id="myMessage"
         description="Hello react_intl"
-        defaultMessage="{name} has apples"
         values={{
           name: "Ana",
         }}

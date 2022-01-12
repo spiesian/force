@@ -1,0 +1,6 @@
+{
+  "myMessage": {
+    "defaultMessage": "{name} are mere",
+    "description": "Hello react_intl"
+  }
+}
