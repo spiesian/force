@@ -1,7 +1,7 @@
 import { Clickable, Spacer } from "@artsy/palette"
 import { ArtworkSidebarCurrentBidInfo_artwork } from "v2/__generated__/ArtworkSidebarCurrentBidInfo_artwork.graphql"
 import * as React from "react"
-import { createFragmentContainer, graphql } from "react-relay"
+import { createRefetchContainer, graphql, RelayRefetchProp } from "react-relay"
 import { AnalyticsSchema, useTracking } from "v2/System"
 import {
   Box,
@@ -13,15 +13,31 @@ import {
 } from "@artsy/palette"
 import { useDialog } from "v2/Utils/Hooks/useDialog"
 import { AuctionBuyersPremiumDialogQueryRenderer } from "v2/Components/AuctionBuyersPremiumDialog"
+import { usePoll } from "v2/Apps/Conversation/Utils/usePoll"
 
 export interface ArtworkSidebarCurrentBidInfoProps {
   artwork: ArtworkSidebarCurrentBidInfo_artwork
+  relay: RelayRefetchProp
 }
 
 export const ArtworkSidebarCurrentBidInfo: React.FC<ArtworkSidebarCurrentBidInfoProps> = ({
   artwork,
+  relay,
 }) => {
   const { trackEvent } = useTracking()
+
+  usePoll({
+    callback: () => {
+      relay.refetch(
+        { artworkID: artwork.internalID },
+        null,
+        {},
+        { force: true }
+      )
+    },
+    intervalTime: 5000,
+    key: artwork.internalID,
+  })
 
   const { dialogComponent, showDialog, hideDialog } = useDialog({
     Dialog: () => {
@@ -169,11 +185,12 @@ export const ArtworkSidebarCurrentBidInfo: React.FC<ArtworkSidebarCurrentBidInfo
   )
 }
 
-export const ArtworkSidebarCurrentBidInfoFragmentContainer = createFragmentContainer(
+export const ArtworkSidebarCurrentBidInfoFragmentContainer = createRefetchContainer(
   ArtworkSidebarCurrentBidInfo,
   {
     artwork: graphql`
       fragment ArtworkSidebarCurrentBidInfo_artwork on Artwork {
+        internalID
         sale {
           is_closed: isClosed
           is_live_open: isLiveOpen
@@ -203,5 +220,12 @@ export const ArtworkSidebarCurrentBidInfoFragmentContainer = createFragmentConta
         }
       }
     `,
-  }
+  },
+  graphql`
+    query ArtworkSidebarCurrentBidInfoQuery($artworkID: String!) {
+      artwork(id: $artworkID) {
+        ...ArtworkSidebarCurrentBidInfo_artwork
+      }
+    }
+  `
 )

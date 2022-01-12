@@ -5,6 +5,7 @@
 import { ReaderFragment } from "relay-runtime";
 import { FragmentRefs } from "relay-runtime";
 export type ArtworkSidebarCurrentBidInfo_artwork = {
+    readonly internalID: string;
     readonly sale: {
         readonly is_closed: boolean | null;
         readonly is_live_open: boolean | null;
@@ -43,7 +44,14 @@ export type ArtworkSidebarCurrentBidInfo_artwork$key = {
 
 
 const node: ReaderFragment = (function(){
-var v0 = [
+var v0 = {
+  "alias": null,
+  "args": null,
+  "kind": "ScalarField",
+  "name": "internalID",
+  "storageKey": null
+},
+v1 = [
   {
     "alias": null,
     "args": null,
@@ -58,6 +66,7 @@ return {
   "metadata": null,
   "name": "ArtworkSidebarCurrentBidInfo_artwork",
   "selections": [
+    (v0/*: any*/),
     {
       "alias": null,
       "args": null,
@@ -80,13 +89,7 @@ return {
           "name": "isLiveOpen",
           "storageKey": null
         },
-        {
-          "alias": null,
-          "args": null,
-          "kind": "ScalarField",
-          "name": "internalID",
-          "storageKey": null
-        },
+        (v0/*: any*/),
         {
           "alias": "is_with_buyers_premium",
           "args": null,
@@ -133,7 +136,7 @@ return {
           "kind": "LinkedField",
           "name": "currentBid",
           "plural": false,
-          "selections": (v0/*: any*/),
+          "selections": (v1/*: any*/),
           "storageKey": null
         },
         {
@@ -204,7 +207,7 @@ return {
               "kind": "LinkedField",
               "name": "maxBid",
               "plural": false,
-              "selections": (v0/*: any*/),
+              "selections": (v1/*: any*/),
               "storageKey": null
             }
           ],
@@ -218,5 +221,5 @@ return {
   "abstractKey": null
 };
 })();
-(node as any).hash = '683ff598c60c16fd85ebe10e5225e24d';
+(node as any).hash = '8dad5677d389c48aac8a5571205734b0';
 export default node;
