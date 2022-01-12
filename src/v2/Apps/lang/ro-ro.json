@@ -8,15 +8,49 @@
       "defaultMessage": "Download App"
     },
   "home.newWorksByArtistsYouFollow": {
-    "defaultMessage": "Lucrări noi ale artiștilor pe care îi urmăriți",
+    "defaultMessage": "r New Works by Artists you Follow",
     "description": "Tab Title for the Artists you follow Rail on the Home Screen"
   },
   "home.recentlyViewed": {
-    "defaultMessage": "Vizualizat recent",
-    "description": "Tab Title for the recently viewed Artists Rail on the Home Screen"
+    "defaultMessage": "r Recently Viewed"
   },
   "home.trendingArtistsOnArtsy": {
-    "defaultMessage": "Artiști în tendințe pe Artsy",
-    "description": "Trending Artists Rail Title"
+    "defaultMessage": "r Trending Artists on Artsy"
+  },
+  "home.metaTagsTitle": {
+    "defaultMessage": "r Artsy — Discover, Buy, and Sell Fine Art"
+  },
+  "home.metaTagsDescription": {
+    "defaultMessage": "r Artsy is the world’s largest online art marketplace. Browse over 1 million artworks by iconic and emerging artists from 4000+ galleries and top auction houses."
+  },
+  "home.featuredShows": {
+    "defaultMessage": "r Featured Shows"
+  },
+  "home.exploreAllShows": {
+    "defaultMessage": "r Explore All Shows"
+  },
+  "home.marketNews": {
+    "defaultMessage": "r Market News"
+  },
+  "home.marketNewsAuthor": {
+    "defaultMessage": "r By {author}"
+  },
+  "home.exploreEditorial": {
+    "defaultMessage": "r Explore Editorial"
+  },
+  "home.featuredGalleries": {
+    "defaultMessage": "r Featured Galleries"
+  },
+  "home.viewAllGalleries": {
+    "defaultMessage": "r View All Galleries"
+  },
+  "home.featuredEvents": {
+    "defaultMessage": "r Featured"
+  },
+  "home.auctionLots": {
+    "defaultMessage": "r Auction Lots"
+  },
+  "home.viewAllAuctions": {
+    "defaultMessage": "r View All Auctions"
   }
 }

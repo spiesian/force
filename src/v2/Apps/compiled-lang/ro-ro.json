@@ -1,20 +1,96 @@
 {
+  "home.auctionLots": [
+    {
+      "type": 0,
+      "value": "r Auction Lots"
+    }
+  ],
+  "home.exploreAllShows": [
+    {
+      "type": 0,
+      "value": "r Explore All Shows"
+    }
+  ],
+  "home.exploreEditorial": [
+    {
+      "type": 0,
+      "value": "r Explore Editorial"
+    }
+  ],
+  "home.featuredEvents": [
+    {
+      "type": 0,
+      "value": "r Featured"
+    }
+  ],
+  "home.featuredGalleries": [
+    {
+      "type": 0,
+      "value": "r Featured Galleries"
+    }
+  ],
+  "home.featuredShows": [
+    {
+      "type": 0,
+      "value": "r Featured Shows"
+    }
+  ],
+  "home.marketNews": [
+    {
+      "type": 0,
+      "value": "r Market News"
+    }
+  ],
+  "home.marketNewsAuthor": [
+    {
+      "type": 0,
+      "value": "r By "
+    },
+    {
+      "type": 1,
+      "value": "author"
+    }
+  ],
+  "home.metaTagsDescription": [
+    {
+      "type": 0,
+      "value": "r Artsy is the world’s largest online art marketplace. Browse over 1 million artworks by iconic and emerging artists from 4000+ galleries and top auction houses."
+    }
+  ],
+  "home.metaTagsTitle": [
+    {
+      "type": 0,
+      "value": "r Artsy — Discover, Buy, and Sell Fine Art"
+    }
+  ],
   "home.newWorksByArtistsYouFollow": [
     {
       "type": 0,
-      "value": "Lucrări noi ale artiștilor pe care îi urmăriți"
+      "value": "r New Works by Artists you Follow"
     }
   ],
   "home.recentlyViewed": [
     {
       "type": 0,
-      "value": "Vizualizat recent"
+      "value": "r Recently Viewed"
     }
   ],
   "home.trendingArtistsOnArtsy": [
     {
       "type": 0,
-      "value": "Artiști în tendințe pe Artsy"
+      "value": "r Trending Artists on Artsy"
+    }
+  ],
+  "home.viewAllAuctions": [
+    {
+      "type": 0,
+      "value": "r View All Auctions"
+    }
+  ],
+  "home.viewAllGalleries": [
+    {
+      "type": 0,
+      "value": "r View All Galleries"
     }
   ]
 }

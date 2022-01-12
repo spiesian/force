@@ -17,6 +17,7 @@ import {
   PartnerCellFragmentContainer,
   PartnerCellPlaceholder,
 } from "v2/Components/Cells/PartnerCell"
+import { useIntl } from "react-intl"
 
 interface HomeFeaturedGalleriesRailProps {
   orderedSet: HomeFeaturedGalleriesRail_orderedSet
@@ -26,8 +27,8 @@ const HomeFeaturedGalleriesRail: React.FC<HomeFeaturedGalleriesRailProps> = ({
   orderedSet,
 }) => {
   const { trackEvent } = useTracking()
-
   const nodes = extractNodes(orderedSet.orderedItemsConnection)
+  const intl = useIntl()
 
   if (nodes.length === 0) {
     return null
@@ -35,9 +36,9 @@ const HomeFeaturedGalleriesRail: React.FC<HomeFeaturedGalleriesRailProps> = ({
 
   return (
     <Rail
-      title="Featured Galleries"
+      title={intl.formatMessage({ id: "home.featuredGalleries" })}
+      viewAllLabel={intl.formatMessage({ id: "home.viewAllGalleries" })}
       countLabel={nodes.length}
-      viewAllLabel="View All Galleries"
       viewAllHref="/galleries"
       viewAllOnClick={() => {
         const trackingEvent: ClickedGalleryGroup = {

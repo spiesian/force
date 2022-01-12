@@ -5,7 +5,7 @@ import {
   SkeletonText,
   SkeletonBox,
 } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { useSystemContext } from "v2/System"
 import { SystemQueryRenderer } from "v2/System/Relay/SystemQueryRenderer"
@@ -21,6 +21,7 @@ import {
 } from "@artsy/cohesion"
 import { useTracking } from "v2/System"
 import { Rail } from "v2/Components/Rail"
+import { useIntl } from "react-intl"
 
 interface HomeAuctionLotsRailProps {
   viewer: HomeAuctionLotsRail_viewer
@@ -30,6 +31,7 @@ const HomeAuctionLotsRail: React.FC<HomeAuctionLotsRailProps> = ({
   viewer,
 }) => {
   const { trackEvent } = useTracking()
+  const intl = useIntl()
 
   const nodes = extractNodes(viewer.saleArtworksConnection).filter(node => {
     return !node.sale?.isClosed
@@ -41,9 +43,9 @@ const HomeAuctionLotsRail: React.FC<HomeAuctionLotsRailProps> = ({
 
   return (
     <Rail
-      title="Auction Lots"
+      title={intl.formatMessage({ id: "home.auctionLots" })}
       countLabel={nodes.length}
-      viewAllLabel="View All Auctions"
+      viewAllLabel={intl.formatMessage({ id: "home.viewAllAuctions" })}
       viewAllHref="/auctions"
       viewAllOnClick={() => {
         const trackingEvent: ClickedArtworkGroup = {

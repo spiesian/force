@@ -56,11 +56,45 @@
     "description": "Tab Title for the Artists you follow Rail on the Home Screen"
   },
   "home.recentlyViewed": {
-    "defaultMessage": "Recently Viewed",
-    "description": "Tab Title for the recently viewed Artists Rail on the Home Screen"
+    "defaultMessage": "Recently Viewed"
   },
   "home.trendingArtistsOnArtsy": {
-    "defaultMessage": "Trending Artists on Artsy",
-    "description": "Trending Artists Rail Title"
+    "defaultMessage": "Trending Artists on Artsy"
+  },
+  "home.metaTagsTitle": {
+    "defaultMessage": "Artsy — Discover, Buy, and Sell Fine Art"
+  },
+  "home.metaTagsDescription": {
+    "defaultMessage": "Artsy is the world’s largest online art marketplace. Browse over 1 million artworks by iconic and emerging artists from 4000+ galleries and top auction houses."
+  },
+  "home.featuredShows": {
+    "defaultMessage": "Featured Shows"
+  },
+  "home.exploreAllShows": {
+    "defaultMessage": "Explore All Shows"
+  },
+  "home.marketNews": {
+    "defaultMessage": "Market News"
+  },
+  "home.marketNewsAuthor": {
+    "defaultMessage": "By {author}"
+  },
+  "home.exploreEditorial": {
+    "defaultMessage": "Explore Editorial"
+  },
+  "home.featuredGalleries": {
+    "defaultMessage": "Featured Galleries"
+  },
+  "home.viewAllGalleries": {
+    "defaultMessage": "View All Galleries"
+  },
+  "home.featuredEvents": {
+    "defaultMessage": "Featured"
+  },
+  "home.auctionLots": {
+    "defaultMessage": "Auction Lots"
+  },
+  "home.viewAllAuctions": {
+    "defaultMessage": "View All Auctions"
   }
 }

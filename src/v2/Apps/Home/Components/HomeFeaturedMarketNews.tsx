@@ -18,7 +18,7 @@ import {
   ResponsiveBox,
 } from "@artsy/palette"
 import { compact, take } from "lodash"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { Masonry } from "v2/Components/Masonry"
 import { useSystemContext, useTracking } from "v2/System"
@@ -28,7 +28,8 @@ import { Media } from "v2/Utils/Responsive"
 import { HomeFeaturedMarketNewsQuery } from "v2/__generated__/HomeFeaturedMarketNewsQuery.graphql"
 import { HomeFeaturedMarketNews_articles } from "v2/__generated__/HomeFeaturedMarketNews_articles.graphql"
 import styled from "styled-components"
-import { themeGet } from "@styled-system/theme-get";
+import { themeGet } from "@styled-system/theme-get"
+import { FormattedMessage } from "react-intl"
 
 const ARTICLE_COUNT = 6
 
@@ -44,7 +45,7 @@ const StyledRouterLink = styled(RouterLink)`
 `
 
 const HomeFeaturedMarketNews: React.FC<HomeFeaturedMarketNewsProps> = ({
-  articles
+  articles,
 }) => {
   const { trackEvent } = useTracking()
   const [firstArticle, ...restOfArticles] = articles
@@ -91,11 +92,16 @@ const HomeFeaturedMarketNews: React.FC<HomeFeaturedMarketNewsProps> = ({
             <Text variant="xs" textTransform="uppercase" my={1}>
               {firstArticle.vertical}
             </Text>
-          
+
             <Text variant="xl">{firstArticle.title}</Text>
 
             <Text variant="lg" mt={1}>
-              By {firstArticle.author?.name}
+              <FormattedMessage
+                id="home.marketNewsAuthor"
+                values={{
+                  author: firstArticle.author?.name,
+                }}
+              />
             </Text>
           </StyledRouterLink>
         </Column>
@@ -145,11 +151,16 @@ const HomeFeaturedMarketNews: React.FC<HomeFeaturedMarketNewsProps> = ({
                     <Text variant="xs" textTransform="uppercase" my={1}>
                       {article.vertical}
                     </Text>
-                    
-                      <Text variant="lg">{article.title}</Text>
-                    
+
+                    <Text variant="lg">{article.title}</Text>
+
                     <Text variant="md" mt={1}>
-                      By {article.author?.name}
+                      <FormattedMessage
+                        id="home.marketNewsAuthor"
+                        values={{
+                          author: article.author?.name,
+                        }}
+                      />
                     </Text>
                   </Box>
                 </StyledRouterLink>
@@ -168,7 +179,9 @@ const HomeFeaturedMarketNewsContainer: React.FC = ({ children }) => {
   return (
     <>
       <Flex justifyContent="space-between" alignItems="center">
-        <Text variant="xl">Market News</Text>
+        <Text variant="xl">
+          <FormattedMessage id="home.marketNews" />
+        </Text>
 
         <Text
           variant="sm"
@@ -187,7 +200,7 @@ const HomeFeaturedMarketNewsContainer: React.FC = ({ children }) => {
             trackEvent(trackingEvent)
           }}
         >
-          Explore Editorial
+          <FormattedMessage id="home.exploreEditorial" />
         </Text>
       </Flex>
 

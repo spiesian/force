@@ -1,4 +1,68 @@
 {
+  "home.auctionLots": [
+    {
+      "type": 0,
+      "value": "Auction Lots"
+    }
+  ],
+  "home.exploreAllShows": [
+    {
+      "type": 0,
+      "value": "Explore All Shows"
+    }
+  ],
+  "home.exploreEditorial": [
+    {
+      "type": 0,
+      "value": "Explore Editorial"
+    }
+  ],
+  "home.featuredEvents": [
+    {
+      "type": 0,
+      "value": "Featured"
+    }
+  ],
+  "home.featuredGalleries": [
+    {
+      "type": 0,
+      "value": "Featured Galleries"
+    }
+  ],
+  "home.featuredShows": [
+    {
+      "type": 0,
+      "value": "Featured Shows"
+    }
+  ],
+  "home.marketNews": [
+    {
+      "type": 0,
+      "value": "Market News"
+    }
+  ],
+  "home.marketNewsAuthor": [
+    {
+      "type": 0,
+      "value": "By "
+    },
+    {
+      "type": 1,
+      "value": "author"
+    }
+  ],
+  "home.metaTagsDescription": [
+    {
+      "type": 0,
+      "value": "Artsy is the world’s largest online art marketplace. Browse over 1 million artworks by iconic and emerging artists from 4000+ galleries and top auction houses."
+    }
+  ],
+  "home.metaTagsTitle": [
+    {
+      "type": 0,
+      "value": "Artsy — Discover, Buy, and Sell Fine Art"
+    }
+  ],
   "home.newWorksByArtistsYouFollow": [
     {
       "type": 0,
@@ -15,6 +79,28 @@
     {
       "type": 0,
       "value": "Trending Artists on Artsy"
+    }
+  ],
+  "home.viewAllAuctions": [
+    {
+      "type": 0,
+      "value": "View All Auctions"
+    }
+  ],
+  "home.viewAllGalleries": [
+    {
+      "type": 0,
+      "value": "View All Galleries"
+    }
+  ],
+  "myMessage": [
+    {
+      "type": 1,
+      "value": "name"
+    },
+    {
+      "type": 0,
+      "value": " has apples"
     }
   ],
   "navbar.artists": [

@@ -20,6 +20,7 @@ import { useTracking } from "v2/System"
 import { RouterLink } from "v2/System/Router/RouterLink"
 import { Media } from "v2/Utils/Responsive"
 import { HomeFeaturedEventsRail_orderedSet } from "v2/__generated__/HomeFeaturedEventsRail_orderedSet.graphql"
+import { FormattedMessage } from "react-intl"
 
 interface HomeFeaturedEventsRailProps {
   orderedSet: HomeFeaturedEventsRail_orderedSet
@@ -42,7 +43,7 @@ const HomeFeaturedEventsRail: React.FC<HomeFeaturedEventsRailProps> = ({
   return (
     <>
       <Text variant="lg" mb={4}>
-        Featured
+        <FormattedMessage id="home.featuredEvents" />
       </Text>
 
       <GridColumns gridRowGap={2}>
