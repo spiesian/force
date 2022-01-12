@@ -84,7 +84,7 @@ export const AppShell: React.FC<AppShellProps> = props => {
   useProductionEnvironmentWarning()
 
   return (
-    <IntlProvider messages={data["ro-RO"]} locale="en-us" defaultLocale="en-us">
+    <IntlProvider messages={data["en-US"]} locale="en-us" defaultLocale="en-us">
       <Flex
         width="100%"
         // Prevents horizontal scrollbars from `FullBleed` + persistent vertical scrollbars

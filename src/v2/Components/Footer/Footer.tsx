@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 import styled from "styled-components"
 import { Media } from "v2/Utils/Responsive"
 import {
@@ -21,6 +21,7 @@ import {
 import { CCPARequest } from "../CCPARequest"
 import { FooterDownloadAppBanner } from "./FooterDownloadAppBanner"
 import { RouterLink, RouterLinkProps } from "v2/System/Router/RouterLink"
+import { FormattedMessage } from "react-intl"
 
 interface FooterProps extends BoxProps {}
 
@@ -54,100 +55,100 @@ export const Footer: React.FC<FooterProps> = props => {
         <GridColumns pt={tokens.pt} pb={tokens.pb} gridRowGap={[4, 0]}>
           <Column span={3}>
             <Text variant={tokens.header} fontWeight="bold" mb={2}>
-              About us
+              <FormattedMessage id="footer.aboutUs" />
             </Text>
 
             <Text variant={tokens.body}>
               <FooterLink my={2} to="/about">
-                About
+                <FormattedMessage id="footer.about" />
               </FooterLink>
 
               <FooterLink my={2} to="/about/jobs">
-                Jobs
+                <FormattedMessage id="footer.jobs" />
               </FooterLink>
 
               <FooterLink my={2} to="/about/press">
-                Press
+                <FormattedMessage id="footer.press" />
               </FooterLink>
 
               <FooterLink mt={2} to="/contact">
-                Contact
+                <FormattedMessage id="footer.contact" />
               </FooterLink>
             </Text>
           </Column>
 
           <Column span={3}>
             <Text variant={tokens.header} fontWeight="bold" mb={2}>
-              Resources
+              <FormattedMessage id="footer.resources" />
             </Text>
 
             <Text variant={tokens.body}>
               <FooterLink my={2} to="https://artsy.github.io/open-source">
-                Open Source
+                <FormattedMessage id="footer.openSource" />
               </FooterLink>
 
               <FooterLink my={2} to="https://medium.com/artsy-blog">
-                Blog
+                <FormattedMessage id="footer.blog" />
               </FooterLink>
 
               <FooterLink my={2} to="/categories">
-                The Art Genome Project
+                <FormattedMessage id="footer.artGenomeProject" />
               </FooterLink>
 
               <FooterLink mt={2} to="/artsy-education">
-                Education
+                <FormattedMessage id="footer.education" />
               </FooterLink>
             </Text>
           </Column>
 
           <Column span={3}>
             <Text variant={tokens.header} fontWeight="bold" mb={2}>
-              Partnerships
+              <FormattedMessage id="footer.partnerships" />
             </Text>
 
             <Text variant={tokens.body}>
               <FooterLink my={2} to="https://partners.artsy.net">
-                Artsy for Galleries
+                <FormattedMessage id="footer.artsyForGalleries" />
               </FooterLink>
 
               <FooterLink my={2} to="/institution-partnerships">
-                Artsy for Museums
+                <FormattedMessage id="footer.artsyForMuseums" />
               </FooterLink>
 
               <FooterLink mt={2} to="/auction-partnerships">
-                Artsy for Auctions
+                <FormattedMessage id="footer.artsyForAuctions" />
               </FooterLink>
 
               <FooterLink
                 mt={2}
                 to="https://partners.artsy.net/artsy-fair-partnerships/"
               >
-                Artsy for Fairs
+                <FormattedMessage id="footer.artsyForFairs" />
               </FooterLink>
             </Text>
           </Column>
 
           <Column span={3} wrap>
             <Text variant={tokens.header} fontWeight="bold" mb={2}>
-              Support
+              <FormattedMessage id="footer.support" />
             </Text>
 
             <Text variant={tokens.body}>
               <FooterLink my={2} to="https://support.artsy.net">
-                Visit our Help Center
+                <FormattedMessage id="footer.visitOurHelpCenter" />
               </FooterLink>
 
               <FooterLink
                 mt={2}
                 to="https://support.artsy.net/hc/en-us/categories/360003689513-Buy"
               >
-                Buying on Artsy
+                <FormattedMessage id="footer.buyingOnArtsy" />
               </FooterLink>
             </Text>
 
             <Media greaterThan="xs">
               <Text variant={tokens.header} fontWeight="bold" mt={4} mb={1}>
-                Get the App
+                <FormattedMessage id="footer.getTheApp" />
               </Text>
 
               <Text variant={tokens.body}>
@@ -155,14 +156,14 @@ export const Footer: React.FC<FooterProps> = props => {
                   mt={2}
                   to="https://apps.apple.com/us/app/artsy-buy-sell-original-art/id703796080"
                 >
-                  iOS App
+                  <FormattedMessage id="footer.iosApp" />
                 </FooterLink>
 
                 <FooterLink
                   mt={2}
                   to="https://play.google.com/store/apps/details?id=net.artsy.app"
                 >
-                  Android App
+                  <FormattedMessage id="footer.androidApp" />
                 </FooterLink>
               </Text>
             </Media>
@@ -250,19 +251,19 @@ const PolicyLinks = () => {
       <Flex mr={1}>© {new Date().getFullYear()} Artsy</Flex>
 
       <FooterLink color="black60" mr={1} to="/terms">
-        Terms of Use
+        <FormattedMessage id="footer.termsOfUse" />
       </FooterLink>
 
       <FooterLink color="black60" mr={1} to="/privacy">
-        Privacy Policy
+        <FormattedMessage id="footer.privacyPolicy" />
       </FooterLink>
 
       <FooterLink color="black60" mr={1} to="/security">
-        Security
+        <FormattedMessage id="footer.security" />
       </FooterLink>
 
       <FooterLink color="black60" mr={1} to="/conditions-of-sale">
-        Conditions of Sale
+        <FormattedMessage id="footer.conditionsOfSale" />
       </FooterLink>
 
       <FooterLink
@@ -270,7 +271,7 @@ const PolicyLinks = () => {
         mr={1}
         to="/page/artsy-curated-auctions-listing-agreement"
       >
-        ACA Seller’s Agreement
+        <FormattedMessage id="footer.acaSellersAgreement" />
       </FooterLink>
 
       <Flex mr={1}>

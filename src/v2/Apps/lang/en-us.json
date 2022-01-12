@@ -96,5 +96,83 @@
   },
   "home.viewAllAuctions": {
     "defaultMessage": "View All Auctions"
+  },
+  "footer.about": {
+    "defaultMessage": "About"
+  },
+  "footer.aboutUs": {
+    "defaultMessage": "About us"
+  },
+  "footer.acaSellersAgreement": {
+    "defaultMessage": "ACA Seller’s Agreement"
+  },
+  "footer.androidApp": {
+    "defaultMessage": "Android App"
+  },
+  "footer.artGenomeProject": {
+    "defaultMessage": "The Art Genome Project"
+  },
+  "footer.artsyForAuctions": {
+    "defaultMessage": "Artsy for Auctions"
+  },
+  "footer.artsyForFairs": {
+    "defaultMessage": "Artsy for Fairs"
+  },
+  "footer.artsyForGalleries": {
+    "defaultMessage": "Artsy for Galleries"
+  },
+  "footer.artsyForMuseums": {
+    "defaultMessage": "Artsy for Museums"
+  },
+  "footer.buyingOnArtsy": {
+    "defaultMessage": "Buying on Artsy"
+  },
+  "footer.contact": {
+    "defaultMessage": "Contact"
+  },
+  "footer.conditionsOfSale": {
+    "defaultMessage": "Conditions of Sale"
+  },
+  "footer.blog": {
+    "defaultMessage": "Blog"
+  },
+  "footer.education": {
+    "defaultMessage": "Education"
+  },
+  "footer.getTheApp": {
+    "defaultMessage": "Get the App"
+  },
+  "footer.iosApp": {
+    "defaultMessage": "iOS App"
+  },
+  "footer.jobs": {
+    "defaultMessage": "Jobs"
+  },
+  "footer.openSource": {
+    "defaultMessage": "Open Source"
+  },
+  "footer.partnerships": {
+    "defaultMessage": "Partnerships"
+  },
+  "footer.press": {
+    "defaultMessage": "Press"
+  },
+  "footer.privacyPolicy": {
+    "defaultMessage": "Privacy Policy"
+  },
+  "footer.resources": {
+    "defaultMessage": "Resources"
+  },
+  "footer.security": {
+    "defaultMessage": "Security"
+  },
+  "footer.support": {
+    "defaultMessage": "Support"
+  },
+  "footer.termsOfUse": {
+    "defaultMessage": "Terms of Use"
+  },
+  "footer.visitOurHelpCenter": {
+    "defaultMessage": "Visit our Help Center"
   }
 }

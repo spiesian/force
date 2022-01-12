@@ -1,4 +1,160 @@
 {
+  "footer.about": [
+    {
+      "type": 0,
+      "value": "About"
+    }
+  ],
+  "footer.aboutUs": [
+    {
+      "type": 0,
+      "value": "About us"
+    }
+  ],
+  "footer.acaSellersAgreement": [
+    {
+      "type": 0,
+      "value": "ACA Seller’s Agreement"
+    }
+  ],
+  "footer.androidApp": [
+    {
+      "type": 0,
+      "value": "Android App"
+    }
+  ],
+  "footer.artGenomeProject": [
+    {
+      "type": 0,
+      "value": "The Art Genome Project"
+    }
+  ],
+  "footer.artsyForAuctions": [
+    {
+      "type": 0,
+      "value": "Artsy for Auctions"
+    }
+  ],
+  "footer.artsyForFairs": [
+    {
+      "type": 0,
+      "value": "Artsy for Fairs"
+    }
+  ],
+  "footer.artsyForGalleries": [
+    {
+      "type": 0,
+      "value": "Artsy for Galleries"
+    }
+  ],
+  "footer.artsyForMuseums": [
+    {
+      "type": 0,
+      "value": "Artsy for Museums"
+    }
+  ],
+  "footer.blog": [
+    {
+      "type": 0,
+      "value": "Blog"
+    }
+  ],
+  "footer.buyingOnArtsy": [
+    {
+      "type": 0,
+      "value": "Buying on Artsy"
+    }
+  ],
+  "footer.conditionsOfSale": [
+    {
+      "type": 0,
+      "value": "Conditions of Sale"
+    }
+  ],
+  "footer.contact": [
+    {
+      "type": 0,
+      "value": "Contact"
+    }
+  ],
+  "footer.education": [
+    {
+      "type": 0,
+      "value": "Education"
+    }
+  ],
+  "footer.getTheApp": [
+    {
+      "type": 0,
+      "value": "Get the App"
+    }
+  ],
+  "footer.iosApp": [
+    {
+      "type": 0,
+      "value": "iOS App"
+    }
+  ],
+  "footer.jobs": [
+    {
+      "type": 0,
+      "value": "Jobs"
+    }
+  ],
+  "footer.openSource": [
+    {
+      "type": 0,
+      "value": "Open Source"
+    }
+  ],
+  "footer.partnerships": [
+    {
+      "type": 0,
+      "value": "Partnerships"
+    }
+  ],
+  "footer.press": [
+    {
+      "type": 0,
+      "value": "Press"
+    }
+  ],
+  "footer.privacyPolicy": [
+    {
+      "type": 0,
+      "value": "Privacy Policy"
+    }
+  ],
+  "footer.resources": [
+    {
+      "type": 0,
+      "value": "Resources"
+    }
+  ],
+  "footer.security": [
+    {
+      "type": 0,
+      "value": "Security"
+    }
+  ],
+  "footer.support": [
+    {
+      "type": 0,
+      "value": "Support"
+    }
+  ],
+  "footer.termsOfUse": [
+    {
+      "type": 0,
+      "value": "Terms of Use"
+    }
+  ],
+  "footer.visitOurHelpCenter": [
+    {
+      "type": 0,
+      "value": "Visit our Help Center"
+    }
+  ],
   "home.auctionLots": [
     {
       "type": 0,
