@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import * as React from "react";
+import { useEffect, useState } from "react"
+import * as React from "react"
 import {
   Button,
   Flex,
@@ -41,6 +41,7 @@ import { AppContainer } from "v2/Apps/Components/AppContainer"
 import { HorizontalPadding } from "v2/Apps/Components/HorizontalPadding"
 import { useNavBarHeight } from "./useNavBarHeight"
 import { RouterLink } from "v2/System/Router/RouterLink"
+import { FormattedMessage } from "react-intl"
 
 /**
  * Old Force pages have the navbar height hardcoded in several places. If
@@ -148,7 +149,7 @@ export const NavBar: React.FC = track(
                   flex={1}
                   size="small"
                 >
-                  Sign Up
+                  <FormattedMessage id="navbar.signup" />
                 </Button>
 
                 <Button
@@ -159,7 +160,7 @@ export const NavBar: React.FC = track(
                   ml={1}
                   size="small"
                 >
-                  Log In
+                  <FormattedMessage id="navbar.login" />
                 </Button>
               </Flex>
             )}
@@ -181,7 +182,7 @@ export const NavBar: React.FC = track(
                       textDecoration="none"
                       onClick={handleClick}
                     >
-                      Buy
+                      <FormattedMessage id="navbar.buy" />
                     </NavBarItemLink>
                   </Flex>
 
@@ -190,7 +191,7 @@ export const NavBar: React.FC = track(
                     textDecoration="none"
                     onClick={handleClick}
                   >
-                    Sell
+                    <FormattedMessage id="navbar.sell" />
                   </NavBarItemLink>
 
                   <NavBarItemLink
@@ -198,7 +199,7 @@ export const NavBar: React.FC = track(
                     textDecoration="none"
                     onClick={handleClick}
                   >
-                    Price Database
+                    <FormattedMessage id="navbar.pricedatabase" />
                   </NavBarItemLink>
 
                   <Flex alignItems="center" display={["none", "none", "flex"]}>
@@ -207,7 +208,7 @@ export const NavBar: React.FC = track(
                       textDecoration="none"
                       onClick={handleClick}
                     >
-                      Editorial
+                      <FormattedMessage id="navbar.editorial" />
                     </NavBarItemLink>
                   </Flex>
                 </Text>
@@ -229,7 +230,7 @@ export const NavBar: React.FC = track(
                         })
                       }}
                     >
-                      Log In
+                      <FormattedMessage id="navbar.login" />
                     </Button>
 
                     <Button
@@ -243,7 +244,7 @@ export const NavBar: React.FC = track(
                         })
                       }}
                     >
-                      Sign Up
+                      <FormattedMessage id="navbar.signup" />
                     </Button>
                   </Flex>
                 )}
@@ -358,23 +359,23 @@ export const NavBar: React.FC = track(
                 </Dropdown>
 
                 <NavBarItemLink href="/auctions" onClick={handleClick}>
-                  Auctions
+                  <FormattedMessage id="navbar.auctions" />
                 </NavBarItemLink>
 
                 <NavBarItemLink href="/viewing-rooms" onClick={handleClick}>
-                  Viewing&nbsp;Rooms
+                  <FormattedMessage id="navbar.viewingrooms" />
                 </NavBarItemLink>
 
                 <NavBarItemLink href="/galleries" onClick={handleClick}>
-                  Galleries
+                  <FormattedMessage id="navbar.galleries" />
                 </NavBarItemLink>
 
                 <NavBarItemLink href="/fairs" onClick={handleClick}>
-                  Fairs
+                  <FormattedMessage id="navbar.fairs" />
                 </NavBarItemLink>
 
                 <NavBarItemLink href="/shows" onClick={handleClick}>
-                  Shows
+                  <FormattedMessage id="navbar.shows" />
                 </NavBarItemLink>
 
                 <NavBarItemLink
@@ -384,7 +385,7 @@ export const NavBar: React.FC = track(
                   href="/institutions"
                   onClick={handleClick}
                 >
-                  Museums
+                  <FormattedMessage id="navbar.mueuns" />
                 </NavBarItemLink>
               </Flex>
 
@@ -399,7 +400,7 @@ export const NavBar: React.FC = track(
                     })
                   }}
                 >
-                  Download App
+                  <FormattedMessage id="navbar.downloadapp" />
                 </NavBarItemButton>
               </Flex>
             </Text>

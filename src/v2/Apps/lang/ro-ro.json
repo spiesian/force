@@ -1,6 +1,11 @@
 {
   "myMessage": {
-    "defaultMessage": "{name} are mere",
+    "defaultMessage": "{name} has apples",
     "description": "Hello react_intl"
+  },
+  "header": {
+    "downloadapp": {
+      "defaultMessage": "Download App"
+    }
   }
 }

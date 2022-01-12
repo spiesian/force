@@ -8,5 +8,101 @@
       "type": 0,
       "value": " has apples"
     }
+  ],
+  "navbar.artists": [
+    {
+      "type": 0,
+      "value": "Artists"
+    }
+  ],
+  "navbar.artworks": [
+    {
+      "type": 0,
+      "value": "Artworks"
+    }
+  ],
+  "navbar.auctions": [
+    {
+      "type": 0,
+      "value": "Auctions"
+    }
+  ],
+  "navbar.buy": [
+    {
+      "type": 0,
+      "value": "Buy"
+    }
+  ],
+  "navbar.downloadapp": [
+    {
+      "type": 0,
+      "value": "Download App"
+    }
+  ],
+  "navbar.editorial": [
+    {
+      "type": 0,
+      "value": "Editorial"
+    }
+  ],
+  "navbar.fairs": [
+    {
+      "type": 0,
+      "value": "Fairs"
+    }
+  ],
+  "navbar.galleries": [
+    {
+      "type": 0,
+      "value": "Galleries"
+    }
+  ],
+  "navbar.login": [
+    {
+      "type": 0,
+      "value": "Log In"
+    }
+  ],
+  "navbar.mueuns": [
+    {
+      "type": 0,
+      "value": "Museuns"
+    }
+  ],
+  "navbar.pricedatabase": [
+    {
+      "type": 0,
+      "value": "Price Database"
+    }
+  ],
+  "navbar.sell": [
+    {
+      "type": 0,
+      "value": "Sell"
+    }
+  ],
+  "navbar.show": [
+    {
+      "type": 0,
+      "value": "Show"
+    }
+  ],
+  "navbar.shows": [
+    {
+      "type": 0,
+      "value": "Shows"
+    }
+  ],
+  "navbar.signup": [
+    {
+      "type": 0,
+      "value": "Sign Up"
+    }
+  ],
+  "navbar.viewingrooms": [
+    {
+      "type": 0,
+      "value": "Viewing Rooms"
+    }
   ]
 }

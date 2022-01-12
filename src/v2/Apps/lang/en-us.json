@@ -2,5 +2,53 @@
   "myMessage": {
     "defaultMessage": "{name} has apples",
     "description": "Hello react_intl"
+  },
+  "navbar.login": {
+      "defaultMessage": "Log In"
+  },
+  "navbar.signup": {
+    "defaultMessage": "Sign Up"
+  },
+  "navbar.downloadapp": {
+      "defaultMessage": "Download App"
+  },
+  "navbar.show": {
+    "defaultMessage": "Show"
+  },
+  "navbar.buy": {
+    "defaultMessage": "Buy"
+  },
+  "navbar.sell": {
+    "defaultMessage": "Sell"
+  },
+  "navbar.pricedatabase": {
+    "defaultMessage": "Price Database"
+  },
+  "navbar.editorial": {
+    "defaultMessage": "Editorial"
+  },
+  "navbar.artists": {
+    "defaultMessage": "Artists"
+  },
+  "navbar.artworks": {
+    "defaultMessage": "Artworks"
+  },
+  "navbar.auctions": {
+    "defaultMessage": "Auctions"
+  },
+  "navbar.viewingrooms": {
+    "defaultMessage": "Viewing Rooms"
+  },
+  "navbar.galleries": {
+    "defaultMessage": "Galleries"
+  },
+  "navbar.fairs": {
+    "defaultMessage": "Fairs"
+  },
+  "navbar.shows": {
+    "defaultMessage": "Shows"
+  },
+  "navbar.mueuns": {
+    "defaultMessage": "Museuns"
   }
 }
