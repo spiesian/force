@@ -18,7 +18,7 @@ import { AppToasts } from "./AppToasts"
 import { useNavBarHeight } from "v2/Components/NavBar/useNavBarHeight"
 import { useProductionEnvironmentWarning } from "v2/Utils/Hooks/useProductionEnvironmentWarning"
 import { useAuthValidation } from "v2/Utils/Hooks/useAuthValidation"
-import { IntlProvider, FormattedMessage } from "react-intl"
+import { IntlProvider } from "react-intl"
 import locale_en_us from "../compiled-lang/en-us.json"
 import locale_ro_ro from "../compiled-lang/ro-ro.json"
 
