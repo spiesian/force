@@ -323,7 +323,7 @@ export const NavBar: React.FC = track(
                         onClick={handleClick}
                         data-label="Artists"
                       />
-                      Artists
+                      <FormattedMessage id="navbar.artists" />
                     </NavBarItemButton>
                   )}
                 </Dropdown>
@@ -353,7 +353,7 @@ export const NavBar: React.FC = track(
                         onClick={handleClick}
                         data-label="Artworks"
                       />
-                      Artworks
+                      <FormattedMessage id="navbar.artworks" />
                     </NavBarItemButton>
                   )}
                 </Dropdown>
