@@ -155,6 +155,12 @@
       "value": "Visite o Centro de Ajuda"
     }
   ],
+  "footerDownloadAppBanner.getMore": [
+    {
+      "type": 0,
+      "value": "Obtenha mais da Artsy—no aplicativo"
+    }
+  ],
   "home.auctionLots": [
     {
       "type": 0,

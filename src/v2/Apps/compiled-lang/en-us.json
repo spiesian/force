@@ -71,6 +71,12 @@
       "value": "Save"
     }
   ],
+  "artwork.artworkactionssavebutton.watchlot": [
+    {
+      "type": 0,
+      "value": "Watch lot"
+    }
+  ],
   "artwork.authenticitycertificate.certificateofauthenticity": [
     {
       "type": 0,
@@ -489,6 +495,12 @@
     {
       "type": 0,
       "value": "Visit our Help Center"
+    }
+  ],
+  "footerDownloadAppBanner.getMore": [
+    {
+      "type": 0,
+      "value": "Get More from Artsy—on the App"
     }
   ],
   "home.auctionLots": [

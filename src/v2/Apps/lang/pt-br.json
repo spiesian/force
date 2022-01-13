@@ -131,6 +131,9 @@
   "footer.visitOurHelpCenter": {
     "defaultMessage": "Visite o Centro de Ajuda"
   },
+  "footerDownloadAppBanner.getMore": {
+    "defaultMessage": "Obtenha mais da Artsy—no aplicativo"
+  },
   "home.auctionLots": {
     "defaultMessage": "Auction Lots"
   },

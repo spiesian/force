@@ -11,6 +11,7 @@ import {
 import { resized } from "v2/Utils/resized"
 import { Media } from "v2/Utils/Responsive"
 import { DownloadAppBadges } from "../DownloadAppBadges/DownloadAppBadges"
+import { FormattedMessage } from "react-intl"
 
 const DESKTOP_COVER_IMAGE = resized(
   "https://files.artsy.net/images/artsy_app-download-footer_2x_max.jpg",
@@ -41,7 +42,7 @@ export const FooterDownloadAppBanner = () => {
         py={[6, 2]}
       >
         <Text variant={tokens.title} textAlign="center" mb={1}>
-          Get More from Artsy—on the App
+          <FormattedMessage id="footerDownloadAppBanner.getMore" />
         </Text>
         <Spacer mt={2} />
         <DownloadAppBadges contextModule={ContextModule.footer} />

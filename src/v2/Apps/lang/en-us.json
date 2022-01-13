@@ -181,6 +181,9 @@
   "footer.visitOurHelpCenter": {
     "defaultMessage": "Visit our Help Center"
   },
+  "footerDownloadAppBanner.getMore": {
+    "defaultMessage": "Get More from Artsy—on the App"
+  },
   "shipping.myAddresses": {
     "defaultMessage": "My addresses | Artsy"
   },
