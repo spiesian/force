@@ -51,6 +51,12 @@
   "navbar.mueuns": {
     "defaultMessage": "Museuns"
   },
+  "navbar.searchplaceholder": {
+    "defaultMessage": "Search by artist, gallery, style, theme, tag, etc."
+  },
+  "navbar.searchplaceholderxs": {
+    "defaultMessage": "Search Artsy"
+  },
   "home.newWorksByArtistsYouFollow": {
     "defaultMessage": "New Works by Artists you Follow",
     "description": "Tab Title for the Artists you follow Rail on the Home Screen"

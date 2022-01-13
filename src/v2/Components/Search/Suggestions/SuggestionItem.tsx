@@ -1,7 +1,7 @@
 import { ArtworkIcon, AuctionIcon, Flex, Pill, Text } from "@artsy/palette"
 import match from "autosuggest-highlight/match"
 import parse from "autosuggest-highlight/parse"
-import * as React from "react";
+import * as React from "react"
 import styled from "styled-components"
 import { RouterLink } from "v2/System/Router/RouterLink"
 
@@ -77,8 +77,8 @@ const SuggestionItemLink = styled(RouterLink).attrs({
   min-height: 60px;
 `
 
-export const PLACEHOLDER = "Search by artist, gallery, style, theme, tag, etc."
-export const PLACEHOLDER_XS = "Search Artsy"
+export const PLACEHOLDER = "navbar.searchplaceholder"
+export const PLACEHOLDER_XS = "navbar.searchplaceholderxs"
 
 const DefaultSuggestion: React.FC<SuggestionItemProps> = ({
   display,

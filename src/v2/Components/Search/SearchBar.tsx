@@ -28,6 +28,7 @@ import { useDidMount } from "v2/Utils/Hooks/useDidMount"
 import createLogger from "v2/Utils/logger"
 import { Media } from "v2/Utils/Responsive"
 import { SearchInputContainer } from "./SearchInputContainer"
+import { injectIntl, IntlShape } from "react-intl"
 
 const logger = createLogger("Components/Search/SearchBar")
 
@@ -35,6 +36,7 @@ export interface Props extends SystemContextProps {
   relay: RelayRefetchProp
   router?: Router
   viewer: SearchBar_viewer
+  intl: IntlShape
 }
 
 interface State {
@@ -77,12 +79,11 @@ const SuggestionContainer = ({ children, containerProps }) => {
 const Form = styled.form`
   width: 100%;
 `
-
 // @ts-expect-error PLEASE_FIX_ME_STRICT_NULL_CHECK_MIGRATION
 @track(null, {
   dispatch: data => Events.postEvent(data),
 })
-export class SearchBar extends Component<Props, State> {
+export class SearchBarInside extends Component<Props, State> {
   public input: HTMLInputElement
 
   // Once this is set, we don't ever expect to change it back. A click on a
@@ -390,7 +391,9 @@ export class SearchBar extends Component<Props, State> {
           event.preventDefault()
         }
       },
-      placeholder: xs ? PLACEHOLDER_XS : PLACEHOLDER,
+      placeholder: xs
+        ? this.props.intl.formatMessage({ id: PLACEHOLDER_XS })
+        : this.props.intl.formatMessage({ id: PLACEHOLDER }),
       value: term,
     }
 
@@ -463,6 +466,8 @@ export class SearchBar extends Component<Props, State> {
     )
   }
 }
+
+export const SearchBar = injectIntl(SearchBarInside)
 
 export const SearchBarRefetchContainer = createRefetchContainer(
   withSystemContext(SearchBar),
