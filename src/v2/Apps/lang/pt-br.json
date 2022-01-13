@@ -1,0 +1,116 @@
+{
+  "footer.about": {
+    "defaultMessage": "Sobre"
+  },
+  "footer.aboutUs": {
+    "defaultMessage": "Sobre nós"
+  },
+  "footer.acaSellersAgreement": {
+    "defaultMessage": "ACA Seller's Agreement"
+  },
+  "footer.androidApp": {
+    "defaultMessage": "Android APP"
+  },
+  "footer.artGenomeProject": {
+    "defaultMessage": "O Projeto Art Genome"
+  },
+  "footer.artsyForAuctions": {
+    "defaultMessage": "Artsy para Leilões"
+  },
+  "footer.artsyForFairs": {
+    "defaultMessage": "Artsy para Feiras de Arte"
+  },
+  "footer.artsyForGalleries": {
+    "defaultMessage": "Artsy para Galerias"
+  },
+  "footer.artsyForMuseums": {
+    "defaultMessage": "Artsy para Museus"
+  },
+  "footer.blog": {
+    "defaultMessage": "Blog"
+  },
+  "footer.buyingOnArtsy": {
+    "Comprando na Artsy"
+  },
+  "footer.conditionsOfSale": {
+    "defaultMessage": "Condições de Venda"
+  },
+  "footer.contact": {
+    "defaultMessage": "Contato"
+  },
+  "footer.education": {
+    "defaultMessage": "Educação"
+  },
+  "footer.getTheApp": {
+    "defaultMessage": "Baixe o aplicativo"
+  },
+  "footer.iosApp": {
+    "defaultMessage": "iOS App"
+  },
+  "footer.jobs": {
+    "defaultMessage": "Vagas"
+  },
+  "footer.openSource": {
+    "defaultMessage": "Open Source"
+  },
+  "footer.partnerships": {
+    "defaultMessage": "Parcerias"
+  },
+  "footer.press": {
+    "defaultMessage": "Imprensa"
+  },
+  "footer.privacyPolicy": {
+    "defaultMessage": "Política de privacidade"
+  },
+  "footer.resources": {
+    "defaultMessage": "Recursos"
+  },
+  "footer.security": {
+    "defaultMessage": "Segurança"
+  },
+  "footer.support": {
+    "defaultMessage": "Suporte"
+  },
+  "footer.termsOfUse": {
+    "defaultMessage": "Termos de uso"
+  },
+  "footer.visitOurHelpCenter": {
+    "defaultMessage": "Visite o Centro de Ajuda"
+  },
+  "home.auctionLots": {
+    "defaultMessage": "Auction Lots"
+  },
+  "home.exploreAllShows": {
+    "defaultMessage": "Explore todas as exibições"
+  },
+  "home.exploreEditorial": {
+    "defaultMessage": "Explore o Editorial"
+  },
+  "home.featuredEvents": {
+    "defaultMessage": "Eventos"
+  },
+  "home.featuredGalleries": {
+    "defaultMessage": "Galerias"
+  },
+  "home.featuredShows": {
+    "defaultMessage": "Exibições"
+  },
+  "home.marketNews": {
+  },
+  "home.marketNewsAuthor": {
+  },
+  "home.metaTagsDescription": {
+  },
+  "home.metaTagsTitle": {
+  },
+  "home.newWorksByArtistsYouFollow": {
+  },
+  "home.recentlyViewed": {
+  },
+  "home.trendingArtistsOnArtsy": {
+  },
+  "home.viewAllAuctions": {
+  },
+  "home.viewAllGalleries": {
+  }
+}
