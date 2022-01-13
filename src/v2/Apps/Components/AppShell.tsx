@@ -82,9 +82,10 @@ export const AppShell: React.FC<AppShellProps> = props => {
 
   useNetworkOfflineMonitor()
   useProductionEnvironmentWarning()
+  const locale = props.match.location.query.locale || "en-US"
 
   return (
-    <IntlProvider messages={data["en-US"]} locale="en-us" defaultLocale="en-us">
+    <IntlProvider messages={data[locale]} locale="en-us" defaultLocale="en-us">
       <Flex
         width="100%"
         // Prevents horizontal scrollbars from `FullBleed` + persistent vertical scrollbars
