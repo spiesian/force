@@ -13,6 +13,7 @@ import {
 } from "@artsy/palette"
 import { useDialog } from "v2/Utils/Hooks/useDialog"
 import { AuctionBuyersPremiumDialogQueryRenderer } from "v2/Components/AuctionBuyersPremiumDialog"
+import { FormattedMessage } from "react-intl"
 
 export interface ArtworkSidebarCurrentBidInfoProps {
   artwork: ArtworkSidebarCurrentBidInfo_artwork
@@ -55,7 +56,7 @@ export const ArtworkSidebarCurrentBidInfo: React.FC<ArtworkSidebarCurrentBidInfo
         <Separator my={2} />
 
         <Text variant="subtitle" color="black100">
-          Bidding closed
+          <FormattedMessage id="artwork.sidebarcurrentbidinfo.biddingclosed" />
         </Text>
       </>
     )
@@ -145,7 +146,8 @@ export const ArtworkSidebarCurrentBidInfo: React.FC<ArtworkSidebarCurrentBidInfo
 
           {myMaxBid && (
             <Text variant="xs" color="black60" pl={1}>
-              Your max: {myMaxBid}
+              <FormattedMessage id="artwork.sidebarcurrentbidinfo.yourmax" />{" "}
+              {myMaxBid}
             </Text>
           )}
         </Flex>
@@ -156,12 +158,12 @@ export const ArtworkSidebarCurrentBidInfo: React.FC<ArtworkSidebarCurrentBidInfo
           <Spacer mt={1} />
 
           <Text variant="xs" color="black60">
-            This auction has a{" "}
+            <FormattedMessage id="artwork.sidebarcurrentbidinfo.thisauctionhasa" />{" "}
             <Clickable onClick={showDialog} textDecoration="underline">
-              buyer’s premium
+              <FormattedMessage id="artwork.sidebarcurrentbidinfo.buyerpremium" />
             </Clickable>
             .<br />
-            Shipping, taxes, and additional fees may apply.
+            <FormattedMessage id="artwork.sidebarcurrentbidinfo.shippingandtaxes" />
           </Text>
         </>
       )}

@@ -4,6 +4,7 @@ import { createFragmentContainer, graphql } from "react-relay"
 import { ContextModule } from "@artsy/cohesion"
 import { ArtworkSidebarArtists_artwork } from "v2/__generated__/ArtworkSidebarArtists_artwork.graphql"
 import { FollowArtistButtonFragmentContainer } from "v2/Components/FollowButton/FollowArtistButton"
+import { FormattedMessage } from "react-intl"
 
 export interface ArtistsProps {
   artwork: ArtworkSidebarArtists_artwork
@@ -36,7 +37,7 @@ export const ArtworkSidebarArtists: React.FC<ArtistsProps> = ({
                 triggerSuggestions
                 buttonProps={{ size: "small", variant: "secondaryOutline" }}
               >
-                Follow
+                <FormattedMessage id="artwork.sidebarartist.follow" />
               </FollowArtistButtonFragmentContainer>
             }
           />

@@ -4,25 +4,27 @@ import { Component } from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { ArtworkDefinitionList } from "v2/Apps/Artwork/Components/ArtworkDefinitionList"
 import { groupBy } from "lodash"
+import { injectIntl, IntlShape } from "react-intl"
 
 export interface MarketInsightsProps {
   artist: ArtistMarketInsights_artist
   border?: boolean
   Container?: (props: { children: JSX.Element }) => JSX.Element
+  intl: IntlShape
 }
 
 export const CATEGORIES = {
-  "blue-chip": "Blue-chip",
-  "top-established": "Established",
-  "top-emerging": "Emerging",
+  "blue-chip": "artwork.artistmarketingsights.bluechip",
+  "top-established": "artwork.artistmarketingsights.established",
+  "top-emerging": "artwork.artistmarketingsights.emerging",
 }
 const CATEGORY_LABEL_MAP = {
-  "blue-chip": "Represented by internationally recognized galleries.",
-  "top-established": "Represented by industry leading galleries.",
-  "top-emerging": "Represented by up-and-coming galleries.",
+  "blue-chip": "artwork.artistmarketingsights.bluechip.label",
+  "top-established": "artwork.artistmarketingsights.established.label",
+  "top-emerging": "artwork.artistmarketingsights.emerging.label",
 }
 
-export class MarketInsights extends Component<MarketInsightsProps> {
+export class MarketInsightsInside extends Component<MarketInsightsProps> {
   static defaultProps = {
     border: true,
   }
@@ -49,7 +51,11 @@ export class MarketInsights extends Component<MarketInsightsProps> {
       .join(", ")
 
     return (
-      <ArtworkDefinitionList term="High auction record">
+      <ArtworkDefinitionList
+        term={this.props.intl.formatMessage({
+          id: "artwork.artistmarketingsights.term",
+        })}
+      >
         {display}
       </ArtworkDefinitionList>
     )
@@ -62,7 +68,9 @@ export class MarketInsights extends Component<MarketInsightsProps> {
       const highCategory = highestCategory(partnersConnection.edges)
 
       return (
-        <ArtworkDefinitionList term={CATEGORIES[highCategory]}>
+        <ArtworkDefinitionList
+          term={this.props.intl.formatMessage({ id: CATEGORIES[highCategory] })}
+        >
           {CATEGORY_LABEL_MAP[highCategory]}
         </ArtworkDefinitionList>
       )
@@ -77,11 +85,13 @@ export class MarketInsights extends Component<MarketInsightsProps> {
 
     const label =
       collections.length === 1
-        ? "Collected by a major museum"
-        : "Collected by major museums"
+        ? "artwork.artistmarketingsights.collectedbyamajormuseums"
+        : "artwork.artistmarketingsights.collectedbymajormuseums"
 
     return (
-      <ArtworkDefinitionList term={label}>
+      <ArtworkDefinitionList
+        term={this.props.intl.formatMessage({ id: label })}
+      >
         {collections.join(", ")}
       </ArtworkDefinitionList>
     )
@@ -120,6 +130,8 @@ export class MarketInsights extends Component<MarketInsightsProps> {
     )
   }
 }
+
+export const MarketInsights = injectIntl(MarketInsightsInside)
 
 export const ArtistMarketInsightsFragmentContainer = createFragmentContainer(
   MarketInsights,

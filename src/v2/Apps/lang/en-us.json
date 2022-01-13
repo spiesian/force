@@ -234,5 +234,158 @@
   },
   "button.continue": {
     "defaultMessage": "Continue"
+  },
+  "artwork.banner.status.incurrentshow": {
+    "defaultMessage": "In current show"
+  },
+  "artwork.banner.status.inauction": {
+    "defaultMessage": "In auction"
+  },
+  "artwork.banner.status.atfair": {
+    "defaultMessage": "At fair"
+  },
+  "artwork.banner.status.inupcomingshow": {
+    "defaultMessage": "In upcoming show "
+  },
+  "artwork.banner.status.inpastshow": {
+    "defaultMessage": "In past show "
+  },
+  "artwork.sidebarcommercial.buynow": {
+    "defaultMessage": "Buy now"
+  },
+  "artwork.sidebarcommercial.makeoffer": {
+    "defaultMessage": "Make offer"
+  },
+  "artwork.sidebarcommercial.contactgallery": {
+    "defaultMessage": "Contact Gallery"
+  },
+  "artwork.sidebarartist.follow": {
+    "defaultMessage": "Follow"
+  },
+  "artwork.sidebarauctionpartnerinfo.estimatedvalue": {
+    "defaultMessage": "Estimated value:"
+  },
+  "artwork.sidebarbidaction.registertobid": {
+    "defaultMessage": "Register to bid"
+  },
+  "artwork.sidebarbidaction.verifyidentity": {
+    "defaultMessage": "Verify identity"
+  },
+  "artwork.sidebarbidaction.identityverificationrequiredtobid": {
+    "defaultMessage": "Identity verification required to bid."
+  },
+  "artwork.sidebarbidaction.registrationpending": {
+    "defaultMessage": "Registration pending"
+  },
+  "artwork.sidebarbidaction.registrationclosed": {
+    "defaultMessage": "Registration closed"
+  },
+  "artwork.sidebarbidaction.watchlivebidding": {
+    "defaultMessage": "Watch live bidding"
+  },
+  "artwork.sidebarbidaction.enterbidding": {
+    "defaultMessage": "Enter live bidding"
+  },
+  "artwork.sidebarbidaction.placemaxbid": {
+    "defaultMessage": "Place max bid"
+  },
+  "artwork.sidebarcurrentbidinfo.biddingclosed": {
+    "defaultMessage": "Bidding closed"
+  },
+  "artwork.sidebarcurrentbidinfo.yourmax": {
+    "defaultMessage": "Your max:"
+  },
+  "artwork.sidebarcurrentbidinfo.thisauctionhasa": {
+    "defaultMessage": "This auction has a"
+  },
+  "artwork.sidebarcurrentbidinfo.buyerpremium": {
+    "defaultMessage": "buyer’s premium"
+  },
+  "artwork.sidebarcurrentbidinfo.shippingandtaxes": {
+    "defaultMessage": "Shipping, taxes, and additional fees may apply."
+  },
+  "artwork.sidebarextralinks.haveaquestion": {
+    "defaultMessage": "Have a question? Read our"
+  },
+  "artwork.authenticitycertificate.certificateofauthenticity": {
+    "defaultMessage": "Certificate of authenticity"
+  },
+  "artwork.authenticitycertificate.certificateofauthenticitydescription": {
+    "defaultMessage": "A certificate of authenticity (COA) is a document from an authoritative source that verifies the artwork’s authenticity. While many COAs are signed by the artist, others will be signed by the representing gallery or the printmaker who collaborated with the artist on the work. For secondary market works, authorized estates or foundations are often the issuing party."
+  },
+  "artwork.authenticitycertificate.coa.description": {
+    "defaultMessage": "COAs typically include the name of the artist, the details (title, date, medium, dimensions) of the work in question, and whenever possible an image of the work."
+  },
+  "artwork.authenticitycertificate.readmore": {
+    "defaultMessage": "Read more about artwork authenticity in our"
+  },
+  "artwork.authenticitycertificate.helpcenter": {
+    "defaultMessage": "Help Center"
+  },
+  "artwork.securepayment.securepayment": {
+    "defaultMessage": "Secure payment"
+  },
+  "artwork.securepayment.securetransactions": {
+    "defaultMessage": "Secure transactions by credit card through Stripe."
+  },
+  "artwork.securepayment.learnmore": {
+    "defaultMessage": "Learn more"
+  },
+  "artwork.buyerguarantee.yourpurchaseisprotected": {
+    "defaultMessage": "Artsy’s buyer protection."
+  },
+  "artwork.buyerguarantee.buyerprotection": {
+    "defaultMessage": "Your purchase is protected"
+  },
+  "artwork.index.aboutthework": {
+    "defaultMessage": "About the work"
+  },
+  "artwork.index.certificateofauthenticity": {
+    "defaultMessage": "Certificate of authenticity"
+  },
+  "artwork.index.provenance": {
+    "defaultMessage": "Provenance"
+  },
+  "artwork.artistmarketingsights.term": {
+    "defaultMessage": "High auction record"
+  },
+  "artwork.artistmarketingsights.collectedbyamajormuseums": {
+    "defaultMessage": "Collected by a major museum"
+  },
+  "artwork.artistmarketingsights.collectedbymajormuseums": {
+    "defaultMessage": "Collected by major museum"
+  },
+  "artwork.artistmarketingsights.bluechip": {
+    "defaultMessage": "Blue-chip"
+  },
+  "artwork.artistmarketingsights.established": {
+    "defaultMessage": "Established"
+  },
+  "artwork.artistmarketingsights.emerging": {
+    "defaultMessage": "Emerging"
+  },
+  "artwork.artistmarketingsights.bluechip.label": {
+    "defaultMessage": "Represented by internationally recognized galleries."
+  },
+  "artwork.artistmarketingsights.established.label": {
+    "defaultMessage": "Represented by industry leading galleries."
+  },
+  "artwork.artistmarketingsights.emerging.label": {
+    "defaultMessage": "Represented by up-and-coming galleries."
+  },
+  "artwork.selectedexhibitions.selectedexhibitions": {
+    "defaultMessage": "Selected exhibitions"
+  },
+  "artwork.selectedexhibitions.exhibitions": {
+    "defaultMessage": "Exhibitions"
+  },
+  "artwork.artworkactions.viewinroom": {
+    "defaultMessage": "View in room"
+  },
+  "artwork.artworkactions.share": {
+    "defaultMessage": "Share"
+  },
+  "artwork.artworkactionssavebutton.save": {
+    "defaultMessage": "Save"
   }
 }

@@ -5,6 +5,7 @@ import { BuyerGuarantee_artwork } from "v2/__generated__/BuyerGuarantee_artwork.
 import { createFragmentContainer, graphql } from "react-relay"
 import { TrustSignal } from "./TrustSignal"
 import { BUYER_GUARANTEE_URL } from "v2/Apps/Order/Components/BuyerGuarantee"
+import { useIntl, FormattedMessage } from "react-intl"
 
 interface Props {
   artwork: BuyerGuarantee_artwork
@@ -13,11 +14,14 @@ interface Props {
 // @ts-expect-error PLEASE_FIX_ME_STRICT_NULL_CHECK_MIGRATION
 const BuyerGuarantee: React.FC<Props> = props => {
   const { artwork } = props
+  const intl = useIntl()
   return (
     (artwork.is_acquireable || artwork.is_offerable) && (
       <TrustSignal
         Icon={<CheckCircleIcon />}
-        label="Your purchase is protected"
+        label={intl.formatMessage({
+          id: "artwork.buyerguarantee.yourpurchaseisprotected",
+        })}
         description={
           <>
             {"Learn more about "}
@@ -26,7 +30,7 @@ const BuyerGuarantee: React.FC<Props> = props => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Artsy’s buyer protection.
+              <FormattedMessage id="artwork.buyerguarantee.buyerprotection" />
             </Link>
             {"."}
           </>

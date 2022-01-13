@@ -5,11 +5,12 @@ import {
   HeartFillIcon,
   HeartIcon,
 } from "@artsy/palette"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { useSaveArtwork } from "v2/Components/Artwork/SaveButton/useSaveArtwork"
 import { ArtworkActionsSaveButton_artwork } from "v2/__generated__/ArtworkActionsSaveButton_artwork.graphql"
 import { UtilButton } from "./ArtworkActions"
+import { useIntl } from "react-intl"
 
 interface ArtworkActionsSaveButtonProps {
   artwork: ArtworkActionsSaveButton_artwork
@@ -17,6 +18,7 @@ interface ArtworkActionsSaveButtonProps {
 const ArtworkActionsSaveButton: React.FC<ArtworkActionsSaveButtonProps> = ({
   artwork,
 }) => {
+  const intl = useIntl()
   const { handleSave } = useSaveArtwork({
     isSaved: !!artwork.is_saved,
     artwork,
@@ -35,7 +37,9 @@ const ArtworkActionsSaveButton: React.FC<ArtworkActionsSaveButtonProps> = ({
       <UtilButton
         name="bell"
         Icon={isSaved ? FilledIcon : BellIcon}
-        label="Watch lot"
+        label={intl.formatMessage({
+          id: "artwork.artworkactionssavebutton.watchlot",
+        })}
         onClick={handleSave}
       />
     )
@@ -46,7 +50,9 @@ const ArtworkActionsSaveButton: React.FC<ArtworkActionsSaveButtonProps> = ({
       <UtilButton
         name="heart"
         Icon={isSaved ? FilledIcon : HeartIcon}
-        label="Save"
+        label={intl.formatMessage({
+          id: "artwork.artworkactionssavebutton.save",
+        })}
         onClick={handleSave}
       />
     )

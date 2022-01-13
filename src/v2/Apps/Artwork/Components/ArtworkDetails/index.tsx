@@ -9,8 +9,8 @@ import {
   Tab,
   Tabs,
 } from "@artsy/palette"
-import { Component } from "react";
-import * as React from "react";
+import { Component } from "react"
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import styled from "styled-components"
 import { ArtworkDetailsAboutTheWorkFromArtsyFragmentContainer } from "./ArtworkDetailsAboutTheWorkFromArtsy"
@@ -24,9 +24,11 @@ import Events from "v2/Utils/Events"
 import { SystemQueryRenderer } from "v2/System/Relay/SystemQueryRenderer"
 import { ArtworkDetailsQuery } from "v2/__generated__/ArtworkDetailsQuery.graphql"
 import { useSystemContext } from "v2/System"
+import { injectIntl, IntlShape, FormattedMessage } from "react-intl"
 
 export interface ArtworkDetailsProps {
   artwork: ArtworkDetails_artwork
+  intl: IntlShape
 }
 
 @track(
@@ -37,7 +39,7 @@ export interface ArtworkDetailsProps {
     dispatch: data => Events.postEvent(data),
   }
 )
-export class ArtworkDetails extends Component<ArtworkDetailsProps> {
+export class ArtworkDetailsInside extends Component<ArtworkDetailsProps> {
   @track((_props, _state, [{ data }]) => {
     return {
       action_type: Schema.ActionType.Click,
@@ -56,7 +58,12 @@ export class ArtworkDetails extends Component<ArtworkDetailsProps> {
     return (
       <ArtworkDetailsContainer data-test="artworkDetails">
         <Tabs onChange={this.trackTabChange.bind(this)}>
-          <Tab name="About the work" data={{ trackingLabel: "about_the_work" }}>
+          <Tab
+            name={this.props.intl.formatMessage({
+              id: "artwork.index.aboutthework",
+            })}
+            data={{ trackingLabel: "about_the_work" }}
+          >
             <ArtworkDetailsAboutTheWorkFromArtsyFragmentContainer
               artwork={artwork}
             />
@@ -96,7 +103,12 @@ export class ArtworkDetails extends Component<ArtworkDetailsProps> {
           )}
 
           {artwork.provenance && (
-            <Tab name="Provenance" data={{ trackingLabel: "provenance" }}>
+            <Tab
+              name={this.props.intl.formatMessage({
+                id: "artwork.index.provenance",
+              })}
+              data={{ trackingLabel: "provenance" }}
+            >
               <Provenance>
                 <BorderBox>
                   <HTML variant="sm" html={artwork.provenance} />
@@ -109,6 +121,8 @@ export class ArtworkDetails extends Component<ArtworkDetailsProps> {
     )
   }
 }
+
+export const ArtworkDetails = injectIntl(ArtworkDetailsInside)
 
 export const ArtworkDetailsFragmentContainer = createFragmentContainer(
   ArtworkDetails,
@@ -149,7 +163,7 @@ const PLACEHOLDER = (
             <SkeletonText variant="xs">Condition</SkeletonText>
             <SkeletonText variant="xs">Signature</SkeletonText>
             <SkeletonText variant="xs">
-              Certificate of authenticity
+              <FormattedMessage id="artwork.index.certificateofauthenticity" />
             </SkeletonText>
             <SkeletonText variant="xs">Frame</SkeletonText>
           </StackableBorderBox>

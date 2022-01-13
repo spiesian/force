@@ -14,6 +14,7 @@ import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { Media } from "v2/Utils/Responsive"
 import { ArtworkDefinitionList } from "v2/Apps/Artwork/Components/ArtworkDefinitionList"
+import { injectIntl, IntlShape } from "react-intl"
 
 const MIN_FOR_SELECTED_EXHIBITIONS = 3
 export const MIN_EXHIBITIONS = 2
@@ -28,6 +29,7 @@ export interface SelectedExhibitionsProps {
   totalExhibitions?: number
   ViewAllLink?: JSX.Element
   Container?: (props: { children: JSX.Element }) => JSX.Element
+  intl: IntlShape
 }
 
 export const SelectedExhibitions: React.FC<SelectedExhibitionsProps> = props => {
@@ -51,14 +53,19 @@ export interface ExhibitionsHeadlineProps {
   expanded: boolean
   collapsible: boolean
   onShowClicked: (event: React.MouseEvent<HTMLElement>) => void
+  intl: IntlShape
 }
 
-export const ExhibitionsHeadline: React.FC<ExhibitionsHeadlineProps> = props => (
+export const ExhibitionsHeadlineInside: React.FC<ExhibitionsHeadlineProps> = props => (
   <Flex justifyContent="space-between" mb={isCollapsed(props) ? 0 : 1}>
     <Text variant="xs" fontWeight="bold">
       {props.exhibitionCount < MIN_FOR_SELECTED_EXHIBITIONS
-        ? "Exhibitions"
-        : "Selected exhibitions"}
+        ? props.intl.formatMessage({
+            id: "artwork.selectedexhibitions.exhibitions",
+          })
+        : props.intl.formatMessage({
+            id: "artwork.selectedexhibitions.selectedexhibitions",
+          })}
 
       {isCollapsed(props) ? ` (${props.exhibitionCount})` : ""}
     </Text>
@@ -72,6 +79,8 @@ export const ExhibitionsHeadline: React.FC<ExhibitionsHeadlineProps> = props => 
     )}
   </Flex>
 )
+
+export const ExhibitionsHeadline = injectIntl(ExhibitionsHeadlineInside)
 
 export interface ExhibitionYearListProps {
   year: Year
@@ -140,7 +149,7 @@ export interface SelectedExhibitionsContainerProps
   collapsible?: boolean
 }
 
-export class SelectedExhibitionsContainer extends React.Component<
+export class SelectedExhibitionsContainerInside extends React.Component<
   SelectedExhibitionsContainerProps
 > {
   static defaultProps = {
@@ -194,6 +203,10 @@ export class SelectedExhibitionsContainer extends React.Component<
     )
   }
 }
+
+export const SelectedExhibitionsContainer = injectIntl(
+  SelectedExhibitionsContainerInside
+)
 
 export const SelectedExhibitionFragmentContainer = createFragmentContainer(
   SelectedExhibitions,

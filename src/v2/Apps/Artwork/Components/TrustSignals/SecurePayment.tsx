@@ -4,6 +4,7 @@ import * as React from "react"
 import { createFragmentContainer } from "react-relay"
 import { graphql } from "react-relay"
 import { TrustSignal, TrustSignalProps } from "./TrustSignal"
+import { useIntl, FormattedMessage } from "react-intl"
 
 interface SecurePaymentProps
   extends Omit<TrustSignalProps, "Icon" | "label" | "description"> {
@@ -15,21 +16,24 @@ export const SecurePayment: React.FC<SecurePaymentProps> = ({
   artwork,
   ...other
 }) => {
+  const intl = useIntl()
   return (
     (artwork.is_acquireable || artwork.is_offerable) && (
       <TrustSignal
         Icon={<LockIcon />}
-        label="Secure payment"
+        label={intl.formatMessage({
+          id: "artwork.securepayment.securepayment",
+        })}
         description={
           <>
-            {"Secure transactions by credit card through Stripe."}
+            {intl.formatMessage({ id: "artwork.securepayment.securepayment" })}
             <br />
             <Link
               href="https://stripe.com/docs/security/stripe"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Learn more
+              <FormattedMessage id="artwork.securepayment.learnmore" />
             </Link>
             {"."}
           </>

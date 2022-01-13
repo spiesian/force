@@ -7,6 +7,7 @@ import { ArtworkSidebarExtraLinks_artwork } from "v2/__generated__/ArtworkSideba
 import { useInquiry, WithInquiryProps } from "v2/Components/Inquiry/useInquiry"
 import { useDialog } from "v2/Utils/Hooks/useDialog"
 import { AuctionFAQsDialogQueryRenderer } from "v2/Components/AuctionFAQsDialog"
+import { FormattedMessage } from "react-intl"
 
 export interface ArtworkSidebarExtraLinksProps {
   artwork: ArtworkSidebarExtraLinks_artwork
@@ -137,7 +138,7 @@ class ArtworkSidebarExtraLinksContainer extends React.Component<
         {this.props.auctionFAQsDialog.dialogComponent}
 
         <Container>
-          Have a question? Read our{" "}
+          <FormattedMessage id="artwork.sidebarextralinks.haveaquestion" />{" "}
           <Clickable
             onClick={this.onClickAuctionFAQ.bind(this)}
             textDecoration="underline"

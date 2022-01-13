@@ -1,5 +1,5 @@
 import { ArtworkBanner_artwork } from "v2/__generated__/ArtworkBanner_artwork.graphql"
-import * as React from "react";
+import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import {
   Box,
@@ -12,14 +12,15 @@ import {
 } from "@artsy/palette"
 import { TopContextBar } from "v2/Components/TopContextBar"
 import { RouterLink } from "v2/System/Router/RouterLink"
+import { injectIntl, IntlShape } from "react-intl"
 
 export interface ArtworkBannerProps {
   artwork: ArtworkBanner_artwork
+  intl: IntlShape
 }
 
-export const ArtworkBanner: React.FC<ArtworkBannerProps> = props => {
+export const ArtworkBannerInside: React.FC<ArtworkBannerProps> = props => {
   const bannerProps = computeBannerProps(props)
-
   if (!bannerProps) {
     return null
   }
@@ -63,9 +64,11 @@ export const ArtworkBanner: React.FC<ArtworkBannerProps> = props => {
   )
 }
 
+export const ArtworkBanner = injectIntl(ArtworkBannerInside)
+
 const computeBannerProps = (props: ArtworkBannerProps) => {
   const { context, partner, sale } = props.artwork
-
+  const { intl } = props
   if (!context) {
     return null
   }
@@ -78,7 +81,9 @@ const computeBannerProps = (props: ArtworkBannerProps) => {
 
       return {
         image: sale.coverImage?.cropped,
-        meta: "In auction",
+        meta: intl.formatMessage({
+          id: "artwork.banner.status.inauction",
+        }),
         name: context.name,
         subHeadline:
           sale.isBenefit || sale.isGalleryAuction ? null : partner?.name,
@@ -88,18 +93,26 @@ const computeBannerProps = (props: ArtworkBannerProps) => {
     case "Fair": {
       return {
         image: context.profile?.icon?.cropped,
-        meta: "At fair",
+        meta: intl.formatMessage({
+          id: "artwork.banner.status.infair",
+        }),
         name: context.name,
         subHeadline: partner?.name,
         href: context.href,
       }
     }
     case "Show": {
-      let meta = "In current show"
+      let meta = intl.formatMessage({
+        id: "artwork.banner.status.incurrentshow",
+      })
       if (context.status === "upcoming") {
-        meta = "In upcoming show"
+        meta = intl.formatMessage({
+          id: "artwork.banner.status.inupcomingshow",
+        })
       } else if (context.status === "closed") {
-        meta = "In past show"
+        meta = intl.formatMessage({
+          id: "artwork.banner.status.inpastshow",
+        })
       }
 
       return {

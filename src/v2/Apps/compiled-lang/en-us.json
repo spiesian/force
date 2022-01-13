@@ -1,4 +1,310 @@
 {
+  "artwork.artistmarketingsights.bluechip": [
+    {
+      "type": 0,
+      "value": "Blue-chip"
+    }
+  ],
+  "artwork.artistmarketingsights.bluechip.label": [
+    {
+      "type": 0,
+      "value": "Represented by internationally recognized galleries."
+    }
+  ],
+  "artwork.artistmarketingsights.collectedbyamajormuseums": [
+    {
+      "type": 0,
+      "value": "Collected by a major museum"
+    }
+  ],
+  "artwork.artistmarketingsights.collectedbymajormuseums": [
+    {
+      "type": 0,
+      "value": "Collected by major museum"
+    }
+  ],
+  "artwork.artistmarketingsights.emerging": [
+    {
+      "type": 0,
+      "value": "Emerging"
+    }
+  ],
+  "artwork.artistmarketingsights.emerging.label": [
+    {
+      "type": 0,
+      "value": "Represented by up-and-coming galleries."
+    }
+  ],
+  "artwork.artistmarketingsights.established": [
+    {
+      "type": 0,
+      "value": "Established"
+    }
+  ],
+  "artwork.artistmarketingsights.established.label": [
+    {
+      "type": 0,
+      "value": "Represented by industry leading galleries."
+    }
+  ],
+  "artwork.artistmarketingsights.term": [
+    {
+      "type": 0,
+      "value": "High auction record"
+    }
+  ],
+  "artwork.artworkactions.share": [
+    {
+      "type": 0,
+      "value": "Share"
+    }
+  ],
+  "artwork.artworkactions.viewinroom": [
+    {
+      "type": 0,
+      "value": "View in room"
+    }
+  ],
+  "artwork.artworkactionssavebutton.save": [
+    {
+      "type": 0,
+      "value": "Save"
+    }
+  ],
+  "artwork.authenticitycertificate.certificateofauthenticity": [
+    {
+      "type": 0,
+      "value": "Certificate of authenticity"
+    }
+  ],
+  "artwork.authenticitycertificate.certificateofauthenticitydescription": [
+    {
+      "type": 0,
+      "value": "A certificate of authenticity (COA) is a document from an authoritative source that verifies the artwork’s authenticity. While many COAs are signed by the artist, others will be signed by the representing gallery or the printmaker who collaborated with the artist on the work. For secondary market works, authorized estates or foundations are often the issuing party."
+    }
+  ],
+  "artwork.authenticitycertificate.coa.description": [
+    {
+      "type": 0,
+      "value": "COAs typically include the name of the artist, the details (title, date, medium, dimensions) of the work in question, and whenever possible an image of the work."
+    }
+  ],
+  "artwork.authenticitycertificate.helpcenter": [
+    {
+      "type": 0,
+      "value": "Help Center"
+    }
+  ],
+  "artwork.authenticitycertificate.readmore": [
+    {
+      "type": 0,
+      "value": "Read more about artwork authenticity in our"
+    }
+  ],
+  "artwork.banner.status.atfair": [
+    {
+      "type": 0,
+      "value": "At fair"
+    }
+  ],
+  "artwork.banner.status.inauction": [
+    {
+      "type": 0,
+      "value": "In auction"
+    }
+  ],
+  "artwork.banner.status.incurrentshow": [
+    {
+      "type": 0,
+      "value": "In current show"
+    }
+  ],
+  "artwork.banner.status.inpastshow": [
+    {
+      "type": 0,
+      "value": "In past show "
+    }
+  ],
+  "artwork.banner.status.inupcomingshow": [
+    {
+      "type": 0,
+      "value": "In upcoming show "
+    }
+  ],
+  "artwork.buyerguarantee.buyerprotection": [
+    {
+      "type": 0,
+      "value": "Your purchase is protected"
+    }
+  ],
+  "artwork.buyerguarantee.yourpurchaseisprotected": [
+    {
+      "type": 0,
+      "value": "Artsy’s buyer protection."
+    }
+  ],
+  "artwork.index.aboutthework": [
+    {
+      "type": 0,
+      "value": "About the work"
+    }
+  ],
+  "artwork.index.certificateofauthenticity": [
+    {
+      "type": 0,
+      "value": "Certificate of authenticity"
+    }
+  ],
+  "artwork.index.provenance": [
+    {
+      "type": 0,
+      "value": "Provenance"
+    }
+  ],
+  "artwork.securepayment.learnmore": [
+    {
+      "type": 0,
+      "value": "Learn more"
+    }
+  ],
+  "artwork.securepayment.securepayment": [
+    {
+      "type": 0,
+      "value": "Secure payment"
+    }
+  ],
+  "artwork.securepayment.securetransactions": [
+    {
+      "type": 0,
+      "value": "Secure transactions by credit card through Stripe."
+    }
+  ],
+  "artwork.selectedexhibitions.exhibitions": [
+    {
+      "type": 0,
+      "value": "Exhibitions"
+    }
+  ],
+  "artwork.selectedexhibitions.selectedexhibitions": [
+    {
+      "type": 0,
+      "value": "Selected exhibitions"
+    }
+  ],
+  "artwork.sidebarartist.follow": [
+    {
+      "type": 0,
+      "value": "Follow"
+    }
+  ],
+  "artwork.sidebarauctionpartnerinfo.estimatedvalue": [
+    {
+      "type": 0,
+      "value": "Estimated value:"
+    }
+  ],
+  "artwork.sidebarbidaction.enterbidding": [
+    {
+      "type": 0,
+      "value": "Enter live bidding"
+    }
+  ],
+  "artwork.sidebarbidaction.identityverificationrequiredtobid": [
+    {
+      "type": 0,
+      "value": "Identity verification required to bid."
+    }
+  ],
+  "artwork.sidebarbidaction.placemaxbid": [
+    {
+      "type": 0,
+      "value": "Place max bid"
+    }
+  ],
+  "artwork.sidebarbidaction.registertobid": [
+    {
+      "type": 0,
+      "value": "Register to bid"
+    }
+  ],
+  "artwork.sidebarbidaction.registrationclosed": [
+    {
+      "type": 0,
+      "value": "Registration closed"
+    }
+  ],
+  "artwork.sidebarbidaction.registrationpending": [
+    {
+      "type": 0,
+      "value": "Registration pending"
+    }
+  ],
+  "artwork.sidebarbidaction.verifyidentity": [
+    {
+      "type": 0,
+      "value": "Verify identity"
+    }
+  ],
+  "artwork.sidebarbidaction.watchlivebidding": [
+    {
+      "type": 0,
+      "value": "Watch live bidding"
+    }
+  ],
+  "artwork.sidebarcommercial.buynow": [
+    {
+      "type": 0,
+      "value": "Buy now"
+    }
+  ],
+  "artwork.sidebarcommercial.contactgallery": [
+    {
+      "type": 0,
+      "value": "Contact Gallery"
+    }
+  ],
+  "artwork.sidebarcommercial.makeoffer": [
+    {
+      "type": 0,
+      "value": "Make offer"
+    }
+  ],
+  "artwork.sidebarcurrentbidinfo.biddingclosed": [
+    {
+      "type": 0,
+      "value": "Bidding closed"
+    }
+  ],
+  "artwork.sidebarcurrentbidinfo.buyerpremium": [
+    {
+      "type": 0,
+      "value": "buyer’s premium"
+    }
+  ],
+  "artwork.sidebarcurrentbidinfo.shippingandtaxes": [
+    {
+      "type": 0,
+      "value": "Shipping, taxes, and additional fees may apply."
+    }
+  ],
+  "artwork.sidebarcurrentbidinfo.thisauctionhasa": [
+    {
+      "type": 0,
+      "value": "This auction has a"
+    }
+  ],
+  "artwork.sidebarcurrentbidinfo.yourmax": [
+    {
+      "type": 0,
+      "value": "Your max:"
+    }
+  ],
+  "artwork.sidebarextralinks.haveaquestion": [
+    {
+      "type": 0,
+      "value": "Have a question? Read our"
+    }
+  ],
   "button.continue": [
     {
       "type": 0,

@@ -19,6 +19,7 @@ import track from "react-tracking"
 import { getENV } from "v2/Utils/getENV"
 import { bidderQualifications } from "v2/Utils/identityVerificationRequirements"
 import { compact } from "lodash"
+import { FormattedMessage } from "react-intl"
 
 export interface ArtworkSidebarBidActionProps {
   artwork: ArtworkSidebarBidAction_artwork
@@ -34,7 +35,7 @@ const RegisterToBidButton: React.FC<{ onClick: () => void }> = ({
 }) => {
   return (
     <Button width="100%" size="medium" mt={1} onClick={onClick} data-test="bid">
-      Register to bid
+      <FormattedMessage id="artwork.sidebarbidaction.registertobid" />
     </Button>
   )
 }
@@ -42,7 +43,7 @@ const RegisterToBidButton: React.FC<{ onClick: () => void }> = ({
 const VerifyIdentityButton: React.FC<{ id: string }> = ({ id }) => (
   <a href={`/identity-verification/${id}`}>
     <Button width="100%" size="medium">
-      Verify identity
+      <FormattedMessage id="artwork.sidebarbidaction.verifyidentity" />
     </Button>
   </a>
 )
@@ -50,7 +51,7 @@ const VerifyIdentityButton: React.FC<{ id: string }> = ({ id }) => (
 const IdentityVerificationDisclaimer: React.FC = () => {
   return (
     <Text variant="md" color="black60" textAlign="center">
-      Identity verification required to bid.{" "}
+      <FormattedMessage id="artwork.sidebarbidaction.identityverificationrequiredtobid" />{" "}
       <Link href="/identity-verification-faq">FAQ</Link>
     </Text>
   )
@@ -167,7 +168,7 @@ export class ArtworkSidebarBidAction extends React.Component<
         } else {
           PreviewAction = () => (
             <Button width="100%" size="medium" mt={1} disabled>
-              Registration pending
+              <FormattedMessage id="artwork.sidebarbidaction.registrationpending" />
             </Button>
           )
         }
@@ -195,7 +196,7 @@ export class ArtworkSidebarBidAction extends React.Component<
         return (
           <>
             <Text variant="xs" color="black60" pb={1} textAlign="center">
-              Registration closed
+              <FormattedMessage id="artwork.sidebarbidaction.registrationclosed" />
             </Text>
 
             <Button
@@ -203,7 +204,7 @@ export class ArtworkSidebarBidAction extends React.Component<
               size="medium"
               onClick={() => this.redirectToLiveBidding(me)}
             >
-              Watch live bidding
+              <FormattedMessage id="artwork.sidebarbidaction.watchlivebidding" />
             </Button>
           </>
         )
@@ -215,7 +216,7 @@ export class ArtworkSidebarBidAction extends React.Component<
               size="medium"
               onClick={() => this.redirectToLiveBidding(me)}
             >
-              Enter live bidding
+              <FormattedMessage id="artwork.sidebarbidaction.enterbidding" />
             </Button>
 
             <Spacer mt={1} />
@@ -239,7 +240,7 @@ export class ArtworkSidebarBidAction extends React.Component<
               />
             ) : (
               <Button width="100%" size="medium" disabled>
-                Registration pending
+                <FormattedMessage id="artwork.sidebarbidaction.registrationpending" />
               </Button>
             )}
 
@@ -255,7 +256,7 @@ export class ArtworkSidebarBidAction extends React.Component<
       if (sale.is_registration_closed && !qualifiedForBidding) {
         return (
           <Button width="100%" size="medium" disabled>
-            Registration closed
+            <FormattedMessage id="artwork.sidebarbidaction.registrationclosed" />
           </Button>
         )
       }
@@ -293,7 +294,7 @@ export class ArtworkSidebarBidAction extends React.Component<
 
             <Flex width="100%" flexDirection="row" alignItems="center">
               <Text variant="md" color="black100" mr={1}>
-                Place max bid
+                <FormattedMessage id="artwork.sidebarbidaction.placemaxbid" />
               </Text>
 
               <Tooltip

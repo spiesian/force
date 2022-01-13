@@ -33,6 +33,7 @@ import {
   ViewInRoomFragmentContainer,
 } from "v2/Components/ViewInRoom/ViewInRoom"
 import { getENV } from "v2/Utils/getENV"
+import { useIntl } from "react-intl"
 
 interface ArtworkActionsProps {
   artwork: ArtworkActions_artwork
@@ -67,10 +68,11 @@ export const ArtworkActions: React.FC<ArtworkActionsProps> = ({
   const { is_downloadable, artists, title, date } = artwork
 
   const ViewInRoomButton = () => {
+    const intl = useIntl()
     return (
       <UtilButton
         name="viewInRoom"
-        label="View in room"
+        label={intl.formatMessage({ id: "artwork.artworkactions.viewinroom" })}
         onClick={() => {
           selectDefaultSlide()
           showViewInRoom()
@@ -80,10 +82,11 @@ export const ArtworkActions: React.FC<ArtworkActionsProps> = ({
   }
 
   const ShareButton = () => {
+    const intl = useIntl()
     return (
       <Popover
         placement="top"
-        title="Share"
+        title={intl.formatMessage({ id: "artwork.artworkactions.share" })}
         popover={
           <ArtworkSharePanelFragmentContainer
             width={300}
@@ -101,7 +104,7 @@ export const ArtworkActions: React.FC<ArtworkActionsProps> = ({
                 onVisible()
                 toggleSharePanel() // Tracking
               }}
-              label="Share"
+              label={intl.formatMessage({ id: "artwork.artworkactions.share" })}
             />
           )
         }}

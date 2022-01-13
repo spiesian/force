@@ -36,6 +36,7 @@ import { openAuthModal } from "v2/Utils/openAuthModal"
 import { ArtworkSidebarSizeInfoFragmentContainer as SizeInfo } from "./ArtworkSidebarSizeInfo"
 import { Mediator } from "lib/mediator"
 import { useInquiry, WithInquiryProps } from "v2/Components/Inquiry/useInquiry"
+import { FormattedMessage } from "react-intl"
 
 type EditionSet = NonNullable<
   ArtworkSidebarCommercial_artwork["edition_sets"]
@@ -479,7 +480,7 @@ export class ArtworkSidebarCommercialContainer extends React.Component<
               loading={isCommittingCreateOrderMutation}
               onClick={this.handleCreateOrder.bind(this)}
             >
-              Buy now
+              <FormattedMessage id="artwork.sidebarcommercial.buynow" />
             </Button>
           )}
           {shouldDisplayMakeOfferButton && (
@@ -492,7 +493,7 @@ export class ArtworkSidebarCommercialContainer extends React.Component<
                 loading={isCommittingCreateOfferOrderMutation}
                 onClick={this.handleCreateOfferOrder.bind(this)}
               >
-                Make offer
+                <FormattedMessage id="artwork.sidebarcommercial.makeoffer" />
               </Button>
             </>
           )}
@@ -509,7 +510,7 @@ export class ArtworkSidebarCommercialContainer extends React.Component<
                     : "primaryBlack"
                 }
               >
-                Contact Gallery
+                <FormattedMessage id="artwork.sidebarcommercial.contactgallery" />
               </Button>
             </>
           )}
