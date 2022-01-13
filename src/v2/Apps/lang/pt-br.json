@@ -181,5 +181,251 @@
   },
   "home.viewAllGalleries": {
     "defaultMessage": "Ver todas as galerias"
+  },
+  "home.featuredEvents": {
+    "defaultMessage": "Destaques"
+  },
+  "home.auctionLots": {
+    "defaultMessage": "Lotes de leiao"
+  },
+  "home.viewAllAuctions": {
+    "defaultMessage": "Ver todos os leiloes"
+  },
+  "footer.about": {
+    "defaultMessage": "Sobre"
+  },
+  "footer.aboutUs": {
+    "defaultMessage": "Sobre nos"
+  },
+  "footer.acaSellersAgreement": {
+    "defaultMessage": "Acordo de vendedores ACA"
+  },
+  "footer.androidApp": {
+    "defaultMessage": "Applicativo Android"
+  },
+  "footer.artGenomeProject": {
+    "defaultMessage": "O projeto 'Art Genome'"
+  },
+  "footer.artsyForAuctions": {
+    "defaultMessage": "Artsy para leiloes"
+  },
+  "footer.artsyForFairs": {
+    "defaultMessage": "Artsy para Feiras"
+  },
+  "footer.artsyForGalleries": {
+    "defaultMessage": "Artsy para Galerias"
+  },
+  "footer.artsyForMuseums": {
+    "defaultMessage": "Artsy para Museus"
+  },
+  "footer.buyingOnArtsy": {
+    "defaultMessage": "Comopre na Artsy"
+  },
+  "footer.contact": {
+    "defaultMessage": "Contato"
+  },
+  "footer.conditionsOfSale": {
+    "defaultMessage": "Condicoes para vender"
+  },
+  "footer.blog": {
+    "defaultMessage": "Blog"
+  },
+  "footer.education": {
+    "defaultMessage": "Educacao"
+  },
+  "footer.getTheApp": {
+    "defaultMessage": "Baixe o aplicativo"
+  },
+  "footer.iosApp": {
+    "defaultMessage": "Aplicativo iOS"
+  },
+  "footer.jobs": {
+    "defaultMessage": "Trabalhe conosco"
+  },
+  "footer.openSource": {
+    "defaultMessage": "Codigo aberto"
+  },
+  "footer.partnerships": {
+    "defaultMessage": "Parceiros"
+  },
+  "footer.press": {
+    "defaultMessage": "Imprensa"
+  },
+  "footer.privacyPolicy": {
+    "defaultMessage": "Politica de privacidade"
+  },
+  "footer.resources": {
+    "defaultMessage": "Recursos"
+  },
+  "footer.security": {
+    "defaultMessage": "Seguranca"
+  },
+  "footer.support": {
+    "defaultMessage": "Ajuda"
+  },
+  "footer.termsOfUse": {
+    "defaultMessage": "Termos de uso"
+  },
+  "footer.visitOurHelpCenter": {
+    "defaultMessage": "Visite o nosso Centro de Ajuda"
+  },
+  "artwork.banner.status.incurrentshow": {
+    "defaultMessage": "atualmente em Apresentacao"
+  },
+  "artwork.banner.status.inauction": {
+    "defaultMessage": "em leilao"
+  },
+  "artwork.banner.status.atfair": {
+    "defaultMessage": "Na Feira"
+  },
+  "artwork.banner.status.inupcomingshow": {
+    "defaultMessage": "Apresentacao em breve"
+  },
+  "artwork.banner.status.inpastshow": {
+    "defaultMessage": "Em uma apresentacao passada"
+  },
+  "artwork.sidebarcommercial.buynow": {
+    "defaultMessage": "Compre agora"
+  },
+  "artwork.sidebarcommercial.makeoffer": {
+    "defaultMessage": "Faca uma oferta"
+  },
+  "artwork.sidebarcommercial.contactgallery": {
+    "defaultMessage": "Contate a Galeria"
+  },
+  "artwork.sidebarartist.follow": {
+    "defaultMessage": "Siga"
+  },
+  "artwork.sidebarauctionpartnerinfo.estimatedvalue": {
+    "defaultMessage": "Valor estimado:"
+  },
+  "artwork.sidebarbidaction.registertobid": {
+    "defaultMessage": "Registre para dar lance"
+  },
+  "artwork.sidebarbidaction.verifyidentity": {
+    "defaultMessage": "Verifique a identidade"
+  },
+  "artwork.sidebarbidaction.identityverificationrequiredtobid": {
+    "defaultMessage": "Verificacao de identidade necessaria para dar lance."
+  },
+  "artwork.sidebarbidaction.registrationpending": {
+    "defaultMessage": "Registro pendente"
+  },
+  "artwork.sidebarbidaction.registrationclosed": {
+    "defaultMessage": "Registro encerrado"
+  },
+  "artwork.sidebarbidaction.watchlivebidding": {
+    "defaultMessage": "Assista ao lance ao vivo"
+  },
+  "artwork.sidebarbidaction.enterbidding": {
+    "defaultMessage": "Entre no lance ao vivo"
+  },
+  "artwork.sidebarbidaction.placemaxbid": {
+    "defaultMessage": "Defina um lance maximo"
+  },
+  "artwork.sidebarcurrentbidinfo.biddingclosed": {
+    "defaultMessage": "Lances encerrados"
+  },
+  "artwork.sidebarcurrentbidinfo.yourmax": {
+    "defaultMessage": "Seu maximo:"
+  },
+  "artwork.sidebarcurrentbidinfo.thisauctionhasa": {
+    "defaultMessage": "Esta audicao tem um"
+  },
+  "artwork.sidebarcurrentbidinfo.buyerpremium": {
+    "defaultMessage": "compradores premium"
+  },
+  "artwork.sidebarcurrentbidinfo.shippingandtaxes": {
+    "defaultMessage": "Envios, impostos, e taxas adicionais podem ser aplicadas."
+  },
+  "artwork.sidebarextralinks.haveaquestion": {
+    "defaultMessage": "Tem uma pergunta? Leia o nosso"
+  },
+  "artwork.authenticitycertificate.certificateofauthenticity": {
+    "defaultMessage": "Certificado de autenticidade"
+  },
+  "artwork.authenticitycertificate.certificateofauthenticitydescription": {
+    "defaultMessage": "Um certificado de autenticidade (COA) e um documeto ... is a document from an authoritative source that verifies the artwork’s authenticity. While many COAs are signed by the artist, others will be signed by the representing gallery or the printmaker who collaborated with the artist on the work. For secondary market works, authorized estates or foundations are often the issuing party."
+  },
+  "artwork.authenticitycertificate.coa.description": {
+    "defaultMessage": "COAs tipicamente inclue o nome do artista... include the name of the artist, the details (title, date, medium, dimensions) of the work in question, and whenever possible an image of the work."
+  },
+  "artwork.authenticitycertificate.readmore": {
+    "defaultMessage": "Leia mais sobre autenticidade de arte no nosso"
+  },
+  "artwork.authenticitycertificate.helpcenter": {
+    "defaultMessage": "Centro de ajuda"
+  },
+  "artwork.securepayment.securepayment": {
+    "defaultMessage": "Pagamento seguro"
+  },
+  "artwork.securepayment.securetransactions": {
+    "defaultMessage": "Garanta compras com cartao de credito usando Stripe."
+  },
+  "artwork.securepayment.learnmore": {
+    "defaultMessage": "Aprenda mais"
+  },
+  "artwork.buyerguarantee.yourpurchaseisprotected": {
+    "defaultMessage": "Protecao para compradores Artsy."
+  },
+  "artwork.buyerguarantee.buyerprotection": {
+    "defaultMessage": "A sua compra esta protegida"
+  },
+  "artwork.index.aboutthework": {
+    "defaultMessage": "Sobre o trabalho"
+  },
+  "artwork.index.certificateofauthenticity": {
+    "defaultMessage": "Certificado de autenticidade"
+  },
+  "artwork.index.provenance": {
+    "defaultMessage": "Provenance"
+  },
+  "artwork.artistmarketingsights.term": {
+    "defaultMessage": "Registro de alta audicao"
+  },
+  "artwork.artistmarketingsights.collectedbyamajormuseums": {
+    "defaultMessage": "Coletado prioritariamente pelo museu"
+  },
+  "artwork.artistmarketingsights.collectedbymajormuseums": {
+    "defaultMessage": "Coletado pela maioria de museus"
+  },
+  "artwork.artistmarketingsights.bluechip": {
+    "defaultMessage": "Blue-chip"
+  },
+  "artwork.artistmarketingsights.established": {
+    "defaultMessage": "Definido"
+  },
+  "artwork.artistmarketingsights.emerging": {
+    "defaultMessage": "Emergente"
+  },
+  "artwork.artistmarketingsights.bluechip.label": {
+    "defaultMessage": "Representado por galerias reconhecidas internacionalmente."
+  },
+  "artwork.artistmarketingsights.established.label": {
+    "defaultMessage": "Representado por galerias lideres da industria."
+  },
+  "artwork.artistmarketingsights.emerging.label": {
+    "defaultMessage": "Representado por novas galerias."
+  },
+  "artwork.selectedexhibitions.selectedexhibitions": {
+    "defaultMessage": "Exibicoes escolhidas"
+  },
+  "artwork.selectedexhibitions.exhibitions": {
+    "defaultMessage": "Exibicoes"
+  },
+  "artwork.artworkactions.viewinroom": {
+    "defaultMessage": "Veja na sala"
+  },
+  "artwork.artworkactions.share": {
+    "defaultMessage": "Compartilhe"
+  },
+  "artwork.artworkactionssavebutton.save": {
+    "defaultMessage": "Favorito"
+  },
+  "artwork.artworkactionssavebutton.watchlot": {
+    "defaultMessage": "Assista um lote"
+  },
+  "footerDownloadAppBanner.getMore": {
+    "defaultMessage": "Tenha mais da Artsy no aplicativo"
   }
 }
