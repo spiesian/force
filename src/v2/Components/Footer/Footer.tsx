@@ -232,7 +232,7 @@ const WeChat = styled(Flex)`
 `
 
 const appendLocaleToParams = locale => {
-  window.history.pushState({}, null, `?locale=${locale}`)
+  window.history.pushState({}, "", `?locale=${locale}`)
   window.location.reload()
 }
 
