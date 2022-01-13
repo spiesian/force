@@ -248,5 +248,113 @@
       "type": 0,
       "value": "Ver todas as galerias"
     }
+  ],
+  "navbar.artists": [
+    {
+      "type": 0,
+      "value": "Artistas"
+    }
+  ],
+  "navbar.artworks": [
+    {
+      "type": 0,
+      "value": "Obras de arte"
+    }
+  ],
+  "navbar.auctions": [
+    {
+      "type": 0,
+      "value": "Leilões"
+    }
+  ],
+  "navbar.buy": [
+    {
+      "type": 0,
+      "value": "Comprar"
+    }
+  ],
+  "navbar.downloadapp": [
+    {
+      "type": 0,
+      "value": "Baixar o aplicativo"
+    }
+  ],
+  "navbar.editorial": [
+    {
+      "type": 0,
+      "value": "Editorial"
+    }
+  ],
+  "navbar.fairs": [
+    {
+      "type": 0,
+      "value": "Feiras"
+    }
+  ],
+  "navbar.galleries": [
+    {
+      "type": 0,
+      "value": "Galerias"
+    }
+  ],
+  "navbar.login": [
+    {
+      "type": 0,
+      "value": "Entrar"
+    }
+  ],
+  "navbar.mueuns": [
+    {
+      "type": 0,
+      "value": "Museus"
+    }
+  ],
+  "navbar.pricedatabase": [
+    {
+      "type": 0,
+      "value": "Price Database"
+    }
+  ],
+  "navbar.searchplaceholder": [
+    {
+      "type": 0,
+      "value": "Busque por artista, galeria, estilo, tema, tag, etc."
+    }
+  ],
+  "navbar.searchplaceholderxs": [
+    {
+      "type": 0,
+      "value": "Faça buscas na Artsy"
+    }
+  ],
+  "navbar.sell": [
+    {
+      "type": 0,
+      "value": "Vender"
+    }
+  ],
+  "navbar.show": [
+    {
+      "type": 0,
+      "value": "Exibir"
+    }
+  ],
+  "navbar.shows": [
+    {
+      "type": 0,
+      "value": "Exibições"
+    }
+  ],
+  "navbar.signup": [
+    {
+      "type": 0,
+      "value": "Registrar"
+    }
+  ],
+  "navbar.viewingrooms": [
+    {
+      "type": 0,
+      "value": "Salas de exibição"
+    }
   ]
 }

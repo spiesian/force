@@ -1,4 +1,58 @@
 {
+  "navbar.login": {
+    "defaultMessage": "Entrar"
+  },
+  "navbar.signup": {
+    "defaultMessage": "Registrar"
+  },
+  "navbar.downloadapp": {
+    "defaultMessage": "Baixar o aplicativo"
+  },
+  "navbar.show": {
+    "defaultMessage": "Exibir"
+  },
+  "navbar.buy": {
+    "defaultMessage": "Comprar"
+  },
+  "navbar.sell": {
+    "defaultMessage": "Vender"
+  },
+  "navbar.pricedatabase": {
+    "defaultMessage": "Price Database"
+  },
+  "navbar.editorial": {
+    "defaultMessage": "Editorial"
+  },
+  "navbar.artists": {
+    "defaultMessage": "Artistas"
+  },
+  "navbar.artworks": {
+    "defaultMessage": "Obras de arte"
+  },
+  "navbar.auctions": {
+    "defaultMessage": "Leilões"
+  },
+  "navbar.viewingrooms": {
+    "defaultMessage": "Salas de exibição"
+  },
+  "navbar.galleries": {
+    "defaultMessage": "Galerias"
+  },
+  "navbar.fairs": {
+    "defaultMessage": "Feiras"
+  },
+  "navbar.shows": {
+    "defaultMessage": "Exibições"
+  },
+  "navbar.mueuns": {
+    "defaultMessage": "Museus"
+  },
+  "navbar.searchplaceholder": {
+    "defaultMessage": "Busque por artista, galeria, estilo, tema, tag, etc."
+  },
+  "navbar.searchplaceholderxs": {
+    "defaultMessage": "Faça buscas na Artsy"
+  },
   "footer.about": {
     "defaultMessage": "Sobre"
   },
