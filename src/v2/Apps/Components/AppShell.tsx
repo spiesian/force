@@ -21,6 +21,7 @@ import { useAuthValidation } from "v2/Utils/Hooks/useAuthValidation"
 import { IntlProvider } from "react-intl"
 import locale_en_us from "../compiled-lang/en-us.json"
 import locale_ro_ro from "../compiled-lang/ro-ro.json"
+import locale_pt_br from "../compiled-lang/pt-br.json"
 
 const logger = createLogger("Apps/Components/AppShell")
 
@@ -32,6 +33,7 @@ interface AppShellProps {
 const data = {
   "en-US": locale_en_us,
   "ro-RO": locale_ro_ro,
+  "pt-BR": locale_pt_br,
 }
 
 export const AppShell: React.FC<AppShellProps> = props => {

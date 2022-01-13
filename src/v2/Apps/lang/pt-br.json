@@ -30,7 +30,7 @@
     "defaultMessage": "Blog"
   },
   "footer.buyingOnArtsy": {
-    "Comprando na Artsy"
+    "defaultMessage": "Comprando na Artsy"
   },
   "footer.conditionsOfSale": {
     "defaultMessage": "Condições de Venda"
@@ -96,21 +96,30 @@
     "defaultMessage": "Exibições"
   },
   "home.marketNews": {
+    "defaultMessage": "Market news"
   },
   "home.marketNewsAuthor": {
+    "defaultMessage": "Por {author}"
   },
   "home.metaTagsDescription": {
+    "defaultMessage": "A Artsy é o maior marketplace online do mundo. Procure por mais de um milhão de obras de arte icônicas and artistas emergentes de mais de 4000 galerias e casas de leilão"
   },
   "home.metaTagsTitle": {
+    "defaultMessage": "Artsy - Descubra, compre e venda obras de arte"
   },
   "home.newWorksByArtistsYouFollow": {
+    "defaultMessage": "Novas obras dos artistas que você segue"
   },
   "home.recentlyViewed": {
+    "defaultMessage": "Visto recentemente"
   },
   "home.trendingArtistsOnArtsy": {
+    "defaultMessage": "Artistas populares na Artsy"
   },
   "home.viewAllAuctions": {
+    "defaultMessage": "Ver todos os leilões"
   },
   "home.viewAllGalleries": {
+    "defaultMessage": "Ver todas as galerias"
   }
 }
