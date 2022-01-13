@@ -10,6 +10,7 @@ describe("SelectedExhibitions", () => {
     totalExhibitions: 100,
     // eslint-disable-next-line jsx-a11y/anchor-is-valid
     ViewAllLink: <a href="#">hi</a>,
+    intl: Intl as any,
   }
 
   beforeAll(() => {

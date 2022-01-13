@@ -387,5 +387,8 @@
   },
   "artwork.artworkactionssavebutton.save": {
     "defaultMessage": "Save"
+  },
+  "artwork.artworkactionssavebutton.watchlot": {
+    "defaultMessage": "Watch lot"
   }
 }
