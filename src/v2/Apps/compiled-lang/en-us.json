@@ -325,6 +325,18 @@
       "value": "Price Database"
     }
   ],
+  "navbar.searchplaceholder": [
+    {
+      "type": 0,
+      "value": "Search by artist, gallery, style, theme, tag, etc."
+    }
+  ],
+  "navbar.searchplaceholderxs": [
+    {
+      "type": 0,
+      "value": "Search Artsy"
+    }
+  ],
   "navbar.sell": [
     {
       "type": 0,
