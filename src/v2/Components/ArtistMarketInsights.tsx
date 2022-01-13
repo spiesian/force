@@ -71,7 +71,9 @@ export class MarketInsightsInside extends Component<MarketInsightsProps> {
         <ArtworkDefinitionList
           term={this.props.intl.formatMessage({ id: CATEGORIES[highCategory] })}
         >
-          {CATEGORY_LABEL_MAP[highCategory]}
+          {this.props.intl.formatMessage({
+            id: CATEGORY_LABEL_MAP[highCategory],
+          })}
         </ArtworkDefinitionList>
       )
     }

@@ -1,4 +1,316 @@
 {
+  "artwork.artistmarketingsights.bluechip": [
+    {
+      "type": 0,
+      "value": "Blue-chip"
+    }
+  ],
+  "artwork.artistmarketingsights.bluechip.label": [
+    {
+      "type": 0,
+      "value": "Representado por galerias reconhecidas internacionalmente."
+    }
+  ],
+  "artwork.artistmarketingsights.collectedbyamajormuseums": [
+    {
+      "type": 0,
+      "value": "Coletado prioritariamente pelo museu"
+    }
+  ],
+  "artwork.artistmarketingsights.collectedbymajormuseums": [
+    {
+      "type": 0,
+      "value": "Coletado pela maioria de museus"
+    }
+  ],
+  "artwork.artistmarketingsights.emerging": [
+    {
+      "type": 0,
+      "value": "Emergente"
+    }
+  ],
+  "artwork.artistmarketingsights.emerging.label": [
+    {
+      "type": 0,
+      "value": "Representado por novas galerias."
+    }
+  ],
+  "artwork.artistmarketingsights.established": [
+    {
+      "type": 0,
+      "value": "Definido"
+    }
+  ],
+  "artwork.artistmarketingsights.established.label": [
+    {
+      "type": 0,
+      "value": "Representado por galerias lideres da industria."
+    }
+  ],
+  "artwork.artistmarketingsights.term": [
+    {
+      "type": 0,
+      "value": "Registro de alta audicao"
+    }
+  ],
+  "artwork.artworkactions.share": [
+    {
+      "type": 0,
+      "value": "Compartilhe"
+    }
+  ],
+  "artwork.artworkactions.viewinroom": [
+    {
+      "type": 0,
+      "value": "Veja na sala"
+    }
+  ],
+  "artwork.artworkactionssavebutton.save": [
+    {
+      "type": 0,
+      "value": "Favorito"
+    }
+  ],
+  "artwork.artworkactionssavebutton.watchlot": [
+    {
+      "type": 0,
+      "value": "Assista um lote"
+    }
+  ],
+  "artwork.authenticitycertificate.certificateofauthenticity": [
+    {
+      "type": 0,
+      "value": "Certificado de autenticidade"
+    }
+  ],
+  "artwork.authenticitycertificate.certificateofauthenticitydescription": [
+    {
+      "type": 0,
+      "value": "Um certificado de autenticidade (COA) e um documeto ... is a document from an authoritative source that verifies the artwork’s authenticity. While many COAs are signed by the artist, others will be signed by the representing gallery or the printmaker who collaborated with the artist on the work. For secondary market works, authorized estates or foundations are often the issuing party."
+    }
+  ],
+  "artwork.authenticitycertificate.coa.description": [
+    {
+      "type": 0,
+      "value": "COAs tipicamente inclue o nome do artista... include the name of the artist, the details (title, date, medium, dimensions) of the work in question, and whenever possible an image of the work."
+    }
+  ],
+  "artwork.authenticitycertificate.helpcenter": [
+    {
+      "type": 0,
+      "value": "Centro de ajuda"
+    }
+  ],
+  "artwork.authenticitycertificate.readmore": [
+    {
+      "type": 0,
+      "value": "Leia mais sobre autenticidade de arte no nosso"
+    }
+  ],
+  "artwork.banner.status.atfair": [
+    {
+      "type": 0,
+      "value": "Na Feira"
+    }
+  ],
+  "artwork.banner.status.inauction": [
+    {
+      "type": 0,
+      "value": "em leilao"
+    }
+  ],
+  "artwork.banner.status.incurrentshow": [
+    {
+      "type": 0,
+      "value": "atualmente em Apresentacao"
+    }
+  ],
+  "artwork.banner.status.inpastshow": [
+    {
+      "type": 0,
+      "value": "Em uma apresentacao passada"
+    }
+  ],
+  "artwork.banner.status.inupcomingshow": [
+    {
+      "type": 0,
+      "value": "Apresentacao em breve"
+    }
+  ],
+  "artwork.buyerguarantee.buyerprotection": [
+    {
+      "type": 0,
+      "value": "A sua compra esta protegida"
+    }
+  ],
+  "artwork.buyerguarantee.yourpurchaseisprotected": [
+    {
+      "type": 0,
+      "value": "Protecao para compradores Artsy."
+    }
+  ],
+  "artwork.index.aboutthework": [
+    {
+      "type": 0,
+      "value": "Sobre o trabalho"
+    }
+  ],
+  "artwork.index.certificateofauthenticity": [
+    {
+      "type": 0,
+      "value": "Certificado de autenticidade"
+    }
+  ],
+  "artwork.index.provenance": [
+    {
+      "type": 0,
+      "value": "Provenance"
+    }
+  ],
+  "artwork.securepayment.learnmore": [
+    {
+      "type": 0,
+      "value": "Aprenda mais"
+    }
+  ],
+  "artwork.securepayment.securepayment": [
+    {
+      "type": 0,
+      "value": "Pagamento seguro"
+    }
+  ],
+  "artwork.securepayment.securetransactions": [
+    {
+      "type": 0,
+      "value": "Garanta compras com cartao de credito usando Stripe."
+    }
+  ],
+  "artwork.selectedexhibitions.exhibitions": [
+    {
+      "type": 0,
+      "value": "Exibicoes"
+    }
+  ],
+  "artwork.selectedexhibitions.selectedexhibitions": [
+    {
+      "type": 0,
+      "value": "Exibicoes escolhidas"
+    }
+  ],
+  "artwork.sidebarartist.follow": [
+    {
+      "type": 0,
+      "value": "Siga"
+    }
+  ],
+  "artwork.sidebarauctionpartnerinfo.estimatedvalue": [
+    {
+      "type": 0,
+      "value": "Valor estimado:"
+    }
+  ],
+  "artwork.sidebarbidaction.enterbidding": [
+    {
+      "type": 0,
+      "value": "Entre no lance ao vivo"
+    }
+  ],
+  "artwork.sidebarbidaction.identityverificationrequiredtobid": [
+    {
+      "type": 0,
+      "value": "Verificacao de identidade necessaria para dar lance."
+    }
+  ],
+  "artwork.sidebarbidaction.placemaxbid": [
+    {
+      "type": 0,
+      "value": "Defina um lance maximo"
+    }
+  ],
+  "artwork.sidebarbidaction.registertobid": [
+    {
+      "type": 0,
+      "value": "Registre para dar lance"
+    }
+  ],
+  "artwork.sidebarbidaction.registrationclosed": [
+    {
+      "type": 0,
+      "value": "Registro encerrado"
+    }
+  ],
+  "artwork.sidebarbidaction.registrationpending": [
+    {
+      "type": 0,
+      "value": "Registro pendente"
+    }
+  ],
+  "artwork.sidebarbidaction.verifyidentity": [
+    {
+      "type": 0,
+      "value": "Verifique a identidade"
+    }
+  ],
+  "artwork.sidebarbidaction.watchlivebidding": [
+    {
+      "type": 0,
+      "value": "Assista ao lance ao vivo"
+    }
+  ],
+  "artwork.sidebarcommercial.buynow": [
+    {
+      "type": 0,
+      "value": "Compre agora"
+    }
+  ],
+  "artwork.sidebarcommercial.contactgallery": [
+    {
+      "type": 0,
+      "value": "Contate a Galeria"
+    }
+  ],
+  "artwork.sidebarcommercial.makeoffer": [
+    {
+      "type": 0,
+      "value": "Faca uma oferta"
+    }
+  ],
+  "artwork.sidebarcurrentbidinfo.biddingclosed": [
+    {
+      "type": 0,
+      "value": "Lances encerrados"
+    }
+  ],
+  "artwork.sidebarcurrentbidinfo.buyerpremium": [
+    {
+      "type": 0,
+      "value": "compradores premium"
+    }
+  ],
+  "artwork.sidebarcurrentbidinfo.shippingandtaxes": [
+    {
+      "type": 0,
+      "value": "Envios, impostos, e taxas adicionais podem ser aplicadas."
+    }
+  ],
+  "artwork.sidebarcurrentbidinfo.thisauctionhasa": [
+    {
+      "type": 0,
+      "value": "Esta audicao tem um"
+    }
+  ],
+  "artwork.sidebarcurrentbidinfo.yourmax": [
+    {
+      "type": 0,
+      "value": "Seu maximo:"
+    }
+  ],
+  "artwork.sidebarextralinks.haveaquestion": [
+    {
+      "type": 0,
+      "value": "Tem uma pergunta? Leia o nosso"
+    }
+  ],
   "ccpaRequest.personalInformation": [
     {
       "type": 0,
@@ -14,37 +326,37 @@
   "footer.aboutUs": [
     {
       "type": 0,
-      "value": "Sobre nós"
+      "value": "Sobre nos"
     }
   ],
   "footer.acaSellersAgreement": [
     {
       "type": 0,
-      "value": "Acordo de venda ACA"
+      "value": "Acordo de vendedores ACA"
     }
   ],
   "footer.androidApp": [
     {
       "type": 0,
-      "value": "Android APP"
+      "value": "Applicativo Android"
     }
   ],
   "footer.artGenomeProject": [
     {
       "type": 0,
-      "value": "O Projeto Art Genome"
+      "value": "O projeto 'Art Genome'"
     }
   ],
   "footer.artsyForAuctions": [
     {
       "type": 0,
-      "value": "Artsy para Leilões"
+      "value": "Artsy para leiloes"
     }
   ],
   "footer.artsyForFairs": [
     {
       "type": 0,
-      "value": "Artsy para Feiras de Arte"
+      "value": "Artsy para Feiras"
     }
   ],
   "footer.artsyForGalleries": [
@@ -68,13 +380,13 @@
   "footer.buyingOnArtsy": [
     {
       "type": 0,
-      "value": "Comprando na Artsy"
+      "value": "Comopre na Artsy"
     }
   ],
   "footer.conditionsOfSale": [
     {
       "type": 0,
-      "value": "Condições de Venda"
+      "value": "Condicoes para vender"
     }
   ],
   "footer.contact": [
@@ -86,7 +398,7 @@
   "footer.education": [
     {
       "type": 0,
-      "value": "Educação"
+      "value": "Educacao"
     }
   ],
   "footer.getTheApp": [
@@ -98,25 +410,25 @@
   "footer.iosApp": [
     {
       "type": 0,
-      "value": "iOS App"
+      "value": "Aplicativo iOS"
     }
   ],
   "footer.jobs": [
     {
       "type": 0,
-      "value": "Vagas"
+      "value": "Trabalhe conosco"
     }
   ],
   "footer.openSource": [
     {
       "type": 0,
-      "value": "Open Source"
+      "value": "Codigo aberto"
     }
   ],
   "footer.partnerships": [
     {
       "type": 0,
-      "value": "Parcerias"
+      "value": "Parceiros"
     }
   ],
   "footer.press": [
@@ -128,7 +440,7 @@
   "footer.privacyPolicy": [
     {
       "type": 0,
-      "value": "Política de privacidade"
+      "value": "Politica de privacidade"
     }
   ],
   "footer.resources": [
@@ -140,13 +452,13 @@
   "footer.security": [
     {
       "type": 0,
-      "value": "Segurança"
+      "value": "Seguranca"
     }
   ],
   "footer.support": [
     {
       "type": 0,
-      "value": "Suporte"
+      "value": "Ajuda"
     }
   ],
   "footer.termsOfUse": [
@@ -158,19 +470,19 @@
   "footer.visitOurHelpCenter": [
     {
       "type": 0,
-      "value": "Visite o Centro de Ajuda"
+      "value": "Visite o nosso Centro de Ajuda"
     }
   ],
   "footerDownloadAppBanner.getMore": [
     {
       "type": 0,
-      "value": "Obtenha mais da Artsy—no aplicativo"
+      "value": "Tenha mais da Artsy no aplicativo"
     }
   ],
   "home.auctionLots": [
     {
       "type": 0,
-      "value": "Auction Lots"
+      "value": "Lotes de leiao"
     }
   ],
   "home.exploreAllShows": [
@@ -188,7 +500,7 @@
   "home.featuredEvents": [
     {
       "type": 0,
-      "value": "Eventos"
+      "value": "Destaques"
     }
   ],
   "home.featuredGalleries": [
@@ -252,7 +564,7 @@
   "home.viewAllAuctions": [
     {
       "type": 0,
-      "value": "Ver todos os leilões"
+      "value": "Ver todos os leiloes"
     }
   ],
   "home.viewAllGalleries": [
