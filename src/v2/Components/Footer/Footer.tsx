@@ -23,6 +23,7 @@ import { FooterDownloadAppBanner } from "./FooterDownloadAppBanner"
 import { RouterLink, RouterLinkProps } from "v2/System/Router/RouterLink"
 import { FormattedMessage } from "react-intl"
 import { LanguageSelect } from "v2/Components/LanguageSelect"
+import { getClientParam } from "v2/Utils/getClientParam"
 
 interface FooterProps extends BoxProps {}
 
@@ -236,6 +237,11 @@ const appendLocaleToParams = locale => {
   window.location.reload()
 }
 
+const selectedLocale = () => {
+  const locale = getClientParam("locale")
+  return locale || "en-US"
+}
+
 const PolicyLinks = () => {
   const tokens = useThemeConfig({
     v2: {
@@ -285,7 +291,10 @@ const PolicyLinks = () => {
       </Flex>
 
       <Flex mr={1}>
-        <LanguageSelect onSelect={value => appendLocaleToParams(value)} />
+        <LanguageSelect
+          selected={selectedLocale()}
+          onSelect={value => appendLocaleToParams(value)}
+        />
       </Flex>
     </Text>
   )
