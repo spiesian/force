@@ -1,4 +1,10 @@
 {
+  "ccpaRequest.personalInformation": [
+    {
+      "type": 0,
+      "value": "Não venda meus dados pessoais"
+    }
+  ],
   "footer.about": [
     {
       "type": 0,
@@ -14,7 +20,7 @@
   "footer.acaSellersAgreement": [
     {
       "type": 0,
-      "value": "ACA Seller's Agreement"
+      "value": "Acordo de venda ACA"
     }
   ],
   "footer.androidApp": [

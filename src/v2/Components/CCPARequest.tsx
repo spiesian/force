@@ -21,6 +21,7 @@ import { ErrorWithMetadata } from "v2/Utils/errors"
 import { get } from "v2/Utils/get"
 import createLogger from "v2/Utils/logger"
 import { themeGet } from "@styled-system/theme-get"
+import { FormattedMessage } from "react-intl"
 
 export const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
@@ -315,7 +316,9 @@ export const CCPARequest: React.SFC<Props> = props => {
   return (
     <>
       <CCPALink onClick={() => setShowModal(true)}>
-        <Text variant="caption">Do not sell my personal information</Text>
+        <Text variant="caption">
+          <FormattedMessage id="ccpaRequest.personalInformation" />
+        </Text>
       </CCPALink>
 
       <Modal

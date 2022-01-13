@@ -3,6 +3,9 @@
     "defaultMessage": "{name} has apples",
     "description": "Hello react_intl"
   },
+  "ccpaRequest.personalInformation": {
+    "defaultMessage": "Do not sell my personal information"
+  },
   "navbar.login": {
       "defaultMessage": "Log In"
   },

@@ -317,6 +317,12 @@
       "value": "Continue"
     }
   ],
+  "ccpaRequest.personalInformation": [
+    {
+      "type": 0,
+      "value": "Do not sell my personal information"
+    }
+  ],
   "error.invalidAddressMesssage": [
     {
       "type": 0,

@@ -2,6 +2,9 @@
   "navbar.login": {
     "defaultMessage": "Entrar"
   },
+  "ccpaRequest.personalInformation": {
+    "defaultMessage": "Não venda meus dados pessoais"
+  },
   "navbar.signup": {
     "defaultMessage": "Registrar"
   },
@@ -60,7 +63,7 @@
     "defaultMessage": "Sobre nós"
   },
   "footer.acaSellersAgreement": {
-    "defaultMessage": "ACA Seller's Agreement"
+    "defaultMessage": "Acordo de venda ACA"
   },
   "footer.androidApp": {
     "defaultMessage": "Android APP"
