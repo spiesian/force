@@ -180,5 +180,59 @@
   },
   "footer.visitOurHelpCenter": {
     "defaultMessage": "Visit our Help Center"
+  },
+  "shipping.myAddresses": {
+    "defaultMessage": "My addresses | Artsy"
+  },
+  "shipping.deliveryMethod": {
+    "defaultMessage": "Delivery method"
+  },
+  "shipping.shippingLabel": {
+    "defaultMessage": "Shipping"
+  },
+  "shipping.pickupLabel": {
+    "defaultMessage": "Arrange for pickup (free)"
+  },
+  "shipping.pickupDescription": {
+    "defaultMessage": "After your order is confirmed, a specialist will contact you within 2 business days to coordinate pickup."
+  },
+  "shipping.deliveryAddress": {
+    "defaultMessage": "Delivery address"
+  },
+  "shipping.saveDeliveryAddress": {
+    "defaultMessage": "Save shipping address for later use"
+  },
+  "shipping.requiredForShippingLogistics": {
+    "defaultMessage": "Required for shipping logistics"
+  },
+  "shipping.phoneNumberLabel": {
+    "defaultMessage": "Number to contact you for pickup logistics"
+  },
+  "shipping.options": {
+    "defaultMessage": "Artsy Shipping options"
+  },
+  "shipping.description": {
+    "defaultMessage": "All options are eligible for Artsy’s Buyer Protection policy, which protects against damage and loss."
+  },
+  "shipping.quoteArtaError": {
+    "defaultMessage": "There was a problem getting shipping quotes. <br />Please contact {email}."
+  },
+  "shipping.quoteArtaConfirmationError": {
+    "defaultMessage": "We need to confirm some details with you before processing this order.<br />Please reach out to {email} for assistance."
+  },
+  "error.invalidAddressTitle": {
+    "defaultMessage": "Invalid address"
+  },
+  "error.invalidAddressMesssage": {
+    "defaultMessage": "There was an error processing your address. Please review and try again."
+  },
+  "error.invalidDomesticAddressTitle": {
+    "defaultMessage": "Can't ship to that address"
+  },
+  "error.invalidDomesticAddressMesssage": {
+    "defaultMessage": "This work can only be shipped domestically."
+  },
+  "button.continue": {
+    "defaultMessage": "Continue"
   }
 }

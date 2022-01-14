@@ -83,6 +83,7 @@ import {
   ContextModule,
   OwnerType,
 } from "@artsy/cohesion"
+import { FormattedMessage, injectIntl, IntlShape } from "react-intl"
 
 export interface ShippingProps extends SystemContextProps {
   order: Shipping_order
@@ -92,6 +93,7 @@ export interface ShippingProps extends SystemContextProps {
   dialog: Dialog
   commitMutation: CommitMutation
   isCommittingMutation: boolean
+  intl: IntlShape
 }
 
 export interface ShippingState {
@@ -111,7 +113,7 @@ export interface ShippingState {
 
 const logger = createLogger("Order/Routes/Shipping/index.tsx")
 @track()
-export class ShippingRoute extends Component<ShippingProps, ShippingState> {
+class ShippingRouteCore extends Component<ShippingProps, ShippingState> {
   state: ShippingState = {
     shippingOption: getShippingOption(
       this.props.order.requestedFulfillment?.__typename
@@ -402,23 +404,31 @@ export class ShippingRoute extends Component<ShippingProps, ShippingState> {
   handleSubmitError(error: { code: string; data: string | null }) {
     logger.error(error)
     const parsedData = error.data ? JSON.parse(error.data) : {}
+
     if (
       error.code === "missing_region" ||
       error.code === "missing_country" ||
       error.code === "missing_postal_code"
     ) {
       this.props.dialog.showErrorDialog({
-        title: "Invalid address",
-        message:
-          "There was an error processing your address. Please review and try again.",
+        title: this.props.intl.formatMessage({
+          id: "error.invalidAddressTitle",
+        }),
+        message: this.props.intl.formatMessage({
+          id: "error.invalidAddressMessage",
+        }),
       })
     } else if (
       error.code === "unsupported_shipping_location" &&
       parsedData.failure_code === "domestic_shipping_only"
     ) {
       this.props.dialog.showErrorDialog({
-        title: "Can't ship to that address",
-        message: "This work can only be shipped domestically.",
+        title: this.props.intl.formatMessage({
+          id: "error.invalidDomesticAddressTitle",
+        }),
+        message: this.props.intl.formatMessage({
+          id: "error.invalidDomesticAddressMessage",
+        }),
       })
     } else if (this.isArtaShipping() && this.state.shippingQuoteId) {
       this.props.dialog.showErrorDialog({
@@ -431,9 +441,16 @@ export class ShippingRoute extends Component<ShippingProps, ShippingState> {
 
   getArtaErrorMessage = () => (
     <>
-      There was a problem getting shipping quotes. <br />
-      Please contact{" "}
-      <RouterLink to={`mailto:orders@artsy.net`}>orders@artsy.net</RouterLink>.
+      <FormattedMessage
+        id="shipping.quoteArtaError"
+        values={{
+          email: (
+            <RouterLink to={`mailto:orders@artsy.net`}>
+              orders@artsy.net
+            </RouterLink>
+          ),
+        }}
+      />
     </>
   )
 
@@ -569,12 +586,16 @@ export class ShippingRoute extends Component<ShippingProps, ShippingState> {
         color="red100"
         data-test="artaErrorMessage"
       >
-        We need to confirm some details with you before processing this order.
-        Please reach out to{" "}
-        <RouterLink color="red100" to="mailto:orders@artsy.net">
-          orders@artsy.net
-        </RouterLink>{" "}
-        for assistance.
+        <FormattedMessage
+          id="shipping.quoteArtaConfirmationError"
+          values={{
+            email: (
+              <RouterLink color="red100" to="mailto:orders@artsy.net">
+                orders@artsy.net
+              </RouterLink>
+            ),
+          }}
+        />
       </Text>
     )
   }
@@ -636,20 +657,25 @@ export class ShippingRoute extends Component<ShippingProps, ShippingState> {
                     defaultValue={shippingOption}
                   >
                     <Text variant="md" mb="1">
-                      Delivery method
+                      <FormattedMessage id="shipping.deliveryMethod" />
                     </Text>
-                    <BorderedRadio value="SHIP" label="Shipping" />
+                    <BorderedRadio
+                      value="SHIP"
+                      label={this.props.intl.formatMessage({
+                        id: "shipping.shippingLabel",
+                      })}
+                    />
 
                     <BorderedRadio
                       value="PICKUP"
-                      label="Arrange for pickup (free)"
+                      label={this.props.intl.formatMessage({
+                        id: "shipping.pickupLabel",
+                      })}
                       data-test="pickupOption"
                     >
                       <Collapse open={shippingOption === "PICKUP"}>
                         <Text variant="xs" color="black60">
-                          After your order is confirmed, a specialist will
-                          contact you within 2 business days to coordinate
-                          pickup.
+                          <FormattedMessage id="shipping.pickupDescription" />
                         </Text>
                       </Collapse>
                     </BorderedRadio>
@@ -663,7 +689,7 @@ export class ShippingRoute extends Component<ShippingProps, ShippingState> {
                 open={!!showSavedAddresses}
               >
                 <Text variant="md" mb="1">
-                  Delivery address
+                  <FormattedMessage id="shipping.deliveryAddress" />
                 </Text>
                 {isArtaShipping &&
                   shippingQuotes &&
@@ -701,7 +727,9 @@ export class ShippingRoute extends Component<ShippingProps, ShippingState> {
                   errors={phoneNumberError}
                   touched={phoneNumberTouched}
                   onChange={this.onPhoneNumberChange}
-                  label="Required for shipping logistics"
+                  label={this.props.intl.formatMessage({
+                    id: "shipping.requiredForShippingLogistics",
+                  })}
                 />
                 <Checkbox
                   onSelect={selected =>
@@ -710,7 +738,7 @@ export class ShippingRoute extends Component<ShippingProps, ShippingState> {
                   selected={this.state.saveAddress}
                   data-test="save-address-checkbox"
                 >
-                  Save shipping address for later use
+                  <FormattedMessage id="shipping.saveDeliveryAddress" />
                 </Checkbox>
                 <Spacer mt={4} />
               </Collapse>
@@ -725,7 +753,9 @@ export class ShippingRoute extends Component<ShippingProps, ShippingState> {
                   errors={phoneNumberError}
                   touched={phoneNumberTouched}
                   onChange={this.onPhoneNumberChange}
-                  label="Number to contact you for pickup logistics"
+                  label={this.props.intl.formatMessage({
+                    id: "shipping.phoneNumberLabel",
+                  })}
                 />
               </Collapse>
 
@@ -736,10 +766,11 @@ export class ShippingRoute extends Component<ShippingProps, ShippingState> {
                   shippingQuotes.length > 0
                 }
               >
-                <Text variant="sm">Artsy Shipping options</Text>
+                <Text variant="sm">
+                  <FormattedMessage id="shipping.options" />
+                </Text>
                 <Text variant="xs" mb="1" color="black60">
-                  All options are eligible for Artsy’s Buyer Protection policy,
-                  which protects against damage and loss.
+                  <FormattedMessage id="shipping.description" />
                 </Text>
 
                 <ShippingQuotesFragmentContainer
@@ -759,7 +790,7 @@ export class ShippingRoute extends Component<ShippingProps, ShippingState> {
                   variant="primaryBlack"
                   width="100%"
                 >
-                  Continue
+                  <FormattedMessage id="button.continue" />
                 </Button>
               </Media>
             </Flex>
@@ -783,7 +814,7 @@ export class ShippingRoute extends Component<ShippingProps, ShippingState> {
                   variant="primaryBlack"
                   width="100%"
                 >
-                  Continue
+                  <FormattedMessage id="button.continue" />
                 </Button>
               </Media>
             </Flex>
@@ -793,6 +824,7 @@ export class ShippingRoute extends Component<ShippingProps, ShippingState> {
     )
   }
 }
+export const ShippingRoute = injectIntl(ShippingRouteCore)
 
 export const ShippingFragmentContainer = createFragmentContainer(
   withSystemContext(injectCommitMutation(injectDialog(ShippingRoute))),

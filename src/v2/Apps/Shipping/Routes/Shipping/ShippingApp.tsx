@@ -6,6 +6,7 @@ import { data as sd } from "sharify"
 import { Box } from "@artsy/palette"
 import { UserSettingsTabs } from "v2/Components/UserSettings/UserSettingsTabs"
 import { UserSettingsAddressesFragmentContainer as UserSettingsAddresses } from "v2/Apps/Settings/Routes/Shipping/Components/UserSettingsAddresses"
+import { FormattedMessage } from "react-intl"
 
 export interface ShippingAppProps {
   me: ShippingApp_me
@@ -19,7 +20,9 @@ const ShippingApp: React.FC<ShippingAppProps> = props => {
   // to apps
   return (
     <>
-      <Title>My addresses | Artsy</Title>
+      <Title>
+        <FormattedMessage id="shipping.myAddresses" />
+      </Title>
       <Box mx={[1, 4]} pb={[2, 4]}>
         <Box mb={2} mt={1}>
           <UserSettingsTabs route={sd.CURRENT_PATH} username={me?.name} />
