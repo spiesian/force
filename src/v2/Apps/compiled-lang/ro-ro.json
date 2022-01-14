@@ -1,50 +1,560 @@
 {
+  "artwork.artistmarketingsights.bluechip": [
+    {
+      "type": 0,
+      "value": "Blue-chip"
+    }
+  ],
+  "artwork.artistmarketingsights.bluechip.label": [
+    {
+      "type": 0,
+      "value": "Reprezentat de galerii recunoscute internațional."
+    }
+  ],
+  "artwork.artistmarketingsights.collectedbyamajormuseums": [
+    {
+      "type": 0,
+      "value": "Colectat de un muzeu important"
+    }
+  ],
+  "artwork.artistmarketingsights.collectedbymajormuseums": [
+    {
+      "type": 0,
+      "value": "Colectat de muzeul major"
+    }
+  ],
+  "artwork.artistmarketingsights.emerging": [
+    {
+      "type": 0,
+      "value": "În curs de dezvoltare"
+    }
+  ],
+  "artwork.artistmarketingsights.emerging.label": [
+    {
+      "type": 0,
+      "value": "Reprezentat de galerii viitoare."
+    }
+  ],
+  "artwork.artistmarketingsights.established": [
+    {
+      "type": 0,
+      "value": "Stabilit"
+    }
+  ],
+  "artwork.artistmarketingsights.established.label": [
+    {
+      "type": 0,
+      "value": "Reprezentat de galerii lidere din industrie."
+    }
+  ],
+  "artwork.artistmarketingsights.term": [
+    {
+      "type": 0,
+      "value": "Record mare la licitație"
+    }
+  ],
+  "artwork.artworkactions.share": [
+    {
+      "type": 0,
+      "value": "Partajare"
+    }
+  ],
+  "artwork.artworkactions.viewinroom": [
+    {
+      "type": 0,
+      "value": "Vizualizare în cameră"
+    }
+  ],
+  "artwork.artworkactionssavebutton.save": [
+    {
+      "type": 0,
+      "value": "Salvați"
+    }
+  ],
+  "artwork.artworkactionssavebutton.watchlot": [
+    {
+      "type": 0,
+      "value": "Urmăriți lotul"
+    }
+  ],
+  "artwork.authenticitycertificate.certificateofauthenticity": [
+    {
+      "type": 0,
+      "value": "Certificat de autenticitate"
+    }
+  ],
+  "artwork.authenticitycertificate.certificateofauthenticitydescription": [
+    {
+      "type": 0,
+      "value": "Un certificat de autenticitate (COA) este un document dintr-o sursă autorizată care verifică autenticitatea operei de artă. În timp ce multe certificate de autenticitate sunt semnate de artist, altele vor fi semnate de galeria reprezentantă sau de tipografia care a colaborat cu artistul. asupra lucrării. Pentru lucrările pieței secundare, moșiile sau fundațiile autorizate sunt adesea partea emitentă."
+    }
+  ],
+  "artwork.authenticitycertificate.coa.description": [
+    {
+      "type": 0,
+      "value": "COA-urile includ de obicei numele artistului, detaliile (titlu, data, suportul, dimensiuni) lucrării în cauză și, ori de câte ori este posibil, o imagine a lucrării."
+    }
+  ],
+  "artwork.authenticitycertificate.helpcenter": [
+    {
+      "type": 0,
+      "value": "Centrul de ajutor"
+    }
+  ],
+  "artwork.authenticitycertificate.readmore": [
+    {
+      "type": 0,
+      "value": "Citiți mai multe despre autenticitatea operei de artă în"
+    }
+  ],
+  "artwork.banner.status.atfair": [
+    {
+      "type": 0,
+      "value": "La echitabil"
+    }
+  ],
+  "artwork.banner.status.inauction": [
+    {
+      "type": 0,
+      "value": "În licitație"
+    }
+  ],
+  "artwork.banner.status.incurrentshow": [
+    {
+      "type": 0,
+      "value": "În emisiunea curentă"
+    }
+  ],
+  "artwork.banner.status.inpastshow": [
+    {
+      "type": 0,
+      "value": "În emisiunea trecută "
+    }
+  ],
+  "artwork.banner.status.inupcomingshow": [
+    {
+      "type": 0,
+      "value": "În emisiunea viitoare "
+    }
+  ],
+  "artwork.buyergarantee.yourpurchaseisprotected": [
+    {
+      "type": 0,
+      "value": "Protecția cumpărătorului Artsy"
+    }
+  ],
+  "artwork.buyerguarantee.buyerprotection": [
+    {
+      "type": 0,
+      "value": "Achiziția dvs. este protejată"
+    }
+  ],
+  "artwork.index.aboutthework": [
+    {
+      "type": 0,
+      "value": "Despre lucrare"
+    }
+  ],
+  "artwork.index.certificateofauthenticity": [
+    {
+      "type": 0,
+      "value": "Certificat de autenticitate"
+    }
+  ],
+  "artwork.index.provenance": [
+    {
+      "type": 0,
+      "value": "Provență"
+    }
+  ],
+  "artwork.securepayment.learnmore": [
+    {
+      "type": 0,
+      "value": "Aflați mai multe"
+    }
+  ],
+  "artwork.securepayment.securepayment": [
+    {
+      "type": 0,
+      "value": "Plată sigură"
+    }
+  ],
+  "artwork.securepayment.securetransactions": [
+    {
+      "type": 0,
+      "value": "Securizați tranzacțiile cu cardul de credit prin Stripe."
+    }
+  ],
+  "artwork.selectedexhibitions.exhibitions": [
+    {
+      "type": 0,
+      "value": "Expoziții"
+    }
+  ],
+  "artwork.selectedexhibitions.selectedexhibitions": [
+    {
+      "type": 0,
+      "value": "Expoziții selectate"
+    }
+  ],
+  "artwork.sidebarartist.follow": [
+    {
+      "type": 0,
+      "value": "Urmărește"
+    }
+  ],
+  "artwork.sidebarauctionpartnerinfo.estimatedvalue": [
+    {
+      "type": 0,
+      "value": "Valoare estimată:"
+    }
+  ],
+  "artwork.sidebarbidaction.enterbidding": [
+    {
+      "type": 0,
+      "value": "Introduceți licitarea live"
+    }
+  ],
+  "artwork.sidebarbidaction.identityverificationrequiredtobid": [
+    {
+      "type": 0,
+      "value": "Este necesară verificarea identității pentru a licita."
+    }
+  ],
+  "artwork.sidebarbidaction.placemaxbid": [
+    {
+      "type": 0,
+      "value": "Plasați suma licitată maximă"
+    }
+  ],
+  "artwork.sidebarbidaction.registertobid": [
+    {
+      "type": 0,
+      "value": "Înregistrați-vă pentru a licita"
+    }
+  ],
+  "artwork.sidebarbidaction.registrationclosed": [
+    {
+      "type": 0,
+      "value": "Înregistrare închisă"
+    }
+  ],
+  "artwork.sidebarbidaction.registrationpending": [
+    {
+      "type": 0,
+      "value": "Înregistrare în așteptare"
+    }
+  ],
+  "artwork.sidebarbidaction.verifyidentity": [
+    {
+      "type": 0,
+      "value": "Verificați identitatea"
+    }
+  ],
+  "artwork.sidebarbidaction.watchlivebidding": [
+    {
+      "type": 0,
+      "value": "Urmăriți licitarea live"
+    }
+  ],
+  "artwork.sidebarcommercial.buynow": [
+    {
+      "type": 0,
+      "value": "Cumpărați acum"
+    }
+  ],
+  "artwork.sidebarcommercial.contactgallery": [
+    {
+      "type": 0,
+      "value": "Contactați Galeria"
+    }
+  ],
+  "artwork.sidebarcommercial.makeoffer": [
+    {
+      "type": 0,
+      "value": "Fă ofertă"
+    }
+  ],
+  "artwork.sidebarcurrentbidinfo.biddingclosed": [
+    {
+      "type": 0,
+      "value": "Licitare închisă"
+    }
+  ],
+  "artwork.sidebarcurrentbidinfo.buyerpremium": [
+    {
+      "type": 0,
+      "value": "prima cumpărătorului"
+    }
+  ],
+  "artwork.sidebarcurrentbidinfo.shippingandtaxes": [
+    {
+      "type": 0,
+      "value": "Se pot aplica Expediere, taxe și taxe suplimentare."
+    }
+  ],
+  "artwork.sidebarcurrentbidinfo.thisauctionhasa": [
+    {
+      "type": 0,
+      "value": "Această licitație are un"
+    }
+  ],
+  "artwork.sidebarcurrentbidinfo.yourmax": [
+    {
+      "type": 0,
+      "value": "Max. dvs.:"
+    }
+  ],
+  "artwork.sidebarextralinks.haveaquestion": [
+    {
+      "type": 0,
+      "value": "Aveți o întrebare? Citiți"
+    }
+  ],
+  "button.continue": [
+    {
+      "type": 0,
+      "value": "Continuați"
+    }
+  ],
+  "ccpaRequest.personalInformation": [
+    {
+      "type": 0,
+      "value": "Nu vindeți informațiile mele personale"
+    }
+  ],
+  "error.invalidAddressMesssage": [
+    {
+      "type": 0,
+      "value": "A apărut o eroare la procesarea adresei dvs. Vă rugăm să examinați și să încercați din nou."
+    }
+  ],
+  "error.invalidAddressTitle": [
+    {
+      "type": 0,
+      "value": "Adresă nevalidă"
+    }
+  ],
+  "error.invalidDomesticAddressMesssage": [
+    {
+      "type": 0,
+      "value": "Această lucrare poate fi expediată doar intern."
+    }
+  ],
+  "error.invalidDomesticAddressTitle": [
+    {
+      "type": 0,
+      "value": "Nu se poate expedia la acea adresă"
+    }
+  ],
+  "footer.about": [
+    {
+      "type": 0,
+      "value": "Despre"
+    }
+  ],
+  "footer.aboutUs": [
+    {
+      "type": 0,
+      "value": "Despre noi"
+    }
+  ],
+  "footer.acaSellersAgreement": [
+    {
+      "type": 0,
+      "value": "Acordul vânzătorului ACA"
+    }
+  ],
+  "footer.androidApp": [
+    {
+      "type": 0,
+      "value": "Aplicația Android"
+    }
+  ],
+  "footer.artGenomeProject": [
+    {
+      "type": 0,
+      "value": "Proiectul Art Genome"
+    }
+  ],
+  "footer.artsyForAuctions": [
+    {
+      "type": 0,
+      "value": "Artsy pentru licitații"
+    }
+  ],
+  "footer.artsyForFairs": [
+    {
+      "type": 0,
+      "value": "Artistic pentru târguri"
+    }
+  ],
+  "footer.artsyForGalleries": [
+    {
+      "type": 0,
+      "value": "Artistic pentru galerii"
+    }
+  ],
+  "footer.artsyForMuseums": [
+    {
+      "type": 0,
+      "value": "Artistic pentru muzee"
+    }
+  ],
+  "footer.blog": [
+    {
+      "type": 0,
+      "value": "Blog"
+    }
+  ],
+  "footer.buyingOnArtsy": [
+    {
+      "type": 0,
+      "value": "Cumpărând pe Artsy"
+    }
+  ],
+  "footer.conditionsOfSale": [
+    {
+      "type": 0,
+      "value": "Condiții de vânzare"
+    }
+  ],
+  "footer.contact": [
+    {
+      "type": 0,
+      "value": "Contact"
+    }
+  ],
+  "footer.education": [
+    {
+      "type": 0,
+      "value": "Educație"
+    }
+  ],
+  "footer.getTheApp": [
+    {
+      "type": 0,
+      "value": "Obțineți aplicația"
+    }
+  ],
+  "footer.iosApp": [
+    {
+      "type": 0,
+      "value": "Aplicația iOS"
+    }
+  ],
+  "footer.jobs": [
+    {
+      "type": 0,
+      "value": "Locuri de muncă"
+    }
+  ],
+  "footer.openSource": [
+    {
+      "type": 0,
+      "value": "Sursă deschisă"
+    }
+  ],
+  "footer.partnerships": [
+    {
+      "type": 0,
+      "value": "Parteneriate"
+    }
+  ],
+  "footer.press": [
+    {
+      "type": 0,
+      "value": "Apăsați"
+    }
+  ],
+  "footer.privacyPolicy": [
+    {
+      "type": 0,
+      "value": "Politica de confidențialitate"
+    }
+  ],
+  "footer.resources": [
+    {
+      "type": 0,
+      "value": "Resurse"
+    }
+  ],
+  "footer.security": [
+    {
+      "type": 0,
+      "value": "Securitate"
+    }
+  ],
+  "footer.support": [
+    {
+      "type": 0,
+      "value": "Suport"
+    }
+  ],
+  "footer.termsOfUse": [
+    {
+      "type": 0,
+      "value": "Termeni de utilizare"
+    }
+  ],
+  "footer.visitOurHelpCenter": [
+    {
+      "type": 0,
+      "value": "Vizitați Centrul nostru de ajutor"
+    }
+  ],
+  "footerDownloadAppBanner.getMore": [
+    {
+      "type": 0,
+      "value": "Obțineți mai multe de la Artsy—în aplicație"
+    }
+  ],
   "home.auctionLots": [
     {
       "type": 0,
-      "value": "r Auction Lots"
+      "value": "Loturi de licitație"
     }
   ],
   "home.exploreAllShows": [
     {
       "type": 0,
-      "value": "r Explore All Shows"
+      "value": "Explorați toate emisiunile"
     }
   ],
   "home.exploreEditorial": [
     {
       "type": 0,
-      "value": "r Explore Editorial"
+      "value": "Explorați editoriale"
     }
   ],
   "home.featuredEvents": [
     {
       "type": 0,
-      "value": "r Featured"
+      "value": "Prezentat"
     }
   ],
   "home.featuredGalleries": [
     {
       "type": 0,
-      "value": "r Featured Galleries"
+      "value": "Galeriile recomandate"
     }
   ],
   "home.featuredShows": [
     {
       "type": 0,
-      "value": "r Featured Shows"
+      "value": "Emisiuni recomandate"
     }
   ],
   "home.marketNews": [
     {
       "type": 0,
-      "value": "r Market News"
+      "value": "Știri despre piață"
     }
   ],
   "home.marketNewsAuthor": [
     {
       "type": 0,
-      "value": "r By "
+      "value": "De "
     },
     {
       "type": 1,
@@ -54,43 +564,277 @@
   "home.metaTagsDescription": [
     {
       "type": 0,
-      "value": "r Artsy is the world’s largest online art marketplace. Browse over 1 million artworks by iconic and emerging artists from 4000+ galleries and top auction houses."
+      "value": "Artsy este cea mai mare piață de artă online din lume. Căutați peste 1 milion de lucrări de artă ale artiștilor emblematici și emergenti din peste 4000 de galerii și case de licitații de top."
     }
   ],
   "home.metaTagsTitle": [
     {
       "type": 0,
-      "value": "r Artsy — Discover, Buy, and Sell Fine Art"
+      "value": "Artsy — Descoperiți, cumpărați și vindeți artă plastică"
     }
   ],
   "home.newWorksByArtistsYouFollow": [
     {
       "type": 0,
-      "value": "r New Works by Artists you Follow"
+      "value": "Lucrări noi ale artiștilor pe care îi urmăriți"
     }
   ],
   "home.recentlyViewed": [
     {
       "type": 0,
-      "value": "r Recently Viewed"
+      "value": "Vizualizat recent"
     }
   ],
   "home.trendingArtistsOnArtsy": [
     {
       "type": 0,
-      "value": "r Trending Artists on Artsy"
+      "value": "Artiști în tendințe pe Artsy"
+    }
+  ],
+  "home.viewAllArtists": [
+    {
+      "type": 0,
+      "value": "Vezi toți artiștii"
     }
   ],
   "home.viewAllAuctions": [
     {
       "type": 0,
-      "value": "r View All Auctions"
+      "value": "Vedeți toate licitațiile"
     }
   ],
   "home.viewAllGalleries": [
     {
       "type": 0,
-      "value": "r View All Galleries"
+      "value": "Vedeți toate galeriile"
+    }
+  ],
+  "mesajul meu": [
+    {
+      "type": 1,
+      "value": "name"
+    },
+    {
+      "type": 0,
+      "value": " are mere"
+    }
+  ],
+  "navbar.artists": [
+    {
+      "type": 0,
+      "value": "Artisti"
+    }
+  ],
+  "navbar.artworks": [
+    {
+      "type": 0,
+      "value": "Opere de artă"
+    }
+  ],
+  "navbar.auctions": [
+    {
+      "type": 0,
+      "value": "Licitații"
+    }
+  ],
+  "navbar.buy": [
+    {
+      "type": 0,
+      "value": "Cumpărați"
+    }
+  ],
+  "navbar.downloadapp": [
+    {
+      "type": 0,
+      "value": "Descărcați aplicația"
+    }
+  ],
+  "navbar.editorial": [
+    {
+      "type": 0,
+      "value": "Editorial"
+    }
+  ],
+  "navbar.fairs": [
+    {
+      "type": 0,
+      "value": "Târguri"
+    }
+  ],
+  "navbar.galleries": [
+    {
+      "type": 0,
+      "value": "Galerie"
+    }
+  ],
+  "navbar.login": [
+    {
+      "type": 0,
+      "value": "Autentificare"
+    }
+  ],
+  "navbar.mueuns": [
+    {
+      "type": 0,
+      "value": "Museuns"
+    }
+  ],
+  "navbar.pricedatabase": [
+    {
+      "type": 0,
+      "value": "Baza de date de prețuri"
+    }
+  ],
+  "navbar.searchplaceholder": [
+    {
+      "type": 0,
+      "value": "Căutați după artist, galerie, stil, temă, etichetă etc."
+    }
+  ],
+  "navbar.searchplaceholderxs": [
+    {
+      "type": 0,
+      "value": "Căutați Artsy"
+    }
+  ],
+  "navbar.sell": [
+    {
+      "type": 0,
+      "value": "Vând"
+    }
+  ],
+  "navbar.show": [
+    {
+      "type": 0,
+      "value": "Afișați"
+    }
+  ],
+  "navbar.shows": [
+    {
+      "type": 0,
+      "value": "Afișează"
+    }
+  ],
+  "navbar.signup": [
+    {
+      "type": 0,
+      "value": "Înscrieți-vă"
+    }
+  ],
+  "navbar.viewingrooms": [
+    {
+      "type": 0,
+      "value": "Vizualizarea camerelor"
+    }
+  ],
+  "optiuni pentru livrare": [
+    {
+      "type": 0,
+      "value": "Opțiuni de livrare artistică"
+    }
+  ],
+  "shipping.deliveryAddress": [
+    {
+      "type": 0,
+      "value": "Adresa de livrare"
+    }
+  ],
+  "shipping.deliveryMethod": [
+    {
+      "type": 0,
+      "value": "Metoda de livrare"
+    }
+  ],
+  "shipping.description": [
+    {
+      "type": 0,
+      "value": "Toate opțiunile sunt eligibile pentru politica Artsy de protecție a cumpărătorilor, care protejează împotriva daunelor și pierderilor."
+    }
+  ],
+  "shipping.myAddresses": [
+    {
+      "type": 0,
+      "value": "Adresele mele | Artsy"
+    }
+  ],
+  "shipping.phoneNumberLabel": [
+    {
+      "type": 0,
+      "value": "Număr pentru a vă contacta pentru logistica de ridicare"
+    }
+  ],
+  "shipping.pickupDescription": [
+    {
+      "type": 0,
+      "value": "După confirmarea comenzii, un specialist vă va contacta în termen de 2 zile lucrătoare pentru a coordona ridicarea."
+    }
+  ],
+  "shipping.pickupLabel": [
+    {
+      "type": 0,
+      "value": "Aranjați ridicarea (gratuit)"
+    }
+  ],
+  "shipping.quoteArtaConfirmationError": [
+    {
+      "type": 0,
+      "value": "Trebuie să vă confirmăm câteva detalii înainte de a procesa această comandă."
+    },
+    {
+      "type": 0,
+      "value": "<br/>"
+    },
+    {
+      "type": 0,
+      "value": "Vă rugăm să contactați "
+    },
+    {
+      "type": 1,
+      "value": "email"
+    },
+    {
+      "type": 0,
+      "value": " pentru asistență."
+    }
+  ],
+  "shipping.quoteArtaError": [
+    {
+      "type": 0,
+      "value": "A apărut o problemă la obținerea ofertelor de livrare. "
+    },
+    {
+      "type": 0,
+      "value": "<br/>"
+    },
+    {
+      "type": 0,
+      "value": "Vă rugăm să contactați "
+    },
+    {
+      "type": 1,
+      "value": "email"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "shipping.requiredForShippingLogistics": [
+    {
+      "type": 0,
+      "value": "Necesar pentru logistica de expediere"
+    }
+  ],
+  "shipping.saveDeliveryAddress": [
+    {
+      "type": 0,
+      "value": "Salvați adresa de expediere pentru o utilizare ulterioară"
+    }
+  ],
+  "shipping.shippingLabel": [
+    {
+      "type": 0,
+      "value": "Livrare"
     }
   ]
 }

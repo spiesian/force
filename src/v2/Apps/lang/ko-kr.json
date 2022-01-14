@@ -1,0 +1,403 @@
+{
+  "myMessage": {
+    "defaultMessage": "{name}에 사과가 있습니다",
+    "description": "안녕하세요 react_intl"
+  },
+  "ccpaRequest.personalInformation": {
+    "defaultMessage": "내 개인 정보를 판매하지 마십시오"
+  },
+  "navbar.login": {
+      "defaultMessage": "로그인"
+  },
+  "navbar.signup": {
+    "defaultMessage": "가입"
+  },
+  "navbar.downloadapp": {
+      "defaultMessage": "앱 다운로드"
+  },
+  "navbar.show": {
+    "defaultMessage": "표시"
+  },
+  "navbar.buy": {
+    "defaultMessage": "구매"
+  },
+  "navbar.sell": {
+    "defaultMessage": "판매"
+  },
+  "navbar.pricedatabase": {
+    "defaultMessage": "가격 데이터베이스"
+  },
+  "navbar.editorial": {
+    "defaultMessage": "에디토리얼"
+  },
+  "navbar.artists": {
+    "defaultMessage": "아티스트"
+  },
+  "navbar.artworks": {
+    "defaultMessage": "아트워크"
+  },
+  "navbar.auctions": {
+    "defaultMessage": "경매"
+  },
+  "navbar.viewingrooms": {
+    "defaultMessage": "방 보기"
+  },
+  "navbar.galleries": {
+    "defaultMessage": "갤러리"
+  },
+  "navbar.fairs": {
+    "defaultMessage": "공정"
+  },
+  "navbar.shows": {
+    "defaultMessage": "표시"
+  },
+  "navbar.mueuns": {
+    "defaultMessage": "뮤슨스"
+  },
+  "navbar.searchplaceholder": {
+    "defaultMessage": "아티스트, 갤러리, 스타일, 테마, 태그 등으로 검색합니다."
+  },
+  "navbar.searchplaceholderx": {
+    "defaultMessage": "Artsy 검색"
+  },
+  "home.newWorksByArtistsYouFollow": {
+    "defaultMessage": "팔로우하는 아티스트의 신작",
+    "description": "홈 화면에서 Rail을 팔로우하는 아티스트의 탭 제목"
+  },
+  "home.recentlyViewed": {
+    "defaultMessage": "최근에 본 항목"
+  },
+  "home.trendingArtistsOnArtsy": {
+    "defaultMessage": "Artsy의 인기 아티스트"
+  },
+  "home.viewAllArtists": {
+    "defaultMessage": "모든 아티스트 보기"
+  },
+  "home.metaTagsTitle": {
+    "defaultMessage": "Artsy — 미술품 발견, 구매 및 판매"
+  },
+  "home.metaTagsDescription": {
+    "defaultMessage": "Artsy는 세계 최대의 온라인 아트 마켓플레이스입니다. 4000개 이상의 갤러리와 최고의 경매장에서 나온 아이코닉하고 신진 아티스트의 100만 개 이상의 작품을 찾아보세요."
+  },
+  "home.featuredShows": {
+    "defaultMessage": "추천 프로그램"
+  },
+  "home.exploreAllShows": {
+    "defaultMessage": "모든 쇼 탐색"
+  },
+  "home.marketNews": {
+    "defaultMessage": "시장 뉴스"
+  },
+  "home.marketNewsAuthor": {
+    "defaultMessage": "{author} 작성"
+  },
+  "home.exploreEditorial": {
+    "defaultMessage": "편집 탐색"
+  },
+  "home.featuredGalleries": {
+    "defaultMessage": "추천 갤러리"
+  },
+  "home.viewAllGalleries": {
+    "defaultMessage": "모든 갤러리 보기"
+  },
+  "home.featuredEvents": {
+    "defaultMessage": "추천"
+  },
+  "home.auctionLots": {
+    "defaultMessage": "경매 로트"
+  },
+  "home.viewAllAuctions": {
+    "defaultMessage": "모든 경매 보기"
+  },
+  "footer.about": {
+    "defaultMessage": "정보"
+  },
+  "footer.aboutUs": {
+    "defaultMessage": "회사 소개"
+  },
+  "footer.acaSellersAgreement": {
+    "defaultMessage": "ACA 판매자 계약"
+  },
+  "footer.androidApp": {
+    "defaultMessage": "안드로이드 앱"
+  },
+  "footer.artGenomeProject": {
+    "defaultMessage": "예술 게놈 프로젝트"
+  },
+  "footer.artsyForAuctions": {
+    "defaultMessage": "Artsy for Auctions"
+  },
+  "footer.artsyForFairs": {
+    "defaultMessage": "Artsy for Fairs"
+  },
+  "footer.artsyForGalleries": {
+    "defaultMessage": "Artsy for Galleries"
+  },
+  "footer.artsyForMuseums": {
+    "defaultMessage": "Artsy for Museums"
+  },
+  "footer.buyingOnArtsy": {
+    "defaultMessage": "Artsy에서 구매"
+  },
+  "footer.contact": {
+    "defaultMessage": "연락처"
+  },
+  "footer.conditionsOfSale": {
+    "defaultMessage": "판매 조건"
+  },
+  "footer.blog": {
+    "defaultMessage": "블로그"
+  },
+  "footer.education": {
+    "defaultMessage": "교육"
+  },
+  "footer.getTheApp": {
+    "defaultMessage": "앱 다운로드"
+  },
+  "footer.iosApp": {
+    "defaultMessage": "iOS 앱"
+  },
+  "footer.jobs": {
+    "defaultMessage": "작업"
+  },
+  "footer.openSource": {
+    "defaultMessage": "오픈 소스"
+  },
+  "footer.partnerships": {
+    "defaultMessage": "파트너십"
+  },
+  "footer.press": {
+    "defaultMessage": "누르세요"
+  },
+  "footer.privacyPolicy": {
+    "defaultMessage": "개인 정보 보호 정책"
+  },
+  "footer.resources": {
+    "defaultMessage": "리소스"
+  },
+  "footer.security": {
+    "defaultMessage": "보안"
+  },
+  "footer.support": {
+    "defaultMessage": "지원"
+  },
+  "footer.termsOfUse": {
+    "defaultMessage": "이용 약관"
+  },
+  "footer.visitOurHelpCenter": {
+    "defaultMessage": "도움말 센터 방문"
+  },
+  "shipping.myAddresses": {
+    "defaultMessage": "내 주소 | Artsy"
+  },
+  "shipping.deliveryMethod": {
+    "defaultMessage": "전달 방법"
+  },
+  "shipping.shippingLabel": {
+    "defaultMessage": "배송"
+  },
+  "shipping.pickupLabel": {
+    "defaultMessage": "픽업 준비(무료)"
+  },
+  "shipping.pickupDescription": {
+    "defaultMessage": "주문이 확인되면 영업일 기준 2일 이내에 전문가가 픽업을 조정하기 위해 연락을 드릴 것입니다."
+  },
+  "shipping.deliveryAddress": {
+    "defaultMessage": "배달 주소"
+  },
+  "shipping.saveDeliveryAddress": {
+    "defaultMessage": "나중에 사용할 수 있도록 배송 주소 저장"
+  },
+  "shipping.requiredForShippingLogistics": {
+    "defaultMessage": "물류 배송에 필요"
+  },
+  "shipping.phoneNumberLabel": {
+    "defaultMessage": "픽업 물류를 위해 연락할 번호"
+  },
+  "shipping.options": {
+    "defaultMessage": "Artsy 배송 옵션"
+  },
+  "shipping.description": {
+    "defaultMessage": "모든 옵션은 손상 및 손실을 방지하는 Artsy의 구매자 보호 정책에 적합합니다."
+  },
+  "shipping.quoteArtaError": {
+    "defaultMessage": "배송 견적을 받는 동안 문제가 발생했습니다. <br />{email}에 문의하세요."
+  },
+  "shipping.quoteArtaConfirmationError": {
+    "defaultMessage": "이 주문을 처리하기 전에 몇 가지 세부정보를 확인해야 합니다.<br />도움이 필요하면 {email}에 연락하세요."
+  },
+  "error.invalidAddressTitle": {
+    "defaultMessage": "잘못된 주소"
+  },
+  "error.invalidAddressMesssage": {
+    "defaultMessage": "주소를 처리하는 동안 오류가 발생했습니다. 검토하고 다시 시도하십시오."
+  },
+  "error.invalidDomesticAddressTitle": {
+    "defaultMessage": "해당 주소로 배송할 수 없습니다"
+  },
+  "error.invalidDomesticAddressMessage": {
+    "defaultMessage": "이 작품은 국내 배송만 가능합니다."
+  },
+  "button.continue": {
+    "defaultMessage": "계속"
+  },
+  "artwork.banner.status.incurrentshow": {
+    "defaultMessage": "현재 쇼에서"
+  },
+  "artwork.banner.status.inuction": {
+    "defaultMessage": "경매 중"
+  },
+  "artwork.banner.status.atfair": {
+    "defaultMessage": "공정하게"
+  },
+  "artwork.banner.status.inupcomingshow": {
+    "defaultMessage": "예정된 쇼에서"
+  },
+  "artwork.banner.status.inpastshow": {
+    "defaultMessage": "과거 쇼에서"
+  },
+  "artwork.sidebarcommercial.buynow": {
+    "defaultMessage": "지금 구매"
+  },
+  "artwork.sidebarcommercial.makeoffer": {
+    "defaultMessage": "제안하기"
+  },
+  "artwork.sidebarcommercial.contactgallery": {
+    "defaultMessage": "갤러리에 문의"
+  },
+  "artwork.sidebarartist.follow": {
+    "defaultMessage": "팔로우"
+  },
+  "artwork.sidebarauctionpartnerinfo.estimatedvalue": {
+    "defaultMessage": "예상 값:"
+  },
+  "artwork.sidebarbidaction.registertobid": {
+    "defaultMessage": "입찰 등록"
+  },
+  "artwork.sidebarbidaction.verifyidentity": {
+    "defaultMessage": "신원 확인"
+  },
+  "artwork.sidebarbidaction.identityverificationrequiredtobid": {
+    "defaultMessage": "입찰을 위해 신원 확인이 필요합니다."
+  },
+  "artwork.sidebarbidaction.registrationpending": {
+    "defaultMessage": "등록 보류 중"
+  },
+  "artwork.sidebarbidaction.registrationclosed": {
+    "defaultMessage": "등록 마감됨"
+  },
+  "artwork.sidebarbidaction.watchlivebidding": {
+    "defaultMessage": "실시간 입찰 보기"
+  },
+  "artwork.sidebarbidaction.enterbidding": {
+    "defaultMessage": "실시간 입찰 입력"
+  },
+  "artwork.sidebarbidaction.placemaxbid": {
+    "defaultMessage": "최대 입찰가 지정"
+  },
+  "artwork.sidebarcurrentbidinfo.biddingclosed": {
+    "defaultMessage": "입찰 마감됨"
+  },
+  "artwork.sidebarcurrentbidinfo.yourmax": {
+    "defaultMessage": "최대:"
+  },
+  "artwork.sidebarcurrentbidinfo.thisauctionhasa": {
+    "defaultMessage": "이 경매에는"
+  },
+  "artwork.sidebarcurrentbidinfo.buyerpremium": {
+    "defaultMessage": "구매자 프리미엄"
+  },
+  "artwork.sidebarcurrentbidinfo.shippingandtaxes": {
+    "defaultMessage": "배송, 세금 및 추가 수수료가 적용될 수 있습니다."
+  },
+  "artwork.sidebarextralinks.haveaquestion": {
+    "defaultMessage": "질문이 있으신가요? 읽어보세요."
+  },
+  "artwork.authenticitycertificate.certificateofauthenticity": {
+    "defaultMessage": "인증서"
+  },
+  "artwork.authenticitycertificate.certificateofauthenticitydescription": {
+    "defaultMessage": "진위 증명서(COA)는 예술 작품의 진위를 확인하는 신뢰할 수 있는 출처의 문서입니다. 많은 COA에는 아티스트가 서명하지만 나머지는 아티스트와 협력한 대표 갤러리 또는 판화 제작자가 서명합니다. 2차 시장 작업의 경우 승인된 부동산이나 재단이 발행 당사자인 경우가 많습니다."
+  },
+  "artwork.authenticitycertificate.coa.description": {
+    "defaultMessage": "COA에는 일반적으로 아티스트의 이름, 해당 작업의 세부정보(제목, 날짜, 매체, 치수) 및 가능한 경우 작업 이미지가 포함됩니다."
+  },
+  "artwork.authenticitycertificate.readmore": {
+    "defaultMessage": "저희 웹사이트에서 작품의 진위성에 대해 자세히 읽어보세요."
+  },
+  "artwork.authenticitycertificate.helpcenter": {
+    "defaultMessage": "도움말 센터"
+  },
+  "artwork.securepayment.securepayment": {
+    "defaultMessage": "안전한 결제"
+  },
+  "artwork.securepayment.securetransactions": {
+    "defaultMessage": "Stripe를 통해 신용 카드로 거래를 보호합니다."
+  },
+  "artwork.securepayment.learnmore": {
+    "defaultMessage": "자세히 알아보기"
+  },
+  "artwork.buyerguarantee.yourpurchaseisprotected": {
+    "defaultMessage": "Artsy의 구매자 보호."
+  },
+  "artwork.buyerguarantee.buyerprotection": {
+    "defaultMessage": "구매가 보호됩니다"
+  },
+  "artwork.index.aboutthework": {
+    "defaultMessage": "작업 정보"
+  },
+  "artwork.index.certificateofauthenticity": {
+    "defaultMessage": "인증서"
+  },
+  "artwork.index.provenance": {
+    "defaultMessage": "출처"
+  },
+  "artwork.artistmarketingsights.term": {
+    "defaultMessage": "높은 경매 기록"
+  },
+  "artwork.artistmarketingsights.collectedbyamajormuseums": {
+    "defaultMessage": "주요 박물관에서 수집"
+  },
+  "artwork.artistmarketingsights.collectedbymajormuseums": {
+    "defaultMessage": "주요 박물관에서 수집"
+  },
+  "artwork.artistmarketingsights.bluechip": {
+    "defaultMessage": "블루칩"
+  },
+  "artwork.artistmarketingsights.established": {
+    "defaultMessage": "설정됨"
+  },
+  "artwork.artistmarketingsights.emerging": {
+    "defaultMessage": "이머징"
+  },
+  "artwork.artistmarketingsights.bluechip.label": {
+    "defaultMessage": "국제적으로 인정되는 갤러리가 표시합니다."
+  },
+  "artwork.artistmarketingsights.established.label": {
+    "defaultMessage": "업계 최고의 갤러리가 대표합니다."
+  },
+  "artwork.artistmarketingsights.emerging.label": {
+    "defaultMessage": "최신 갤러리가 표시합니다."
+  },
+  "artwork.selectedexhibitions.selectedexhibitions": {
+    "defaultMessage": "선택한 전시회"
+  },
+  "artwork.selectedexhibitions.exhibitions": {
+    "defaultMessage": "전시회"
+  },
+  "artwork.artworkactions.viewinroom": {
+    "defaultMessage": "방에서 보기"
+  },
+  "artwork.artworkactions.share": {
+    "defaultMessage": "공유"
+  },
+  "artwork.artworkactionssavebutton.save": {
+    "defaultMessage": "저장"
+  },
+  "artwork.artworkactionssavebutton.watchlot": {
+    "defaultMessage": "많은 시청"
+  },
+  "footerDownloadAppBanner.getMore": {
+    "defaultMessage": "Artsy에서 더 많은 것을 얻으십시오 - 앱에서"
+  }
+ }

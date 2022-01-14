@@ -311,10 +311,40 @@
       "value": "Tem uma pergunta? Leia o nosso"
     }
   ],
+  "button.continue": [
+    {
+      "type": 0,
+      "value": "Continuar"
+    }
+  ],
   "ccpaRequest.personalInformation": [
     {
       "type": 0,
       "value": "Não venda meus dados pessoais"
+    }
+  ],
+  "error.invalidAddressMessage": [
+    {
+      "type": 0,
+      "value": "Ocorreu um erro ao processar seu endereço. Revise e tente novamente."
+    }
+  ],
+  "error.invalidAddressTitle": [
+    {
+      "type": 0,
+      "value": "Endereço inválido"
+    }
+  ],
+  "error.invalidDomesticAddressMessage": [
+    {
+      "type": 0,
+      "value": "Este trabalho só pode ser enviado internamente."
+    }
+  ],
+  "error.invalidDomesticAddressTitle": [
+    {
+      "type": 0,
+      "value": "Não é possível enviar para esse endereço"
     }
   ],
   "footer.about": [
@@ -464,13 +494,13 @@
   "footer.termsOfUse": [
     {
       "type": 0,
-      "value": "Termos de uso"
+      "value": "Termos de Uso"
     }
   ],
   "footer.visitOurHelpCenter": [
     {
       "type": 0,
-      "value": "Visite o nosso Centro de Ajuda"
+      "value": "Visite nossa Central de Ajuda"
     }
   ],
   "footerDownloadAppBanner.getMore": [
@@ -559,6 +589,12 @@
     {
       "type": 0,
       "value": "Artistas populares na Artsy"
+    }
+  ],
+  "home.viewAllArtists": [
+    {
+      "type": 0,
+      "value": "Ver todos os artistas"
     }
   ],
   "home.viewAllAuctions": [
@@ -679,6 +715,134 @@
     {
       "type": 0,
       "value": "Salas de exibição"
+    }
+  ],
+  "rodapé.recursos": [
+    {
+      "type": 0,
+      "value": "Recursos"
+    }
+  ],
+  "rodapé.segurança": [
+    {
+      "type": 0,
+      "value": "Segurança"
+    }
+  ],
+  "rodapé.support": [
+    {
+      "type": 0,
+      "value": "Suporte"
+    }
+  ],
+  "shipping.deliveryAddress": [
+    {
+      "type": 0,
+      "value": "Endereço de entrega"
+    }
+  ],
+  "shipping.deliveryMethod": [
+    {
+      "type": 0,
+      "value": "Método de entrega"
+    }
+  ],
+  "shipping.description": [
+    {
+      "type": 0,
+      "value": "Todas as opções são elegíveis para a política de proteção ao comprador da Artsy, que protege contra danos e perdas."
+    }
+  ],
+  "shipping.myAddresses": [
+    {
+      "type": 0,
+      "value": "Meus endereços | Artístico"
+    }
+  ],
+  "shipping.options": [
+    {
+      "type": 0,
+      "value": "Opções artísticas de envio"
+    }
+  ],
+  "shipping.phoneNumberLabel": [
+    {
+      "type": 0,
+      "value": "Número para contato para logística de coleta"
+    }
+  ],
+  "shipping.pickupDescription": [
+    {
+      "type": 0,
+      "value": "Depois que seu pedido for confirmado, um especialista entrará em contato com você em até 2 dias úteis para coordenar a retirada."
+    }
+  ],
+  "shipping.pickupLabel": [
+    {
+      "type": 0,
+      "value": "Organizar para retirada (grátis)"
+    }
+  ],
+  "shipping.quoteArtaConfirmationError": [
+    {
+      "type": 0,
+      "value": "Precisamos confirmar alguns detalhes com você antes de processar este pedido."
+    },
+    {
+      "type": 0,
+      "value": "<br/>"
+    },
+    {
+      "type": 0,
+      "value": "Por favor, entre em contato com "
+    },
+    {
+      "type": 1,
+      "value": "email"
+    },
+    {
+      "type": 0,
+      "value": " para obter assistência."
+    }
+  ],
+  "shipping.quoteArtaError": [
+    {
+      "type": 0,
+      "value": "Ocorreu um problema ao obter cotações de envio. "
+    },
+    {
+      "type": 0,
+      "value": "<br/>"
+    },
+    {
+      "type": 0,
+      "value": "Por favor, contate "
+    },
+    {
+      "type": 1,
+      "value": "email"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "shipping.requiredForShippingLogistics": [
+    {
+      "type": 0,
+      "value": "Necessário para logística de envio"
+    }
+  ],
+  "shipping.saveDeliveryAddress": [
+    {
+      "type": 0,
+      "value": "Salvar endereço de entrega para uso posterior"
+    }
+  ],
+  "shipping.shippingLabel": [
+    {
+      "type": 0,
+      "value": "Envio"
     }
   ]
 }

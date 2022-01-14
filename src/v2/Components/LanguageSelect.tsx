@@ -16,6 +16,7 @@ const LANGUAGE_SELECT_OPTIONS = [
   { text: "English (US)", value: "en-US" },
   { text: "Portuguese (BR)", value: "pt-BR" },
   { text: "Romanian (RO)", value: "ro-RO" },
+  { text: "Korean (KR)", value: "ko-KR" },
 ]
 
 export const LANGUAGE_CODE_TO_LANGUAGE_NAME = LANGUAGE_SELECT_OPTIONS.reduce(

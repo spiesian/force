@@ -22,6 +22,7 @@ import { IntlProvider } from "react-intl"
 import locale_en_us from "../compiled-lang/en-us.json"
 import locale_ro_ro from "../compiled-lang/ro-ro.json"
 import locale_pt_br from "../compiled-lang/pt-br.json"
+import locale_ko_kr from "../compiled-lang/ko-kr.json"
 
 const logger = createLogger("Apps/Components/AppShell")
 
@@ -34,6 +35,7 @@ const data = {
   "en-US": locale_en_us,
   "ro-RO": locale_ro_ro,
   "pt-BR": locale_pt_br,
+  "ko-KR": locale_ko_kr,
 }
 
 export const AppShell: React.FC<AppShellProps> = props => {

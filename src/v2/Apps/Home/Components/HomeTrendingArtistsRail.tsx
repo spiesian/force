@@ -45,7 +45,7 @@ const HomeTrendingArtistsRail: React.FC<HomeTrendingArtistsRailProps> = ({
     <Rail
       alignItems="flex-start"
       title={intl.formatMessage({ id: "home.trendingArtistsOnArtsy" })}
-      viewAllLabel="View All Artists"
+      viewAllLabel={intl.formatMessage({ id: "home.viewAllArtists" })}
       viewAllHref="/artists"
       viewAllOnClick={() => {
         const trackingEvent: ClickedArtistGroup = {

@@ -70,6 +70,9 @@
   "home.trendingArtistsOnArtsy": {
     "defaultMessage": "Trending Artists on Artsy"
   },
+  "home.viewAllArtists": {
+    "defaultMessage": "View All Artists"
+  },
   "home.metaTagsTitle": {
     "defaultMessage": "Artsy — Discover, Buy, and Sell Fine Art"
   },

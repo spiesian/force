@@ -176,6 +176,9 @@
   "home.trendingArtistsOnArtsy": {
     "defaultMessage": "Artistas populares na Artsy"
   },
+  "home.viewAllArtists": {
+    "defaultMessage": "Ver todos os artistas"
+  },
   "home.viewAllAuctions": {
     "defaultMessage": "Ver todos os leilões"
   },
@@ -268,6 +271,75 @@
   },
   "footer.visitOurHelpCenter": {
     "defaultMessage": "Visite o nosso Centro de Ajuda"
+  },
+  "rodapé.recursos": {
+    "defaultMessage": "Recursos"
+  },
+  "rodapé.segurança": {
+    "defaultMessage": "Segurança"
+  },
+  "rodapé.support": {
+    "defaultMessage": "Suporte"
+  },
+  "footer.termsOfUse": {
+    "defaultMessage": "Termos de Uso"
+  },
+  "footer.visitOurHelpCenter": {
+    "defaultMessage": "Visite nossa Central de Ajuda"
+  },
+  "shipping.myAddresses": {
+    "defaultMessage": "Meus endereços | Artístico"
+  },
+  "shipping.deliveryMethod": {
+    "defaultMessage": "Método de entrega"
+  },
+  "shipping.shippingLabel": {
+    "defaultMessage": "Envio"
+  },
+  "shipping.pickupLabel": {
+    "defaultMessage": "Organizar para retirada (grátis)"
+  },
+  "shipping.pickupDescription": {
+    "defaultMessage": "Depois que seu pedido for confirmado, um especialista entrará em contato com você em até 2 dias úteis para coordenar a retirada."
+  },
+  "shipping.deliveryAddress": {
+    "defaultMessage": "Endereço de entrega"
+  },
+  "shipping.saveDeliveryAddress": {
+    "defaultMessage": "Salvar endereço de entrega para uso posterior"
+  },
+  "shipping.requiredForShippingLogistics": {
+    "defaultMessage": "Necessário para logística de envio"
+  },
+  "shipping.phoneNumberLabel": {
+    "defaultMessage": "Número para contato para logística de coleta"
+  },
+  "shipping.options": {
+    "defaultMessage": "Opções artísticas de envio"
+  },
+  "shipping.description": {
+    "defaultMessage": "Todas as opções são elegíveis para a política de proteção ao comprador da Artsy, que protege contra danos e perdas."
+  },
+  "shipping.quoteArtaError": {
+    "defaultMessage": "Ocorreu um problema ao obter cotações de envio. <br />Por favor, contate {email}."
+  },
+  "shipping.quoteArtaConfirmationError": {
+    "defaultMessage": "Precisamos confirmar alguns detalhes com você antes de processar este pedido.<br />Por favor, entre em contato com {email} para obter assistência."
+  },
+  "error.invalidAddressTitle": {
+    "defaultMessage": "Endereço inválido"
+  },
+  "error.invalidAddressMessage": {
+    "defaultMessage": "Ocorreu um erro ao processar seu endereço. Revise e tente novamente."
+  },
+  "error.invalidDomesticAddressTitle": {
+    "defaultMessage": "Não é possível enviar para esse endereço"
+  },
+  "error.invalidDomesticAddressMessage": {
+    "defaultMessage": "Este trabalho só pode ser enviado internamente."
+  },
+  "button.continue": {
+    "defaultMessage": "Continuar"
   },
   "artwork.banner.status.incurrentshow": {
     "defaultMessage": "atualmente em Apresentacao"

@@ -2,379 +2,379 @@
   "artwork.artistmarketingsights.bluechip": [
     {
       "type": 0,
-      "value": "Blue-chip"
+      "value": "블루칩"
     }
   ],
   "artwork.artistmarketingsights.bluechip.label": [
     {
       "type": 0,
-      "value": "Represented by internationally recognized galleries."
+      "value": "국제적으로 인정되는 갤러리가 표시합니다."
     }
   ],
   "artwork.artistmarketingsights.collectedbyamajormuseums": [
     {
       "type": 0,
-      "value": "Collected by a major museum"
+      "value": "주요 박물관에서 수집"
     }
   ],
   "artwork.artistmarketingsights.collectedbymajormuseums": [
     {
       "type": 0,
-      "value": "Collected by major museum"
+      "value": "주요 박물관에서 수집"
     }
   ],
   "artwork.artistmarketingsights.emerging": [
     {
       "type": 0,
-      "value": "Emerging"
+      "value": "이머징"
     }
   ],
   "artwork.artistmarketingsights.emerging.label": [
     {
       "type": 0,
-      "value": "Represented by up-and-coming galleries."
+      "value": "최신 갤러리가 표시합니다."
     }
   ],
   "artwork.artistmarketingsights.established": [
     {
       "type": 0,
-      "value": "Established"
+      "value": "설정됨"
     }
   ],
   "artwork.artistmarketingsights.established.label": [
     {
       "type": 0,
-      "value": "Represented by industry leading galleries."
+      "value": "업계 최고의 갤러리가 대표합니다."
     }
   ],
   "artwork.artistmarketingsights.term": [
     {
       "type": 0,
-      "value": "High auction record"
+      "value": "높은 경매 기록"
     }
   ],
   "artwork.artworkactions.share": [
     {
       "type": 0,
-      "value": "Share"
+      "value": "공유"
     }
   ],
   "artwork.artworkactions.viewinroom": [
     {
       "type": 0,
-      "value": "View in room"
+      "value": "방에서 보기"
     }
   ],
   "artwork.artworkactionssavebutton.save": [
     {
       "type": 0,
-      "value": "Save"
+      "value": "저장"
     }
   ],
   "artwork.artworkactionssavebutton.watchlot": [
     {
       "type": 0,
-      "value": "Watch lot"
+      "value": "많은 시청"
     }
   ],
   "artwork.authenticitycertificate.certificateofauthenticity": [
     {
       "type": 0,
-      "value": "Certificate of authenticity"
+      "value": "인증서"
     }
   ],
   "artwork.authenticitycertificate.certificateofauthenticitydescription": [
     {
       "type": 0,
-      "value": "A certificate of authenticity (COA) is a document from an authoritative source that verifies the artwork’s authenticity. While many COAs are signed by the artist, others will be signed by the representing gallery or the printmaker who collaborated with the artist on the work. For secondary market works, authorized estates or foundations are often the issuing party."
+      "value": "진위 증명서(COA)는 예술 작품의 진위를 확인하는 신뢰할 수 있는 출처의 문서입니다. 많은 COA에는 아티스트가 서명하지만 나머지는 아티스트와 협력한 대표 갤러리 또는 판화 제작자가 서명합니다. 2차 시장 작업의 경우 승인된 부동산이나 재단이 발행 당사자인 경우가 많습니다."
     }
   ],
   "artwork.authenticitycertificate.coa.description": [
     {
       "type": 0,
-      "value": "COAs typically include the name of the artist, the details (title, date, medium, dimensions) of the work in question, and whenever possible an image of the work."
+      "value": "COA에는 일반적으로 아티스트의 이름, 해당 작업의 세부정보(제목, 날짜, 매체, 치수) 및 가능한 경우 작업 이미지가 포함됩니다."
     }
   ],
   "artwork.authenticitycertificate.helpcenter": [
     {
       "type": 0,
-      "value": "Help Center"
+      "value": "도움말 센터"
     }
   ],
   "artwork.authenticitycertificate.readmore": [
     {
       "type": 0,
-      "value": "Read more about artwork authenticity in our"
+      "value": "저희 웹사이트에서 작품의 진위성에 대해 자세히 읽어보세요."
     }
   ],
   "artwork.banner.status.atfair": [
     {
       "type": 0,
-      "value": "At fair"
-    }
-  ],
-  "artwork.banner.status.inauction": [
-    {
-      "type": 0,
-      "value": "In auction"
+      "value": "공정하게"
     }
   ],
   "artwork.banner.status.incurrentshow": [
     {
       "type": 0,
-      "value": "In current show"
+      "value": "현재 쇼에서"
     }
   ],
   "artwork.banner.status.inpastshow": [
     {
       "type": 0,
-      "value": "In past show "
+      "value": "과거 쇼에서"
+    }
+  ],
+  "artwork.banner.status.inuction": [
+    {
+      "type": 0,
+      "value": "경매 중"
     }
   ],
   "artwork.banner.status.inupcomingshow": [
     {
       "type": 0,
-      "value": "In upcoming show "
+      "value": "예정된 쇼에서"
     }
   ],
   "artwork.buyerguarantee.buyerprotection": [
     {
       "type": 0,
-      "value": "Your purchase is protected"
+      "value": "구매가 보호됩니다"
     }
   ],
   "artwork.buyerguarantee.yourpurchaseisprotected": [
     {
       "type": 0,
-      "value": "Artsy’s buyer protection."
+      "value": "Artsy의 구매자 보호."
     }
   ],
   "artwork.index.aboutthework": [
     {
       "type": 0,
-      "value": "About the work"
+      "value": "작업 정보"
     }
   ],
   "artwork.index.certificateofauthenticity": [
     {
       "type": 0,
-      "value": "Certificate of authenticity"
+      "value": "인증서"
     }
   ],
   "artwork.index.provenance": [
     {
       "type": 0,
-      "value": "Provenance"
+      "value": "출처"
     }
   ],
   "artwork.securepayment.learnmore": [
     {
       "type": 0,
-      "value": "Learn more"
+      "value": "자세히 알아보기"
     }
   ],
   "artwork.securepayment.securepayment": [
     {
       "type": 0,
-      "value": "Secure payment"
+      "value": "안전한 결제"
     }
   ],
   "artwork.securepayment.securetransactions": [
     {
       "type": 0,
-      "value": "Secure transactions by credit card through Stripe."
+      "value": "Stripe를 통해 신용 카드로 거래를 보호합니다."
     }
   ],
   "artwork.selectedexhibitions.exhibitions": [
     {
       "type": 0,
-      "value": "Exhibitions"
+      "value": "전시회"
     }
   ],
   "artwork.selectedexhibitions.selectedexhibitions": [
     {
       "type": 0,
-      "value": "Selected exhibitions"
+      "value": "선택한 전시회"
     }
   ],
   "artwork.sidebarartist.follow": [
     {
       "type": 0,
-      "value": "Follow"
+      "value": "팔로우"
     }
   ],
   "artwork.sidebarauctionpartnerinfo.estimatedvalue": [
     {
       "type": 0,
-      "value": "Estimated value:"
+      "value": "예상 값:"
     }
   ],
   "artwork.sidebarbidaction.enterbidding": [
     {
       "type": 0,
-      "value": "Enter live bidding"
+      "value": "실시간 입찰 입력"
     }
   ],
   "artwork.sidebarbidaction.identityverificationrequiredtobid": [
     {
       "type": 0,
-      "value": "Identity verification required to bid."
+      "value": "입찰을 위해 신원 확인이 필요합니다."
     }
   ],
   "artwork.sidebarbidaction.placemaxbid": [
     {
       "type": 0,
-      "value": "Place max bid"
+      "value": "최대 입찰가 지정"
     }
   ],
   "artwork.sidebarbidaction.registertobid": [
     {
       "type": 0,
-      "value": "Register to bid"
+      "value": "입찰 등록"
     }
   ],
   "artwork.sidebarbidaction.registrationclosed": [
     {
       "type": 0,
-      "value": "Registration closed"
+      "value": "등록 마감됨"
     }
   ],
   "artwork.sidebarbidaction.registrationpending": [
     {
       "type": 0,
-      "value": "Registration pending"
+      "value": "등록 보류 중"
     }
   ],
   "artwork.sidebarbidaction.verifyidentity": [
     {
       "type": 0,
-      "value": "Verify identity"
+      "value": "신원 확인"
     }
   ],
   "artwork.sidebarbidaction.watchlivebidding": [
     {
       "type": 0,
-      "value": "Watch live bidding"
+      "value": "실시간 입찰 보기"
     }
   ],
   "artwork.sidebarcommercial.buynow": [
     {
       "type": 0,
-      "value": "Buy now"
+      "value": "지금 구매"
     }
   ],
   "artwork.sidebarcommercial.contactgallery": [
     {
       "type": 0,
-      "value": "Contact Gallery"
+      "value": "갤러리에 문의"
     }
   ],
   "artwork.sidebarcommercial.makeoffer": [
     {
       "type": 0,
-      "value": "Make offer"
+      "value": "제안하기"
     }
   ],
   "artwork.sidebarcurrentbidinfo.biddingclosed": [
     {
       "type": 0,
-      "value": "Bidding closed"
+      "value": "입찰 마감됨"
     }
   ],
   "artwork.sidebarcurrentbidinfo.buyerpremium": [
     {
       "type": 0,
-      "value": "buyer’s premium"
+      "value": "구매자 프리미엄"
     }
   ],
   "artwork.sidebarcurrentbidinfo.shippingandtaxes": [
     {
       "type": 0,
-      "value": "Shipping, taxes, and additional fees may apply."
+      "value": "배송, 세금 및 추가 수수료가 적용될 수 있습니다."
     }
   ],
   "artwork.sidebarcurrentbidinfo.thisauctionhasa": [
     {
       "type": 0,
-      "value": "This auction has a"
+      "value": "이 경매에는"
     }
   ],
   "artwork.sidebarcurrentbidinfo.yourmax": [
     {
       "type": 0,
-      "value": "Your max:"
+      "value": "최대:"
     }
   ],
   "artwork.sidebarextralinks.haveaquestion": [
     {
       "type": 0,
-      "value": "Have a question? Read our"
+      "value": "질문이 있으신가요? 읽어보세요."
     }
   ],
   "button.continue": [
     {
       "type": 0,
-      "value": "Continue"
+      "value": "계속"
     }
   ],
   "ccpaRequest.personalInformation": [
     {
       "type": 0,
-      "value": "Do not sell my personal information"
+      "value": "내 개인 정보를 판매하지 마십시오"
     }
   ],
   "error.invalidAddressMesssage": [
     {
       "type": 0,
-      "value": "There was an error processing your address. Please review and try again."
+      "value": "주소를 처리하는 동안 오류가 발생했습니다. 검토하고 다시 시도하십시오."
     }
   ],
   "error.invalidAddressTitle": [
     {
       "type": 0,
-      "value": "Invalid address"
+      "value": "잘못된 주소"
     }
   ],
-  "error.invalidDomesticAddressMesssage": [
+  "error.invalidDomesticAddressMessage": [
     {
       "type": 0,
-      "value": "This work can only be shipped domestically."
+      "value": "이 작품은 국내 배송만 가능합니다."
     }
   ],
   "error.invalidDomesticAddressTitle": [
     {
       "type": 0,
-      "value": "Can't ship to that address"
+      "value": "해당 주소로 배송할 수 없습니다"
     }
   ],
   "footer.about": [
     {
       "type": 0,
-      "value": "About"
+      "value": "정보"
     }
   ],
   "footer.aboutUs": [
     {
       "type": 0,
-      "value": "About us"
+      "value": "회사 소개"
     }
   ],
   "footer.acaSellersAgreement": [
     {
       "type": 0,
-      "value": "ACA Seller’s Agreement"
+      "value": "ACA 판매자 계약"
     }
   ],
   "footer.androidApp": [
     {
       "type": 0,
-      "value": "Android App"
+      "value": "안드로이드 앱"
     }
   ],
   "footer.artGenomeProject": [
     {
       "type": 0,
-      "value": "The Art Genome Project"
+      "value": "예술 게놈 프로젝트"
     }
   ],
   "footer.artsyForAuctions": [
@@ -404,209 +404,209 @@
   "footer.blog": [
     {
       "type": 0,
-      "value": "Blog"
+      "value": "블로그"
     }
   ],
   "footer.buyingOnArtsy": [
     {
       "type": 0,
-      "value": "Buying on Artsy"
+      "value": "Artsy에서 구매"
     }
   ],
   "footer.conditionsOfSale": [
     {
       "type": 0,
-      "value": "Conditions of Sale"
+      "value": "판매 조건"
     }
   ],
   "footer.contact": [
     {
       "type": 0,
-      "value": "Contact"
+      "value": "연락처"
     }
   ],
   "footer.education": [
     {
       "type": 0,
-      "value": "Education"
+      "value": "교육"
     }
   ],
   "footer.getTheApp": [
     {
       "type": 0,
-      "value": "Get the App"
+      "value": "앱 다운로드"
     }
   ],
   "footer.iosApp": [
     {
       "type": 0,
-      "value": "iOS App"
+      "value": "iOS 앱"
     }
   ],
   "footer.jobs": [
     {
       "type": 0,
-      "value": "Jobs"
+      "value": "작업"
     }
   ],
   "footer.openSource": [
     {
       "type": 0,
-      "value": "Open Source"
+      "value": "오픈 소스"
     }
   ],
   "footer.partnerships": [
     {
       "type": 0,
-      "value": "Partnerships"
+      "value": "파트너십"
     }
   ],
   "footer.press": [
     {
       "type": 0,
-      "value": "Press"
+      "value": "누르세요"
     }
   ],
   "footer.privacyPolicy": [
     {
       "type": 0,
-      "value": "Privacy Policy"
+      "value": "개인 정보 보호 정책"
     }
   ],
   "footer.resources": [
     {
       "type": 0,
-      "value": "Resources"
+      "value": "리소스"
     }
   ],
   "footer.security": [
     {
       "type": 0,
-      "value": "Security"
+      "value": "보안"
     }
   ],
   "footer.support": [
     {
       "type": 0,
-      "value": "Support"
+      "value": "지원"
     }
   ],
   "footer.termsOfUse": [
     {
       "type": 0,
-      "value": "Terms of Use"
+      "value": "이용 약관"
     }
   ],
   "footer.visitOurHelpCenter": [
     {
       "type": 0,
-      "value": "Visit our Help Center"
+      "value": "도움말 센터 방문"
     }
   ],
   "footerDownloadAppBanner.getMore": [
     {
       "type": 0,
-      "value": "Get More from Artsy—on the App"
+      "value": "Artsy에서 더 많은 것을 얻으십시오 - 앱에서"
     }
   ],
   "home.auctionLots": [
     {
       "type": 0,
-      "value": "Auction Lots"
+      "value": "경매 로트"
     }
   ],
   "home.exploreAllShows": [
     {
       "type": 0,
-      "value": "Explore All Shows"
+      "value": "모든 쇼 탐색"
     }
   ],
   "home.exploreEditorial": [
     {
       "type": 0,
-      "value": "Explore Editorial"
+      "value": "편집 탐색"
     }
   ],
   "home.featuredEvents": [
     {
       "type": 0,
-      "value": "Featured"
+      "value": "추천"
     }
   ],
   "home.featuredGalleries": [
     {
       "type": 0,
-      "value": "Featured Galleries"
+      "value": "추천 갤러리"
     }
   ],
   "home.featuredShows": [
     {
       "type": 0,
-      "value": "Featured Shows"
+      "value": "추천 프로그램"
     }
   ],
   "home.marketNews": [
     {
       "type": 0,
-      "value": "Market News"
+      "value": "시장 뉴스"
     }
   ],
   "home.marketNewsAuthor": [
     {
-      "type": 0,
-      "value": "By "
-    },
-    {
       "type": 1,
       "value": "author"
+    },
+    {
+      "type": 0,
+      "value": " 작성"
     }
   ],
   "home.metaTagsDescription": [
     {
       "type": 0,
-      "value": "Artsy is the world’s largest online art marketplace. Browse over 1 million artworks by iconic and emerging artists from 4000+ galleries and top auction houses."
+      "value": "Artsy는 세계 최대의 온라인 아트 마켓플레이스입니다. 4000개 이상의 갤러리와 최고의 경매장에서 나온 아이코닉하고 신진 아티스트의 100만 개 이상의 작품을 찾아보세요."
     }
   ],
   "home.metaTagsTitle": [
     {
       "type": 0,
-      "value": "Artsy — Discover, Buy, and Sell Fine Art"
+      "value": "Artsy — 미술품 발견, 구매 및 판매"
     }
   ],
   "home.newWorksByArtistsYouFollow": [
     {
       "type": 0,
-      "value": "New Works by Artists you Follow"
+      "value": "팔로우하는 아티스트의 신작"
     }
   ],
   "home.recentlyViewed": [
     {
       "type": 0,
-      "value": "Recently Viewed"
+      "value": "최근에 본 항목"
     }
   ],
   "home.trendingArtistsOnArtsy": [
     {
       "type": 0,
-      "value": "Trending Artists on Artsy"
+      "value": "Artsy의 인기 아티스트"
     }
   ],
   "home.viewAllArtists": [
     {
       "type": 0,
-      "value": "View All Artists"
+      "value": "모든 아티스트 보기"
     }
   ],
   "home.viewAllAuctions": [
     {
       "type": 0,
-      "value": "View All Auctions"
+      "value": "모든 경매 보기"
     }
   ],
   "home.viewAllGalleries": [
     {
       "type": 0,
-      "value": "View All Galleries"
+      "value": "모든 갤러리 보기"
     }
   ],
   "myMessage": [
@@ -616,169 +616,169 @@
     },
     {
       "type": 0,
-      "value": " has apples"
+      "value": "에 사과가 있습니다"
     }
   ],
   "navbar.artists": [
     {
       "type": 0,
-      "value": "Artists"
+      "value": "아티스트"
     }
   ],
   "navbar.artworks": [
     {
       "type": 0,
-      "value": "Artworks"
+      "value": "아트워크"
     }
   ],
   "navbar.auctions": [
     {
       "type": 0,
-      "value": "Auctions"
+      "value": "경매"
     }
   ],
   "navbar.buy": [
     {
       "type": 0,
-      "value": "Buy"
+      "value": "구매"
     }
   ],
   "navbar.downloadapp": [
     {
       "type": 0,
-      "value": "Download App"
+      "value": "앱 다운로드"
     }
   ],
   "navbar.editorial": [
     {
       "type": 0,
-      "value": "Editorial"
+      "value": "에디토리얼"
     }
   ],
   "navbar.fairs": [
     {
       "type": 0,
-      "value": "Fairs"
+      "value": "공정"
     }
   ],
   "navbar.galleries": [
     {
       "type": 0,
-      "value": "Galleries"
+      "value": "갤러리"
     }
   ],
   "navbar.login": [
     {
       "type": 0,
-      "value": "Log In"
+      "value": "로그인"
     }
   ],
   "navbar.mueuns": [
     {
       "type": 0,
-      "value": "Museuns"
+      "value": "뮤슨스"
     }
   ],
   "navbar.pricedatabase": [
     {
       "type": 0,
-      "value": "Price Database"
+      "value": "가격 데이터베이스"
     }
   ],
   "navbar.searchplaceholder": [
     {
       "type": 0,
-      "value": "Search by artist, gallery, style, theme, tag, etc."
+      "value": "아티스트, 갤러리, 스타일, 테마, 태그 등으로 검색합니다."
     }
   ],
-  "navbar.searchplaceholderxs": [
+  "navbar.searchplaceholderx": [
     {
       "type": 0,
-      "value": "Search Artsy"
+      "value": "Artsy 검색"
     }
   ],
   "navbar.sell": [
     {
       "type": 0,
-      "value": "Sell"
+      "value": "판매"
     }
   ],
   "navbar.show": [
     {
       "type": 0,
-      "value": "Show"
+      "value": "표시"
     }
   ],
   "navbar.shows": [
     {
       "type": 0,
-      "value": "Shows"
+      "value": "표시"
     }
   ],
   "navbar.signup": [
     {
       "type": 0,
-      "value": "Sign Up"
+      "value": "가입"
     }
   ],
   "navbar.viewingrooms": [
     {
       "type": 0,
-      "value": "Viewing Rooms"
+      "value": "방 보기"
     }
   ],
   "shipping.deliveryAddress": [
     {
       "type": 0,
-      "value": "Delivery address"
+      "value": "배달 주소"
     }
   ],
   "shipping.deliveryMethod": [
     {
       "type": 0,
-      "value": "Delivery method"
+      "value": "전달 방법"
     }
   ],
   "shipping.description": [
     {
       "type": 0,
-      "value": "All options are eligible for Artsy’s Buyer Protection policy, which protects against damage and loss."
+      "value": "모든 옵션은 손상 및 손실을 방지하는 Artsy의 구매자 보호 정책에 적합합니다."
     }
   ],
   "shipping.myAddresses": [
     {
       "type": 0,
-      "value": "My addresses | Artsy"
+      "value": "내 주소 | Artsy"
     }
   ],
   "shipping.options": [
     {
       "type": 0,
-      "value": "Artsy Shipping options"
+      "value": "Artsy 배송 옵션"
     }
   ],
   "shipping.phoneNumberLabel": [
     {
       "type": 0,
-      "value": "Number to contact you for pickup logistics"
+      "value": "픽업 물류를 위해 연락할 번호"
     }
   ],
   "shipping.pickupDescription": [
     {
       "type": 0,
-      "value": "After your order is confirmed, a specialist will contact you within 2 business days to coordinate pickup."
+      "value": "주문이 확인되면 영업일 기준 2일 이내에 전문가가 픽업을 조정하기 위해 연락을 드릴 것입니다."
     }
   ],
   "shipping.pickupLabel": [
     {
       "type": 0,
-      "value": "Arrange for pickup (free)"
+      "value": "픽업 준비(무료)"
     }
   ],
   "shipping.quoteArtaConfirmationError": [
     {
       "type": 0,
-      "value": "We need to confirm some details with you before processing this order."
+      "value": "이 주문을 처리하기 전에 몇 가지 세부정보를 확인해야 합니다."
     },
     {
       "type": 0,
@@ -786,7 +786,7 @@
     },
     {
       "type": 0,
-      "value": "Please reach out to "
+      "value": "도움이 필요하면 "
     },
     {
       "type": 1,
@@ -794,21 +794,17 @@
     },
     {
       "type": 0,
-      "value": " for assistance."
+      "value": "에 연락하세요."
     }
   ],
   "shipping.quoteArtaError": [
     {
       "type": 0,
-      "value": "There was a problem getting shipping quotes. "
+      "value": "배송 견적을 받는 동안 문제가 발생했습니다. "
     },
     {
       "type": 0,
       "value": "<br/>"
-    },
-    {
-      "type": 0,
-      "value": "Please contact "
     },
     {
       "type": 1,
@@ -816,25 +812,25 @@
     },
     {
       "type": 0,
-      "value": "."
+      "value": "에 문의하세요."
     }
   ],
   "shipping.requiredForShippingLogistics": [
     {
       "type": 0,
-      "value": "Required for shipping logistics"
+      "value": "물류 배송에 필요"
     }
   ],
   "shipping.saveDeliveryAddress": [
     {
       "type": 0,
-      "value": "Save shipping address for later use"
+      "value": "나중에 사용할 수 있도록 배송 주소 저장"
     }
   ],
   "shipping.shippingLabel": [
     {
       "type": 0,
-      "value": "Shipping"
+      "value": "배송"
     }
   ]
 }
