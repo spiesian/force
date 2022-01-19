@@ -29,9 +29,8 @@ export type Conversation_conversation = {
                 readonly buyerAction?: CommerceBuyerOfferActionEnum | null;
             } | null;
         } | null> | null;
-        readonly " $fragmentRefs": FragmentRefs<"ConversationMessages_events">;
     } | null;
-    readonly messagesConnection: {
+    readonly conversationEventConnection: {
         readonly pageInfo: {
             readonly startCursor: string | null;
             readonly endCursor: string | null;
@@ -40,11 +39,11 @@ export type Conversation_conversation = {
         };
         readonly edges: ReadonlyArray<{
             readonly node: {
-                readonly id: string;
+                readonly __typename: string;
             } | null;
         } | null> | null;
         readonly totalCount: number | null;
-        readonly " $fragmentRefs": FragmentRefs<"ConversationMessages_messages">;
+        readonly " $fragmentRefs": FragmentRefs<"ConversationMessages_messagesAndEvents">;
     } | null;
     readonly items: ReadonlyArray<{
         readonly item: {
@@ -132,7 +131,7 @@ return {
         "cursor": "after",
         "direction": "forward",
         "path": [
-          "messagesConnection"
+          "conversationEventConnection"
         ]
       }
     ]
@@ -285,21 +284,16 @@ return {
             }
           ],
           "storageKey": null
-        },
-        {
-          "args": null,
-          "kind": "FragmentSpread",
-          "name": "ConversationMessages_events"
         }
       ],
       "storageKey": "orderConnection(first:10,participantType:\"BUYER\",states:[\"APPROVED\",\"FULFILLED\",\"SUBMITTED\"])"
     },
     {
-      "alias": "messagesConnection",
+      "alias": "conversationEventConnection",
       "args": null,
-      "concreteType": "MessageConnection",
+      "concreteType": "ConversationEventConnection",
       "kind": "LinkedField",
-      "name": "__Messages_messagesConnection_connection",
+      "name": "__Conversation_conversationEventConnection_connection",
       "plural": false,
       "selections": [
         {
@@ -344,7 +338,7 @@ return {
         {
           "alias": null,
           "args": null,
-          "concreteType": "MessageEdge",
+          "concreteType": "ConversationEventEdge",
           "kind": "LinkedField",
           "name": "edges",
           "plural": true,
@@ -352,12 +346,11 @@ return {
             {
               "alias": null,
               "args": null,
-              "concreteType": "Message",
+              "concreteType": null,
               "kind": "LinkedField",
               "name": "node",
               "plural": false,
               "selections": [
-                (v0/*: any*/),
                 (v3/*: any*/)
               ],
               "storageKey": null
@@ -382,7 +375,7 @@ return {
         {
           "args": null,
           "kind": "FragmentSpread",
-          "name": "ConversationMessages_messages"
+          "name": "ConversationMessages_messagesAndEvents"
         }
       ],
       "storageKey": null
@@ -456,5 +449,5 @@ return {
   "abstractKey": null
 };
 })();
-(node as any).hash = 'a2c2719506831f7a381533e19821ee9e';
+(node as any).hash = '1afb0e53fb27568b057e790d6e05811e';
 export default node;

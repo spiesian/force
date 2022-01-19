@@ -103,8 +103,8 @@ describe("ConversationMessages", () => {
                 offerAmountChanged: false,
               },
             },
-          },
-        ],
+          ],
+        },
       }),
     })
 

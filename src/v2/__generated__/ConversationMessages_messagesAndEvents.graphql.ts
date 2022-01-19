@@ -1,5 +1,6 @@
 /* tslint:disable */
 /* eslint-disable */
+// @ts-nocheck
 
 import { ReaderFragment } from "relay-runtime";
 import { FragmentRefs } from "relay-runtime";
@@ -94,7 +95,8 @@ return {
                   "name": "Message_message"
                 }
               ],
-              "type": "Message"
+              "type": "Message",
+              "abstractKey": null
             },
             {
               "args": null,
@@ -120,14 +122,16 @@ return {
                 },
                 (v0/*: any*/)
               ],
-              "type": "ConversationOrderStateChanged"
+              "type": "ConversationOrderStateChanged",
+              "abstractKey": null
             },
             {
               "kind": "InlineFragment",
               "selections": [
                 (v0/*: any*/)
               ],
-              "type": "ConversationOfferSubmitted"
+              "type": "ConversationOfferSubmitted",
+              "abstractKey": null
             }
           ],
           "storageKey": null
@@ -136,7 +140,8 @@ return {
       "storageKey": null
     }
   ],
-  "type": "ConversationEventConnection"
+  "type": "ConversationEventConnection",
+  "abstractKey": null
 };
 })();
 (node as any).hash = '8ced926f1a1c378448634be827f975c8';
