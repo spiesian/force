@@ -10,7 +10,7 @@ import {
 import { graphql, createFragmentContainer } from "react-relay"
 import { ArticlesIndexArticle_article } from "v2/__generated__/ArticlesIndexArticle_article.graphql"
 import { RouterLink } from "v2/System/Router/RouterLink"
-import { ArticlesIndexArticleShare } from "./ArticlesIndexArticleShare"
+import { ArticleShare } from "v2/Components/ArticleShare"
 import { getENV } from "v2/Utils/getENV"
 
 interface ArticlesIndexArticleProps {
@@ -37,7 +37,7 @@ const ArticlesIndexArticle: FC<ArticlesIndexArticleProps> = ({ article }) => {
 
         <Spacer mt={2} />
 
-        <ArticlesIndexArticleShare
+        <ArticleShare
           description={article.title ?? "Artsy Editorial"}
           url={`${getENV("APP_URL")}${article.href}`}
         />
@@ -53,7 +53,7 @@ const ArticlesIndexArticle: FC<ArticlesIndexArticleProps> = ({ article }) => {
           <ResponsiveBox
             bg="black30"
             aspectWidth={910}
-            aspectHeight={511}
+            aspectHeight={607}
             maxWidth="100%"
           >
             {image && (
@@ -82,9 +82,12 @@ export const ArticlesIndexArticleFragmentContainer = createFragmentContainer(
         byline
         publishedAt(format: "MMMM Do YYYY")
         thumbnailImage {
-          cropped(width: 910, height: 511) {
+          # 3:2 aspect ratio
+          cropped(width: 910, height: 607) {
             src
             srcSet
+            width
+            height
           }
         }
       }
