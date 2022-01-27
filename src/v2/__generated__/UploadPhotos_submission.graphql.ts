@@ -6,6 +6,7 @@ import { ReaderFragment } from "relay-runtime";
 import { FragmentRefs } from "relay-runtime";
 export type UploadPhotos_submission = {
     readonly id: string;
+    readonly externalId: string;
     readonly assets: ReadonlyArray<{
         readonly id: string;
         readonly imageUrls: unknown | null;
@@ -38,6 +39,13 @@ return {
   "name": "UploadPhotos_submission",
   "selections": [
     (v0/*: any*/),
+    {
+      "alias": null,
+      "args": null,
+      "kind": "ScalarField",
+      "name": "externalId",
+      "storageKey": null
+    },
     {
       "alias": null,
       "args": null,
@@ -83,5 +91,5 @@ return {
   "abstractKey": null
 };
 })();
-(node as any).hash = 'f6b524d7b6c49ec4aeb9bac584d857e7';
+(node as any).hash = '16503f1f65c3bcc1be9ae1e7120964eb';
 export default node;

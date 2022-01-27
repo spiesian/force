@@ -69,7 +69,7 @@ export const ContactInformation: React.FC<ContactInformationProps> = ({
     if (relayEnvironment && submission) {
       try {
         await createOrUpdateConsignSubmission(relayEnvironment, {
-          id: submission.id,
+          externalId: submission.externalId,
           userName: name.trim(),
           userEmail: email.trim(),
           userPhone: phone.international,
@@ -84,7 +84,7 @@ export const ContactInformation: React.FC<ContactInformationProps> = ({
           user_email: me?.email ?? undefined,
         })
 
-        router.push(`/consign/submission/${submission?.id}/thank-you`)
+        router.push(`/consign/submission/${submission?.externalId}/thank-you`)
       } catch (error) {
         logger.error("Submission error", error)
         openErrorModal()
@@ -99,7 +99,7 @@ export const ContactInformation: React.FC<ContactInformationProps> = ({
         py={2}
         mb={6}
         width="min-content"
-        to={`/consign/submission/${submission?.id}/upload-photos`}
+        to={`/consign/submission/${submission?.externalId}/upload-photos`}
       >
         Back
       </BackLink>
@@ -147,6 +147,7 @@ export const ContactInformationFragmentContainer = createFragmentContainer(
     submission: graphql`
       fragment ContactInformation_submission on ConsignmentSubmission {
         id
+        externalId
       }
     `,
     me: graphql`

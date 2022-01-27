@@ -62,7 +62,7 @@ export const UploadPhotos: React.FC<UploadPhotosProps> = ({ submission }) => {
   const handleSubmit = async () => {
     if (submission) {
       router.push({
-        pathname: `/consign/submission/${submission.id}/contact-information`,
+        pathname: `/consign/submission/${submission.externalId}/contact-information`,
       })
     }
   }
@@ -73,7 +73,7 @@ export const UploadPhotos: React.FC<UploadPhotosProps> = ({ submission }) => {
         py={2}
         mb={6}
         width="min-content"
-        to={`/consign/submission/${submission?.id}/artwork-details`}
+        to={`/consign/submission/${submission?.externalId}/artwork-details`}
       >
         Back
       </BackLink>
@@ -128,7 +128,8 @@ export const UploadPhotos: React.FC<UploadPhotosProps> = ({ submission }) => {
                   input: {
                     assetType: "image",
                     geminiToken: photo.geminiToken!,
-                    submissionID: submission.id,
+                    // submissionID: submission.id,
+                    externalSubmissionId: submission.externalId,
                     sessionID: !isLoggedIn ? getENV("SESSION_ID") : undefined,
                     filename: photo.name,
                     size: photo.size.toString(),
@@ -189,6 +190,7 @@ export const UploadPhotosFragmentContainer = createFragmentContainer(
     submission: graphql`
       fragment UploadPhotos_submission on ConsignmentSubmission {
         id
+        externalId
         assets {
           id
           imageUrls
