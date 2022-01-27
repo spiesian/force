@@ -128,7 +128,6 @@ export const UploadPhotos: React.FC<UploadPhotosProps> = ({ submission }) => {
                   input: {
                     assetType: "image",
                     geminiToken: photo.geminiToken!,
-                    // submissionID: submission.id,
                     externalSubmissionId: submission.externalId,
                     sessionID: !isLoggedIn ? getENV("SESSION_ID") : undefined,
                     filename: photo.name,
