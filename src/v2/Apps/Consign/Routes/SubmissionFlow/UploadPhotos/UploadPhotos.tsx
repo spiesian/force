@@ -120,7 +120,7 @@ export const UploadPhotos: React.FC<UploadPhotosProps> = ({ submission }) => {
           }
 
           const handlePhotoUploaded = async (photo: Photo) => {
-            if (photo.geminiToken && submission?.id) {
+            if (photo.geminiToken && submission?.externalId) {
               photo.loading = true
 
               try {
@@ -152,7 +152,7 @@ export const UploadPhotos: React.FC<UploadPhotosProps> = ({ submission }) => {
                 mt={4}
                 maxTotalSize={30}
                 onPhotoUploaded={handlePhotoUploaded}
-                submissionId={submission?.id || ""}
+                submissionId={submission?.externalId || ""}
               />
 
               <Box mb={6}>
