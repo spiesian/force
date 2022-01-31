@@ -30,7 +30,6 @@ query UploadPhotos_SubmissionFlowTest_Query(
 }
 
 fragment UploadPhotos_submission on ConsignmentSubmission {
-  id
   externalId
   assets {
     id
@@ -117,7 +116,6 @@ return {
         "name": "submission",
         "plural": false,
         "selections": [
-          (v2/*: any*/),
           {
             "alias": null,
             "args": null,
@@ -164,14 +162,15 @@ return {
               }
             ],
             "storageKey": null
-          }
+          },
+          (v2/*: any*/)
         ],
         "storageKey": null
       }
     ]
   },
   "params": {
-    "cacheID": "5fb73a729baa1f72b48e5b6a6efd61c5",
+    "cacheID": "dd111c8ae0d473c5b423d2c879701d33",
     "id": null,
     "metadata": {
       "relayTestingSelectionTypeInfo": {
@@ -203,7 +202,7 @@ return {
     },
     "name": "UploadPhotos_SubmissionFlowTest_Query",
     "operationKind": "query",
-    "text": "query UploadPhotos_SubmissionFlowTest_Query(\n  $externalId: ID\n) {\n  submission(externalId: $externalId) {\n    ...UploadPhotos_submission\n    id\n  }\n}\n\nfragment UploadPhotos_submission on ConsignmentSubmission {\n  id\n  externalId\n  assets {\n    id\n    imageUrls\n    geminiToken\n    size\n    filename\n  }\n}\n"
+    "text": "query UploadPhotos_SubmissionFlowTest_Query(\n  $externalId: ID\n) {\n  submission(externalId: $externalId) {\n    ...UploadPhotos_submission\n    id\n  }\n}\n\nfragment UploadPhotos_submission on ConsignmentSubmission {\n  externalId\n  assets {\n    id\n    imageUrls\n    geminiToken\n    size\n    filename\n  }\n}\n"
   }
 };
 })();

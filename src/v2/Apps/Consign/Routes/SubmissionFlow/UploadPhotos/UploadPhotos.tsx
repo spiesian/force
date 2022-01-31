@@ -188,7 +188,6 @@ export const UploadPhotosFragmentContainer = createFragmentContainer(
   {
     submission: graphql`
       fragment UploadPhotos_submission on ConsignmentSubmission {
-        id
         externalId
         assets {
           id

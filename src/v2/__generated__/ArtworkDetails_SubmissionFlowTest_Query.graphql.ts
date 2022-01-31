@@ -30,7 +30,6 @@ query ArtworkDetails_SubmissionFlowTest_Query(
 }
 
 fragment ArtworkDetails_submission on ConsignmentSubmission {
-  id
   externalId
   artist {
     internalID
@@ -129,7 +128,6 @@ return {
         "name": "submission",
         "plural": false,
         "selections": [
-          (v2/*: any*/),
           {
             "alias": null,
             "args": null,
@@ -260,14 +258,15 @@ return {
             "kind": "ScalarField",
             "name": "provenance",
             "storageKey": null
-          }
+          },
+          (v2/*: any*/)
         ],
         "storageKey": null
       }
     ]
   },
   "params": {
-    "cacheID": "6f8896ece5f5c00a44fe4a350037b9bb",
+    "cacheID": "752c36feb14c3f7e14cf06e88f207a22",
     "id": null,
     "metadata": {
       "relayTestingSelectionTypeInfo": {
@@ -316,7 +315,7 @@ return {
     },
     "name": "ArtworkDetails_SubmissionFlowTest_Query",
     "operationKind": "query",
-    "text": "query ArtworkDetails_SubmissionFlowTest_Query(\n  $externalId: ID\n) {\n  submission(id: $externalId) {\n    ...ArtworkDetails_submission\n    id\n  }\n}\n\nfragment ArtworkDetails_submission on ConsignmentSubmission {\n  id\n  externalId\n  artist {\n    internalID\n    name\n    id\n  }\n  locationCity\n  locationCountry\n  locationState\n  year\n  title\n  medium\n  attributionClass\n  editionNumber\n  editionSize\n  height\n  width\n  depth\n  dimensionsMetric\n  provenance\n}\n"
+    "text": "query ArtworkDetails_SubmissionFlowTest_Query(\n  $externalId: ID\n) {\n  submission(id: $externalId) {\n    ...ArtworkDetails_submission\n    id\n  }\n}\n\nfragment ArtworkDetails_submission on ConsignmentSubmission {\n  externalId\n  artist {\n    internalID\n    name\n    id\n  }\n  locationCity\n  locationCountry\n  locationState\n  year\n  title\n  medium\n  attributionClass\n  editionNumber\n  editionSize\n  height\n  width\n  depth\n  dimensionsMetric\n  provenance\n}\n"
   }
 };
 })();
