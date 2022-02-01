@@ -14,6 +14,7 @@ import * as React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
 import { Media } from "v2/Utils/Responsive"
 import { ArtworkDefinitionList } from "v2/Apps/Artwork/Components/ArtworkDefinitionList"
+import { FragmentRefs } from "relay-runtime"
 
 const MIN_FOR_SELECTED_EXHIBITIONS = 3
 export const MIN_EXHIBITIONS = 2
@@ -23,15 +24,21 @@ export type Year = string
 export interface SelectedExhibitionsProps {
   border?: boolean
   collapsible?: boolean
-  exhibitions: SelectedExhibitions_exhibitions
+  exhibitions:
+    | readonly ({
+        readonly " $fragmentRefs": FragmentRefs<
+          "SelectedExhibitions_exhibitions"
+        >
+      } | null)[]
+    | null
   artistID?: string
-  totalExhibitions?: number
+  totalExhibitions?: number | null
   ViewAllLink?: JSX.Element
   Container?: (props: { children: JSX.Element }) => JSX.Element
 }
 
 export const SelectedExhibitions: React.FC<SelectedExhibitionsProps> = props => {
-  return props.exhibitions.length === 0 ? null : (
+  return props.exhibitions?.length === 0 ? null : (
     <>
       <Media at="xs">
         <SelectedExhibitionsContainer collapsible {...props} />
@@ -153,7 +160,7 @@ export class SelectedExhibitionsContainer extends React.Component<
 
   render() {
     if (
-      !this.props.exhibitions.length ||
+      !this.props.exhibitions?.length ||
       (this.props.totalExhibitions ?? 0) < MIN_EXHIBITIONS
     ) {
       return null
