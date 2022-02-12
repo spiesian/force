@@ -20,6 +20,7 @@ declare module "sharify" {
       readonly ALLOWED_REDIRECT_HOSTS: string
       readonly APP_URL: string
       readonly ARTIST_COLLECTIONS_RAIL?: string // TODO: remove after CollectionsRail a/b test
+      readonly AUCTION_ZENDESK_KEY: string
       readonly CDN_URL: string
       readonly CMS_URL: string
       CURRENT_PATH: string
@@ -39,6 +40,7 @@ declare module "sharify" {
       IS_GOOGLEBOT: boolean
       IS_MOBILE: boolean
       IP_ADDRESS: string
+      readonly GOOGLE_MAPS_API_KEY: string
       readonly METAPHYSICS_ENDPOINT: string
       readonly NETWORK_CACHE_SIZE: string
       readonly NETWORK_CACHE_TTL: string
@@ -54,11 +56,11 @@ declare module "sharify" {
       readonly STRIPE_PUBLISHABLE_KEY: string
       readonly THIRD_PARTIES_DISABLED: boolean
       readonly VOLLEY_ENDPOINT: string
+      readonly UNLEASH_API_URL: string
+      readonly UNLEASH_APP_NAME: string
       readonly WEBFONT_URL: string
       readonly XAPP_TOKEN: string
-      readonly GOOGLE_MAPS_API_KEY: string
       readonly ZENDESK_KEY: string
-      readonly AUCTION_ZENDESK_KEY: string
 
       // FORCE Tokens
       AP: {

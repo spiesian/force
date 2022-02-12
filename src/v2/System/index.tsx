@@ -1,3 +1,5 @@
 export * from "./Analytics"
+export * from "./FeatureFlag"
 export * from "./SystemContext"
+export * from "./useFeatureFlag"
 export * from "./useSystemContext"

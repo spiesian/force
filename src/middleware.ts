@@ -68,6 +68,7 @@ import { serverTimingHeaders } from "./lib/middleware/serverTimingHeaders"
 import { splitTestMiddleware } from "./desktop/components/split_test/splitTestMiddleware"
 import { IGNORED_ERRORS } from "./lib/analytics/sentryFilters"
 import { sharifyToCookie } from "./lib/middleware/sharifyToCookie"
+import { featureFlagMiddleware } from "lib/middleware/featureFlagMiddleware"
 
 // Find the v2 routes, we will not be testing memory caching for legacy pages.
 
@@ -116,6 +117,7 @@ export function initializeMiddleware(app) {
   app.use(backboneErrorHandlerMiddleware)
   app.use(sameOriginMiddleware)
   app.use(unsupportedBrowserMiddleware)
+  app.use(featureFlagMiddleware())
 
   // Initialize caches
   applyCacheMiddleware(app)
