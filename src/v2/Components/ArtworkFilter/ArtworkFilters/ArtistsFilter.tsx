@@ -15,6 +15,7 @@ import { FilterExpandable } from "./FilterExpandable"
 import { ShowMore } from "./ShowMore"
 import { useFilterLabelCountByKey } from "../Utils/useFilterLabelCountByKey"
 import { useSystemContext } from "v2/System"
+import { useArtworkGridContext } from "v2/Components/ArtworkGrid/ArtworkGridContext"
 
 export interface ArtistsFilterProps {
   expanded?: boolean
@@ -86,6 +87,7 @@ const ArtistItem: React.FC<
 export const ArtistsFilter: FC<ArtistsFilterProps> = ({ expanded, fairID }) => {
   const { relayEnvironment, user } = useSystemContext()
   const { aggregations, ...filterContext } = useArtworkFilterContext()
+  const { isAuctionArtwork } = useArtworkGridContext()
   const artists = aggregations?.find(agg => agg.slice === "ARTIST")
   const {
     artistIDs = [],
@@ -125,9 +127,10 @@ export const ArtistsFilter: FC<ArtistsFilterProps> = ({ expanded, fairID }) => {
     !!user && includeArtworksByFollowedArtists
   const followedArtistArtworkCount = filterContext?.counts?.followedArtists ?? 0
   const hasSelection = artistIDs.length > 0 || isFollowedArtistCheckboxSelected
+  const expandFilter = hasSelection || expanded
 
   return (
-    <FilterExpandable label={label} expanded={hasSelection || expanded}>
+    <FilterExpandable label={label} expanded={expandFilter}>
       <Flex flexDirection="column">
         <Checkbox
           disabled={!followedArtistArtworkCount}
@@ -140,7 +143,7 @@ export const ArtistsFilter: FC<ArtistsFilterProps> = ({ expanded, fairID }) => {
           Artists I follow ({followedArtistArtworkCount})
         </Checkbox>
 
-        <ShowMore>
+        <ShowMore expanded={isAuctionArtwork}>
           {artistsSorted.map(({ value: slug, name }, index) => {
             return (
               <ArtistItem
