@@ -3,7 +3,6 @@ import { middleware as stitchMiddleware } from "@artsy/stitch/dist/internal/midd
 import * as globalReactModules from "desktop/components/react/stitch_components"
 
 const app = express()
-
 /**
  * -----------------------------------------------------------------------------
  *

@@ -20,6 +20,7 @@ export {
 } from "v2/Apps/Settings/Routes/EditSettings/Components/SettingsEditSettingsTwoFactor/TwoFactorAuthentication"
 export { ReactionCCPARequest as CCPARequest } from "./CCPARequest"
 import { Footer as BaseFooter } from "v2/Components/Footer"
+import "v2/System/i18n/i18n"
 
 export const Footer = () => {
   return (

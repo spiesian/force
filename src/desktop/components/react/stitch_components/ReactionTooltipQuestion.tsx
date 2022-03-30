@@ -1,5 +1,6 @@
 import { HelpIcon } from "@artsy/palette"
 import { Tooltip } from "v2/Components/Tooltip"
+import "v2/System/i18n/i18n"
 
 export const ReactionTooltipQuestion = props => {
   return (

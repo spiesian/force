@@ -28,6 +28,7 @@ import { ClientContext } from "desktop/lib/buildClientAppContext"
 import { FlashMessage } from "v2/Components/Modal/FlashModal"
 import { SiftContainer } from "v2/Utils/SiftContainer"
 import { setupSentryClient } from "lib/setupSentryClient"
+import "v2/System/i18n/i18n"
 
 export interface BootProps {
   children: React.ReactNode
