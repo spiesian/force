@@ -26,8 +26,10 @@ import { featureRoutes } from "v2/Apps/Feature/featureRoutes"
 import { geneRoutes } from "v2/Apps/Gene/geneRoutes"
 import { homeRoutes } from "v2/Apps/Home/homeRoutes"
 import { identityVerificationRoutes } from "v2/Apps/IdentityVerification/identityVerificationRoutes"
+import { jobsRoutes } from "v2/Apps/Jobs/jobsRoutes"
 import { meetTheSpecialistsRoutes } from "v2/Apps/MeetTheSpecialists/meetTheSpecialistsRoutes"
 import { orderRoutes } from "v2/Apps/Order/orderRoutes"
+import { pageRoutes } from "v2/Apps/Page/pageRoutes"
 import { partnerRoutes } from "v2/Apps/Partner/partnerRoutes"
 import { partnersRoutes } from "v2/Apps/Partners/partnersRoutes"
 import { preferencesRoutes } from "./Apps/Preferences/preferencesRoutes"
@@ -36,7 +38,6 @@ import { searchRoutes } from "v2/Apps/Search/searchRoutes"
 import { settingsRoutes } from "v2/Apps/Settings/settingsRoutes"
 import { showRoutes } from "v2/Apps/Show/showRoutes"
 import { showsRoutes } from "v2/Apps/Shows/showsRoutes"
-import { staticPageRoutes } from "v2/Apps/StaticPage/staticPageRoutes"
 import { tagRoutes } from "./Apps/Tag/tagRoutes"
 import { viewingRoomRoutes } from "v2/Apps/ViewingRoom/viewingRoomRoutes"
 import { worksForYouRoutes } from "./Apps/WorksForYou/worksForYouRoutes"
@@ -68,13 +69,14 @@ export function getAppRoutes(): AppRouteConfig[] {
     { routes: geneRoutes },
     { routes: homeRoutes },
     { routes: identityVerificationRoutes },
+    { routes: jobsRoutes },
     { routes: meetTheSpecialistsRoutes },
     { routes: orderRoutes },
+    { routes: pageRoutes },
     { routes: partnerRoutes },
     { routes: partnersRoutes },
     { routes: preferencesRoutes },
     { routes: priceDatabaseRoutes },
-    { routes: staticPageRoutes },
     { routes: searchRoutes },
     { routes: settingsRoutes },
     { routes: showRoutes },
