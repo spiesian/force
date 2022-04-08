@@ -229,6 +229,28 @@ const onAccessToken = (req, done, params) =>
     }
     // No errors—create the user from the access token.
     if (!err) {
+      if (params.provider && params.provider === "google") {
+        // @chris
+        // TODO get gravity user id based on access token / check if user's name is nil
+
+        // if the users name is nil we are gonna update it
+        return request
+          .put(opts.ARTSY_URL + "/api/v1/user") // put that used id here so we can update the user
+          .send({ name: params.displayName })
+          .set({ "User-Agent": req.get("user-agent") })
+          .set({ "X-Xapp-Token": artsyXapp.token })
+          .set({ Referer: req.get("referer") })
+          .end(function (err) {
+            if (err) {
+              console.error("error on onAccessToken user update", err)
+            }
+            return done(
+              null,
+              new opts.CurrentUser({ accessToken: res.body.access_token })
+            )
+          })
+      }
+
       return done(
         null,
         new opts.CurrentUser({ accessToken: res.body.access_token })
