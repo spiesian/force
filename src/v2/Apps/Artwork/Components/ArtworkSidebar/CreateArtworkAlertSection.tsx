@@ -7,7 +7,6 @@ import {
   SearchCriteriaAttributes,
 } from "v2/Components/SavedSearchAlert/types"
 import { compact } from "lodash"
-import { checkboxValues } from "v2/Components/ArtworkFilter/ArtworkFilters/AttributionClassFilter"
 import { getAllowedSearchCriteria } from "v2/Components/SavedSearchAlert/Utils/savedSearchCriteria"
 import { OwnerType } from "@artsy/cohesion"
 import { SavedSearchCreateAlertButton } from "v2/Components/SavedSearchAlert/Components/SavedSearchCreateAlertButton"
@@ -22,11 +21,9 @@ export const CreateArtworkAlertSection: React.FC<CreateArtworkAlertSectionProps>
   artwork,
 }) => {
   const artists = compact(artwork.artists)
+  const attributionClass = compact([artwork.attributionClass?.internalID])
   const artistIDs = artists.map(artist => artist.internalID)
   const placeholder = `Artworks like: ${artwork.title!}`
-  const attributionClass = getAttributionClassIdByLabel(
-    artwork.attributionClass?.name ?? ""
-  )
 
   const entity: SavedSearchEntity = {
     placeholder,
@@ -103,21 +100,9 @@ export const CreateArtworkAlertSectionFragmentContainer = createFragmentContaine
           slug
         }
         attributionClass {
-          name
+          internalID
         }
       }
     `,
   }
 )
-
-export const getAttributionClassIdByLabel = (label: string) => {
-  const option = checkboxValues.find(
-    value => value.name.toLowerCase() === label.toLowerCase()
-  )
-
-  if (option?.value) {
-    return [option.value]
-  }
-
-  return []
-}
