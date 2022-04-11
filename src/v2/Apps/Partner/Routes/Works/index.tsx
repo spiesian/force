@@ -10,6 +10,7 @@ import {
 import { BaseArtworkFilter } from "v2/Components/ArtworkFilter"
 import { updateUrl } from "v2/Components/ArtworkFilter/Utils/urlBuilder"
 import { Match, RouterState, withRouter } from "found"
+import { getDefaultSortForWorks } from "../../Utils/getDefaultSortForWorks"
 
 interface PartnerArtworkFilterProps {
   partner: Works_partner
@@ -25,9 +26,7 @@ export const Artworks: React.FC<PartnerArtworkFilterProps> = ({
   const { sidebar } = partner
   const filters = match?.location.query ?? {}
 
-  if (match?.params?.partnerId === "artsy-2" && !filters.sort) {
-    filters.sort = "-partner_updated_at"
-  }
+  filters.sort = getDefaultSortForWorks(match?.params?.partnerId!, filters.sort)
 
   return (
     <ArtworkFilterContextProvider

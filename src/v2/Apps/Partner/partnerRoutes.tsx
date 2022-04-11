@@ -5,6 +5,7 @@ import { initialArtworkFilterState } from "v2/Components/ArtworkFilter/ArtworkFi
 import { paramsToCamelCase } from "v2/Components/ArtworkFilter/Utils/urlBuilder"
 import { allowedFilters } from "v2/Components/ArtworkFilter/Utils/allowedFilters"
 import { AppRouteConfig } from "v2/System/Router/Route"
+import { getDefaultSortForWorks } from "./Utils/getDefaultSortForWorks"
 
 const PartnerApp = loadable(
   () => import(/* webpackChunkName: "partnerBundle" */ "./PartnerApp"),
@@ -219,12 +220,10 @@ export const partnerRoutes: AppRouteConfig[] = [
             ...paramsToCamelCase(filterStateFromUrl),
           }
 
-          if (
-            data.partnerId === "artsy-2" &&
-            filterParams.sort === "-decayed_merch"
-          ) {
-            filterParams.sort = "-partner_updated_at"
-          }
+          filterParams.sort = getDefaultSortForWorks(
+            data.partnerId,
+            filterParams.sort
+          )
 
           return {
             aggregations,
