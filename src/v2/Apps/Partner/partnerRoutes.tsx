@@ -219,6 +219,13 @@ export const partnerRoutes: AppRouteConfig[] = [
             ...paramsToCamelCase(filterStateFromUrl),
           }
 
+          if (
+            data.partnerId === "artsy-2" &&
+            filterParams.sort === "-decayed_merch"
+          ) {
+            filterParams.sort = "-partner_updated_at"
+          }
+
           return {
             aggregations,
             input: allowedFilters(filterParams),

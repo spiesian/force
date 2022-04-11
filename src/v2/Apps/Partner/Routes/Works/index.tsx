@@ -23,10 +23,15 @@ export const Artworks: React.FC<PartnerArtworkFilterProps> = ({
   match,
 }) => {
   const { sidebar } = partner
+  const filters = match?.location.query ?? {}
+
+  if (match?.params?.partnerId === "artsy-2" && !filters.sort) {
+    filters.sort = "-partner_updated_at"
+  }
 
   return (
     <ArtworkFilterContextProvider
-      filters={match && match.location.query}
+      filters={filters}
       sortOptions={[
         { text: "Default", value: "-decayed_merch" },
         { text: "Price (desc.)", value: "-has_price,-prices" },
