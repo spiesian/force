@@ -1761,6 +1761,9 @@ type Artwork implements Node & Searchable & Sellable {
   exhibitionHistory(format: Format): String
   fair: Fair
 
+  # A list of images and videos for the artwork
+  figures: [ArtworkFigures!]!
+
   # Formatted artwork metadata, including artist, title, date and partner; e.g., 'Andy Warhol, Truck, 1980, Westward Gallery'.
   formattedMetadata: String
   framed: ArtworkInfoRow
@@ -1943,9 +1946,6 @@ type Artwork implements Node & Searchable & Sellable {
   # Based on artwork location verify that VAT info for the partner is complete.
   vatRequirementComplete: Boolean
 
-  # returns a Video object for the associated artwork
-  video: Video
-
   # If the category is video, then it returns the href for the (youtube/vimeo) video, otherwise returns the website from CMS
   website: String
 
@@ -2037,6 +2037,8 @@ interface ArtworkEdgeInterface {
   cursor: String
   node: Artwork
 }
+
+union ArtworkFigures = Image | Video
 
 union ArtworkFilterFacet = Gene | Tag
 
@@ -14675,13 +14677,13 @@ union VanityURLEntityType = Fair | Partner
 # An object containing video metadata
 type Video {
   # The height of the video
-  height: Int
+  height: Int!
 
   # The url of the video
-  src: String
+  url: String!
 
   # The width of the video
-  width: Int
+  width: Int!
 }
 
 # A wildcard used to support complex root queries in Relay
