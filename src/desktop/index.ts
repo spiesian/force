@@ -4,6 +4,10 @@ import * as globalReactModules from "desktop/components/react/stitch_components"
 
 const app = express()
 
+// FIXME: Move this
+import { app as shortcuts } from "v2/System/Server/shortcuts"
+app.use(shortcuts)
+
 /**
  * -----------------------------------------------------------------------------
  *
@@ -53,7 +57,6 @@ app.use(require("./apps/article").app)
 
 // Non-profile dynamic vanity url apps
 app.use(require("./apps/articles").app)
-app.use(require("./apps/shortcuts"))
 
 // Apps that need to fetch a profile.
 // Because profile routes are usually top-level and use wild-card matchers in their routers,
