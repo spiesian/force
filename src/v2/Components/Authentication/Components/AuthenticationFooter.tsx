@@ -33,7 +33,13 @@ export const AuthenticationFooter: React.FC<AuthenticationFooterProps> = ({
   ...rest
 }) => {
   return (
-    <Container variant="xs" color="black60" textAlign="center" {...rest}>
+    <Container
+      variant="xs"
+      color="black60"
+      textAlign="center"
+      paddingBottom={[150, 100]}
+      {...rest}
+    >
       {(() => {
         switch (mode) {
           case "login": {
