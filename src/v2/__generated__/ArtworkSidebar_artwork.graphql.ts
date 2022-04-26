@@ -10,12 +10,14 @@ export type ArtworkSidebar_artwork = {
     readonly sale: {
         readonly is_closed: boolean | null;
         readonly startAt: string | null;
+        readonly extendedBiddingPeriodMinutes: number | null;
     } | null;
     readonly saleArtwork: {
         readonly endAt: string | null;
         readonly endedAt: string | null;
+        readonly extendedBiddingEndAt: string | null;
     } | null;
-    readonly " $fragmentRefs": FragmentRefs<"ArtworkSidebarArtists_artwork" | "ArtworkSidebarMetadata_artwork" | "ArtworkSidebarAuctionPartnerInfo_artwork" | "ArtworkSidebarAuctionInfoPolling_artwork" | "ArtworkSidebarAuctionTimer_artwork" | "ArtworkSidebarCommercial_artwork" | "ArtworkSidebarPartnerInfo_artwork" | "ArtworkSidebarExtraLinks_artwork" | "SecurePayment_artwork" | "VerifiedSeller_artwork" | "AuthenticityCertificate_artwork" | "BuyerGuarantee_artwork" | "CreateArtworkAlertSection_artwork" | "ArtworkSidebarBiddingClosedMessage_artwork">;
+    readonly " $fragmentRefs": FragmentRefs<"ArtworkSidebarArtists_artwork" | "ArtworkSidebarMetadata_artwork" | "ArtworkSidebarAuctionPartnerInfo_artwork" | "ArtworkSidebarAuctionInfoPolling_artwork" | "ArtworkSidebarAuctionTimer_artwork" | "ArtworkSidebarAuctionProgressBar_artwork" | "ArtworkSidebarCommercial_artwork" | "ArtworkSidebarPartnerInfo_artwork" | "ArtworkSidebarExtraLinks_artwork" | "SecurePayment_artwork" | "VerifiedSeller_artwork" | "AuthenticityCertificate_artwork" | "BuyerGuarantee_artwork" | "CreateArtworkAlertSection_artwork" | "ArtworkSidebarBiddingClosedMessage_artwork">;
     readonly " $refType": "ArtworkSidebar_artwork";
 };
 export type ArtworkSidebar_artwork$data = ArtworkSidebar_artwork;
@@ -67,6 +69,13 @@ const node: ReaderFragment = {
           "kind": "ScalarField",
           "name": "startAt",
           "storageKey": null
+        },
+        {
+          "alias": null,
+          "args": null,
+          "kind": "ScalarField",
+          "name": "extendedBiddingPeriodMinutes",
+          "storageKey": null
         }
       ],
       "storageKey": null
@@ -91,6 +100,13 @@ const node: ReaderFragment = {
           "args": null,
           "kind": "ScalarField",
           "name": "endedAt",
+          "storageKey": null
+        },
+        {
+          "alias": null,
+          "args": null,
+          "kind": "ScalarField",
+          "name": "extendedBiddingEndAt",
           "storageKey": null
         }
       ],
@@ -120,6 +136,11 @@ const node: ReaderFragment = {
       "args": null,
       "kind": "FragmentSpread",
       "name": "ArtworkSidebarAuctionTimer_artwork"
+    },
+    {
+      "args": null,
+      "kind": "FragmentSpread",
+      "name": "ArtworkSidebarAuctionProgressBar_artwork"
     },
     {
       "args": null,
@@ -170,5 +191,5 @@ const node: ReaderFragment = {
   "type": "Artwork",
   "abstractKey": null
 };
-(node as any).hash = '6d4f0574bf7a55af00fd956e3bc60fb3';
+(node as any).hash = '27ddd9bd51e4e8a560b14eb1de2c06d9';
 export default node;

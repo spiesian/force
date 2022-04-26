@@ -21,6 +21,7 @@ import { ArtworkSidebarAuctionTimerFragmentContainer } from "./ArtworkSidebarAuc
 import { useTimer } from "v2/Utils/Hooks/useTimer"
 import { ArtworkSidebarBiddingClosedMessageFragmentContainer } from "./ArtworkSidebarBiddingClosedMessage"
 import { lotIsClosed } from "v2/Apps/Artwork/Utils/lotIsClosed"
+import { ArtworkSidebarAuctionProgressBarFragmentContainer } from "./ArtworkSidebarAuctionProgressBar"
 
 export interface ArtworkSidebarProps {
   artwork: ArtworkSidebar_artwork
@@ -48,6 +49,9 @@ export const ArtworkSidebar: React.FC<ArtworkSidebarProps> = ({
     (is_in_auction && lotIsClosed(sale, saleArtwork)) ||
     is_sold
 
+  const isExtendedBiddingEnabled = !!sale?.extendedBiddingPeriodMinutes
+  const isLotEndAt = !!(saleArtwork?.extendedBiddingEndAt ?? saleArtwork?.endAt)
+
   return (
     <ArtworkSidebarContainer data-test={ContextModule.artworkSidebar}>
       <ArtworkSidebarArtistsFragmentContainer artwork={artwork} />
@@ -74,7 +78,14 @@ export const ArtworkSidebar: React.FC<ArtworkSidebarProps> = ({
           </Join>
 
           {!hasEnded && (
-            <ArtworkSidebarAuctionTimerFragmentContainer artwork={artwork} />
+            <>
+              <ArtworkSidebarAuctionTimerFragmentContainer artwork={artwork} />
+              {isExtendedBiddingEnabled && isLotEndAt && (
+                <ArtworkSidebarAuctionProgressBarFragmentContainer
+                  artwork={artwork}
+                />
+              )}
+            </>
           )}
         </>
       ) : (
@@ -111,6 +122,7 @@ export const ArtworkSidebarFragmentContainer = createFragmentContainer(
         ...ArtworkSidebarAuctionPartnerInfo_artwork
         ...ArtworkSidebarAuctionInfoPolling_artwork
         ...ArtworkSidebarAuctionTimer_artwork
+        ...ArtworkSidebarAuctionProgressBar_artwork
         ...ArtworkSidebarCommercial_artwork
         ...ArtworkSidebarPartnerInfo_artwork
         ...ArtworkSidebarExtraLinks_artwork
@@ -123,10 +135,12 @@ export const ArtworkSidebarFragmentContainer = createFragmentContainer(
         sale {
           is_closed: isClosed
           startAt
+          extendedBiddingPeriodMinutes
         }
         saleArtwork {
           endAt
           endedAt
+          extendedBiddingEndAt
         }
       }
     `,
